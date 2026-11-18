@@ -358,6 +358,19 @@ svg {
   font-size: clamp(1.5rem, 2.6vw, 2rem);
 }
 
+.onboarding__head .display {
+  font-size: clamp(2.8rem, 5.5vw, 4rem);
+  font-weight: 800;
+}
+
+.onboarding__head .lead {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  font-weight: 500;
+  color: var(--ink-2);
+  max-width: 42rem;
+  line-height: 1.55;
+}
+
 .eyebrow {
   display: flex;
   align-items: center;
@@ -465,6 +478,12 @@ svg {
   color: var(--ink);
 }
 
+.button--large {
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
 .icon-button {
   display: inline-grid;
   place-items: center;
@@ -535,6 +554,12 @@ svg {
 
 .input--error {
   border-color: var(--score-weak);
+}
+
+.input--large {
+  padding: 1.1rem 1.2rem;
+  font-size: 1.05rem;
+  border-radius: var(--radius);
 }
 
 .counter {
@@ -718,8 +743,8 @@ svg {
 
 .brand__word {
   font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: 1.8rem;
+  font-weight: 800;
   letter-spacing: -0.02em;
   color: var(--ink);
 }
@@ -729,7 +754,7 @@ svg {
 }
 
 .brand--compact .brand__word {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
 }
 
 .topnav {
@@ -867,7 +892,7 @@ svg {
   max-width: var(--max);
   width: 100%;
   margin: 0 auto;
-  padding: 1.4rem;
+  padding: 2rem 1.4rem;
 }
 
 .onboarding__edition {
@@ -881,20 +906,20 @@ svg {
   flex: 1;
   display: flex;
   justify-content: center;
-  padding: 0 1.4rem 3.5rem;
+  padding: 0 1.4rem 5rem;
 }
 
 .onboarding__main {
   width: 100%;
   max-width: var(--max);
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);
-  gap: 2.4rem;
+  grid-template-columns: minmax(0, 1.6fr) minmax(300px, 1fr);
+  gap: 3rem;
   align-items: start;
 }
 
 .onboarding__panel {
-  padding: 2.2rem 0 0;
+  padding: 3rem 0 0;
 }
 
 .onboarding__panel .display {
@@ -945,15 +970,15 @@ svg {
 }
 
 .onboarding__aside {
-  padding-top: 4.9rem;
+  padding-top: 6rem;
 }
 
 .onboarding__card {
-  padding: 1.5rem;
-  border: 1px solid var(--rule);
+  padding: 2rem;
+  border: 1.5px solid var(--rule);
   border-radius: var(--radius-lg);
   background: var(--surface);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lift);
 }
 
 .onboarding__card--accent {
@@ -967,20 +992,21 @@ svg {
 
 .feature-list {
   display: grid;
-  gap: 0.95rem;
-  margin: 1rem 0 1.2rem;
+  gap: 1.1rem;
+  margin: 1.5rem 0 1.6rem;
 }
 
 .feature-list li {
   display: grid;
-  grid-template-columns: 22px 1fr;
-  gap: 0.6rem;
-  font-size: 0.85rem;
+  grid-template-columns: 26px 1fr;
+  gap: 0.8rem;
+  font-size: 0.95rem;
   color: var(--ink-2);
+  line-height: 1.6;
 }
 
 .feature-list svg {
-  margin-top: 2px;
+  margin-top: 3px;
   color: var(--country-deep);
 }
 

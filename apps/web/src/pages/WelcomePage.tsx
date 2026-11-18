@@ -43,31 +43,34 @@ export function WelcomePage() {
           <p className="eyebrow">Cómo funciona</p>
           <ul className="feature-list">
             <li>
-              <Sparkles aria-hidden="true" size={17} />
+              <Sparkles aria-hidden="true" size={20} />
               <span>
                 <strong>Dossier personalizado.</strong> Postura, prioridades, líneas rojas y
                 vulnerabilidades de tu país.
               </span>
             </li>
             <li>
-              <Mic aria-hidden="true" size={17} />
+              <Mic aria-hidden="true" size={20} />
               <span>
                 <strong>Asistente con fuentes.</strong> Respuestas acotadas al corpus, con URL
                 verificable y nivel de confianza.
               </span>
             </li>
             <li>
-              <Gavel aria-hidden="true" size={17} />
+              <Gavel aria-hidden="true" size={20} />
               <span>
                 <strong>Arena de debate.</strong> Preguntas que no se repiten y rúbrica en Diálogo,
                 Argumentos, Coherencia y Resolución.
               </span>
             </li>
+            <li>
+              <ArrowRight aria-hidden="true" size={20} />
+              <span>
+                <strong>Sin fecha fija.</strong> Prepárate cuando quieras, como quieras y desde
+                donde quieras.
+              </span>
+            </li>
           </ul>
-          <p className="onboarding__dates">
-            <span>09 · 12 · 2026</span>
-            Miércoles · jornada completa
-          </p>
         </div>
       }
     >
@@ -76,7 +79,7 @@ export function WelcomePage() {
           <span className="field__label">¿Cómo te llamas?</span>
           <input
             ref={inputRef}
-            className={touched && error ? 'input input--error' : 'input'}
+            className={touched && error ? 'input input--error input--large' : 'input input--large'}
             value={value}
             onChange={(event) => setValue(event.target.value)}
             onBlur={() => setTouched(true)}
@@ -94,8 +97,8 @@ export function WelcomePage() {
         </label>
 
         <div className="actions">
-          <button className="button" type="submit" disabled={trimmed.length === 0}>
-            Continuar <ArrowRight aria-hidden="true" size={17} />
+          <button className="button button--large" type="submit" disabled={trimmed.length === 0}>
+            Continuar <ArrowRight aria-hidden="true" size={18} />
           </button>
           <span className="muted small">Sin registro, sin correo. Todo queda en este dispositivo.</span>
         </div>
