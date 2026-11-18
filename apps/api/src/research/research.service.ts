@@ -458,11 +458,12 @@ export class ResearchService {
       general: `**Respuesta desde el corpus.** ${lead}`,
     };
 
-    const evidence = top
-      .slice(0, 3)
+    // El primer pasaje ya se citó en la entradilla: la evidencia aporta documentos complementarios.
+    const evidenceDocs = top.length > 1 ? top.slice(1, 4) : top.slice(0, 1);
+    const evidence = evidenceDocs
       .map(
         (doc, index) =>
-          `${index + 1}. **${doc.title}** — ${this.bestExcerpt(doc, question, 360)} _( ${doc.citation.label} )_`,
+          `${index + 1}. **${doc.title}** — ${this.bestExcerpt(doc, question, 360)}\nFuente: _( ${doc.citation.label} )_`,
       )
       .join('\n\n');
 

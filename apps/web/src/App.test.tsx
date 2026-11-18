@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { AppRoutes } from './App';
 import {
@@ -67,6 +67,8 @@ const FLOWS: CommitteeFlow[] = [
 
 beforeEach(() => {
   localStorage.clear();
+  document.documentElement.removeAttribute('data-color-scheme');
+  document.documentElement.style.colorScheme = '';
   Element.prototype.scrollIntoView = vi.fn();
 });
 
@@ -169,21 +171,21 @@ describe.each(FLOWS)('flujo $id', (flow) => {
 });
 
 describe('panel del delegado', () => {
-  it('muestra la bandera del país y rota los datos del día', async () => {
+  it('rota los datos del día sin repetir el bloque anterior', async () => {
     localStorage.setItem('debamun.delegate.v1', profile.delegate.id);
 
     const nextFacts = [
       {
         text: 'El CERN, uno de los mayores laboratorios de física, tiene sede en Ginebra.',
         index: 4,
-        total: 8,
+        total: 10,
         date: '2026-11-16',
         offset: 4,
       },
       {
         text: 'La formación profesional dual combina empresa y escuela.',
         index: 5,
-        total: 8,
+        total: 10,
         date: '2026-11-16',
         offset: 5,
       },
@@ -205,11 +207,51 @@ describe('panel del delegado', () => {
     );
 
     expect(await screen.findByText(factsOfDay[1].text)).toBeTruthy();
-    expect(screen.getByText('1–4 de 8 datos · rotan cada día')).toBeTruthy();
+    expect(screen.getByText('1–4 de 10 datos · rotan cada día')).toBeTruthy();
 
     fireEvent.click(screen.getByRole('button', { name: /Otros datos/ }));
 
     expect(await screen.findByText(nextFacts[0].text)).toBeTruthy();
-    expect(screen.getByText('5–6 de 8 datos · rotan cada día')).toBeTruthy();
+    expect(screen.getByText('5–6 de 10 datos · rotan cada día')).toBeTruthy();
+  });
+});
+
+describe('identidad y tema', () => {
+  it('muestra el logo de podio y corbata junto a DebaMun', async () => {
+    const { container } = render(
+      <MemoryRouter initialEntries={['/bienvenida']}>
+        <AppRoutes />
+      </MemoryRouter>,
+    );
+
+    await screen.findByPlaceholderText('Nombre y apellido');
+
+    const mark = container.querySelector('.brand__mark svg');
+    expect(mark).not.toBeNull();
+    expect(mark?.querySelectorAll('path, rect')).toHaveLength(5);
+  });
+
+  it('alterna el modo oscuro desde el onboarding y lo recuerda', async () => {
+    render(
+      <MemoryRouter initialEntries={['/bienvenida']}>
+        <AppRoutes />
+      </MemoryRouter>,
+    );
+
+    const toDark = await screen.findByRole('button', { name: 'Cambiar a modo oscuro' });
+    fireEvent.click(toDark);
+
+    await waitFor(() => {
+      expect(document.documentElement.getAttribute('data-color-scheme')).toBe('dark');
+    });
+    expect(localStorage.getItem('debamun.color-scheme')).toBe('dark');
+    expect(await screen.findByRole('button', { name: 'Cambiar a modo claro' })).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Cambiar a modo claro' }));
+
+    await waitFor(() => {
+      expect(document.documentElement.getAttribute('data-color-scheme')).toBe('light');
+    });
+    expect(localStorage.getItem('debamun.color-scheme')).toBe('light');
   });
 });

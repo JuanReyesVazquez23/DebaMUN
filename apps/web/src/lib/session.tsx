@@ -79,23 +79,28 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     const delegateId = localStorage.getItem(DELEGATE_KEY);
     const savedProfile = localStorage.getItem(PROFILE_KEY);
 
+    // Restaurar inmediatamente desde localStorage si existe y coincide con el delegado activo.
     if (savedProfile) {
       try {
         const parsed = JSON.parse(savedProfile) as SessionProfile;
-        if (parsed && parsed.delegate && parsed.delegate.id === delegateId) {
+        if (parsed?.delegate?.id && parsed.delegate.id === delegateId) {
           setProfile(parsed);
           setStatus('ready');
+          return;
         }
       } catch {
-        // Ignorar si el profile guardado está corrupto
+        // Perfil corrupto: se descarta y se intenta recuperar del backend.
       }
+      localStorage.removeItem(PROFILE_KEY);
     }
 
+    // No hay sesión guardada: estado anónimo sin tocar nada más.
     if (!delegateId) {
       setStatus('anonymous');
       return;
     }
 
+    // Fallback: si hay delegateId pero no profile guardado, intentar recuperar desde el backend.
     let cancelled = false;
     api
       .profile(delegateId)
@@ -107,13 +112,8 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       })
       .catch(() => {
         if (cancelled) return;
-        // Si el backend no responde, mantener el profile guardado en localStorage.
-        // No se borra nada: la sesión debe persistir indefinidamente.
-        if (!profile && !savedProfile) {
-          setStatus('anonymous');
-        } else if (!profile) {
-          setStatus('ready');
-        }
+        // Nunca borrar la sesión: mantener el delegateId para que el usuario pueda volver a iniciar.
+        setStatus('anonymous');
       });
 
     return () => {

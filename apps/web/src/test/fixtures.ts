@@ -85,7 +85,7 @@ export const committee: CommitteeTopic = {
 export const factOfDay = {
   text: 'Suiza tiene cuatro lenguas oficiales.',
   index: 0,
-  total: 8,
+  total: 10,
   date: '2026-11-16',
   offset: 0,
 };
@@ -95,21 +95,21 @@ export const factsOfDay = [
   {
     text: 'Berna es la ciudad federal, aunque Suiza no tiene una capital formal.',
     index: 1,
-    total: 8,
+    total: 10,
     date: '2026-11-16',
     offset: 1,
   },
   {
     text: 'El Consejo Federal tiene siete miembros y rota su presidencia cada año.',
     index: 2,
-    total: 8,
+    total: 10,
     date: '2026-11-16',
     offset: 2,
   },
   {
     text: 'Ginebra acoge la sede europea de la ONU.',
     index: 3,
-    total: 8,
+    total: 10,
     date: '2026-11-16',
     offset: 3,
   },

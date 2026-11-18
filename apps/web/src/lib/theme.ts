@@ -69,24 +69,31 @@ export const COMMITTEE_ACCENT: Record<CommitteeId, string> = {
 
 /**
  * Traduce la paleta del país a variables CSS. La tinta y el acento se ajustan
- * para mantener contraste AA sobre el papel cálido de la interfaz.
+ * para mantener contraste AA sobre el papel cálido de la interfaz, y se
+ * recalibran cuando el tema es oscuro.
  * La comisión es obligatoria: ninguna comisión actúa como valor por defecto.
  */
-export function themeVars(palette: CountryPalette, committee: CommitteeId): Record<string, string> {
+export function themeVars(
+  palette: CountryPalette,
+  committee: CommitteeId,
+  scheme: 'light' | 'dark' = 'light',
+): Record<string, string> {
   const primary = palette.primary;
   const accent = COMMITTEE_ACCENT[committee];
+  const dark = scheme === 'dark';
+
   return {
     '--country': primary,
     '--country-ink': readableOn(primary),
-    '--country-deep': mix(primary, '#141109', 0.45),
-    '--country-soft': mix(primary, '#fbf7ee', 0.86),
-    '--country-line': mix(primary, '#e6dcc8', 0.55),
-    '--country-wash': mix(primary, '#f7f2e7', 0.93),
-    '--country-halo': rgba(primary, 0.16),
-    '--country-halo-accent': rgba(palette.accent, 0.12),
+    '--country-deep': dark ? mix(primary, '#f3ecd9', 0.42) : mix(primary, '#141109', 0.45),
+    '--country-soft': dark ? mix(primary, '#24211c', 0.8) : mix(primary, '#fbf7ee', 0.86),
+    '--country-line': dark ? mix(primary, '#4a4236', 0.5) : mix(primary, '#e6dcc8', 0.55),
+    '--country-wash': dark ? mix(primary, '#1a1814', 0.88) : mix(primary, '#f7f2e7', 0.93),
+    '--country-halo': rgba(primary, dark ? 0.2 : 0.16),
+    '--country-halo-accent': rgba(palette.accent, dark ? 0.16 : 0.12),
     '--country-accent': palette.accent,
     '--committee': accent,
-    '--committee-soft': mix(accent, '#fbf7ee', 0.9),
+    '--committee-soft': dark ? mix(accent, '#24211c', 0.8) : mix(accent, '#fbf7ee', 0.9),
   };
 }
 

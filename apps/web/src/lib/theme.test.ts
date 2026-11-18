@@ -35,6 +35,17 @@ describe('theme', () => {
     expect(vars['--country-soft']).toMatch(/^#[0-9a-f]{6}$/);
   });
 
+  it('recalibra el tema del país en modo oscuro', () => {
+    const palette = { primary: '#FF5A5F', secondary: '#fff', accent: '#D80621' };
+    const light = themeVars(palette, 'UNESCO');
+    const dark = themeVars(palette, 'UNESCO', 'dark');
+
+    expect(dark['--country']).toBe(light['--country']);
+    expect(dark['--country-soft']).not.toBe(light['--country-soft']);
+    expect(dark['--country-wash']).not.toBe(light['--country-wash']);
+    expect(dark['--country-deep']).not.toBe(light['--country-deep']);
+  });
+
   it('asigna tonos crecientes de puntaje', () => {
     expect(scoreTone(90)).toBe('var(--score-high)');
     expect(scoreTone(65)).toBe('var(--score-mid)');

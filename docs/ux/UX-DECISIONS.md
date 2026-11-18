@@ -21,13 +21,15 @@
 
 ## 3. Flujos
 
-### Onboarding (3 pantallas, una decisión por pantalla)
+### Onboarding (4 pantallas, una decisión por pantalla)
 
 ```
-[Tu nombre] → [Tu país] → [Tu comisión] → [Panel]
+[Tu nombre] → [Tu grado] → [Tu país] → [Tu comisión] → [Panel]
 ```
 
 - Una sola pregunta por pantalla, con el valor explicado al lado.
+- El grado se elige por etapas (primaria 1.º–6.º, secundaria 1.º–6.º y universidad); el nivel de
+  debate sugerido se resalta sin preseleccionar la dificultad.
 - El país se elige con búsqueda y filtro por región; la tarjeta muestra bandera, región y una muestra
   de la paleta para anticipar el tema visual.
 - Escocia lleva la nota "No es Estado miembro de la ONU" en la propia tarjeta, no escondida en el
@@ -41,7 +43,7 @@
 
 - Saludo + resumen del país en una frase: contexto inmediato.
 - Datos del día en un panel con cuatro hechos y rotación al siguiente bloque: contexto útil, no relleno.
-- La bandera del país tiene una ficha propia en el panel, con nombre oficial, región, capital y comisión.
+- La bandera del país vive en el topbar, junto al nombre: identidad permanente sin robar espacio al panel.
 - Readiness con checks ponderados y explicación de qué falta.
 - Progreso del debate con media, mejor y última intervención + historial corto.
 - "Qué haría ahora": cuatro acciones ordenadas por impacto.
@@ -80,6 +82,11 @@
 - **Serif para títulos y citas**, sans para interfaz: jerarquía clara y sensación de documento.
 - **Color del país** en acentos, bordes y marca; el comité aporta un segundo acento (azul UNESCO,
   verde ECOSOC).
+- **Marca:** podio de tres niveles con corbata negra sobre placa crema; la silueta no cambia entre
+  temas para conservar el contraste de la corbata.
+- **Modo claro/oscuro:** preferencia del sistema como valor inicial, conmutador Sol/Luna en el
+  topbar y en el onboarding, persistencia en `localStorage` y variables de país recalibradas para
+  fondo oscuro (`themeVars`).
 - **Tinta sobre color** se calcula por contraste WCAG (`readableOn`), no se fija a mano: cualquier
   paleta nueva sigue siendo legible.
 - **Radios generosos y sombras suaves**: tarjetas que se pueden tocar, no cajas duras.

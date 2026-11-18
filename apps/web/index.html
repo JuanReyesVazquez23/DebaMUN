@@ -4,12 +4,31 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#16130e" />
+    <meta name="theme-color" content="#f5f0e6" />
     <meta
       name="description"
-      content="DebaMun: dossier por país, asistente con fuentes y entrenador de debate para la conferencia 2026."
+      content="DebaMun: dossier por país, asistente con fuentes y entrenador de debate para modelos de las Naciones Unidas."
     />
-    <title>DebaMun · Entrenador de debate para la conferencia 2026</title>
+    <title>DebaMun · Preparación para modelos de las Naciones Unidas</title>
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem('debamun.color-scheme');
+          const scheme =
+            stored === 'dark' || stored === 'light'
+              ? stored
+              : window.matchMedia?.('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.dataset.colorScheme = scheme;
+          document.documentElement.style.colorScheme = scheme;
+          const meta = document.querySelector('meta[name="theme-color"]');
+          if (meta) meta.setAttribute('content', scheme === 'dark' ? '#1a1814' : '#f5f0e6');
+        } catch {
+          /* Sin preferencias guardadas: el tema claro sigue siendo el inicial. */
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

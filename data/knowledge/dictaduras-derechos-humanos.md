@@ -1,6 +1,7 @@
 # Dictaduras, conflictos y regímenes autoritarios en América Latina (siglo XX)
 
 > Fuente: Guía de preparación para delegados · Material editorial sobre historia y derechos humanos
+> URL: https://www.ohchr.org/es/transitional-justice
 > Tema aplicable: Comisiones que aborden democracia, derechos humanos, memoria histórica y justicia transicional.
 
 ## Contexto histórico

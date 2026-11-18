@@ -109,8 +109,6 @@ export function DashboardPage() {
             </Link>
           </div>
         </div>
-
-
       </section>
 
       <div className="dashboard__grid">

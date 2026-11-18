@@ -1,7 +1,6 @@
 # DebaMun
 
-> Plataforma de investigación y entrenamiento para delegados del modelo interno de
-> Naciones Unidas. Plataforma general para prepararse para cualquier modelo de las Naciones Unidas,
+> Plataforma general de investigación y entrenamiento para delegados de modelos de las Naciones Unidas.
 > Dos comisiones: **UNESCO** (IA generativa en educación) y **ECOSOC** (futuro del empleo juvenil ante la IA).
 > Ambas tienen el **mismo peso**: misma rúbrica, mismo dossier y mismo asistente.
 > Ninguna está preseleccionada ni se presenta como recomendada; el orden de la lista no implica prioridad.
@@ -17,12 +16,13 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 | Módulo | Qué hace |
 | --- | --- |
 | Onboarding | Nombre → grado escolar (primaria 1.º–6.º, secundaria 1.º–6.º o universidad) → país → comisión, en cuatro pasos, sin correo ni contraseña. |
-| Dossier | 33 delegaciones con postura en cada comisión, prioridades, vulnerabilidad, palanca, aliados, tensiones, líneas rojas, tips, datos y fuentes. |
-| Datos del día | 8 hechos por país; el panel muestra 4 y permite rotar al siguiente bloque. La selección es determinista por fecha y no repite datos dentro del día. |
+| Dossier | 34 delegaciones con postura en cada comisión, prioridades, vulnerabilidad, palanca, aliados, tensiones, líneas rojas, tips, datos y fuentes. |
+| Datos del día | 10 hechos por país; el panel muestra 4 y permite rotar al siguiente bloque. La selección es determinista por fecha y no repite datos dentro del día. |
 | Asistente | Recuperación por intención y entidades (BM25 + sinónimos + frases) sobre corpus local + servicio Python + LLM opcional. Cada respuesta se adapta a la pregunta y trae fuentes, extractos y nivel de confianza. |
 | Debate | 2.336 combinaciones por comisión, dificultad elegible (Básico, Intermedio, Avanzado), IDs estables y control de preguntas ya usadas por sesión. |
 | Evaluación | Rúbrica contextual en cuatro criterios, con señales de estructura, mecanismo causal, viabilidad y rendición de cuentas; resolución solo cuando la pregunta la exige. |
 | Persistencia | PostgreSQL (local o Neon) con fallback en memoria; Redis/BullMQ opcional con degradación elegante. |
+| Marca y tema | Logo de podio con corbata, modo claro/oscuro persistente y preferencia del sistema como valor inicial. |
 | Accesibilidad | Foco visible, navegación por teclado, `aria-live`, contraste AA, `prefers-reduced-motion` y layout responsive. |
 
 ## Stack
@@ -117,7 +117,7 @@ DebOnu/
 │  ├─ app/                    sanitizer, corpus, pipelines, spiders
 │  └─ tests/                  sanitización, recuperación y esquema de datos
 ├─ data/
-│  ├─ countries/              33 dossieres en 4 JSON
+│  ├─ countries/              34 dossieres en 4 JSON
 │  ├─ knowledge/              guías editoriales de IA, empleo y debate
 │  └─ topics.json             briefing UNESCO/ECOSOC + conferencia
 ├─ db/schema.sql              esquema PostgreSQL (incluye tablas de Fase 1)

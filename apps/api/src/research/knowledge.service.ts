@@ -18,6 +18,20 @@ interface MarkdownDoc {
   title: string;
   text: string;
   citation: CountrySource;
+  /**
+   * País al que pertenece el fragmento. `paises.md` dedica una sección a cada delegación:
+   * sin esta marca, el contexto de Suiza se llenaría de datos de Suecia o Brasil.
+   */
+  country?: string;
+}
+
+/** Compara nombres sin acentos, mayúsculas ni espacios sobrantes. */
+function normalizeName(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
 }
 
 @Injectable()
@@ -112,7 +126,7 @@ export class KnowledgeService implements OnModuleInit {
     );
     push(
       `${country.name} en ${committee.abbr} · prioridades`,
-      stance.priorities.join(' '),
+      stance.priorities.join(' · '),
       committeeSource,
       'country',
       1.2,
@@ -189,6 +203,8 @@ export class KnowledgeService implements OnModuleInit {
     );
 
     for (const doc of this.markdownDocs) {
+      // El dossier de otro país es ruido: la delegación responde con su propio material.
+      if (doc.country && doc.country !== normalizeName(country.name)) continue;
       push(doc.title, doc.text, doc.citation, 'knowledge', 0.9);
     }
 
@@ -215,13 +231,18 @@ export class KnowledgeService implements OnModuleInit {
       return [{ title: fileName.replace('.md', ''), text: raw.trim(), citation }];
     }
 
+    // `paises.md` usa una sección por país: el epígrafe es el nombre de la delegación.
+    const perCountry = fileName === 'paises.md';
+
     return sections
       .map((section) => {
         const [heading, ...body] = section.split(/\r?\n/);
+        const title = heading?.trim() || fileName;
         return {
-          title: heading?.trim() || fileName,
+          title,
           text: body.join('\n').replace(/^>\s*.*$/gm, '').trim(),
           citation,
+          ...(perCountry ? { country: normalizeName(title) } : {}),
         };
       })
       .filter((doc) => doc.text.length > 40);

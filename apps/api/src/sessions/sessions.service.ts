@@ -107,8 +107,9 @@ export class SessionsService {
   }
 
   /**
-   * Devuelve un bloque de datos consecutivo para el día. El punto de partida rota a diario y
-   * `offset` permite pedir el siguiente bloque sin repetir los ya mostrados.
+   * Devuelve un bloque consecutivo de datos para el día. El punto de partida rota a diario y
+   * `offset` permite pedir el siguiente bloque sin repetir los ya mostrados. El último bloque
+   * puede ser más corto para no dar la vuelta y repetir datos del principio.
    */
   getFacts(countryCode: string, offset = 0, count = 4): FactOfDay[] {
     const country = this.countries.getCountry(countryCode);
@@ -118,11 +119,12 @@ export class SessionsService {
     const total = Math.max(1, country.facts.length);
     const base = seedFrom(`${date}:${country.code}`) % total;
     const safeOffset = Math.max(0, Math.floor(offset));
-    const size = Math.min(Math.max(1, Math.floor(count)), total);
+    const start = safeOffset % total;
+    const size = Math.min(Math.max(1, Math.floor(count)), total - start);
 
     return Array.from({ length: size }, (_, position) => {
       const shift = safeOffset + position;
-      const index = (base + shift) % total;
+      const index = (base + start + position) % total;
       return {
         text: country.facts[index] ?? country.summary,
         index,

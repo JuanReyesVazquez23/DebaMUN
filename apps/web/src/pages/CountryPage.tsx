@@ -5,12 +5,14 @@ import { OnboardingShell } from '../components/AppShell';
 import { CountryFlag } from '../components/CountryFlag';
 import { ErrorBlock, LoadingBlock } from '../components/StateBlocks';
 import { api } from '../lib/api';
+import { useColorScheme } from '../lib/color-scheme';
 import { useSession } from '../lib/session';
 import { mix } from '../lib/theme';
 import type { CountrySummary } from '../types';
 
 export function CountryPage() {
   const { draft, setCountry } = useSession();
+  const { isDark } = useColorScheme();
   const navigate = useNavigate();
   const [countries, setCountries] = useState<CountrySummary[]>([]);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
@@ -143,7 +145,9 @@ export function CountryPage() {
                     aria-pressed={isSelected}
                     style={{
                       borderColor: isSelected ? country.palette.primary : undefined,
-                      background: isSelected ? mix(country.palette.primary, '#fffdf8', 0.92) : undefined,
+                      background: isSelected
+                        ? mix(country.palette.primary, isDark ? '#24211c' : '#fffdf8', 0.9)
+                        : undefined,
                     }}
                   >
                     <span className="country-card__top">

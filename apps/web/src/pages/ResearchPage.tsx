@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+﻿import { useCallback, useEffect, useRef, useState } from 'react';
 import {
   ArrowUpRight,
   BadgeCheck,
@@ -11,6 +11,7 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { LoadingBlock } from '../components/StateBlocks';
+import { AnswerText } from '../components/AnswerText';
 import { api } from '../lib/api';
 import { hostOf } from '../lib/format';
 import { useSession } from '../lib/session';
@@ -30,23 +31,6 @@ function parseSources(value: unknown): ResearchSource[] {
     if (!item || typeof item !== 'object') return false;
     const candidate = item as Partial<ResearchSource>;
     return typeof candidate.url === 'string' && typeof candidate.label === 'string';
-  });
-}
-
-function renderAnswer(text: string) {
-  return text.split('\n').map((line, index) => {
-    const trimmed = line.trim();
-    if (!trimmed) return <br key={`br-${index}`} />;
-    const bold = trimmed.match(/^\*\*(.+?)\*\*(.*)$/);
-    if (bold) {
-      return (
-        <p key={`p-${index}`}>
-          <strong>{bold[1]}</strong>
-          {bold[2]}
-        </p>
-      );
-    }
-    return <p key={`p-${index}`}>{trimmed}</p>;
   });
 }
 
@@ -179,7 +163,9 @@ export function ResearchPage() {
                       ) : null}
                     </span>
                   </header>
-                  <div className="bubble__body">{renderAnswer(message.content)}</div>
+                  <div className="bubble__body">
+                    <AnswerText text={message.content} />
+                  </div>
 
                   {message.sources.length > 0 ? (
                     <footer className="bubble__sources">

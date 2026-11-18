@@ -1,7 +1,10 @@
-import { useCallback, useEffect, useState, type CSSProperties, type ReactNode } from 'react';
+import { useEffect, type CSSProperties, type ReactNode } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { BookOpen, Compass, LogOut, MessagesSquare, Moon, Sun, Swords } from 'lucide-react';
+import { BookOpen, Compass, LogOut, MessagesSquare, Swords } from 'lucide-react';
+import { BrandMark } from './BrandMark';
 import { CountryFlag } from './CountryFlag';
+import { ThemeToggle } from './ThemeToggle';
+import { useColorScheme } from '../lib/color-scheme';
 import { useSession } from '../lib/session';
 import { themeVars } from '../lib/theme';
 import { initials } from '../lib/format';
@@ -22,6 +25,7 @@ const ROOM: Record<CommitteeId, string> = {
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <span className={compact ? 'brand brand--compact' : 'brand'}>
+      <BrandMark />
       <span className="brand__word">
         Deba<span>Mun</span>
       </span>
@@ -31,24 +35,8 @@ export function Brand({ compact = false }: { compact?: boolean }) {
 
 export function AppShell({ children }: { children: ReactNode }) {
   const { profile, signOut } = useSession();
+  const { scheme } = useColorScheme();
   const navigate = useNavigate();
-
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    const saved = localStorage.getItem('debamun.color-scheme');
-    const prefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
-    const enabled = saved ? saved === 'dark' : prefersDark;
-    setDarkMode(enabled);
-    document.documentElement.setAttribute('data-color-scheme', enabled ? 'dark' : 'light');
-  }, []);
-
-  const toggleDarkMode = useCallback(() => {
-    const next = !darkMode;
-    setDarkMode(next);
-    document.documentElement.setAttribute('data-color-scheme', next ? 'dark' : 'light');
-    localStorage.setItem('debamun.color-scheme', next ? 'dark' : 'light');
-  }, [darkMode]);
 
   useEffect(() => {
     document.title = profile ? `${profile.country.name} · DebaMun` : 'DebaMun';
@@ -56,7 +44,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
   if (!profile) return <>{children}</>;
 
-  const style = themeVars(profile.country.palette, profile.committee.id);
+  const style = themeVars(profile.country.palette, profile.committee.id, scheme);
 
   return (
     <div className="shell" style={style as CSSProperties}>
@@ -92,15 +80,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                 <span>{ROOM[profile.committee.id]}</span>
               </span>
             </div>
-            <button
-              type="button"
-              className="icon-button"
-              onClick={toggleDarkMode}
-              title={darkMode ? 'Modo claro' : 'Modo oscuro'}
-              aria-label={darkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-            >
-              {darkMode ? <Sun aria-hidden="true" size={17} /> : <Moon aria-hidden="true" size={17} />}
-            </button>
+            <ThemeToggle />
             <button
               type="button"
               className="icon-button"
@@ -169,6 +149,7 @@ export function OnboardingShell({
     <div className="onboarding">
       <header className="onboarding__head">
         <Brand />
+        <ThemeToggle />
       </header>
 
       <div className="onboarding__body">

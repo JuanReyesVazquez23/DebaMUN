@@ -17,17 +17,17 @@ Cada función del producto responde a ese trabajo (ver `docs/ux/`).
 
 - Onboarding en 3 pasos: nombre → país → comisión.
 - Personalización visual por país (paleta accesible, bandera, identidad).
-- Dossier editorial de 33 países con postura UNESCO y ECOSOC, alianzas, tensiones, tips y fuentes.
-- Datos del día rotativos por país: 8 por país, bloque de 4 en el panel y selección determinista por fecha.
+- Dossier editorial de 34 países con postura UNESCO y ECOSOC, alianzas, tensiones, tips y fuentes.
+- Datos del día rotativos por país: 10 por país, bloque de 4 en el panel y selección determinista por fecha.
 - Briefing de comisión con subtemas, preguntas clave, glosario y fuentes.
 - Asistente de investigación con recuperación local, citas y fallback al servicio Python.
 - Simulador de debate: preguntas combinatorias que no se repiten, modo relámpago y evaluación en
   **Diálogo, Argumentos, Coherencia y Resolución**.
 - Persistencia PostgreSQL (compatible Neon) con fallback en memoria; Redis/BullMQ opcional.
-- 33 países: Suiza, Escocia, Canadá, Japón, Corea del Sur, Colombia, Alemania, Singapur, España,
+- 34 países: Suiza, Escocia, Canadá, Japón, Corea del Sur, Colombia, Alemania, Singapur, España,
   Polonia, Estonia, China, El Salvador, Brasil, Francia, Suecia, Noruega, Finlandia, Irlanda,
   Islandia, Reino Unido, Rusia, México, India, Sudáfrica, Australia, Argentina, Chile, Perú,
-  Países Bajos, Bélgica, Portugal e Italia.
+  Países Bajos, Bélgica, Portugal, Italia y Paraguay.
 - Accesibilidad WCAG AA, navegación por teclado, reduced motion y diseño responsive.
 - Tests unitarios de scoring, generador de preguntas, sanitizador y utilidades de frontend.
 

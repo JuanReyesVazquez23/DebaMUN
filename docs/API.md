@@ -26,7 +26,7 @@ El frontend muestra el primer mensaje de validación y ofrece reintento en error
   "status": "ok",
   "service": "debamun-api",
   "version": "0.1.0",
-  "corpus": { "countries": 33, "committees": ["UNESCO", "ECOSOC"] },
+  "corpus": { "countries": 34, "committees": ["UNESCO", "ECOSOC"] },
   "services": {
     "database": "up",
     "cache": "memory",
@@ -108,7 +108,7 @@ Respuesta `201`:
   },
   "country": { "…": "dossier completo" },
   "committee": { "…": "briefing completo" },
-  "factOfDay": { "text": "…", "index": 2, "total": 8, "date": "2026-11-16", "offset": 0 },
+  "factOfDay": { "text": "…", "index": 2, "total": 10, "date": "2026-11-16", "offset": 0 },
   "conference": { "name": "DebaMun", "date": "" },
 }
 ```
@@ -125,7 +125,7 @@ Mismo cuerpo que la creación. Actualiza `last_seen_at`.
   "country": { "…": "…" },
   "committee": { "…": "…" },
   "factOfDay": { "…": "…" },
-  "factsOfDay": [{ "text": "…", "index": 4, "total": 8, "date": "2026-11-16", "offset": 0 }],
+  "factsOfDay": [{ "text": "…", "index": 4, "total": 10, "date": "2026-11-16", "offset": 0 }],
   "conference": { "name": "DebaMun", "date": "" },
   "readiness": {
     "score": 45,
@@ -151,8 +151,9 @@ del día sin salir de la lista.
 
 ### `GET /facts/day?countryCode=CH&offset=0`
 
-Devuelve `{ "date": "2026-11-16", "facts": [...] }` con cuatro datos consecutivos. El punto de
-partida rota a diario; usar `offset=4` entrega el bloque siguiente sin repetir el anterior.
+Devuelve `{ "date": "2026-11-16", "facts": [...] }` con hasta cuatro datos consecutivos. El punto de
+partida rota a diario; usar `offset=4` entrega el bloque siguiente sin repetir el anterior. El último
+bloque puede ser más corto para no dar la vuelta a la lista.
 
 ---
 
@@ -325,7 +326,7 @@ Encola `research-refresh` (3 intentos, backoff exponencial) o devuelve un job in
 {
   "status": "ok",
   "service": "debamun-research",
-  "corpus": { "documents": 513, "countries": 33, "sources": 9, "scraped": 0 }
+  "corpus": { "documents": 513, "countries": 34, "sources": 9, "scraped": 0 }
 }
 ```
 

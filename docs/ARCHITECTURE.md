@@ -219,7 +219,7 @@ La ingesta escribe `data/scraped/passages.jsonl`; el corpus recarga cuando cambi
 - Caché de respuestas de investigación (10 min) y de documentos de conocimiento por país+comisión.
 - Preguntas generadas bajo demanda: no se materializan 2.336 objetos por sesión.
 - Pool PostgreSQL de 8 conexiones por defecto; sin ORM para evitar sobrecarga.
-- Build web: ~324 kB JS (100 kB gzip) y 33 kB CSS (7 kB gzip).
+- Build web: ~356 kB JS (109 kB gzip) y 43 kB CSS (8.3 kB gzip).
 
 ## 8. Puntos de extensión
 
