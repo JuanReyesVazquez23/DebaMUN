@@ -18,7 +18,7 @@ import { CriterionCard } from '../components/CriterionCard';
 import { ScoreRing } from '../components/ScoreRing';
 import { ErrorBlock, LoadingBlock } from '../components/StateBlocks';
 import { api } from '../lib/api';
-import { countWords, formatSeconds, gradeLabel, KIND_LABEL } from '../lib/format';
+import { countWords, formatSeconds, gradeLabel, KIND_LABEL, normalizeGrade } from '../lib/format';
 import { useSession } from '../lib/session';
 import type { GeneratedQuestion, GradeId, TurnResult } from '../types';
 
@@ -60,13 +60,28 @@ const LEVEL_NAME: Record<Difficulty, string> = {
   3: 'Avanzado',
 };
 
-const GRADE_ORDER: GradeId[] = ['6', '7', '8', '9', '10', '11', '12', 'universidad'];
+const GRADE_ORDER: GradeId[] = [
+  'primaria-1',
+  'primaria-2',
+  'primaria-3',
+  'primaria-4',
+  'primaria-5',
+  'primaria-6',
+  'secundaria-1',
+  'secundaria-2',
+  'secundaria-3',
+  'secundaria-4',
+  'secundaria-5',
+  'secundaria-6',
+  'universidad',
+];
 
 function suggestedLevel(grade: GradeId | null | undefined): Difficulty {
-  if (!grade) return 2;
-  const index = GRADE_ORDER.indexOf(grade);
-  if (index <= 1) return 1;
-  if (index <= 4) return 2;
+  const normalized = normalizeGrade(grade);
+  if (!normalized) return 2;
+  const index = GRADE_ORDER.indexOf(normalized);
+  if (index <= 2) return 1;
+  if (index <= 7) return 2;
   return 3;
 }
 

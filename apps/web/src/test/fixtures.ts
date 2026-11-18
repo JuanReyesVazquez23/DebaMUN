@@ -85,10 +85,35 @@ export const committee: CommitteeTopic = {
 export const factOfDay = {
   text: 'Suiza tiene cuatro lenguas oficiales.',
   index: 0,
-  total: 2,
+  total: 8,
   date: '2026-11-16',
   offset: 0,
 };
+
+export const factsOfDay = [
+  factOfDay,
+  {
+    text: 'Berna es la ciudad federal, aunque Suiza no tiene una capital formal.',
+    index: 1,
+    total: 8,
+    date: '2026-11-16',
+    offset: 1,
+  },
+  {
+    text: 'El Consejo Federal tiene siete miembros y rota su presidencia cada año.',
+    index: 2,
+    total: 8,
+    date: '2026-11-16',
+    offset: 2,
+  },
+  {
+    text: 'Ginebra acoge la sede europea de la ONU.',
+    index: 3,
+    total: 8,
+    date: '2026-11-16',
+    offset: 3,
+  },
+];
 
 export const profile: SessionProfile = {
   delegate: {
@@ -96,7 +121,7 @@ export const profile: SessionProfile = {
     username: 'Valentina Ríos',
     countryCode: 'CH',
     committee: 'UNESCO',
-    grade: '10',
+    grade: 'secundaria-5',
     createdAt: '2026-11-16T10:00:00.000Z',
   },
   country,
@@ -108,6 +133,7 @@ export const profile: SessionProfile = {
 
 export const dashboard: DashboardData = {
   ...profile,
+  factsOfDay,
   readiness: {
     score: 45,
     label: 'En preparación',

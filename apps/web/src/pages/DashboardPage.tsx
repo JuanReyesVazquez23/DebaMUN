@@ -7,17 +7,21 @@ import {
   Check,
   Circle,
   Gauge,
+  Landmark,
+  MapPin,
   MessagesSquare,
-  Quote,
+  RefreshCw,
+  Sparkles,
   Swords,
   Target,
 } from 'lucide-react';
+import { CountryFlag } from '../components/CountryFlag';
 import { ScoreRing } from '../components/ScoreRing';
 import { ErrorBlock, LoadingBlock } from '../components/StateBlocks';
 import { api } from '../lib/api';
 import { formatDateTime, gradeLabel, longDate } from '../lib/format';
 import { useSession } from '../lib/session';
-import type { DashboardData } from '../types';
+import type { DashboardData, FactOfDay } from '../types';
 
 function greeting(): string {
   const hour = new Date().getHours();
@@ -32,6 +36,9 @@ export function DashboardPage() {
   const [data, setData] = useState<DashboardData | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [error, setError] = useState('');
+  const [facts, setFacts] = useState<FactOfDay[]>([]);
+  const [factOffset, setFactOffset] = useState(0);
+  const [factsBusy, setFactsBusy] = useState(false);
 
   const load = useCallback(() => {
     if (!profile) return;
@@ -40,6 +47,8 @@ export function DashboardPage() {
       .dashboard(profile.delegate.id)
       .then((next) => {
         setData(next);
+        setFacts(next.factsOfDay ?? [next.factOfDay]);
+        setFactOffset(0);
         setStatus('ready');
       })
       .catch((cause: unknown) => {
@@ -55,8 +64,28 @@ export function DashboardPage() {
   if (status === 'error' && !data) return <ErrorBlock message={error} onRetry={load} />;
   if (!data) return null;
 
-  const { country, committee, readiness, debate, factOfDay } = data;
+  const { country, committee, readiness, debate } = data;
   const averageTone = debate.average >= 70 ? 'alta' : debate.average >= 50 ? 'media' : 'inicial';
+  const totalFacts = facts[0]?.total ?? 0;
+
+  async function loadOtherFacts() {
+    if (!data || factsBusy) return;
+    const nextOffset = factOffset + facts.length >= totalFacts ? 0 : factOffset + facts.length;
+    setFactsBusy(true);
+    try {
+      if (nextOffset === 0) {
+        setFacts(data.factsOfDay ?? [data.factOfDay]);
+      } else {
+        const response = await api.factsOfDay(country.code, nextOffset);
+        setFacts(response.facts);
+      }
+      setFactOffset(nextOffset);
+    } catch {
+      // Si falla la petición, conservamos los datos que ya están en pantalla.
+    } finally {
+      setFactsBusy(false);
+    }
+  }
 
   return (
     <div className="dashboard">
@@ -92,21 +121,65 @@ export function DashboardPage() {
           </div>
         </div>
 
-        <div className="fact">
-          <p className="eyebrow">
-            <Quote aria-hidden="true" size={13} /> Dato del día · {country.name}
-          </p>
-          <p className="fact__text">{factOfDay.text}</p>
-          <p className="fact__meta">
-            {factOfDay.index + 1} de {factOfDay.total} · rota cada día
-          </p>
-          <div className="fact__flag" aria-hidden="true">
-            {country.flag}
-          </div>
-        </div>
+        <aside className="hero__side" aria-label={`Ficha de ${country.name}`}>
+          <article className="flag-card">
+            <CountryFlag code={country.code} name={country.name} className="flag-card__flag" />
+            <div className="flag-card__body">
+              <p className="eyebrow">Tu delegación</p>
+              <h2>{country.officialName}</h2>
+              <ul className="flag-card__meta">
+                <li>
+                  <MapPin aria-hidden="true" size={14} /> {country.region}
+                </li>
+                <li>
+                  <Landmark aria-hidden="true" size={14} /> {country.capital}
+                </li>
+                <li>
+                  <MessagesSquare aria-hidden="true" size={14} /> {committee.abbr} ·{' '}
+                  {committee.shortTopic}
+                </li>
+              </ul>
+            </div>
+          </article>
+        </aside>
       </section>
 
       <div className="dashboard__grid">
+        <section className="panel panel--facts" aria-labelledby="facts-title">
+          <header className="panel__head">
+            <div>
+              <p className="eyebrow">
+                <Sparkles aria-hidden="true" size={13} /> Datos del día
+              </p>
+              <h2 id="facts-title">{country.name} en cifras y contexto</h2>
+            </div>
+            <button
+              className="button button--ghost button--tiny"
+              type="button"
+              onClick={() => void loadOtherFacts()}
+              disabled={factsBusy || totalFacts <= facts.length}
+            >
+              <RefreshCw aria-hidden="true" size={14} className={factsBusy ? 'spin' : undefined} />
+              Otros datos
+            </button>
+          </header>
+
+          <ol className="fact-grid">
+            {facts.map((fact, index) => (
+              <li key={`${fact.offset}-${fact.index}`} className="fact-item">
+                <span className="fact-item__num">{String(factOffset + index + 1).padStart(2, '0')}</span>
+                <p>{fact.text}</p>
+              </li>
+            ))}
+          </ol>
+
+          <p className="fact-foot">
+            {totalFacts > 0
+              ? `${Math.min(factOffset + 1, totalFacts)}–${Math.min(factOffset + facts.length, totalFacts)} de ${totalFacts} datos · rotan cada día`
+              : 'Sin datos disponibles por ahora.'}
+          </p>
+        </section>
+
         <section className="panel panel--readiness" aria-labelledby="readiness-title">
           <header className="panel__head">
             <div>

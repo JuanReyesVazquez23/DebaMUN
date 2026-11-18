@@ -60,18 +60,43 @@ export const KIND_LABEL: Record<string, string> = {
 };
 
 export const GRADE_LABEL: Record<GradeId, string> = {
-  '6': '6.º grado',
-  '7': '7.º grado',
-  '8': '8.º grado',
-  '9': '9.º grado',
-  '10': '10.º grado',
-  '11': '11.º grado',
-  '12': '12.º grado',
+  'primaria-1': '1.º de primaria',
+  'primaria-2': '2.º de primaria',
+  'primaria-3': '3.º de primaria',
+  'primaria-4': '4.º de primaria',
+  'primaria-5': '5.º de primaria',
+  'primaria-6': '6.º de primaria',
+  'secundaria-1': '1.º de secundaria',
+  'secundaria-2': '2.º de secundaria',
+  'secundaria-3': '3.º de secundaria',
+  'secundaria-4': '4.º de secundaria',
+  'secundaria-5': '5.º de secundaria',
+  'secundaria-6': '6.º de secundaria',
   universidad: 'Universidad',
 };
 
-export function gradeLabel(grade?: GradeId | null): string {
-  return grade ? GRADE_LABEL[grade] : 'Grado sin indicar';
+/** Grados guardados con el esquema anterior (6.º a 12.º). */
+const LEGACY_GRADE: Record<string, GradeId> = {
+  '6': 'primaria-6',
+  '7': 'secundaria-1',
+  '8': 'secundaria-2',
+  '9': 'secundaria-3',
+  '10': 'secundaria-4',
+  '11': 'secundaria-5',
+  '12': 'secundaria-6',
+  universidad: 'universidad',
+};
+
+/** Acepta el id actual o uno antiguo guardado en localStorage. */
+export function normalizeGrade(grade?: string | null): GradeId | null {
+  if (!grade) return null;
+  if (Object.hasOwn(GRADE_LABEL, grade)) return grade as GradeId;
+  return LEGACY_GRADE[grade] ?? null;
+}
+
+export function gradeLabel(grade?: string | null): string {
+  const normalized = normalizeGrade(grade);
+  return normalized ? GRADE_LABEL[normalized] : 'Grado sin indicar';
 }
 
 export function formatSeconds(seconds: number): string {

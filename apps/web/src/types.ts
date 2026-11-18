@@ -1,6 +1,19 @@
 export type CommitteeId = 'UNESCO' | 'ECOSOC';
 
-export type GradeId = '6' | '7' | '8' | '9' | '10' | '11' | '12' | 'universidad';
+export type GradeId =
+  | 'primaria-1'
+  | 'primaria-2'
+  | 'primaria-3'
+  | 'primaria-4'
+  | 'primaria-5'
+  | 'primaria-6'
+  | 'secundaria-1'
+  | 'secundaria-2'
+  | 'secundaria-3'
+  | 'secundaria-4'
+  | 'secundaria-5'
+  | 'secundaria-6'
+  | 'universidad';
 
 export interface CountryPalette {
   primary: string;
@@ -128,6 +141,7 @@ export interface ReadinessCheck {
 }
 
 export interface DashboardData extends SessionProfile {
+  factsOfDay: FactOfDay[];
   readiness: {
     score: number;
     label: string;

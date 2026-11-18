@@ -18,7 +18,7 @@ Cada función del producto responde a ese trabajo (ver `docs/ux/`).
 - Onboarding en 3 pasos: nombre → país → comisión.
 - Personalización visual por país (paleta accesible, bandera, identidad).
 - Dossier editorial de 33 países con postura UNESCO y ECOSOC, alianzas, tensiones, tips y fuentes.
-- Dato del día rotativo por país (determinista por fecha, sin repetir hasta agotar).
+- Datos del día rotativos por país: 8 por país, bloque de 4 en el panel y selección determinista por fecha.
 - Briefing de comisión con subtemas, preguntas clave, glosario y fuentes.
 - Asistente de investigación con recuperación local, citas y fallback al servicio Python.
 - Simulador de debate: preguntas combinatorias que no se repiten, modo relámpago y evaluación en

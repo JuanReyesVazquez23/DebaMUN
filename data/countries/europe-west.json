@@ -44,7 +44,11 @@
       "Suiza tiene cuatro idiomas oficiales: alemán, francés, italiano y romanche.",
       "Berna es la ciudad federal, aunque Suiza no tiene una capital formal en su Constitución.",
       "El Consejo Federal, órgano ejecutivo colegiado de siete miembros, rota su presidencia cada año.",
-      "Ginebra acoge la sede europea de la ONU y numerosas organizaciones internacionales."
+      "Ginebra acoge la sede europea de la ONU y numerosas organizaciones internacionales.",
+      "Suiza es miembro de la OCDE desde 1961.",
+      "No pertenece a la Unión Europea, pero mantiene acuerdos bilaterales con ella.",
+      "El CERN, uno de los mayores laboratorios de física del mundo, tiene sede en Ginebra.",
+      "Su formación profesional dual combina aprendizaje en empresa y escuela."
     ],
     "sources": [
       { "label": "Administración Federal Suiza", "url": "https://www.admin.ch/", "kind": "official" },
@@ -98,7 +102,11 @@
       "Edimburgo es la capital y sede del Parlamento escocés, restablecido en 1999.",
       "Escocia tiene más de 700 islas, muchas de ellas habitadas.",
       "El gaélico escocés es una lengua celta reconocida oficialmente, junto al escocés.",
-      "Glasgow acogió la COP26 de cambio climático en 2021."
+      "Glasgow acogió la COP26 de cambio climático en 2021.",
+      "Escocia forma parte del Reino Unido y no es un Estado miembro de la ONU.",
+      "Edimburgo es la capital y sede del Parlamento escocés.",
+      "En el referéndum de independencia de 2014 ganó el 'no' con el 55 % de los votos.",
+      "Escocia tiene su propia política educativa y un sistema universitario de cuatro años."
     ],
     "sources": [
       { "label": "Gobierno de Escocia", "url": "https://www.gov.scot/", "kind": "official" },
@@ -151,7 +159,11 @@
       "Alemania es una república federal con 16 estados (Länder).",
       "La formación profesional dual combina aprendizaje en empresa y escuela técnica.",
       "Bonn alberga sedes de varias organizaciones de las Naciones Unidas.",
-      "La Ley Fundamental de 1949 establece la protección de la dignidad humana como principio central."
+      "La Ley Fundamental de 1949 establece la protección de la dignidad humana como principio central.",
+      "Alemania es miembro de la OCDE desde 1961.",
+      "Es el país más poblado de la Unión Europea.",
+      "Su formación profesional dual es una referencia internacional.",
+      "Ingresó en la ONU en 1973, junto con la República Democrática Alemana."
     ],
     "sources": [
       { "label": "Gobierno Federal de Alemania", "url": "https://www.bundesregierung.de/", "kind": "official" },
@@ -204,7 +216,11 @@
       "España tiene 17 comunidades autónomas y dos ciudades autónomas.",
       "El español es lengua oficial en España y en 20 países de América y África.",
       "La Constitución de 1978 reconoce el derecho a la autonomía de las nacionalidades y regiones.",
-      "España es uno de los países con más sitios inscritos en la Lista del Patrimonio Mundial de UNESCO."
+      "España es uno de los países con más sitios inscritos en la Lista del Patrimonio Mundial de UNESCO.",
+      "España es miembro de la ONU desde 1955 y de la OCDE desde 1961.",
+      "Cuenta con medio centenar de sitios declarados Patrimonio Mundial por la UNESCO.",
+      "El español es la segunda lengua materna más hablada del mundo.",
+      "Es uno de los países con mayor esperanza de vida de la Unión Europea."
     ],
     "sources": [
       { "label": "Gobierno de España", "url": "https://www.lamoncloa.gob.es/", "kind": "official" },
@@ -257,7 +273,11 @@
       "Francia es miembro permanente del Consejo de Seguridad de la ONU desde 1945.",
       "El francés es lengua oficial en decenas de países y una de las seis lenguas oficiales de la ONU.",
       "París alberga la sede de UNESCO.",
-      "Francia es el país más visitado del mundo por turistas internacionales."
+      "Francia es el país más visitado del mundo por turistas internacionales.",
+      "Francia es miembro permanente del Consejo de Seguridad de la ONU.",
+      "El francés es una de las seis lenguas oficiales de la ONU.",
+      "Es el país más visitado del mundo por turistas internacionales.",
+      "La educación obligatoria comienza a los 3 años desde 2019."
     ],
     "sources": [
       { "label": "Gobierno de Francia", "url": "https://www.gouvernement.fr/", "kind": "official" },
@@ -310,7 +330,11 @@
       "El irlandés es la primera lengua oficial, aunque el inglés predomina en la vida cotidiana.",
       "Dublín es sede europea de varias empresas tecnológicas globales.",
       "Irlanda es un Estado neutral que no pertenece a la OTAN.",
-      "El Libro de Kells, manuscrito medieval, se conserva en Trinity College Dublin."
+      "El Libro de Kells, manuscrito medieval, se conserva en Trinity College Dublin.",
+      "Irlanda es miembro de la OCDE desde 1961.",
+      "Dublín alberga sedes europeas de grandes empresas tecnológicas.",
+      "El irlandés es lengua oficial junto al inglés, aunque se habla a diario en pocas zonas.",
+      "Es uno de los países de la UE con mayor PIB per cápita."
     ],
     "sources": [
       { "label": "Gobierno de Irlanda", "url": "https://www.gov.ie/", "kind": "official" },
@@ -363,7 +387,11 @@
       "El Reino Unido es miembro permanente del Consejo de Seguridad de la ONU.",
       "Está formado por Inglaterra, Escocia, Gales e Irlanda del Norte.",
       "La Commonwealth agrupa a más de 50 países, muchos con vínculos históricos con el Reino Unido.",
-      "Londres es uno de los centros financieros más importantes del mundo."
+      "Londres es uno de los centros financieros más importantes del mundo.",
+      "El Servicio Nacional de Salud (NHS) ofrece atención sanitaria pública desde 1948.",
+      "Perteneció a la Unión Europea entre 1973 y 2020.",
+      "La BBC es uno de los servicios públicos de radiodifusión más antiguos del mundo.",
+      "Es miembro de la OCDE, del G7 y de la OTAN."
     ],
     "sources": [
       { "label": "Gobierno del Reino Unido", "url": "https://www.gov.uk/", "kind": "official" },
@@ -416,7 +444,11 @@
       "Ámsterdam es la capital, pero el gobierno y el parlamento tienen sede en La Haya.",
       "La Haya alberga la Corte Internacional de Justicia y la Corte Penal Internacional.",
       "Una parte importante del territorio neerlandés está por debajo del nivel del mar.",
-      "Los Países Bajos son un gran exportador agrícola pese a su pequeño tamaño."
+      "Los Países Bajos son un gran exportador agrícola pese a su pequeño tamaño.",
+      "Países Bajos es miembro fundador de la OCDE y de la OTAN.",
+      "Es uno de los países con mayor uso de la bicicleta por habitante.",
+      "Róterdam es el mayor puerto de Europa.",
+      "Su economía es una de las más abiertas y orientadas al comercio del mundo."
     ],
     "sources": [
       { "label": "Gobierno de los Países Bajos", "url": "https://www.government.nl/", "kind": "official" },
@@ -469,7 +501,11 @@
       "Bélgica tiene tres lenguas oficiales: neerlandés, francés y alemán.",
       "Bruselas es sede de la Comisión Europea, el Consejo Europeo y la OTAN.",
       "El país se organiza en tres regiones y tres comunidades lingüísticas.",
-      "Bruselas es oficialmente bilingüe (neerlandés y francés)."
+      "Bruselas es oficialmente bilingüe (neerlandés y francés).",
+      "Bélgica alberga las instituciones principales de la Unión Europea en Bruselas.",
+      "Es miembro fundador de la OTAN y de la OCDE.",
+      "Tiene tres lenguas oficiales: neerlandés, francés y alemán.",
+      "Su sistema educativo está organizado por comunidades lingüísticas."
     ],
     "sources": [
       { "label": "Gobierno de Bélgica", "url": "https://www.belgium.be/", "kind": "official" },
@@ -522,7 +558,11 @@
       "Portugal tiene dos archipiélagos atlánticos: Azores y Madeira.",
       "El portugués es lengua oficial en Portugal, Brasil y varios países africanos.",
       "Portugal ingresó en la Comunidad Europea en 1986.",
-      "Lisboa es una de las capitales más antiguas de Europa occidental."
+      "Lisboa es una de las capitales más antiguas de Europa occidental.",
+      "Portugal es miembro de la ONU desde 1955 y de la OCDE desde 1961.",
+      "Es uno de los países europeos con mayor proporción de electricidad renovable.",
+      "Lisboa acoge la sede de la Comunidad de Países de Lengua Portuguesa.",
+      "Tiene una de las mayores zonas económicas exclusivas marítimas de Europa."
     ],
     "sources": [
       { "label": "Gobierno de Portugal", "url": "https://www.portugal.gov.pt/", "kind": "official" },
@@ -575,7 +615,11 @@
       "Italia es el país con más sitios inscritos en la Lista del Patrimonio Mundial de UNESCO.",
       "Roma alberga la sede de la FAO, el Programa Mundial de Alimentos y otras agencias de la ONU.",
       "Italia fue uno de los seis países fundadores de la Comunidad Europea en 1957.",
-      "El país tiene 20 regiones, cinco de ellas con estatuto especial."
+      "El país tiene 20 regiones, cinco de ellas con estatuto especial.",
+      "Italia ingresó en la ONU en 1955.",
+      "Es uno de los países con más sitios Patrimonio Mundial de la UNESCO.",
+      "Es miembro fundador de la Unión Europea.",
+      "Su educación secundaria superior dura cinco años y combina ciclos técnicos y académicos."
     ],
     "sources": [
       { "label": "Gobierno de Italia", "url": "https://www.governo.it/", "kind": "official" },

@@ -5,28 +5,45 @@ import { OnboardingShell } from '../components/AppShell';
 import { useSession } from '../lib/session';
 import type { GradeId } from '../types';
 
+type GradeStage = 'primaria' | 'secundaria' | 'universidad';
+
 interface GradeOption {
   id: GradeId;
   label: string;
   hint: string;
-  stage: 'colegio' | 'universidad';
+  stage: GradeStage;
 }
 
+const YEAR_HINT = ['Primer año', 'Segundo año', 'Tercer año', 'Cuarto año', 'Quinto año', 'Sexto año'];
+
 const GRADES: GradeOption[] = [
-  { id: '6', label: '6.º grado', hint: 'Primer año de secundaria', stage: 'colegio' },
-  { id: '7', label: '7.º grado', hint: 'Segundo año de secundaria', stage: 'colegio' },
-  { id: '8', label: '8.º grado', hint: 'Tercer año de secundaria', stage: 'colegio' },
-  { id: '9', label: '9.º grado', hint: 'Cuarto año de secundaria', stage: 'colegio' },
-  { id: '10', label: '10.º grado', hint: 'Quinto año de secundaria', stage: 'colegio' },
-  { id: '11', label: '11.º grado', hint: 'Penúltimo año de secundaria', stage: 'colegio' },
-  { id: '12', label: '12.º grado', hint: 'Último año de secundaria', stage: 'colegio' },
-  { id: 'universidad', label: 'Universidad', hint: 'Pregrado o ciclo técnico superior', stage: 'universidad' },
+  ...YEAR_HINT.map((hint, index) => ({
+    id: `primaria-${index + 1}` as GradeId,
+    label: `${index + 1}.º de primaria`,
+    hint,
+    stage: 'primaria' as const,
+  })),
+  ...YEAR_HINT.map((hint, index) => ({
+    id: `secundaria-${index + 1}` as GradeId,
+    label: `${index + 1}.º de secundaria`,
+    hint,
+    stage: 'secundaria' as const,
+  })),
+  {
+    id: 'universidad',
+    label: 'Universidad',
+    hint: 'Pregrado o ciclo técnico superior',
+    stage: 'universidad',
+  },
 ];
 
-const STAGE_LABEL: Record<GradeOption['stage'], string> = {
-  colegio: 'Colegio',
+const STAGE_LABEL: Record<GradeStage, string> = {
+  primaria: 'Primaria',
+  secundaria: 'Secundaria',
   universidad: 'Educación superior',
 };
+
+const STAGE_ORDER: GradeStage[] = ['primaria', 'secundaria', 'universidad'];
 
 export function GradePage() {
   const { draft, setGrade } = useSession();
@@ -72,7 +89,7 @@ export function GradePage() {
       }
     >
       <div className="grade-groups">
-        {(['colegio', 'universidad'] as const).map((stage) => {
+        {STAGE_ORDER.map((stage) => {
           const options = GRADES.filter((grade) => grade.stage === stage);
           return (
             <section key={stage} className="grade-group" aria-label={STAGE_LABEL[stage]}>

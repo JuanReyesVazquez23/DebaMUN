@@ -16,9 +16,9 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 
 | Módulo | Qué hace |
 | --- | --- |
-| Onboarding | Nombre → grado escolar → país → comisión, en cuatro pasos, sin correo ni contraseña. |
+| Onboarding | Nombre → grado escolar (primaria 1.º–6.º, secundaria 1.º–6.º o universidad) → país → comisión, en cuatro pasos, sin correo ni contraseña. |
 | Dossier | 33 delegaciones con postura en cada comisión, prioridades, vulnerabilidad, palanca, aliados, tensiones, líneas rojas, tips, datos y fuentes. |
-| Dato del día | Hecho rotativo y determinista por fecha y país; no se repite hasta agotar la lista. |
+| Datos del día | 8 hechos por país; el panel muestra 4 y permite rotar al siguiente bloque. La selección es determinista por fecha y no repite datos dentro del día. |
 | Asistente | Recuperación por intención y entidades (BM25 + sinónimos + frases) sobre corpus local + servicio Python + LLM opcional. Cada respuesta se adapta a la pregunta y trae fuentes, extractos y nivel de confianza. |
 | Debate | 2.336 combinaciones por comisión, dificultad elegible (Básico, Intermedio, Avanzado), IDs estables y control de preguntas ya usadas por sesión. |
 | Evaluación | Rúbrica contextual en cuatro criterios, con señales de estructura, mecanismo causal, viabilidad y rendición de cuentas; resolución solo cuando la pregunta la exige. |
@@ -31,6 +31,7 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 - **Web:** React 19.3 + Vite 8 + React Router 7 + Lucide.
 - **Investigación:** FastAPI + Scrapy + sanitizador propio (HTML, Unicode, PII, prompt injection).
 - **Datos:** JSON editorial versionado en `data/`.
+- **Banderas:** SVG incluidos en `apps/web/src/assets/flags` (flagcdn, dominio público), sin depender de red.
 
 ---
 
@@ -72,7 +73,7 @@ npm run dev:research   # http://localhost:8000/health
 DebaMun funciona igual, en modo degradado y explícito:
 
 - Sin `DATABASE_URL` → almacenamiento en memoria (se pierde al reiniciar).
-- Sin `REDIS_URL` → caché en memoria y cola BullMQ en modo inline.
+- Sin `REDIS_URL` → caché en memoria y cola BullMQ en modo inline. Con `REDIS_URL` la caché pasa a ser compartida; la cola solo se activa con `JOBS_WORKER=1` (worker persistente, no en Vercel).
 - Sin `LLM_*` → recuperación local + rúbrica heurística (comportamiento por defecto).
 - Sin servicio Python → el asistente usa solo el corpus de la API.
 
@@ -137,7 +138,7 @@ reporta como `scraper: down`.
 | Web React/Vite | Vercel (`apps/web`) | Estático + rewrite SPA para React Router. |
 | API NestJS | Vercel (`apps/api`) | `src/main.ts` se detecta con el soporte zero-config de NestJS. |
 | PostgreSQL | Neon | Cadena con `-pooler`, `DATABASE_SSL=true`, `DATABASE_POOL_MAX=3`. |
-| Redis/BullMQ | Upstash (opcional) | Sin Redis, caché y cola viven en memoria por instancia. |
+| Redis/BullMQ | Upstash (opcional) | Sin Redis, caché y cola viven en memoria por instancia; la cola necesita `JOBS_WORKER=1`. |
 | FastAPI + Scrapy | Fuera de Vercel | Necesita procesos largos y escritura en disco. |
 
 Orden recomendado: **Neon → API → copiar URL de la API → Web → copiar URL de la web → `WEB_ORIGIN` en la API → redeploy**.
@@ -210,6 +211,7 @@ POST /api/sessions
 GET  /api/sessions/:id
 GET  /api/sessions/:id/dashboard
 GET  /api/facts/today?countryCode=CH&offset=0
+GET  /api/facts/day?countryCode=CH&offset=4
 POST /api/debate/sessions
 POST /api/debate/questions/next
 POST /api/debate/turns

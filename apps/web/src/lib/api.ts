@@ -3,6 +3,7 @@ import type {
   CommitteeId,
   CountrySummary,
   DashboardData,
+  FactOfDay,
   GradeId,
   NextQuestionResponse,
   ResearchResult,
@@ -91,6 +92,11 @@ export const api = {
   profile: (delegateId: string) => request<SessionProfile>(`/sessions/${delegateId}`),
 
   dashboard: (delegateId: string) => request<DashboardData>(`/sessions/${delegateId}/dashboard`),
+
+  factsOfDay: (countryCode: string, offset = 0) =>
+    request<{ date: string; facts: FactOfDay[] }>(
+      `/facts/day?countryCode=${encodeURIComponent(countryCode)}&offset=${offset}`,
+    ),
 
   createDebateSession: (delegateId: string, difficulty: 1 | 2 | 3) =>
     request<{ session: { id: string; difficulty: 1 | 2 | 3 } }>('/debate/sessions', {

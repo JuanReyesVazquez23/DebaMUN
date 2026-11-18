@@ -4,6 +4,7 @@ import type { CommitteeTopic, CountryProfile } from '../countries/countries.type
 import { seedFrom } from '../common/hash.js';
 import type { DelegateRecord } from '../database/store.service.js';
 import { StoreService } from '../database/store.service.js';
+import { normalizeGrade } from './grade.js';
 import type { CreateSessionDto } from './sessions.dto.js';
 
 export interface FactOfDay {
@@ -32,7 +33,7 @@ export class SessionsService {
       username: dto.username,
       countryCode: country.code,
       committee: dto.committee,
-      grade: dto.grade ?? '10',
+      grade: dto.grade ?? 'secundaria-5',
     });
 
     return this.buildProfile(delegate, country, committee);
@@ -75,11 +76,14 @@ export class SessionsService {
     if (country.sources.length >= 2) nextSteps.push('Abre una fuente oficial y anota dos datos verificables.');
     nextSteps.push('Ensaya una respuesta de 60 segundos con la estructura que te sugiere la pregunta.');
 
+    const factsOfDay = this.getFacts(country.code, 0, 4);
+
     return {
       delegate: this.publicDelegate(delegate),
       country,
       committee,
-      factOfDay: this.getFact(country.code, 0),
+      factOfDay: factsOfDay[0] ?? this.getFact(country.code, 0),
+      factsOfDay,
       conference: this.countries.getTopics().conference,
       countdownDays: this.daysUntilConference(),
       readiness: { score: readinessScore, label: readinessLabel, checks },
@@ -101,18 +105,34 @@ export class SessionsService {
   }
 
   getFact(countryCode: string, offset = 0): FactOfDay {
+    return this.getFacts(countryCode, offset, 1)[0] as FactOfDay;
+  }
+
+  /**
+   * Devuelve un bloque de datos consecutivo para el día. El punto de partida rota a diario y
+   * `offset` permite pedir el siguiente bloque sin repetir los ya mostrados.
+   */
+  getFacts(countryCode: string, offset = 0, count = 4): FactOfDay[] {
     const country = this.countries.getCountry(countryCode);
     if (!country) throw new NotFoundException(`No hay datos para ${countryCode}.`);
+
     const date = new Date().toISOString().slice(0, 10);
+    const total = Math.max(1, country.facts.length);
+    const base = seedFrom(`${date}:${country.code}`) % total;
     const safeOffset = Math.max(0, Math.floor(offset));
-    const index = seedFrom(`${date}:${country.code}:${safeOffset}`) % country.facts.length;
-    return {
-      text: country.facts[index] ?? country.facts[0] ?? country.summary,
-      index,
-      total: country.facts.length,
-      date,
-      offset: safeOffset,
-    };
+    const size = Math.min(Math.max(1, Math.floor(count)), total);
+
+    return Array.from({ length: size }, (_, position) => {
+      const shift = safeOffset + position;
+      const index = (base + shift) % total;
+      return {
+        text: country.facts[index] ?? country.summary,
+        index,
+        total: country.facts.length,
+        date,
+        offset: shift,
+      };
+    });
   }
 
   private buildProfile(delegate: DelegateRecord, country: CountryProfile, committee: CommitteeTopic) {
@@ -132,7 +152,7 @@ export class SessionsService {
       username: delegate.username,
       countryCode: delegate.countryCode,
       committee: delegate.committee,
-      grade: delegate.grade,
+      grade: normalizeGrade(delegate.grade) ?? delegate.grade,
       createdAt: delegate.createdAt,
     };
   }

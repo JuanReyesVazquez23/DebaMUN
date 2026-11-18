@@ -47,7 +47,7 @@ Tres procesos independientes, sin Docker obligatorio. Cada uno degrada solo:
 | --- | --- | --- |
 | `DatabaseModule` (global) | Pool PostgreSQL, esquema idempotente, repositorio con fallback. | — |
 | `CountriesModule` | Carga `data/countries/*.json` y `data/topics.json`; expone países, comisiones y posturas. | — |
-| `SessionsModule` | Onboarding, perfil, dashboard, dato del día, readiness. | Countries, Store |
+| `SessionsModule` | Onboarding, perfil, dashboard, datos del día (bloques de 4), readiness. | Countries, Store |
 | `DebateModule` | Sesiones de práctica, generación de preguntas, rúbrica, historial. | Countries, Store |
 | `ResearchModule` | Knowledge base, ranking, citas, scraper, LLM opcional. | Countries, Jobs, Store |
 | `JobsModule` | Caché Redis/memoria, cola BullMQ, estado. | — |
@@ -148,7 +148,7 @@ funcione en PostgreSQL estándar y en Neon con pgvector.
 | `/bienvenida` | Nombre | Redirige a `/app` si ya hay perfil |
 | `/pais` | Selección de país con búsqueda y filtro por región | Requiere nombre |
 | `/comision` | Selección de comisión y creación de sesión | Requiere país |
-| `/app` | Panel: readiness, dato del día, stats, ruta de hoy | Requiere perfil |
+| `/app` | Panel: ficha con bandera del país, datos del día, readiness, stats y ruta de hoy | Requiere perfil |
 | `/app/dossier` | Dossier completo con navegación por secciones | Requiere perfil |
 | `/app/debate` | Arena: pregunta, temporizador, rúbrica, resultados | Requiere perfil |
 | `/app/investigacion` | Asistente conversacional con fuentes | Requiere perfil |

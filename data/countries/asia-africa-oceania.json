@@ -44,7 +44,11 @@
       "Japón es un archipiélago de más de 14.000 islas.",
       "Tokio es la capital y una de las áreas metropolitanas más grandes del mundo.",
       "Japón tiene 47 prefecturas.",
-      "El país tiene una de las esperanzas de vida más altas del mundo."
+      "El país tiene una de las esperanzas de vida más altas del mundo.",
+      "Japón es miembro de la OCDE desde 1964.",
+      "Tiene una de las esperanzas de vida más altas del mundo.",
+      "Su Constitución de 1947 renuncia a la guerra como derecho del Estado.",
+      "Tokio es una de las áreas metropolitanas más pobladas del planeta."
     ],
     "sources": [
       { "label": "Gobierno de Japón", "url": "https://www.japan.go.jp/", "kind": "official" },
@@ -97,7 +101,11 @@
       "Corea del Sur tiene como capital a Seúl.",
       "El hangul, su alfabeto, fue creado en el siglo XV.",
       "El país tiene una de las tasas de natalidad más bajas del mundo.",
-      "La Zona Desmilitarizada separa Corea del Sur de Corea del Norte."
+      "La Zona Desmilitarizada separa Corea del Sur de Corea del Norte.",
+      "Corea del Sur es miembro de la OCDE desde 1996.",
+      "Invierte uno de los porcentajes más altos del PIB en investigación y desarrollo.",
+      "El hangeul, su alfabeto, fue promulgado en 1446.",
+      "Pasó de receptor a donante neto de ayuda al desarrollo."
     ],
     "sources": [
       { "label": "Gobierno de Corea del Sur", "url": "https://www.korea.net/", "kind": "official" },
@@ -150,7 +158,11 @@
       "Singapur es una ciudad-Estado y uno de los países más densamente poblados del mundo.",
       "Tiene cuatro lenguas oficiales: inglés, malayo, mandarín y tamil.",
       "Se independizó de Malasia en 1965.",
-      "El puerto de Singapur es uno de los más activos del mundo."
+      "El puerto de Singapur es uno de los más activos del mundo.",
+      "Singapur es una ciudad-Estado y uno de los cuatro tigres asiáticos.",
+      "Es miembro fundador de la ASEAN desde 1967.",
+      "Su sistema NEWater reutiliza agua para cubrir una parte importante de la demanda.",
+      "Tiene cuatro lenguas oficiales: inglés, chino mandarín, malayo y tamil."
     ],
     "sources": [
       { "label": "Gobierno de Singapur", "url": "https://www.gov.sg/", "kind": "official" },
@@ -203,7 +215,11 @@
       "China reconoce oficialmente 56 grupos étnicos.",
       "Pekín es la capital y sede de la mayoría de las instituciones centrales.",
       "La Gran Muralla China se extiende por miles de kilómetros.",
-      "China es el país más poblado de Asia y uno de los más grandes por superficie."
+      "China es el país más poblado de Asia y uno de los más grandes por superficie.",
+      "China es miembro fundador de la ONU y miembro permanente del Consejo de Seguridad.",
+      "Es el segundo país más poblado del mundo desde 2023.",
+      "La Gran Muralla es Patrimonio Mundial de la UNESCO.",
+      "Logró la educación primaria universal antes de los Objetivos de Desarrollo del Milenio."
     ],
     "sources": [
       { "label": "Gobierno de China", "url": "https://english.www.gov.cn/", "kind": "official" },
@@ -256,7 +272,11 @@
       "India es la democracia más poblada del mundo.",
       "Tiene 28 estados y 8 territorios de la unión.",
       "El hindi y el inglés son lenguas oficiales del gobierno central, además de 22 lenguas programadas.",
-      "El sistema de pagos UPI es uno de los más usados del mundo."
+      "El sistema de pagos UPI es uno de los más usados del mundo.",
+      "India es el país más poblado del mundo desde 2023.",
+      "Es miembro fundador del Movimiento de Países No Alineados.",
+      "Su Constitución de 1950 es una de las más extensas del mundo.",
+      "Es el mayor productor mundial de leche."
     ],
     "sources": [
       { "label": "Gobierno de India", "url": "https://www.india.gov.in/", "kind": "official" },
@@ -309,7 +329,11 @@
       "Sudáfrica tiene tres capitales: Pretoria (ejecutiva), Ciudad del Cabo (legislativa) y Bloemfontein (judicial).",
       "Tiene 11 lenguas oficiales.",
       "Nelson Mandela fue su primer presidente elegido democráticamente en 1994.",
-      "Sudáfrica presidió el G20 en 2025."
+      "Sudáfrica presidió el G20 en 2025.",
+      "Sudáfrica es el único país africano miembro del G20.",
+      "Tiene tres capitales: Pretoria, Ciudad del Cabo y Bloemfontein.",
+      "Es el mayor productor mundial de platino.",
+      "Nelson Mandela recibió el Premio Nobel de la Paz en 1993."
     ],
     "sources": [
       { "label": "Gobierno de Sudáfrica", "url": "https://www.gov.za/", "kind": "official" },
@@ -362,7 +386,11 @@
       "Australia tiene seis estados y dos territorios continentales principales.",
       "Canberra es la capital, planificada como sede del gobierno federal.",
       "La Gran Barrera de Coral es el mayor sistema de arrecifes del mundo.",
-      "Australia es uno de los países más urbanizados del mundo."
+      "Australia es uno de los países más urbanizados del mundo.",
+      "Australia es miembro fundador de la ONU.",
+      "La Gran Barrera de Coral es el mayor arrecife del mundo y Patrimonio Mundial.",
+      "Su población se concentra en la costa, sobre todo en el sureste.",
+      "Es uno de los países con mayor proporción de energía solar residencial del mundo."
     ],
     "sources": [
       { "label": "Gobierno de Australia", "url": "https://www.australia.gov.au/", "kind": "official" },
@@ -415,7 +443,11 @@
       "Rusia es el país más extenso del mundo y abarca 11 zonas horarias.",
       "Moscú es la capital y la ciudad más poblada.",
       "Es miembro permanente del Consejo de Seguridad de la ONU.",
-      "El lago Baikal es el lago de agua dulce más profundo del mundo."
+      "El lago Baikal es el lago de agua dulce más profundo del mundo.",
+      "Rusia es miembro permanente del Consejo de Seguridad de la ONU.",
+      "Es el país más extenso del mundo y abarca once husos horarios.",
+      "El ruso es una de las seis lenguas oficiales de la ONU.",
+      "Es uno de los principales exportadores de gas natural del mundo."
     ],
     "sources": [
       { "label": "Gobierno de Rusia", "url": "http://government.ru/en/", "kind": "official" },

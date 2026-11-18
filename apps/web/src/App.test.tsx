@@ -6,6 +6,7 @@ import {
   country,
   dashboard,
   dashboardEcosoc,
+  factsOfDay,
   nextQuestion,
   nextQuestionEcosoc,
   profile,
@@ -75,7 +76,7 @@ afterEach(() => {
 });
 
 describe.each(FLOWS)('flujo $id', (flow) => {
-  it('completa nombre → país → comisión y llega al panel', async () => {
+  it('completa nombre → grado → país → comisión y llega al panel', async () => {
     mockFetch((url, init) => {
       const method = init?.method ?? 'GET';
       if (url.endsWith('/countries')) return json({ countries: [country] });
@@ -98,8 +99,8 @@ describe.each(FLOWS)('flujo $id', (flow) => {
       await screen.findByRole('heading', { level: 1, name: /Qué grado cursas/ }),
     ).toBeTruthy();
 
-    fireEvent.click(screen.getByRole('radio', { name: /10\.º grado/ }));
-    fireEvent.click(screen.getByRole('button', { name: /Continuar desde 10\.º grado/ }));
+    fireEvent.click(screen.getByRole('radio', { name: /5\.º de secundaria/ }));
+    fireEvent.click(screen.getByRole('button', { name: /Continuar desde 5\.º de secundaria/ }));
 
     expect(
       await screen.findByRole('heading', { level: 1, name: /Qué país defiendes/ }),
@@ -164,5 +165,52 @@ describe.each(FLOWS)('flujo $id', (flow) => {
     expect(await screen.findByRole('heading', { level: 2, name: 'Competente' })).toBeTruthy();
     expect(await screen.findByText('78')).toBeTruthy();
     expect(screen.getByRole('button', { name: /Siguiente pregunta/ })).toBeTruthy();
+  });
+});
+
+describe('panel del delegado', () => {
+  it('muestra la bandera del país y rota los datos del día', async () => {
+    localStorage.setItem('debamun.delegate.v1', profile.delegate.id);
+
+    const nextFacts = [
+      {
+        text: 'El CERN, uno de los mayores laboratorios de física, tiene sede en Ginebra.',
+        index: 4,
+        total: 8,
+        date: '2026-11-16',
+        offset: 4,
+      },
+      {
+        text: 'La formación profesional dual combina empresa y escuela.',
+        index: 5,
+        total: 8,
+        date: '2026-11-16',
+        offset: 5,
+      },
+    ];
+
+    mockFetch((url) => {
+      if (url.endsWith(`/sessions/${profile.delegate.id}`)) return json(profile);
+      if (url.endsWith('/dashboard')) return json(dashboard);
+      if (url.includes('/facts/day') && url.includes('offset=4')) {
+        return json({ date: '2026-11-16', facts: nextFacts });
+      }
+      return null;
+    });
+
+    render(
+      <MemoryRouter initialEntries={['/app']}>
+        <AppRoutes />
+      </MemoryRouter>,
+    );
+
+    expect(await screen.findByRole('img', { name: 'Bandera de Suiza' })).toBeTruthy();
+    expect(await screen.findByText(factsOfDay[1].text)).toBeTruthy();
+    expect(screen.getByText('1–4 de 8 datos · rotan cada día')).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', { name: /Otros datos/ }));
+
+    expect(await screen.findByText(nextFacts[0].text)).toBeTruthy();
+    expect(screen.getByText('5–6 de 8 datos · rotan cada día')).toBeTruthy();
   });
 });

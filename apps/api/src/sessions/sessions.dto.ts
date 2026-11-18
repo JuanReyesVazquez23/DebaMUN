@@ -1,12 +1,9 @@
 import { Transform, Type } from 'class-transformer';
 import { IsIn, IsInt, IsOptional, IsString, Length, Matches, Max, Min } from 'class-validator';
 import type { CommitteeId } from '../countries/countries.types.js';
+import { GRADES, type GradeId } from './grade.js';
 
 const trim = ({ value }: { value: unknown }) => (typeof value === 'string' ? value.trim() : value);
-
-/** Grados escolares que puede cursar un delegado. */
-export const GRADES = ['6', '7', '8', '9', '10', '11', '12', 'universidad'] as const;
-export type GradeId = (typeof GRADES)[number];
 
 export class CreateSessionDto {
   @Transform(trim)

@@ -40,7 +40,8 @@
 ### Panel
 
 - Saludo + resumen del país en una frase: contexto inmediato.
-- Dato del día en una tarjeta con la bandera de marca de agua: un gancho de curiosidad, no relleno.
+- Datos del día en un panel con cuatro hechos y rotación al siguiente bloque: contexto útil, no relleno.
+- La bandera del país tiene una ficha propia en el panel, con nombre oficial, región, capital y comisión.
 - Readiness con checks ponderados y explicación de qué falta.
 - Progreso del debate con media, mejor y última intervención + historial corto.
 - "Qué haría ahora": cuatro acciones ordenadas por impacto.

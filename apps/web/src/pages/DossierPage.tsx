@@ -12,6 +12,7 @@ import {
   Sparkles,
   Users,
 } from 'lucide-react';
+import { CountryFlag } from '../components/CountryFlag';
 import { SourceList } from '../components/SourceList';
 import { useSession } from '../lib/session';
 
@@ -35,9 +36,7 @@ export function DossierPage() {
     <div className="dossier">
       <header className="dossier__head">
         <div className="dossier__title">
-          <span className="dossier__flag" aria-hidden="true">
-            {country.flag}
-          </span>
+          <CountryFlag code={country.code} name={country.name} className="dossier__flag" />
           <div>
             <p className="eyebrow">Dossier de delegación · {country.region}</p>
             <h1 className="display">{country.name}</h1>

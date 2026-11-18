@@ -8,6 +8,7 @@ import {
   type ReactNode,
 } from 'react';
 import { ApiError, api } from './api';
+import { normalizeGrade } from './format';
 import type { CommitteeId, CountrySummary, GradeId, SessionProfile } from '../types';
 
 const DELEGATE_KEY = 'debamun.delegate.v1';
@@ -35,16 +36,31 @@ interface SessionContextValue {
 
 const SessionContext = createContext<SessionContextValue | null>(null);
 
-const GRADES: GradeId[] = ['6', '7', '8', '9', '10', '11', '12', 'universidad'];
+const GRADES: GradeId[] = [
+  'primaria-1',
+  'primaria-2',
+  'primaria-3',
+  'primaria-4',
+  'primaria-5',
+  'primaria-6',
+  'secundaria-1',
+  'secundaria-2',
+  'secundaria-3',
+  'secundaria-4',
+  'secundaria-5',
+  'secundaria-6',
+  'universidad',
+];
 
 function readDraft(): Draft {
   try {
     const raw = localStorage.getItem(DRAFT_KEY);
     if (!raw) return { username: '', grade: '', country: null };
     const parsed = JSON.parse(raw) as Partial<Draft>;
+    const grade = normalizeGrade(parsed.grade);
     return {
       username: typeof parsed.username === 'string' ? parsed.username : '',
-      grade: GRADES.includes(parsed.grade as GradeId) ? (parsed.grade as GradeId) : '',
+      grade: grade && GRADES.includes(grade) ? grade : '',
       country: parsed.country ?? null,
     };
   } catch {

@@ -32,8 +32,11 @@ export class JobsService implements OnModuleInit, OnModuleDestroy {
 
   async onModuleInit(): Promise<void> {
     const url = process.env.REDIS_URL?.trim();
-    if (!url || this.cache.backend !== 'redis') {
-      this.logger.warn('Cola BullMQ en modo inline (sin Redis). Los jobs se ejecutan de forma simulada.');
+    const workerEnabled = process.env.JOBS_WORKER === '1';
+    if (!url || this.cache.backend !== 'redis' || !workerEnabled) {
+      this.logger.warn(
+        'Cola BullMQ en modo inline (sin Redis o sin JOBS_WORKER=1). Los jobs se ejecutan de forma simulada.',
+      );
       return;
     }
 
@@ -89,7 +92,7 @@ export class JobsService implements OnModuleInit, OnModuleDestroy {
     return {
       mode: this.mode,
       counts: { waiting: 0, active: 0, completed: 0, failed: 0 },
-      note: 'Modo inline: configura REDIS_URL para habilitar BullMQ.',
+      note: 'Modo inline: configura REDIS_URL y JOBS_WORKER=1 para habilitar BullMQ.',
     };
   }
 

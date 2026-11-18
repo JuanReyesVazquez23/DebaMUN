@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Check, Search } from 'lucide-react';
 import { OnboardingShell } from '../components/AppShell';
+import { CountryFlag } from '../components/CountryFlag';
 import { ErrorBlock, LoadingBlock } from '../components/StateBlocks';
 import { api } from '../lib/api';
 import { useSession } from '../lib/session';
@@ -146,9 +147,7 @@ export function CountryPage() {
                     }}
                   >
                     <span className="country-card__top">
-                      <span className="country-card__flag" aria-hidden="true">
-                        {country.flag}
-                      </span>
+                      <CountryFlag code={country.code} className="country-card__flag" />
                       <span className="country-card__code">{country.code}</span>
                       {isSelected ? (
                         <span className="country-card__check" aria-hidden="true">

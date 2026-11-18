@@ -30,4 +30,12 @@ export class FactsController {
   today(@Query() query: FactQueryDto) {
     return this.sessions.getFact(query.countryCode, query.offset);
   }
+
+  @Get('day')
+  day(@Query() query: FactQueryDto) {
+    return {
+      date: new Date().toISOString().slice(0, 10),
+      facts: this.sessions.getFacts(query.countryCode, query.offset, 4),
+    };
+  }
 }

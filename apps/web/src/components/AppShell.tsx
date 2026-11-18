@@ -1,6 +1,7 @@
 import { useEffect, type CSSProperties, type ReactNode } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { BookOpen, Compass, LogOut, MessagesSquare, Swords } from 'lucide-react';
+import { CountryFlag } from './CountryFlag';
 import { useSession } from '../lib/session';
 import { themeVars } from '../lib/theme';
 import { initials } from '../lib/format';
@@ -71,9 +72,7 @@ export function AppShell({ children }: { children: ReactNode }) {
 
           <div className="topbar__identity">
             <div className="identity">
-              <span className="identity__flag" aria-hidden="true">
-                {profile.country.flag}
-              </span>
+              <CountryFlag code={profile.country.code} className="identity__flag" />
               <span className="identity__text">
                 <strong>{profile.country.name}</strong>
                 <span>{ROOM[profile.committee.id]}</span>

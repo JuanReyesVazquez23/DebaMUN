@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { countWords, formatSeconds, hostOf, initials, longDate } from './format';
+import { countWords, formatSeconds, gradeLabel, hostOf, initials, longDate } from './format';
 
 describe('format', () => {
   it('cuenta palabras con acentos y números', () => {
@@ -25,5 +25,13 @@ describe('format', () => {
 
   it('formatea la fecha de la conferencia en español', () => {
     expect(longDate('2026-12-09').toLowerCase()).toContain('diciembre');
+  });
+
+  it('etiqueta los grados nuevos y migra los antiguos', () => {
+    expect(gradeLabel('primaria-3')).toBe('3.º de primaria');
+    expect(gradeLabel('secundaria-6')).toBe('6.º de secundaria');
+    expect(gradeLabel('universidad')).toBe('Universidad');
+    expect(gradeLabel('10')).toBe('4.º de secundaria');
+    expect(gradeLabel(null)).toBe('Grado sin indicar');
   });
 });

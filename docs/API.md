@@ -82,11 +82,17 @@ tensiones, actores y fuentes.
 ### `POST /sessions`
 
 ```json
-{ "username": "Valentina Ríos", "countryCode": "CH", "committee": "UNESCO" }
+{
+  "username": "Valentina Ríos",
+  "grade": "secundaria-5",
+  "countryCode": "CH",
+  "committee": "UNESCO"
+}
 ```
 
 Reglas: `username` 2–40 caracteres (letras, números, espacios y `. _ - ’`), `countryCode` existente,
-`committee` exacto.
+`committee` exacto y `grade` uno de `primaria-1`…`primaria-6`, `secundaria-1`…`secundaria-6` o
+`universidad`.
 
 Respuesta `201`:
 
@@ -97,11 +103,12 @@ Respuesta `201`:
     "username": "Valentina Ríos",
     "countryCode": "CH",
     "committee": "UNESCO",
+    "grade": "secundaria-5",
     "createdAt": "2026-11-16T23:54:35.000Z"
   },
   "country": { "…": "dossier completo" },
   "committee": { "…": "briefing completo" },
-  "factOfDay": { "text": "…", "index": 2, "total": 4, "date": "2026-11-16", "offset": 0 },
+  "factOfDay": { "text": "…", "index": 2, "total": 8, "date": "2026-11-16", "offset": 0 },
   "conference": { "name": "Ecosoft", "date": "2026-12-09" },
   "countdownDays": 23
 }
@@ -119,6 +126,7 @@ Mismo cuerpo que la creación. Actualiza `last_seen_at`.
   "country": { "…": "…" },
   "committee": { "…": "…" },
   "factOfDay": { "…": "…" },
+  "factsOfDay": [{ "text": "…", "index": 4, "total": 8, "date": "2026-11-16", "offset": 0 }],
   "conference": { "…": "…" },
   "countdownDays": 23,
   "readiness": {
@@ -142,6 +150,11 @@ Mismo cuerpo que la creación. Actualiza `last_seen_at`.
 
 `offset` ∈ [0, 50]. El índice es determinista por fecha, país y offset: cambiar `offset` rota el dato
 del día sin salir de la lista.
+
+### `GET /facts/day?countryCode=CH&offset=0`
+
+Devuelve `{ "date": "2026-11-16", "facts": [...] }` con cuatro datos consecutivos. El punto de
+partida rota a diario; usar `offset=4` entrega el bloque siguiente sin repetir el anterior.
 
 ---
 

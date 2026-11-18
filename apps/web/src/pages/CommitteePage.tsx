@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, Landmark, Users, type LucideIcon } from 'lucide-react';
 import { OnboardingShell } from '../components/AppShell';
+import { CountryFlag } from '../components/CountryFlag';
 import { ErrorBlock } from '../components/StateBlocks';
 import { gradeLabel } from '../lib/format';
 import { useSession } from '../lib/session';
@@ -72,14 +73,12 @@ export function CommitteePage() {
     <OnboardingShell
       step={4}
       title="Elige tu comisión"
-      lead={`Vas a representar a ${country.name} ${country.flag}. La comisión define el tópico, el reglamento y los criterios con los que entrenaré tu debate.`}
+      lead={`Vas a representar a ${country.name}. La comisión define el tópico, el reglamento y los criterios con los que entrenaré tu debate.`}
       aside={
         <div className="onboarding__card">
           <p className="eyebrow">Tu delegación</p>
           <div className="delegate-card">
-            <span className="delegate-card__flag" aria-hidden="true">
-              {country.flag}
-            </span>
+            <CountryFlag code={country.code} className="delegate-card__flag" />
             <div>
               <strong>{draft.username}</strong>
               <span>

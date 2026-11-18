@@ -15,7 +15,7 @@ Vercel · proyecto API (apps/api)
   └─ src/main.ts  →  NestJS zero-config  (una sola función)
         │
         ├─ Neon PostgreSQL (DATABASE_URL)
-        ├─ Upstash Redis (opcional, REDIS_URL)
+        ├─ Upstash Redis (opcional, solo caché con REDIS_URL)
         └─ Research Python (opcional, fuera de Vercel)
 ```
 
@@ -24,7 +24,7 @@ Vercel · proyecto API (apps/api)
 | Web React/Vite | Sí | Build estático + rewrites para React Router. |
 | API NestJS | Sí, como función | Se compila con `tsc` y se carga una sola vez por instancia. |
 | PostgreSQL | Neon | Serverless, con pooler y SSL. |
-| Redis/BullMQ | Upstash (opcional) | Sin Redis, caché y cola quedan en memoria por instancia. |
+| Redis/BullMQ | Upstash (opcional) | Sin Redis, caché y cola quedan en memoria por instancia. En Vercel la cola BullMQ no corre: no hay worker persistente. |
 | FastAPI + Scrapy | No | Lanza Scrapy en subproceso, escribe JSONL en disco y necesita procesos largos. |
 
 Sin el servicio Python el asistente sigue respondiendo con el corpus local, las fuentes del dossier
@@ -67,7 +67,8 @@ Debe terminar con `Esquema aplicado: 10 tablas en public.`
 | `DATABASE_POOL_MAX` | `3` (pocas conexiones por instancia) |
 | `WEB_ORIGIN` | `https://<tu-web>.vercel.app` (varios orígenes separados por coma) |
 | `NODE_ENV` | `production` |
-| `REDIS_URL` | Vacío, o `rediss://...` de Upstash |
+| `REDIS_URL` | Vacío, o la URL `rediss://...` de Upstash (solo caché compartida) |
+| `JOBS_WORKER` | Vacío en Vercel: BullMQ necesita un worker persistente |
 | `RESEARCH_SERVICE_URL` | Vacío (el servicio Python queda fuera de Vercel) |
 | `DATA_DIR` | Vacío (el corpus se copia a `apps/api/data`) |
 | `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` | Opcionales |
@@ -78,7 +79,23 @@ Debe terminar con `Esquema aplicado: 10 tablas en public.`
 Invoke-RestMethod https://<api>.vercel.app/api/health
 ```
 
-Respuesta esperada: `status: ok`, `database: up`, `corpus.countries: 33`.
+Respuesta esperada sin Redis ni servicio Python:
+
+```json
+{
+  "status": "ok",
+  "corpus": { "countries": 33, "committees": ["ECOSOC", "UNESCO"] },
+  "services": {
+    "database": "up",
+    "cache": "memory",
+    "queue": "inline",
+    "scraper": "down",
+    "llm": "disabled"
+  }
+}
+```
+
+Si `database` dice `memory`, la API arrancó sin `DATABASE_URL` válida.
 
 ### Qué hace la configuración
 
