@@ -12,6 +12,7 @@ import { normalizeGrade } from './format';
 import type { CommitteeId, CountrySummary, GradeId, SessionProfile } from '../types';
 
 const DELEGATE_KEY = 'debamun.delegate.v1';
+const PROFILE_KEY = 'debamun.profile.v1';
 const DRAFT_KEY = 'debamun.draft.v1';
 
 interface Draft {
@@ -76,6 +77,20 @@ export function SessionProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const delegateId = localStorage.getItem(DELEGATE_KEY);
+    const savedProfile = localStorage.getItem(PROFILE_KEY);
+
+    if (savedProfile) {
+      try {
+        const parsed = JSON.parse(savedProfile) as SessionProfile;
+        if (parsed && parsed.delegate && parsed.delegate.id === delegateId) {
+          setProfile(parsed);
+          setStatus('ready');
+        }
+      } catch {
+        // Ignorar si el profile guardado está corrupto
+      }
+    }
+
     if (!delegateId) {
       setStatus('anonymous');
       return;
@@ -87,14 +102,18 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       .then((next) => {
         if (cancelled) return;
         setProfile(next);
+        localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
         setStatus('ready');
       })
-      .catch((cause: unknown) => {
+      .catch(() => {
         if (cancelled) return;
-        if (cause instanceof ApiError && cause.status === 404) {
-          localStorage.removeItem(DELEGATE_KEY);
+        // Si el backend no responde, mantener el profile guardado en localStorage.
+        // No se borra nada: la sesión debe persistir indefinidamente.
+        if (!profile && !savedProfile) {
+          setStatus('anonymous');
+        } else if (!profile) {
+          setStatus('ready');
         }
-        setStatus('anonymous');
       });
 
     return () => {
@@ -134,6 +153,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
         committee,
       });
       localStorage.setItem(DELEGATE_KEY, next.delegate.id);
+      localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
       setProfile(next);
       setStatus('ready');
       return next;
@@ -146,10 +166,12 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     if (!current) return;
     const next = await api.profile(current.delegate.id);
     setProfile(next);
+    localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
   }, [profile]);
 
   const signOut = useCallback(() => {
     localStorage.removeItem(DELEGATE_KEY);
+    localStorage.removeItem(PROFILE_KEY);
     setProfile(null);
     setStatus('anonymous');
   }, []);
