@@ -6,6 +6,7 @@ import {
   Check,
   Circle,
   Gauge,
+  MessagesSquare,
   RefreshCw,
   Sparkles,
   Swords,
@@ -14,7 +15,7 @@ import {
 import { ScoreRing } from '../components/ScoreRing';
 import { ErrorBlock, LoadingBlock } from '../components/StateBlocks';
 import { api } from '../lib/api';
-import { formatDateTime, gradeLabel, longDate } from '../lib/format';
+import { formatDateTime, gradeLabel } from '../lib/format';
 import { useSession } from '../lib/session';
 import type { DashboardData, FactOfDay } from '../types';
 

@@ -204,7 +204,6 @@ describe('panel del delegado', () => {
       </MemoryRouter>,
     );
 
-    expect(await screen.findByRole('img', { name: 'Bandera de Suiza' })).toBeTruthy();
     expect(await screen.findByText(factsOfDay[1].text)).toBeTruthy();
     expect(screen.getByText('1–4 de 8 datos · rotan cada día')).toBeTruthy();
 

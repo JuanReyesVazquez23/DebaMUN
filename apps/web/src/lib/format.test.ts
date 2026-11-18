@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { countWords, formatSeconds, gradeLabel, hostOf, initials, longDate } from './format';
+import { countWords, formatSeconds, gradeLabel, hostOf, initials } from './format';
 
 describe('format', () => {
   it('cuenta palabras con acentos y números', () => {
