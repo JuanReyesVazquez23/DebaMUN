@@ -1,0 +1,586 @@
+[
+  {
+    "code": "CH",
+    "slug": "suiza",
+    "name": "Suiza",
+    "officialName": "Confederación Suiza",
+    "flag": "🇨🇭",
+    "region": "Europa Occidental",
+    "capital": "Berna",
+    "languages": ["alemán", "francés", "italiano", "romanche"],
+    "unMember": true,
+    "palette": { "primary": "#E63946", "secondary": "#F1FAEE", "accent": "#A8DADC" },
+    "summary": "Estado federal, neutral y no miembro de la UE, con una economía innovadora y un sistema de formación profesional dual muy consolidado. Ginebra alberga el ecosistema multilateral europeo de la ONU.",
+    "unProfile": {
+      "bloc": "Europa Occidental y otros Estados; tradición humanitaria y multilateral",
+      "style": "Técnico, discreto y orientado al consenso; evita confrontaciones directas y prioriza soluciones verificables.",
+      "allies": ["Noruega", "Suecia", "Países Bajos", "Alemania"],
+      "tensions": ["Soberanía regulatoria frente a marcos internacionales", "Neutralidad frente a sanciones y alineamientos"],
+      "redLines": ["No acepta mecanismos vinculantes que erosionen su autonomía fiscal o migratoria", "Defiende la privacidad y el secreto bancario dentro del marco legal"]
+    },
+    "context": {
+      "aiAndEducation": "Suiza combina investigación de élite (ETH Zúrich, EPFL) con formación profesional dual. Su enfoque regulatorio prioriza riesgo, transparencia y protección de datos más que prohibiciones.",
+      "youthLabour": "El sistema de aprendizaje dual mantiene bajo el desempleo juvenil, pero la digitalización presiona las ocupaciones administrativas y de servicios.",
+      "digitalGovernance": "Ley federal de protección de datos revisada (2023), estrategia nacional de IA y fuerte énfasis en ciberseguridad."
+    },
+    "unesco": {
+      "position": "Apoya directrices internacionales no vinculantes y pilotos evaluados. Prioriza alfabetización en IA, formación docente y protección de datos de menores, con respeto a la diversidad lingüística.",
+      "priorities": ["Formación docente con evidencia y autonomía escolar", "Protección de datos y transparencia algorítmica", "Equidad entre zonas urbanas y rurales"],
+      "vulnerability": "La coordinación entre 26 cantones puede producir estándares desiguales y brechas de implementación.",
+      "leverage": "Puede aportar modelo de formación dual, investigación aplicada y mecanismos de evaluación independiente."
+    },
+    "ecosoc": {
+      "position": "Defiende la responsabilidad social empresarial, el diálogo tripartito y la recapacitación financiada conjuntamente. Prefiere incentivos y estándares verificables antes que nuevas obligaciones globales.",
+      "priorities": ["Aprendizaje dual y certificación de competencias", "Protección social para trabajadores de plataforma", "PYMES y adopción tecnológica responsable"],
+      "vulnerability": "Su mercado laboral altamente especializado puede excluir a jóvenes sin credenciales formales.",
+      "leverage": "Experiencia en aprendizaje dual, cooperación tripartita y fondos de formación sectoriales."
+    },
+    "tips": [
+      "Habla de 'riesgo proporcional' y 'evidencia': encaja con el estilo suizo y evita sonar prohibicionista.",
+      "Usa el ejemplo del aprendizaje dual para defender que la IA debe transformar perfiles, no solo eliminar puestos.",
+      "Menciona Ginebra y los mecanismos multilaterales cuando propongas seguimiento o evaluación."
+    ],
+    "facts": [
+      "Suiza tiene cuatro idiomas oficiales: alemán, francés, italiano y romanche.",
+      "Berna es la ciudad federal, aunque Suiza no tiene una capital formal en su Constitución.",
+      "El Consejo Federal, órgano ejecutivo colegiado de siete miembros, rota su presidencia cada año.",
+      "Ginebra acoge la sede europea de la ONU y numerosas organizaciones internacionales."
+    ],
+    "sources": [
+      { "label": "Administración Federal Suiza", "url": "https://www.admin.ch/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Suiza", "url": "https://www.oecd.org/en/countries/switzerland.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "SCT",
+    "slug": "escocia",
+    "name": "Escocia",
+    "officialName": "Escocia (nación constituyente del Reino Unido)",
+    "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    "region": "Europa Occidental",
+    "capital": "Edimburgo",
+    "languages": ["inglés", "gaélico escocés", "escocés"],
+    "unMember": false,
+    "modelNote": "Escocia no es un Estado miembro de la ONU. En el modelo actúa como delegación con competencias educativas y de empleo, pero su política exterior corresponde al Reino Unido. Aclara esta distinción si un delegado te interpela.",
+    "palette": { "primary": "#4C9AFF", "secondary": "#F0F4F8", "accent": "#005EB8" },
+    "summary": "Nación constituyente del Reino Unido con amplias competencias en educación, salud y desarrollo económico. Tiene un sector tecnológico creciente, universidades de prestigio y una identidad cultural fuerte.",
+    "unProfile": {
+      "bloc": "Reino Unido; Europa Occidental",
+      "style": "Cooperativo y progresista en política social; pragmático en innovación y transición energética.",
+      "allies": ["Irlanda", "Países nórdicos", "Canadá", "Reino Unido"],
+      "tensions": ["Brecha entre Glasgow y zonas rurales", "Dependencia fiscal del gobierno británico", "Tensión soberanista"],
+      "redLines": ["Defiende las competencias educativas y de empleo delegadas", "No acepta que se ignore la dimensión territorial en políticas nacionales"]
+    },
+    "context": {
+      "aiAndEducation": "Curriculum for Excellence da autonomía a centros. Hay programas de alfabetización digital y una estrategia de IA que enfatiza uso ético y capacidades públicas.",
+      "youthLabour": "El empleo juvenil se concentra en servicios, turismo y tecnología. Persisten retos de calidad del empleo y brechas regionales.",
+      "digitalGovernance": "Política digital propia dentro del Reino Unido, con foco en inclusión, datos públicos y colaboración universidad-empresa."
+    },
+    "unesco": {
+      "position": "Promueve un enfoque de derechos, bienestar y equidad. Defiende autonomía docente, evaluación procesual y protección de la niñez, con atención especial a zonas rurales e islas.",
+      "priorities": ["Cierre de brechas territoriales y de conectividad", "Alfabetización mediática y pensamiento crítico", "Bienestar socioemocional frente al uso intensivo de pantallas"],
+      "vulnerability": "Su margen fiscal y regulatorio depende en parte de Londres; algunas políticas requieren coordinación o financiación británica.",
+      "leverage": "Puede presentar modelos de currículo flexible, participación estudiantil y evaluación sin exámenes estandarizados."
+    },
+    "ecosoc": {
+      "position": "Apoya garantías juveniles, salario vital y transición justa. Enfatiza calidad del empleo y voz de los jóvenes en las decisiones que les afectan.",
+      "priorities": ["Garantía de empleo, práctica o formación", "Transparencia algorítmica en plataformas", "Reconversión de sectores intensivos en carbono"],
+      "vulnerability": "Alta dependencia de servicios de bajos salarios y riesgo de que la automatización afecte empleos entry-level.",
+      "leverage": "Experiencia en pactos sociales, energía renovable y fondos de transición justa."
+    },
+    "tips": [
+      "Aclara al inicio que representas a Escocia y que tu competencia es educativa y laboral, no diplomática.",
+      "Usa el ejemplo de las islas y zonas rurales para hablar de equidad territorial sin caer en el victimismo.",
+      "Propón pilotos con evaluación independiente: encaja con tu perfil pragmático."
+    ],
+    "facts": [
+      "Edimburgo es la capital y sede del Parlamento escocés, restablecido en 1999.",
+      "Escocia tiene más de 700 islas, muchas de ellas habitadas.",
+      "El gaélico escocés es una lengua celta reconocida oficialmente, junto al escocés.",
+      "Glasgow acogió la COP26 de cambio climático en 2021."
+    ],
+    "sources": [
+      { "label": "Gobierno de Escocia", "url": "https://www.gov.scot/", "kind": "official" },
+      { "label": "Education Scotland", "url": "https://education.gov.scot/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "DE",
+    "slug": "alemania",
+    "name": "Alemania",
+    "officialName": "República Federal de Alemania",
+    "flag": "🇩🇪",
+    "region": "Europa Occidental",
+    "capital": "Berlín",
+    "languages": ["alemán"],
+    "unMember": true,
+    "palette": { "primary": "#F2C14E", "secondary": "#1B1B1B", "accent": "#DD0000" },
+    "summary": "Mayor economía europea, Estado federal con 16 Länder y un sistema de formación dual referencia mundial. Combina liderazgo industrial con un debate intenso sobre soberanía digital y protección de datos.",
+    "unProfile": {
+      "bloc": "Unión Europea; G7; Europa Occidental",
+      "style": "Estructurado, jurídico y orientado a marcos estables; busca consensos con peso técnico.",
+      "allies": ["Francia", "Países Bajos", "Polonia", "España"],
+      "tensions": ["Dependencia tecnológica de terceros", "Coordinación federal entre Länder", "Transición industrial"],
+      "redLines": ["Defiende el marco del Reglamento Europeo de IA", "No acepta estándares que debiliten la protección de datos"]
+    },
+    "context": {
+      "aiAndEducation": "Los Länder tienen competencia educativa. Se impulsan marcos de competencias digitales, formación docente y uso crítico de IA, con debate sobre evaluación y protección de menores.",
+      "youthLabour": "El sistema dual ofrece una transición sólida, pero la industria automotriz y los servicios administrativos enfrentan reconversión.",
+      "digitalGovernance": "Aplicación del AI Act europeo, fuerte autoridad de protección de datos y estrategia de soberanía digital."
+    },
+    "unesco": {
+      "position": "Prioriza calidad educativa, formación docente y protección de datos. Defiende directrices comunes europeas y evaluación rigurosa antes de escalar tecnologías en aulas.",
+      "priorities": ["Formación docente y currículos de alfabetización en IA", "Protección de datos de menores", "Equidad entre Länder y zonas rurales"],
+      "vulnerability": "La descentralización educativa puede fragmentar estándares y ralentizar la adopción.",
+      "leverage": "Puede aportar formación dual, marcos de calidad y experiencia regulatoria europea."
+    },
+    "ecosoc": {
+      "position": "Defiende economía social de mercado, cogestión y recapacitación financiada por empresas y Estado. Apoya estándares laborales sólidos sin perder competitividad industrial.",
+      "priorities": ["Recualificación masiva en sectores industriales", "Protección de trabajadores de plataforma", "Integración de jóvenes migrantes"],
+      "vulnerability": "La reconversión industrial puede concentrarse en regiones y generar resistencia política.",
+      "leverage": "Modelo de cogestión, formación dual y fondos sectoriales de capacitación."
+    },
+    "tips": [
+      "Usa el principio de proporcionalidad y el AI Act como marco de referencia, no como imposición.",
+      "Habla de 'cogestión' y 'diálogo social' para diferenciarte de enfoques meramente tecnológicos.",
+      "Reconoce la competencia de los Länder: evita prometer una política educativa nacional única."
+    ],
+    "facts": [
+      "Alemania es una república federal con 16 estados (Länder).",
+      "La formación profesional dual combina aprendizaje en empresa y escuela técnica.",
+      "Bonn alberga sedes de varias organizaciones de las Naciones Unidas.",
+      "La Ley Fundamental de 1949 establece la protección de la dignidad humana como principio central."
+    ],
+    "sources": [
+      { "label": "Gobierno Federal de Alemania", "url": "https://www.bundesregierung.de/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "Comisión Europea · Reglamento de IA", "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "ES",
+    "slug": "espana",
+    "name": "España",
+    "officialName": "Reino de España",
+    "flag": "🇪🇸",
+    "region": "Europa Meridional",
+    "capital": "Madrid",
+    "languages": ["español", "catalán", "gallego", "euskera", "aranés"],
+    "unMember": true,
+    "palette": { "primary": "#E63946", "secondary": "#FFC400", "accent": "#AA151B" },
+    "summary": "Monarquía parlamentaria y Estado autonómico con 17 comunidades. Tiene una de las tasas de desempleo juvenil más altas de la UE y un ecosistema digital en crecimiento.",
+    "unProfile": {
+      "bloc": "Unión Europea; Europa Meridional; Iberoamérica",
+      "style": "Europeísta y multilateral, con especial sensibilidad hacia la cohesión territorial y la brecha Sur-Norte.",
+      "allies": ["Portugal", "Francia", "Italia", "México", "Colombia"],
+      "tensions": ["Desempleo juvenil y temporalidad", "Coordinación entre comunidades autónomas", "Brecha digital rural"],
+      "redLines": ["Defiende la unidad del marco europeo de IA", "No acepta recortes que profundicen la desigualdad territorial"]
+    },
+    "context": {
+      "aiAndEducation": "Competencias educativas transferidas a las comunidades. Se impulsan planes de competencia digital docente, formación profesional y uso ético de IA, con diferencias territoriales.",
+      "youthLabour": "Alta temporalidad y desempleo juvenil, especialmente en el sur. La reforma laboral de 2021 redujo parcialmente la precariedad.",
+      "digitalGovernance": "Agencia Española de Supervisión de la IA, estrategia nacional de IA y aplicación del AI Act."
+    },
+    "unesco": {
+      "position": "Apoya un enfoque de derechos con inversión pública en equidad, formación docente y lucha contra la desinformación. Defiende la cooperación iberoamericana y el multilingüismo.",
+      "priorities": ["Cierre de la brecha digital rural", "Formación docente y recursos en lenguas cooficiales", "Alfabetización mediática y pensamiento crítico"],
+      "vulnerability": "La desigualdad entre comunidades y el abandono escolar temprano condicionan la implementación.",
+      "leverage": "Experiencia en cooperación iberoamericana, educación pública y regulación europea."
+    },
+    "ecosoc": {
+      "position": "Prioriza reducción del desempleo juvenil, calidad del empleo y protección de trabajadores de plataforma. Apoya una garantía juvenil reforzada con financiación europea.",
+      "priorities": ["Garantía juvenil y formación profesional", "Protección de repartidores y trabajadores de plataforma", "Reconversión de zonas turísticas"],
+      "vulnerability": "La estacionalidad turística y la temporalidad hacen volátil el empleo juvenil.",
+      "leverage": "Ley Rider, fondos europeos y programas de formación profesional."
+    },
+    "tips": [
+      "Reconoce la competencia autonómica: propón marcos de coordinación, no imposiciones.",
+      "Usa datos de Eurostat o SEPE con cautela y cita la fuente; evita cifras inventadas.",
+      "Conecta la brecha rural con la despoblación: es un argumento transversal potente."
+    ],
+    "facts": [
+      "España tiene 17 comunidades autónomas y dos ciudades autónomas.",
+      "El español es lengua oficial en España y en 20 países de América y África.",
+      "La Constitución de 1978 reconoce el derecho a la autonomía de las nacionalidades y regiones.",
+      "España es uno de los países con más sitios inscritos en la Lista del Patrimonio Mundial de UNESCO."
+    ],
+    "sources": [
+      { "label": "Gobierno de España", "url": "https://www.lamoncloa.gob.es/", "kind": "official" },
+      { "label": "Ministerio de Educación", "url": "https://www.educacionfpydeportes.gob.es/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "FR",
+    "slug": "francia",
+    "name": "Francia",
+    "officialName": "República Francesa",
+    "flag": "🇫🇷",
+    "region": "Europa Occidental",
+    "capital": "París",
+    "languages": ["francés"],
+    "unMember": true,
+    "palette": { "primary": "#4C7DFF", "secondary": "#FFFFFF", "accent": "#EF4135" },
+    "summary": "Miembro permanente del Consejo de Seguridad, potencia nuclear y motor de la integración europea. Defiende activamente la soberanía digital y la excepción cultural.",
+    "unProfile": {
+      "bloc": "Unión Europea; G7; Consejo de Seguridad (P5)",
+      "style": "Assertivo, jurídico y estratégico; busca liderazgo y autonomía europea.",
+      "allies": ["Alemania", "Bélgica", "Portugal", "Canadá", "Senegal"],
+      "tensions": ["Autonomía estratégica frente a aliados", "Cohesión social en periferias", "Relación con África francófona"],
+      "redLines": ["Defiende la excepción cultural y la diversidad lingüística", "No acepta dependencia tecnológica crítica sin salvaguardas"]
+    },
+    "context": {
+      "aiAndEducation": "Educación centralizada con currículos nacionales. Se impulsa formación docente en IA, protección de datos (CNIL) y un debate fuerte sobre evaluación y autoría.",
+      "youthLabour": "Desempleo juvenil estructural, aprendizajes y contratos cortos. Los disturbios de 2023 evidenciaron tensiones de integración.",
+      "digitalGovernance": "Estrategia nacional de IA, CNIL activa y defensa de soberanía europea en nube e IA."
+    },
+    "unesco": {
+      "position": "Promueve regulación con estándares vinculantes cuando sea necesario, protección de menores y diversidad cultural. Sede de UNESCO en París, lo que refuerza su liderazgo simbólico.",
+      "priorities": ["Diversidad lingüística y cultural", "Protección de datos y consentimiento de menores", "Formación docente y evaluación"],
+      "vulnerability": "La centralización puede chocar con realidades territoriales y comunidades marginadas.",
+      "leverage": "Sede de UNESCO, experiencia regulatoria y red francófona global."
+    },
+    "ecosoc": {
+      "position": "Defiende protección social fuerte, salario mínimo y regulación de plataformas. Apoya la condicionalidad social en fondos públicos y el diálogo social.",
+      "priorities": ["Regulación de plataformas y derechos colectivos", "Aprendizaje y primera experiencia laboral", "Igualdad de oportunidades en periferias urbanas"],
+      "vulnerability": "La segregación territorial y el desempleo de larga duración limitan la movilidad social.",
+      "leverage": "Marco de protección social, CNIL y experiencia en regulación digital."
+    },
+    "tips": [
+      "Usa el concepto de 'excepción cultural' para defender lenguas y contenidos locales.",
+      "No prometas derogar el AI Act: habla de aplicación efectiva y proporcionalidad.",
+      "Reconoce las tensiones sociales urbanas; un tono techno-optimista te restaría credibilidad."
+    ],
+    "facts": [
+      "Francia es miembro permanente del Consejo de Seguridad de la ONU desde 1945.",
+      "El francés es lengua oficial en decenas de países y una de las seis lenguas oficiales de la ONU.",
+      "París alberga la sede de UNESCO.",
+      "Francia es el país más visitado del mundo por turistas internacionales."
+    ],
+    "sources": [
+      { "label": "Gobierno de Francia", "url": "https://www.gouvernement.fr/", "kind": "official" },
+      { "label": "CNIL · Protección de datos", "url": "https://www.cnil.fr/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "IE",
+    "slug": "irlanda",
+    "name": "Irlanda",
+    "officialName": "Irlanda (Éire)",
+    "flag": "🇮🇪",
+    "region": "Europa Occidental",
+    "capital": "Dublín",
+    "languages": ["irlandés", "inglés"],
+    "unMember": true,
+    "palette": { "primary": "#2ECC71", "secondary": "#F5F5F5", "accent": "#169B62" },
+    "summary": "Economía pequeña y abierta con fuerte presencia de multinacionales tecnológicas y farmacéuticas. Miembro de la UE, políticamente neutral y con una población joven y altamente educada.",
+    "unProfile": {
+      "bloc": "Unión Europea; Europa Occidental",
+      "style": "Diplomático, cooperativo y centrado en derechos humanos, paz y multilateralismo.",
+      "allies": ["Países Bajos", "Dinamarca", "Canadá", "Portugal"],
+      "tensions": ["Dependencia de multinacionales", "Crisis de vivienda", "Relación con Irlanda del Norte"],
+      "redLines": ["Defiende la neutralidad militar", "No acepta políticas que erosionen el mercado único"]
+    },
+    "context": {
+      "aiAndEducation": "Sistema educativo con fuerte inversión y enfoque en competencias digitales. La presencia de grandes tecnológicas facilita alianzas, pero plantea preguntas sobre influencia privada.",
+      "youthLabour": "Jóvenes muy formados, pero la crisis de vivienda y el costo de vida empujan a la emigración y retrasan la independencia.",
+      "digitalGovernance": "Autoridad de protección de datos (DPC) influyente en la UE; sede europea de grandes plataformas."
+    },
+    "unesco": {
+      "position": "Apoya educación inclusiva, lenguas minoritarias y alfabetización mediática. Defiende un enfoque de derechos y participación de estudiantes.",
+      "priorities": ["Inclusión y bienestar estudiantil", "Preservación del irlandés", "Formación docente en pensamiento crítico"],
+      "vulnerability": "La brecha entre escuelas urbanas y rurales y la presión inmobiliaria afectan la equidad.",
+      "leverage": "Experiencia en atracción de talento, investigación y regulación de datos."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo de calidad, protección social y transición justa. Apoya la condicionalidad social y la inversión en habilidades digitales.",
+      "priorities": ["Vivienda asequible para jóvenes", "Aprendizajes y formación técnica", "Regulación de plataformas"],
+      "vulnerability": "El modelo fiscal dependiente de multinacionales es vulnerable a cambios globales.",
+      "leverage": "Ecosistema tecnológico, autoridad de datos y diálogo social."
+    },
+    "tips": [
+      "Habla de 'inversión extranjera con condiciones' para equilibrar innovación y soberanía.",
+      "Usa la crisis de vivienda como ejemplo de que el empleo juvenil no basta sin bienestar.",
+      "Mantén un tono cooperativo: Irlanda gana influencia como mediadora."
+    ],
+    "facts": [
+      "El irlandés es la primera lengua oficial, aunque el inglés predomina en la vida cotidiana.",
+      "Dublín es sede europea de varias empresas tecnológicas globales.",
+      "Irlanda es un Estado neutral que no pertenece a la OTAN.",
+      "El Libro de Kells, manuscrito medieval, se conserva en Trinity College Dublin."
+    ],
+    "sources": [
+      { "label": "Gobierno de Irlanda", "url": "https://www.gov.ie/", "kind": "official" },
+      { "label": "Comisión de Protección de Datos", "url": "https://www.dataprotection.ie/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "GB",
+    "slug": "reino-unido",
+    "name": "Reino Unido",
+    "officialName": "Reino Unido de Gran Bretaña e Irlanda del Norte",
+    "flag": "🇬🇧",
+    "region": "Europa Occidental",
+    "capital": "Londres",
+    "languages": ["inglés", "galés", "gaélico escocés", "irlandés", "córnico"],
+    "unMember": true,
+    "palette": { "primary": "#4C6FFF", "secondary": "#FFFFFF", "accent": "#C8102E" },
+    "summary": "Miembro permanente del Consejo de Seguridad, economía de servicios y potencia científica. Creó uno de los primeros institutos estatales de seguridad de IA y mantiene una influencia global vía Commonwealth.",
+    "unProfile": {
+      "bloc": "Consejo de Seguridad (P5); G7; Commonwealth; Europa Occidental",
+      "style": "Pragmático, técnico y orientado a seguridad; combina liderazgo normativo con flexibilidad regulatoria.",
+      "allies": ["Estados Unidos", "Australia", "Canadá", "Países Bajos", "India"],
+      "tensions": ["Relación con la UE tras el Brexit", "Desigualdad regional", "Servicios públicos bajo presión"],
+      "redLines": ["Defiende su autonomía regulatoria pos-Brexit", "No acepta restricciones que frenen su sector de servicios"]
+    },
+    "context": {
+      "aiAndEducation": "Currículos descentralizados (Inglaterra, Escocia, Gales, Irlanda del Norte). Fuerte inversión en edtech, evaluación y habilidades digitales, con debate sobre dependencia de proveedores.",
+      "youthLabour": "Desempleo juvenil moderado, pero altos costos de vivienda y empleos precarios. Programas de aprendizaje y bootcamps.",
+      "digitalGovernance": "AI Safety Institute, enfoque pro-innovación y regulación sectorial; ley de seguridad en línea."
+    },
+    "unesco": {
+      "position": "Apoya alfabetización mediática, seguridad en línea y protección de menores. Prefiere marcos flexibles y basados en riesgo antes que prohibiciones amplias.",
+      "priorities": ["Seguridad y bienestar digital de menores", "Habilidades críticas y verificación", "Formación docente"],
+      "vulnerability": "La descentralización educativa y la desigualdad regional generan brechas de implementación.",
+      "leverage": "AI Safety Institute, universidades de élite y experiencia en regulación sectorial."
+    },
+    "ecosoc": {
+      "position": "Defiende mercados laborales flexibles con redes de seguridad, recapacitación y protección de trabajadores atípicos. Apoya estándares internacionales sin compromisos vinculantes rígidos.",
+      "priorities": ["Habilidades para la transición digital", "Protección de trabajadores de plataforma", "Inclusión de jóvenes NEET"],
+      "vulnerability": "La precariedad y los costos de vivienda afectan la transición a la adultez.",
+      "leverage": "Ecosistema financiero, investigación y programas de habilidades."
+    },
+    "tips": [
+      "Distingue entre 'seguridad de IA' y 'regulación educativa': son debates distintos.",
+      "Usa la Commonwealth para hablar de cooperación Sur-Sur y diversidad.",
+      "Evita sonar nostálgico del imperio; enfócate en capacidades técnicas y diplomacia."
+    ],
+    "facts": [
+      "El Reino Unido es miembro permanente del Consejo de Seguridad de la ONU.",
+      "Está formado por Inglaterra, Escocia, Gales e Irlanda del Norte.",
+      "La Commonwealth agrupa a más de 50 países, muchos con vínculos históricos con el Reino Unido.",
+      "Londres es uno de los centros financieros más importantes del mundo."
+    ],
+    "sources": [
+      { "label": "Gobierno del Reino Unido", "url": "https://www.gov.uk/", "kind": "official" },
+      { "label": "AI Safety Institute", "url": "https://www.aisi.gov.uk/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "NL",
+    "slug": "paises-bajos",
+    "name": "Países Bajos",
+    "officialName": "Reino de los Países Bajos",
+    "flag": "🇳🇱",
+    "region": "Europa Occidental",
+    "capital": "Ámsterdam",
+    "languages": ["neerlandés"],
+    "unMember": true,
+    "palette": { "primary": "#F36C21", "secondary": "#FFFFFF", "accent": "#21468B" },
+    "summary": "Democracia consensual, economía abierta y líder en gestión del agua y agricultura de precisión. La Haya alberga instituciones de justicia internacional y la Corte Penal Internacional.",
+    "unProfile": {
+      "bloc": "Unión Europea; Benelux; Europa Occidental",
+      "style": "Consensual, jurídico y orientado a resultados; fuerte tradición de derecho internacional.",
+      "allies": ["Bélgica", "Alemania", "Dinamarca", "Irlanda"],
+      "tensions": ["Vivienda y costo de vida", "Transición agrícola", "Debate migratorio"],
+      "redLines": ["Defiende el derecho internacional y las instituciones de La Haya", "No acepta estándares que fragmenten el mercado único"]
+    },
+    "context": {
+      "aiAndEducation": "Fuerte énfasis en alfabetización digital, pensamiento computacional y equidad. Universidades y sector edtech colaboran con el gobierno en pilotos.",
+      "youthLabour": "Mercado laboral flexible con alta participación juvenil, pero aumento de contratos temporales y presión de vivienda.",
+      "digitalGovernance": "Autoridad de datos influyente, estrategia nacional de IA y compromiso con derechos digitales."
+    },
+    "unesco": {
+      "position": "Apoya educación inclusiva, multilingüismo y uso crítico de tecnología. Defiende evaluación por competencias y protección de datos.",
+      "priorities": ["Equidad y apoyo a estudiantes vulnerables", "Formación docente y pensamiento crítico", "Transparencia de proveedores edtech"],
+      "vulnerability": "La segregación escolar y la escasez de docentes limitan la equidad.",
+      "leverage": "Gestión del agua, agricultura de precisión y experiencia en consenso multipartito."
+    },
+    "ecosoc": {
+      "position": "Combina flexibilidad laboral con protección social. Apoya el diálogo social, la formación continua y la regulación de plataformas.",
+      "priorities": ["Contratos justos para jóvenes", "Vivienda y emancipación juvenil", "Reconversión agrícola sostenible"],
+      "vulnerability": "La crisis de vivienda y la polarización migratoria tensionan la cohesión.",
+      "leverage": "Modelo pólder, innovación agrícola y experiencia en justicia internacional."
+    },
+    "tips": [
+      "Usa el 'modelo pólder' para proponer mesas de consenso entre actores.",
+      "Menciona La Haya cuando hables de rendición de cuentas y derecho internacional.",
+      "No ignores la crisis de vivienda: es central para la juventud neerlandesa."
+    ],
+    "facts": [
+      "Ámsterdam es la capital, pero el gobierno y el parlamento tienen sede en La Haya.",
+      "La Haya alberga la Corte Internacional de Justicia y la Corte Penal Internacional.",
+      "Una parte importante del territorio neerlandés está por debajo del nivel del mar.",
+      "Los Países Bajos son un gran exportador agrícola pese a su pequeño tamaño."
+    ],
+    "sources": [
+      { "label": "Gobierno de los Países Bajos", "url": "https://www.government.nl/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "Corte Internacional de Justicia", "url": "https://www.icj-cij.org/", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "BE",
+    "slug": "belgica",
+    "name": "Bélgica",
+    "officialName": "Reino de Bélgica",
+    "flag": "🇧🇪",
+    "region": "Europa Occidental",
+    "capital": "Bruselas",
+    "languages": ["neerlandés", "francés", "alemán"],
+    "unMember": true,
+    "palette": { "primary": "#FFD166", "secondary": "#1B1B1B", "accent": "#EF3340" },
+    "summary": "Monarquía federal con comunidades lingüísticas y regiones con amplias competencias. Bruselas es sede de la UE y de la OTAN, lo que le da un peso diplomático desproporcionado a su tamaño.",
+    "unProfile": {
+      "bloc": "Unión Europea; Benelux; Europa Occidental",
+      "style": "Institucional, consensual y técnico; actúa como puente entre bloques.",
+      "allies": ["Países Bajos", "Luxemburgo", "Francia", "Alemania"],
+      "tensions": ["Complejidad institucional", "Brecha entre regiones", "Debate energético"],
+      "redLines": ["Defiende el multilateralismo con sede en Bruselas", "No acepta reformas que ignoren las competencias comunitarias"]
+    },
+    "context": {
+      "aiAndEducation": "Educación gestionada por comunidades. Se impulsan competencias digitales, formación docente y uso ético de IA con enfoques diferenciados.",
+      "youthLabour": "Desempleo juvenil concentrado en Bruselas y en jóvenes de origen migrante; fuerte segmentación del mercado.",
+      "digitalGovernance": "Aplicación del AI Act, autoridad de datos y ecosistema de instituciones europeas."
+    },
+    "unesco": {
+      "position": "Apoya diversidad lingüística, educación inclusiva y cooperación cultural. Defiende marcos europeos comunes y protección de menores.",
+      "priorities": ["Multilingüismo y equidad", "Formación docente", "Patrimonio cultural y creatividad"],
+      "vulnerability": "La fragmentación institucional dificulta estándares homogéneos.",
+      "leverage": "Sede europea, experiencia en consenso y diversidad lingüística."
+    },
+    "ecosoc": {
+      "position": "Prioriza diálogo social, protección de jóvenes vulnerables y transición justa. Apoya la coordinación europea de políticas de empleo.",
+      "priorities": ["Empleo juvenil en Bruselas", "Protección de trabajadores de plataforma", "Reconversión energética"],
+      "vulnerability": "La segregación urbana y el desempleo estructural limitan la movilidad.",
+      "leverage": "Instituciones europeas, diálogo social y experiencia federal."
+    },
+    "tips": [
+      "Explica brevemente la estructura federal si te preguntan por competencias.",
+      "Usa Bruselas como símbolo de cooperación, no solo como sede burocrática.",
+      "Habla de 'coordinación multi nivel' para sonar creíble."
+    ],
+    "facts": [
+      "Bélgica tiene tres lenguas oficiales: neerlandés, francés y alemán.",
+      "Bruselas es sede de la Comisión Europea, el Consejo Europeo y la OTAN.",
+      "El país se organiza en tres regiones y tres comunidades lingüísticas.",
+      "Bruselas es oficialmente bilingüe (neerlandés y francés)."
+    ],
+    "sources": [
+      { "label": "Gobierno de Bélgica", "url": "https://www.belgium.be/", "kind": "official" },
+      { "label": "Unión Europea", "url": "https://european-union.europa.eu/", "kind": "multilateral" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "PT",
+    "slug": "portugal",
+    "name": "Portugal",
+    "officialName": "República Portuguesa",
+    "flag": "🇵🇹",
+    "region": "Europa Meridional",
+    "capital": "Lisboa",
+    "languages": ["portugués"],
+    "unMember": true,
+    "palette": { "primary": "#2ECC71", "secondary": "#FFD700", "accent": "#C8102E" },
+    "summary": "Democracia semipresidencial y economía abierta con fuerte peso del turismo, la tecnología y las energías renovables. Mantiene vínculos culturales con la Comunidad de Países de Lengua Portuguesa.",
+    "unProfile": {
+      "bloc": "Unión Europea; Europa Meridional; CPLP",
+      "style": "Cooperativo y atlantista; prioriza cohesión, energía y relaciones con el Sur global.",
+      "allies": ["España", "Brasil", "Cabo Verde", "Irlanda"],
+      "tensions": ["Salarios bajos y emigración juvenil", "Dependencia turística", "Despoblación rural"],
+      "redLines": ["Defiende la CPLP y el multilateralismo", "No acepta recortes en cohesión europea"]
+    },
+    "context": {
+      "aiAndEducation": "Inversión en competencias digitales, formación docente y programas de capacitación. Fuerte vínculo con Brasil y con la comunidad lusófona.",
+      "youthLabour": "Jóvenes cualificados emigran por salarios bajos y costo de vivienda; turismo y tecnología concentran empleo.",
+      "digitalGovernance": "Estrategia nacional de IA, protección de datos y digitalización de servicios públicos."
+    },
+    "unesco": {
+      "position": "Apoya educación inclusiva, patrimonio y diversidad lingüística. Defiende cooperación con países lusófonos y acceso equitativo a tecnología.",
+      "priorities": ["Inclusión digital y rural", "Formación docente", "Patrimonio y creatividad"],
+      "vulnerability": "La despoblación y la brecha urbano-rural condicionan la equidad.",
+      "leverage": "Red CPLP, energías renovables y experiencia en digitalización pública."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo de calidad, salarios justos y protección social. Apoya la regulación de plataformas y la transición energética justa.",
+      "priorities": ["Salarios y productividad", "Empleo juvenil cualificado", "Transición energética y turismo sostenible"],
+      "vulnerability": "La emigración juvenil y la estacionalidad turística debilitan el mercado laboral.",
+      "leverage": "Renovables, comunidad lusófona y digitalización administrativa."
+    },
+    "tips": [
+      "Usa la CPLP para ampliar tu coalición más allá de Europa.",
+      "Habla de 'salarios y productividad' juntos: evita promesas aisladas.",
+      "Reconoce la emigración juvenil como síntoma, no solo como dato."
+    ],
+    "facts": [
+      "Portugal tiene dos archipiélagos atlánticos: Azores y Madeira.",
+      "El portugués es lengua oficial en Portugal, Brasil y varios países africanos.",
+      "Portugal ingresó en la Comunidad Europea en 1986.",
+      "Lisboa es una de las capitales más antiguas de Europa occidental."
+    ],
+    "sources": [
+      { "label": "Gobierno de Portugal", "url": "https://www.portugal.gov.pt/", "kind": "official" },
+      { "label": "CPLP", "url": "https://www.cplp.org/", "kind": "multilateral" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "IT",
+    "slug": "italia",
+    "name": "Italia",
+    "officialName": "República Italiana",
+    "flag": "🇮🇹",
+    "region": "Europa Meridional",
+    "capital": "Roma",
+    "languages": ["italiano"],
+    "unMember": true,
+    "palette": { "primary": "#2ECC71", "secondary": "#FFFFFF", "accent": "#CE2B37" },
+    "summary": "Miembro del G7 y fundador de la UE, con enorme patrimonio cultural y una brecha económica persistente entre el norte industrial y el sur. Envejecimiento poblacional y desempleo juvenil marcan su agenda.",
+    "unProfile": {
+      "bloc": "Unión Europea; G7; OTAN; Europa Meridional",
+      "style": "Europeísta y culturalmente assertivo; busca visibilidad y protección del patrimonio.",
+      "allies": ["Francia", "Alemania", "España", "Grecia"],
+      "tensions": ["Brecha Norte-Sur", "Envejecimiento", "Inestabilidad política"],
+      "redLines": ["Defiende la protección del patrimonio cultural", "No acepta políticas que castiguen al sur sin inversión"]
+    },
+    "context": {
+      "aiAndEducation": "Reformas educativas y planes de competencias digitales. El patrimonio y la creatividad son ejes de la estrategia cultural; la adopción de IA en aulas es desigual.",
+      "youthLabour": "Desempleo juvenil y NEET elevados, especialmente en el sur; emigración de talento al norte de Europa.",
+      "digitalGovernance": "Estrategia nacional de IA, autoridad de datos y debate sobre soberanía digital."
+    },
+    "unesco": {
+      "position": "Defiende patrimonio cultural, creatividad y diversidad. Apoya marcos de protección de menores y formación docente, con sensibilidad hacia la brecha territorial.",
+      "priorities": ["Patrimonio y educación cultural", "Brecha digital Norte-Sur", "Formación docente y evaluación"],
+      "vulnerability": "La desigualdad regional y la baja natalidad tensionan el sistema educativo.",
+      "leverage": "Patrimonio mundial, industrias creativas y liderazgo en el G7."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo juvenil, protección social y reducción de la brecha territorial. Apoya la condicionalidad social y la inversión en el sur.",
+      "priorities": ["Empleo juvenil y NEET", "Reconversión industrial verde", "Protección de trabajadores atípicos"],
+      "vulnerability": "La deuda pública limita el gasto social y la inversión.",
+      "leverage": "Fondos europeos, industrias creativas y experiencia en diálogo social."
+    },
+    "tips": [
+      "Usa el patrimonio cultural como puente entre creatividad e IA, no como oposición.",
+      "Habla del sur de Italia para demostrar sensibilidad territorial.",
+      "No prometas cohesión sin financiación: sé concreto en el mecanismo."
+    ],
+    "facts": [
+      "Italia es el país con más sitios inscritos en la Lista del Patrimonio Mundial de UNESCO.",
+      "Roma alberga la sede de la FAO, el Programa Mundial de Alimentos y otras agencias de la ONU.",
+      "Italia fue uno de los seis países fundadores de la Comunidad Europea en 1957.",
+      "El país tiene 20 regiones, cinco de ellas con estatuto especial."
+    ],
+    "sources": [
+      { "label": "Gobierno de Italia", "url": "https://www.governo.it/", "kind": "official" },
+      { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  }
+]

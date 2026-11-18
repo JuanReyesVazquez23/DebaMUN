@@ -1,0 +1,426 @@
+[
+  {
+    "code": "CA",
+    "slug": "canada",
+    "name": "Canadá",
+    "officialName": "Canadá",
+    "flag": "🇨🇦",
+    "region": "América del Norte",
+    "capital": "Ottawa",
+    "languages": ["inglés", "francés"],
+    "unMember": true,
+    "palette": { "primary": "#FF5A5F", "secondary": "#FFFFFF", "accent": "#D80621" },
+    "summary": "Monarquía constitucional federal y miembro del G7, con dos lenguas oficiales y una de las mayores extensiones territoriales del mundo. Es referencia en investigación en IA y en políticas de reconciliación con pueblos indígenas.",
+    "unProfile": {
+      "bloc": "G7; OTAN; Commonwealth; América del Norte; multilateralismo feminista",
+      "style": "Cooperativo, basado en derechos y evidencia; busca puentes entre economías avanzadas y Sur global.",
+      "allies": ["Reino Unido", "Francia", "Australia", "México", "Chile"],
+      "tensions": ["Relación con Estados Unidos", "Reconciliación indígena", "Vivienda y costo de vida"],
+      "redLines": ["Defiende el multilateralismo y el derecho internacional", "No acepta políticas que ignoren derechos indígenas o de género"]
+    },
+    "context": {
+      "aiAndEducation": "Estrategia Pan-canadiense de IA desde 2017, con institutos en Montreal, Toronto y Edmonton. La educación es competencia provincial; existe debate sobre IA en aulas, evaluación y brechas entre provincias.",
+      "youthLabour": "Desempleo juvenil moderado, pero vivienda y costo de vida afectan la emancipación. Fuerte dependencia de servicios y recursos naturales.",
+      "digitalGovernance": "Ley de IA propuesta (AIDA), directrices federales y provincias con enfoques distintos."
+    },
+    "unesco": {
+      "position": "Apoya educación inclusiva, derechos indígenas, diversidad lingüística y alfabetización mediática. Defiende un enfoque de derechos humanos y cooperación multilateral.",
+      "priorities": ["Reconciliación y educación indígena", "Equidad entre provincias y comunidades remotas", "Alfabetización mediática y pensamiento crítico"],
+      "vulnerability": "La descentralización educativa y las brechas con comunidades remotas dificultan estándares comunes.",
+      "leverage": "Investigación en IA, diversidad lingüística y experiencia en reconciliación."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo de calidad, protección social e inclusión. Apoya la recapacitación y la regulación de plataformas con enfoque de derechos.",
+      "priorities": ["Empleo juvenil y vivienda", "Inclusión de pueblos indígenas", "Transición energética justa"],
+      "vulnerability": "La dependencia de recursos y Estados Unidos expone la economía a shocks.",
+      "leverage": "Investigación, protección social y diplomacia feminista."
+    },
+    "tips": [
+      "Usa 'multilateralismo feminista' con ejemplos concretos, no como etiqueta.",
+      "Habla de reconciliación con pueblos indígenas: es una prioridad real y te diferencia.",
+      "Distingue competencia federal y provincial en educación."
+    ],
+    "facts": [
+      "Canadá tiene dos lenguas oficiales: inglés y francés.",
+      "Ottawa es la capital, aunque Toronto es la ciudad más grande.",
+      "El país tiene la costa más larga del mundo.",
+      "Canadá alberga una quinta parte del agua dulce superficial del planeta."
+    ],
+    "sources": [
+      { "label": "Gobierno de Canadá", "url": "https://www.canada.ca/", "kind": "official" },
+      { "label": "Estrategia Pan-canadiense de IA", "url": "https://ised-isde.canada.ca/site/pan-canadian-artificial-intelligence-strategy/en", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "CO",
+    "slug": "colombia",
+    "name": "Colombia",
+    "officialName": "República de Colombia",
+    "flag": "🇨🇴",
+    "region": "América del Sur",
+    "capital": "Bogotá",
+    "languages": ["español", "lenguas indígenas", "criollo"],
+    "unMember": true,
+    "palette": { "primary": "#FFD166", "secondary": "#003893", "accent": "#CE1126" },
+    "summary": "República unitaria descentralizada, con 32 departamentos y una enorme biodiversidad. Miembro de la OCDE y con un acuerdo de paz de 2016 que sigue transformando su política territorial.",
+    "unProfile": {
+      "bloc": "América Latina y el Caribe; OCDE; Alianza del Pacífico",
+      "style": "Diplomacia de paz, cooperación Sur-Sur y enfoque territorial.",
+      "allies": ["Chile", "Perú", "México", "Brasil", "España"],
+      "tensions": ["Implementación del acuerdo de paz", "Informalidad laboral", "Migración venezolana"],
+      "redLines": ["Defiende la solución negociada de conflictos", "No acepta intervención externa en asuntos internos"]
+    },
+    "context": {
+      "aiAndEducation": "Brecha digital urbano-rural y esfuerzos por conectividad. Programas de formación docente y uso de IA en educación superior, con desafíos de financiación.",
+      "youthLabour": "Alta informalidad y desempleo juvenil; migración venezolana presiona servicios y mercado laboral.",
+      "digitalGovernance": "Estrategia nacional digital, protección de datos y debate sobre IA y derechos."
+    },
+    "unesco": {
+      "position": "Prioriza equidad territorial, educación rural, diversidad cultural y memoria histórica. Defiende inversión pública y cooperación internacional.",
+      "priorities": ["Educación rural y conectividad", "Diversidad cultural y lenguas indígenas", "Memoria y cultura de paz"],
+      "vulnerability": "La brecha rural y el conflicto armado residual limitan el acceso.",
+      "leverage": "Biodiversidad, acuerdo de paz y cooperación Sur-Sur."
+    },
+    "ecosoc": {
+      "position": "Prioriza formalización laboral, protección social y empleo juvenil rural. Apoya la cooperación internacional para la transición.",
+      "priorities": ["Formalización y derechos laborales", "Empleo juvenil rural", "Integración de migrantes"],
+      "vulnerability": "La informalidad y la violencia territorial fragmentan el mercado laboral.",
+      "leverage": "Experiencia en paz, biodiversidad y cooperación regional."
+    },
+    "tips": [
+      "Habla de 'enfoque territorial': es clave en la diplomacia colombiana.",
+      "No reduzcas el país a la violencia; menciona biodiversidad y talento digital.",
+      "Usa la migración venezolana como ejemplo de solidaridad y necesidad de financiación."
+    ],
+    "facts": [
+      "Colombia es el único país de América del Sur con costas en el océano Atlántico y el Pacífico.",
+      "Bogotá está a más de 2.600 metros sobre el nivel del mar.",
+      "Colombia es uno de los países más biodiversos del mundo por especie por kilómetro cuadrado.",
+      "El café colombiano tiene denominación de origen protegida."
+    ],
+    "sources": [
+      { "label": "Gobierno de Colombia", "url": "https://www.gov.co/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Colombia", "url": "https://www.oecd.org/en/countries/colombia.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "SV",
+    "slug": "el-salvador",
+    "name": "El Salvador",
+    "officialName": "República de El Salvador",
+    "flag": "🇸🇻",
+    "region": "América Central",
+    "capital": "San Salvador",
+    "languages": ["español"],
+    "unMember": true,
+    "palette": { "primary": "#4C9AFF", "secondary": "#F5F7FB", "accent": "#FFCC00" },
+    "summary": "República presidencialista, el país continental más pequeño de América Central, con fuerte dependencia de remesas y una economía dolarizada. En 2021 adoptó el bitcoin como moneda de curso legal.",
+    "unProfile": {
+      "bloc": "América Central; SICA; América Latina y el Caribe",
+      "style": "Directo y pragmático, con énfasis en seguridad, migración y cooperación.",
+      "allies": ["Guatemala", "Honduras", "México", "Estados Unidos"],
+      "tensions": ["Dependencia de remesas", "Seguridad y derechos humanos", "Brecha digital"],
+      "redLines": ["Defiende la no intervención", "Rechaza condicionalidades que ignoren su realidad fiscal"]
+    },
+    "context": {
+      "aiAndEducation": "Programas de conectividad y entrega de dispositivos, con retos de electricidad rural y formación docente. La adopción de tecnología es desigual.",
+      "youthLabour": "Informalidad alta y migración juvenil; remesas sostienen el consumo. Nuevas oportunidades en servicios digitales.",
+      "digitalGovernance": "Agenda digital, adopción de bitcoin y debates sobre inclusión financiera."
+    },
+    "unesco": {
+      "position": "Prioriza acceso equitativo, conectividad rural y formación docente. Defiende cooperación internacional y protección de menores.",
+      "priorities": ["Conectividad y electricidad rural", "Formación docente", "Prevención de violencia y bienestar"],
+      "vulnerability": "La brecha digital y los ingresos fiscales limitados condicionan la inversión.",
+      "leverage": "Experiencia en inclusión financiera y cooperación centroamericana."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo juvenil, formalización y migración segura. Apoya la cooperación para el desarrollo y la inversión en habilidades.",
+      "priorities": ["Formalización laboral", "Empleo juvenil y migración", "Inclusión financiera"],
+      "vulnerability": "La dependencia de remesas y la inseguridad limitan la inversión productiva.",
+      "leverage": "Cooperación regional, inclusión financiera y diáspora."
+    },
+    "tips": [
+      "Habla de remesas como oportunidad y vulnerabilidad, no solo como dato.",
+      "No evites el tema de seguridad; enmárcalo en derechos y prevención.",
+      "Propón cooperación regional para conectividad rural."
+    ],
+    "facts": [
+      "El Salvador es el país continental más pequeño de América Central.",
+      "Su moneda oficial es el dólar estadounidense; en 2021 se reconoció el bitcoin como moneda de curso legal.",
+      "San Salvador es la capital y principal centro económico del país.",
+      "Una parte importante del PIB proviene de remesas enviadas por la diáspora."
+    ],
+    "sources": [
+      { "label": "Gobierno de El Salvador", "url": "https://www.presidencia.gob.sv/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "SICA", "url": "https://www.sica.int/", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "BR",
+    "slug": "brasil",
+    "name": "Brasil",
+    "officialName": "República Federativa del Brasil",
+    "flag": "🇧🇷",
+    "region": "América del Sur",
+    "capital": "Brasilia",
+    "languages": ["portugués"],
+    "unMember": true,
+    "palette": { "primary": "#2ECC71", "secondary": "#FFDF00", "accent": "#002776" },
+    "summary": "Democracia federal con 26 estados y el Distrito Federal, la mayor economía de América Latina y una potencia agrícola y ambiental. Presidió el G20 en 2024 y tiene un ecosistema digital vibrante.",
+    "unProfile": {
+      "bloc": "América Latina y el Caribe; BRICS; Mercosur; G20",
+      "style": "Assertivo y multilateral; busca liderazgo regional y autonomía estratégica.",
+      "allies": ["Argentina", "Chile", "México", "India", "Sudáfrica"],
+      "tensions": ["Desigualdad social", "Deforestación", "Polarización política"],
+      "redLines": ["Defiende la soberanía amazónica", "Rechaza condicionalidades ambientales unilaterales"]
+    },
+    "context": {
+      "aiAndEducation": "Programas de conectividad escolar y formación docente; debate sobre regulación de IA y protección de datos (LGPD). Brechas enormes entre regiones.",
+      "youthLabour": "Informalidad y desempleo juvenil elevados; programas de transferencia condicionada y formación profesional.",
+      "digitalGovernance": "LGPD, estrategia brasileña de IA y proyecto de ley de IA en discusión."
+    },
+    "unesco": {
+      "position": "Prioriza equidad, diversidad cultural, lenguas y acceso. Defiende cooperación Sur-Sur y un enfoque de derechos frente a la IA.",
+      "priorities": ["Equidad regional y rural", "Diversidad cultural y lenguas", "Formación docente y conectividad"],
+      "vulnerability": "La desigualdad territorial y la violencia urbana afectan la continuidad educativa.",
+      "leverage": "Escala regional, biodiversidad y cooperación Sur-Sur."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo formal, protección social y reducción de la desigualdad. Apoya la regulación de plataformas y la transición justa.",
+      "priorities": ["Formalización y protección social", "Empleo juvenil", "Transición ecológica justa"],
+      "vulnerability": "La informalidad y la desigualdad estructural limitan el impacto de las políticas.",
+      "leverage": "Programas sociales, escala económica y liderazgo regional."
+    },
+    "tips": [
+      "Habla de desigualdad regional, no solo de Amazonia.",
+      "Usa el G20 y los BRICS para mostrar capacidad de convocatoria.",
+      "Menciona la LGPD como modelo de protección de datos del Sur global."
+    ],
+    "facts": [
+      "Brasil tiene 26 estados y el Distrito Federal, donde se encuentra Brasilia.",
+      "El portugués es la lengua oficial y la más hablada del país.",
+      "La cuenca amazónica alberga la mayor selva tropical del mundo.",
+      "Brasilia fue construida en la década de 1950 y es Patrimonio Mundial de UNESCO."
+    ],
+    "sources": [
+      { "label": "Gobierno de Brasil", "url": "https://www.gov.br/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Brasil", "url": "https://www.oecd.org/en/countries/brazil.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "MX",
+    "slug": "mexico",
+    "name": "México",
+    "officialName": "Estados Unidos Mexicanos",
+    "flag": "🇲🇽",
+    "region": "América del Norte",
+    "capital": "Ciudad de México",
+    "languages": ["español", "68 agrupaciones lingüísticas indígenas"],
+    "unMember": true,
+    "palette": { "primary": "#2ECC71", "secondary": "#FFFFFF", "accent": "#CE1126" },
+    "summary": "República federal con 32 entidades, la segunda economía de América Latina y un socio comercial central de Estados Unidos y Canadá. Su diversidad lingüística y cultural es uno de sus mayores activos.",
+    "unProfile": {
+      "bloc": "América Latina y el Caribe; T-MEC; G20; OCDE",
+      "style": "Diplomacia de principios, no intervención y cooperación para el desarrollo.",
+      "allies": ["Canadá", "Estados Unidos", "Chile", "Colombia", "España"],
+      "tensions": ["Relación con Estados Unidos", "Seguridad", "Desigualdad regional"],
+      "redLines": ["Defiende la no intervención y la autodeterminación", "No acepta políticas migratorias coercitivas"]
+    },
+    "context": {
+      "aiAndEducation": "Programas de becas y conectividad; formación docente desigual. La IA se debate en educación superior y en la industria automotriz.",
+      "youthLabour": "Informalidad alta, jóvenes ninis y migración. El nearshoring genera empleo industrial pero también presión urbana.",
+      "digitalGovernance": "Ley federal de protección de datos, estrategia digital y debate sobre IA."
+    },
+    "unesco": {
+      "position": "Defiende diversidad cultural y lingüística, educación pública y cooperación. Prioriza inclusión de pueblos indígenas y protección de menores.",
+      "priorities": ["Lenguas indígenas y educación intercultural", "Equidad y becas", "Formación docente"],
+      "vulnerability": "La desigualdad regional y la inseguridad afectan la asistencia escolar.",
+      "leverage": "Diversidad cultural, escala económica y diplomacia multilateral."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo formal, salario mínimo y protección social. Apoya la cooperación regional y la regulación de plataformas.",
+      "priorities": ["Formalización y salario digno", "Empleo juvenil", "Migración y derechos laborales"],
+      "vulnerability": "La informalidad y la dependencia comercial de Estados Unidos limitan la calidad del empleo.",
+      "leverage": "Nearshoring, programas sociales y liderazgo regional."
+    },
+    "tips": [
+      "Habla de 'diplomacia de principios' y no intervención: es doctrina histórica.",
+      "Usa la diversidad lingüística como argumento de IA inclusiva.",
+      "No simplifiques la relación con Estados Unidos; muestra matices."
+    ],
+    "facts": [
+      "México tiene 32 entidades federativas, incluida la Ciudad de México.",
+      "Además del español, se reconocen 68 agrupaciones lingüísticas indígenas.",
+      "La Ciudad de México está construida sobre el antiguo lago de Texcoco.",
+      "La cocina tradicional mexicana es Patrimonio Cultural Inmaterial de la Humanidad."
+    ],
+    "sources": [
+      { "label": "Gobierno de México", "url": "https://www.gob.mx/", "kind": "official" },
+      { "label": "INEGI", "url": "https://www.inegi.org.mx/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "AR",
+    "slug": "argentina",
+    "name": "Argentina",
+    "officialName": "República Argentina",
+    "flag": "🇦🇷",
+    "region": "América del Sur",
+    "capital": "Buenos Aires",
+    "languages": ["español"],
+    "unMember": true,
+    "palette": { "primary": "#74ACDF", "secondary": "#FFFFFF", "accent": "#F6B40E" },
+    "summary": "República federal con 23 provincias y la Ciudad Autónoma de Buenos Aires. Tiene un sistema universitario público de prestigio, una fuerte industria de talento digital y una economía marcada por la inflación.",
+    "unProfile": {
+      "bloc": "América Latina y el Caribe; Mercosur; G20",
+      "style": "Diplomacia activa en derechos humanos, multilateralismo y cooperación Sur-Sur.",
+      "allies": ["Brasil", "Chile", "México", "Uruguay"],
+      "tensions": ["Inflación y deuda", "Polarización política", "Informalidad"],
+      "redLines": ["Defiende los derechos humanos y la memoria", "Rechaza condicionalidades que profundicen la desigualdad"]
+    },
+    "context": {
+      "aiAndEducation": "Universidades públicas y programas de formación digital. La IA se incorpora lentamente en aulas, con brechas de conectividad y equipamiento.",
+      "youthLabour": "Desempleo juvenil e informalidad; emigración de talento por inestabilidad macroeconómica.",
+      "digitalGovernance": "Ley de protección de datos, estrategia de IA y debate sobre innovación."
+    },
+    "unesco": {
+      "position": "Defiende educación pública, derechos humanos y diversidad cultural. Prioriza equidad, formación docente y memoria histórica.",
+      "priorities": ["Educación pública y equidad", "Derechos humanos y memoria", "Formación docente"],
+      "vulnerability": "La crisis macroeconómica limita la inversión sostenida.",
+      "leverage": "Universidades,industrias culturales y diplomacia de derechos humanos."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo formal, protección social y reducción de la pobreza. Apoya la cooperación regional y la regulación de plataformas.",
+      "priorities": ["Formalización y protección social", "Empleo juvenil", "Reconversión productiva"],
+      "vulnerability": "La inflación y la volatilidad cambiaria erosionan ingresos y empleo.",
+      "leverage": "Talento digital, agroindustria y cooperación regional."
+    },
+    "tips": [
+      "Habla de derechos humanos con ejemplos concretos, no como eslogan.",
+      "Reconoce la crisis económica: te da autoridad para pedir cooperación.",
+      "Usa el talento digital argentino como activo exportable."
+    ],
+    "facts": [
+      "Argentina tiene 23 provincias y la Ciudad Autónoma de Buenos Aires.",
+      "El tango es Patrimonio Cultural Inmaterial de la Humanidad.",
+      "Es el octavo país más extenso del mundo.",
+      "La Universidad de Buenos Aires es una de las más grandes de América Latina."
+    ],
+    "sources": [
+      { "label": "Gobierno de Argentina", "url": "https://www.argentina.gob.ar/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Argentina", "url": "https://www.oecd.org/en/countries/argentina.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "CL",
+    "slug": "chile",
+    "name": "Chile",
+    "officialName": "República de Chile",
+    "flag": "🇨🇱",
+    "region": "América del Sur",
+    "capital": "Santiago",
+    "languages": ["español"],
+    "unMember": true,
+    "palette": { "primary": "#FF6B6B", "secondary": "#FFFFFF", "accent": "#0039A6" },
+    "summary": "República unitaria con 16 regiones, miembro de la OCDE y uno de los mayores productores de cobre y litio. Tiene un ecosistema de innovación y emprendimiento dinámico y debates pendientes sobre pensiones y desigualdad.",
+    "unProfile": {
+      "bloc": "América Latina y el Caribe; OCDE; Alianza del Pacífico; CPTPP",
+      "style": "Técnico, aperturista y orientado a reglas; busca liderazgo en transición energética.",
+      "allies": ["Perú", "Colombia", "México", "Canadá", "Brasil"],
+      "tensions": ["Desigualdad y pensiones", "Polarización constitucional", "Sequía"],
+      "redLines": ["Defiende la estabilidad macroeconómica", "No acepta políticas que frenen la inversión en minerales críticos"]
+    },
+    "context": {
+      "aiAndEducation": "Programas de conectividad y formación digital; universidades con investigación en IA. Brecha entre Santiago y regiones extremas.",
+      "youthLabour": "Desempleo juvenil y empleo precario; informalidad en servicios. Migración regional relevante.",
+      "digitalGovernance": "Ley de protección de datos, política nacional de IA y estrategia de litio."
+    },
+    "unesco": {
+      "position": "Prioriza equidad, educación pública y transición climática. Defiende formación docente y protección de datos de menores.",
+      "priorities": ["Equidad regional", "Educación pública y formación docente", "Educación para la sostenibilidad"],
+      "vulnerability": "La sequía y la desigualdad territorial afectan la provisión educativa.",
+      "leverage": "Minerales críticos, OCDE y experiencia en políticas públicas."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo formal, protección social y transición justa. Apoya la inversión en habilidades para la economía verde y digital.",
+      "priorities": ["Empleo juvenil y formalización", "Pensiones y protección social", "Transición energética justa"],
+      "vulnerability": "La dependencia del cobre y la desigualdad estructural limitan la diversificación.",
+      "leverage": "Litio, energías renovables y estabilidad institucional."
+    },
+    "tips": [
+      "Usa el litio como ejemplo de cadena de valor y empleo juvenil, no solo de exportación.",
+      "Habla de 'transición justa' con financiación concreta.",
+      "No te enredes en el debate constitucional; enfócate en políticas."
+    ],
+    "facts": [
+      "Chile tiene 16 regiones y una de las costas más largas del mundo.",
+      "El desierto de Atacama es uno de los lugares más áridos del planeta.",
+      "Chile es un gran productor mundial de cobre y litio.",
+      "Santiago es la capital y principal centro urbano del país."
+    ],
+    "sources": [
+      { "label": "Gobierno de Chile", "url": "https://www.gob.cl/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Chile", "url": "https://www.oecd.org/en/countries/chile.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "PE",
+    "slug": "peru",
+    "name": "Perú",
+    "officialName": "República del Perú",
+    "flag": "🇵🇪",
+    "region": "América del Sur",
+    "capital": "Lima",
+    "languages": ["español", "quechua", "aimara", "lenguas amazónicas"],
+    "unMember": true,
+    "palette": { "primary": "#FF6B6B", "secondary": "#FFFFFF", "accent": "#7A1420" },
+    "summary": "República unitaria con 24 departamentos y el Callao, con tres grandes regiones naturales: costa, sierra y selva. Su riqueza minera y cultural convive con una alta informalidad y volatilidad política.",
+    "unProfile": {
+      "bloc": "América Latina y el Caribe; Alianza del Pacífico; APEC",
+      "style": "Diplomacia legalista y multilateral, con énfasis en integración regional.",
+      "allies": ["Chile", "Colombia", "México", "Brasil"],
+      "tensions": ["Inestabilidad política", "Informalidad", "Brecha rural"],
+      "redLines": ["Defiende la solución pacífica de controversias", "Rechaza intervención externa"]
+    },
+    "context": {
+      "aiAndEducation": "Brecha de conectividad en zonas rurales y amazónicas; programas de formación docente y educación intercultural bilingüe.",
+      "youthLabour": "Informalidad alta, desempleo juvenil y migración a Lima. Minería y servicios concentran empleo.",
+      "digitalGovernance": "Ley de protección de datos, agenda digital y debate incipiente sobre IA."
+    },
+    "unesco": {
+      "position": "Prioriza educación intercultural bilingüe, equidad rural y patrimonio. Defiende diversidad cultural y protección de menores.",
+      "priorities": ["Educación intercultural bilingüe", "Conectividad rural y amazónica", "Patrimonio y cultura"],
+      "vulnerability": "La dispersión geográfica y la inestabilidad política dificultan continuidad.",
+      "leverage": "Patrimonio, biodiversidad y experiencia en educación intercultural."
+    },
+    "ecosoc": {
+      "position": "Prioriza formalización, protección social y empleo rural. Apoya cooperación para infraestructura y habilidades.",
+      "priorities": ["Formalización laboral", "Empleo juvenil y rural", "Protección social"],
+      "vulnerability": "La informalidad y la volatilidad política frenan la inversión social.",
+      "leverage": "Minerales, biodiversidad y cooperación regional."
+    },
+    "tips": [
+      "Habla de educación intercultural bilingüe con respeto, no como folclore.",
+      "Usa la selva amazónica para hablar de conectividad y sostenibilidad.",
+      "Evita pronosticar crisis políticas; enfócate en políticas públicas."
+    ],
+    "facts": [
+      "Perú tiene tres regiones naturales: costa, sierra y selva.",
+      "Machu Picchu es Patrimonio Mundial de UNESCO y una de las maravillas del mundo moderno.",
+      "El quechua y el aimara son lenguas oficiales, junto al español y otras lenguas indígenas.",
+      "Perú es uno de los mayores productores de cobre, plata y oro del mundo."
+    ],
+    "sources": [
+      { "label": "Gobierno de Perú", "url": "https://www.gob.pe/", "kind": "official" },
+      { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  }
+]

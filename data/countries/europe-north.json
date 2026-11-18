@@ -1,0 +1,320 @@
+[
+  {
+    "code": "SE",
+    "slug": "suecia",
+    "name": "Suecia",
+    "officialName": "Reino de Suecia",
+    "flag": "🇸🇪",
+    "region": "Europa Septentrional",
+    "capital": "Estocolmo",
+    "languages": ["sueco"],
+    "unMember": true,
+    "palette": { "primary": "#4C9AFF", "secondary": "#FFD166", "accent": "#006AA7" },
+    "summary": "Monarquía constitucional y economía innovadora con un Estado de bienestar robusto. Es sede de Spotify y Ericsson, y combina alta digitalización con una fuerte tradición de diálogo social.",
+    "unProfile": {
+      "bloc": "Unión Europea; Europa Septentrional; cooperación nórdica",
+      "style": "Progresista, técnico y consensual; lidera en igualdad, sostenibilidad y derechos digitales.",
+      "allies": ["Noruega", "Finlandia", "Dinamarca", "Países Bajos"],
+      "tensions": ["Segregación escolar", "Violencia de bandas", "Integración de migrantes"],
+      "redLines": ["Defiende la autonomía del modelo nórdico", "No acepta retrocesos en igualdad de género o protección social"]
+    },
+    "context": {
+      "aiAndEducation": "Currículo nacional con fuerte énfasis en pensamiento crítico y competencia digital. Se debate el uso de IA en evaluación y la dependencia de plataformas extranjeras.",
+      "youthLabour": "Mercado laboral regulado con alta participación, pero desempleo juvenil superior al promedio y presión sobre vivienda en ciudades.",
+      "digitalGovernance": "Estrategia nacional de IA, autoridades de datos y una cultura de transparencia pública."
+    },
+    "unesco": {
+      "position": "Apoya una educación equitativa, alfabetización mediática y protección de menores. Defiende la autonomía docente y la inversión pública, con apertura a pilotos evaluados.",
+      "priorities": ["Igualdad y segregación escolar", "Alfabetización mediática y pensamiento crítico", "Formación docente"],
+      "vulnerability": "La segregación residencial y escolar puede ampliar brechas de acceso a tecnología.",
+      "leverage": "Modelo de bienestar, innovación y transparencia pública."
+    },
+    "ecosoc": {
+      "position": "Defiende el diálogo social, la negociación colectiva y la protección social universal. Apoya la recapacitación financiada públicamente y la regulación de plataformas.",
+      "priorities": ["Negociación colectiva y calidad del empleo", "Reconversión verde y digital", "Inclusión de jóvenes migrantes"],
+      "vulnerability": "La segregación y el desempleo juvenil concentrado en ciertos barrios tensionan la cohesión.",
+      "leverage": "Modelo de diálogo social, innovación y protección universal."
+    },
+    "tips": [
+      "Usa el concepto de 'modelo nórdico' con datos, no como eslogan.",
+      "Habla de segregación escolar: es una crítica interna legítima que te da credibilidad.",
+      "Propón evaluación independiente de pilotos de IA."
+    ],
+    "facts": [
+      "Suecia es una monarquía constitucional con un parlamento unicameral, el Riksdag.",
+      "Estocolmo está construida sobre 14 islas conectadas por más de 50 puentes.",
+      "El Premio Nobel se entrega en Estocolmo, salvo el de la Paz, que se entrega en Oslo.",
+      "Suecia tiene cinco lenguas minoritarias oficialmente reconocidas, además del sueco."
+    ],
+    "sources": [
+      { "label": "Gobierno de Suecia", "url": "https://www.government.se/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Suecia", "url": "https://www.oecd.org/en/countries/sweden.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "NO",
+    "slug": "noruega",
+    "name": "Noruega",
+    "officialName": "Reino de Noruega",
+    "flag": "🇳🇴",
+    "region": "Europa Septentrional",
+    "capital": "Oslo",
+    "languages": ["noruego", "sami"],
+    "unMember": true,
+    "palette": { "primary": "#E63946", "secondary": "#FFFFFF", "accent": "#00205B" },
+    "summary": "Monarquía constitucional, miembro del EEE pero no de la UE, con un fondo soberano que le da un margen fiscal excepcional. Es mediador habitual en procesos de paz y cooperación al desarrollo.",
+    "unProfile": {
+      "bloc": "Europa Septentrional; EEE; cooperación nórdica",
+      "style": "Mediador, discreto y orientado a derechos; invierte en paz y desarrollo.",
+      "allies": ["Suecia", "Dinamarca", "Finlandia", "Islandia"],
+      "tensions": ["Dependencia petrolera", "Relación con la UE", "Integración del norte sami"],
+      "redLines": ["Defiende su autonomía fuera de la UE", "No acepta políticas que ignoren el consentimiento sami"]
+    },
+    "context": {
+      "aiAndEducation": "Fuerte inversión en educación pública y digitalización. Debate sobre IA en evaluación, privacidad y brechas entre centros urbanos y rurales.",
+      "youthLabour": "Buen nivel de empleo juvenil, aunque con presión de vivienda y concentration en ciudades. Sectores petrolero y tecnológico dominan.",
+      "digitalGovernance": "Estrategia nacional de IA, autoridad de datos y cooperación nórdica en interoperabilidad."
+    },
+    "unesco": {
+      "position": "Apoya educación inclusiva, sostenibilidad y derechos de pueblos indígenas. Defiende marcos de protección de menores y cooperación multilateral.",
+      "priorities": ["Educación rural y equidad", "Derechos sami y diversidad cultural", "Alfabetización mediática"],
+      "vulnerability": "La dispersión geográfica encarece la conectividad y los servicios educativos.",
+      "leverage": "Fondo soberano, mediación de paz y cooperación al desarrollo."
+    },
+    "ecosoc": {
+      "position": "Prioriza trabajo decente, protección social y transición justa. Apoya la cooperación tripartita y la inversión en competencias.",
+      "priorities": ["Transición energética justa", "Empleo juvenil y vivienda", "Derechos de trabajadores de plataforma"],
+      "vulnerability": "La dependencia de hidrocarburos condiciona la transición.",
+      "leverage": "Fondo soberano, modelo tripartito y experiencia en paz."
+    },
+    "tips": [
+      "Diferencia entre 'miembro del EEE' y 'miembro de la UE': evita errores.",
+      "Habla de consentimiento libre, previo e informado de los pueblos indígenas.",
+      "Usa tu fondo soberano como ejemplo de financiación de transiciones, no como alarde."
+    ],
+    "facts": [
+      "Noruega no es miembro de la Unión Europea, pero sí del Espacio Económico Europeo.",
+      "El Premio Nobel de la Paz se entrega en Oslo.",
+      "El parlamento sami, Sámediggi, tiene sede en Karasjok.",
+      "Noruega tiene una de las costas más largas del mundo, con numerosos fiordos."
+    ],
+    "sources": [
+      { "label": "Gobierno de Noruega", "url": "https://www.regjeringen.no/en/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Noruega", "url": "https://www.oecd.org/en/countries/norway.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "FI",
+    "slug": "finlandia",
+    "name": "Finlandia",
+    "officialName": "República de Finlandia",
+    "flag": "🇫🇮",
+    "region": "Europa Septentrional",
+    "capital": "Helsinki",
+    "languages": ["finés", "sueco"],
+    "unMember": true,
+    "palette": { "primary": "#4C8DD6", "secondary": "#FFFFFF", "accent": "#003580" },
+    "summary": "República parlamentaria con un sistema educativo admirado por su equidad y autonomía docente. Recientemente ingresó en la OTAN y lidera en alfabetización mediática y sociedad digital.",
+    "unProfile": {
+      "bloc": "Unión Europea; Europa Septentrional; OTAN desde 2023",
+      "style": "Sobrio, basado en evidencia y derechos; prioriza educación, igualdad y seguridad.",
+      "allies": ["Suecia", "Estonia", "Noruega", "Dinamarca"],
+      "tensions": ["Frontera con Rusia", "Envejecimiento", "Brecha rural"],
+      "redLines": ["Defiende la autonomía educativa y municipal", "No acepta desinformación ni injerencia externa"]
+    },
+    "context": {
+      "aiAndEducation": "Educación básica equitativa, docentes altamente formados y currículo con ciudadanía digital. La IA se aborda desde pensamiento crítico y bienestar, no solo productividad.",
+      "youthLabour": "Empleo juvenil relativamente alto, con desafíos de salud mental y transición a estudios superiores.",
+      "digitalGovernance": "Estrategia nacional de IA, identidad digital fuerte y cooperación con Estonia."
+    },
+    "unesco": {
+      "position": "Defiende equidad, autonomía docente y alfabetización mediática. Apoya un uso de IA centrado en el aprendizaje profundo y el bienestar, con evaluación formativa.",
+      "priorities": ["Equidad y apoyo a la diversidad", "Alfabetización mediática y pensamiento crítico", "Bienestar y salud mental"],
+      "vulnerability": "La dispersión rural y el envejecimiento tensionan la provisión de servicios.",
+      "leverage": "Sistema educativo, formación docente y alfabetización mediática."
+    },
+    "ecosoc": {
+      "position": "Apoya protección social universal, formación continua y diálogo social. Prioriza calidad del empleo y bienestar frente a crecimiento a cualquier costo.",
+      "priorities": ["Salud mental y empleo juvenil", "Reconversión digital", "Protección social universal"],
+      "vulnerability": "La frontera con Rusia y la dependencia exportadora generan incertidumbre.",
+      "leverage": "Modelo educativo, innovación limpia y experiencia en cooperación nórdica."
+    },
+    "tips": [
+      "No reduzcas tu posición a 'Finlandia tiene el mejor sistema educativo': explica por qué.",
+      "Habla de bienestar y salud mental como parte del aprendizaje, no como tema aparte.",
+      "Usa la frontera con Rusia con prudencia: seguridad sin alarmismo."
+    ],
+    "facts": [
+      "Finlandia tiene alrededor de 188.000 lagos.",
+      "El finés y el sueco son sus dos lenguas oficiales.",
+      "Finlandia se convirtió en miembro de la OTAN en 2023.",
+      "La sauna es un elemento central de la cultura finlandesa, con millones de unidades en el país."
+    ],
+    "sources": [
+      { "label": "Gobierno de Finlandia", "url": "https://valtioneuvosto.fi/en/", "kind": "official" },
+      { "label": "Agencia Nacional de Educación", "url": "https://www.oph.fi/en", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "IS",
+    "slug": "islandia",
+    "name": "Islandia",
+    "officialName": "Islandia",
+    "flag": "🇮🇸",
+    "region": "Europa Septentrional",
+    "capital": "Reikiavik",
+    "languages": ["islandés"],
+    "unMember": true,
+    "palette": { "primary": "#4C9AFF", "secondary": "#FFFFFF", "accent": "#DC1E35" },
+    "summary": "República parlamentaria insular de baja población, con energía geotérmica abundante y una sociedad muy digitalizada. Su tamaño le obliga a cooperar y a innovar en servicios públicos.",
+    "unProfile": {
+      "bloc": "Europa Septentrional; EEE; cooperación nórdica",
+      "style": "Directo, cooperativo y centrado en derechos, igualdad de género y sostenibilidad.",
+      "allies": ["Noruega", "Dinamarca", "Suecia", "Finlandia"],
+      "tensions": ["Dependencia del turismo", "Vivienda", "Preservación del idioma"],
+      "redLines": ["Defiende la soberanía sobre recursos marinos", "No acepta marcos que ignoren la escala de los pequeños Estados"]
+    },
+    "context": {
+      "aiAndEducation": "Sistema educativo pequeño y digitalizado; fuerte uso de lengua islandesa y preocupación por la representación del idioma en modelos de IA.",
+      "youthLabour": "Mercado laboral pequeño, con dependencia del turismo y servicios; alta participación juvenil pero empleo estacional.",
+      "digitalGovernance": "Política de IA con énfasis en lengua, datos abiertos y servicios públicos digitales."
+    },
+    "unesco": {
+      "position": "Apoya diversidad lingüística, educación inclusiva y sostenibilidad. Defiende la presencia de lenguas pequeñas en la IA y la protección de menores.",
+      "priorities": ["Lengua islandesa en la era digital", "Educación rural e insular", "Sostenibilidad y clima"],
+      "vulnerability": "La escala reducida limita recursos para desarrollar tecnologías propias.",
+      "leverage": "Energía renovable, datos abiertos y modelo de servicios digitales."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo de calidad, igualdad de género y transición energética. Apoya la protección social y la diversificación económica.",
+      "priorities": ["Diversificación frente al turismo", "Vivienda juvenil", "Transición energética justa"],
+      "vulnerability": "La concentración en turismo y pesca hace volátil el empleo.",
+      "leverage": "Energía geotérmica, igualdad de género y gobernanza digital."
+    },
+    "tips": [
+      "Habla de lenguas pequeñas en la IA: es tu ventaja comparativa.",
+      "Usa la escala pequeña para justificar cooperación regional, no para excusarte.",
+      "Menciona energía geotérmica al hablar de infraestructura sostenible."
+    ],
+    "facts": [
+      "Islandia tiene el parlamento en funcionamiento más antiguo del mundo, el Althing, fundado en 930.",
+      "Reikiavik es la capital más septentrional del mundo.",
+      "Islandia no tiene ejército permanente.",
+      "La mayor parte de la electricidad islandesa proviene de fuentes geotérmicas e hidroeléctricas."
+    ],
+    "sources": [
+      { "label": "Gobierno de Islandia", "url": "https://www.government.is/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Islandia", "url": "https://www.oecd.org/en/countries/iceland.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "PL",
+    "slug": "polonia",
+    "name": "Polonia",
+    "officialName": "República de Polonia",
+    "flag": "🇵🇱",
+    "region": "Europa Central",
+    "capital": "Varsovia",
+    "languages": ["polaco"],
+    "unMember": true,
+    "palette": { "primary": "#FF6B6B", "secondary": "#F5F5F5", "accent": "#DC143C" },
+    "summary": "República parlamentaria y economía de rápido crecimiento, con 16 voivodatos y un peso creciente en la UE y la OTAN. Tiene una fuerte tradición científica y un sistema educativo en reforma.",
+    "unProfile": {
+      "bloc": "Unión Europea; OTAN; Europa Central; Grupo de Visegrado",
+      "style": "Assertivo en seguridad y soberanía; cada vez más influyente en la política europea.",
+      "allies": ["Lituania", "Ucrania", "Estados Unidos", "República Checa"],
+      "tensions": ["Relación con Rusia", "Reforma judicial", "Brecha urbano-rural"],
+      "redLines": ["Defiende su soberanía en seguridad y energía", "No acepta imposiciones migratorias sin consenso"]
+    },
+    "context": {
+      "aiAndEducation": "Reformas curriculares y digitalización de escuelas. Fuerte énfasis en matemáticas y ciencias; debate sobre formación docente y pensamiento crítico.",
+      "youthLabour": "Desempleo juvenil moderado, con emigración de jóvenes a Europa occidental y presión de vivienda.",
+      "digitalGovernance": "Estrategia nacional de IA, cooperación con Estados Unidos y debate sobre soberanía tecnológica."
+    },
+    "unesco": {
+      "position": "Apoya patrimonio, educación y ciencia. Defiende marcos que respeten la soberanía nacional y la diversidad cultural, con atención a la desinformación.",
+      "priorities": ["Formación docente y pensamiento crítico", "Patrimonio y memoria histórica", "Brecha educativa rural"],
+      "vulnerability": "La polarización política y la brecha rural dificultan consensos educativos.",
+      "leverage": "Tradición científica, patrimonio y liderazgo en Europa Central."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo, familia y protección social. Apoya la recapacitación y la inversión en industria, con cautela ante nuevas obligaciones globales.",
+      "priorities": ["Empleo juvenil y vivienda", "Reconversión industrial", "Protección de trabajadores migrantes"],
+      "vulnerability": "La emigración juvenil y la dependencia de inversión extranjera tensionan el modelo.",
+      "leverage": "Crecimiento económico, industria y cooperación regional."
+    },
+    "tips": [
+      "Separa seguridad de educación: no mezcles OTAN con UNESCO.",
+      "Usa el ejemplo de la emigración juvenil para hablar de condiciones laborales.",
+      "Mantén un tono firme pero institucional; evita confrontaciones ideológicas."
+    ],
+    "facts": [
+      "Polonia se divide en 16 voivodatos (provincias).",
+      "Varsovia fue reconstruida casi por completo tras la Segunda Guerra Mundial.",
+      "María Skłodowska-Curie, nacida en Varsovia, ganó dos Premios Nobel en distintas disciplinas.",
+      "El centro histórico de Cracovia es Patrimonio Mundial de UNESCO."
+    ],
+    "sources": [
+      { "label": "Gobierno de Polonia", "url": "https://www.gov.pl/", "kind": "official" },
+      { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "EE",
+    "slug": "estonia",
+    "name": "Estonia",
+    "officialName": "República de Estonia",
+    "flag": "🇪🇪",
+    "region": "Europa Septentrional",
+    "capital": "Tallin",
+    "languages": ["estonio"],
+    "unMember": true,
+    "palette": { "primary": "#4C9AFF", "secondary": "#F5F7FA", "accent": "#1A1A1A" },
+    "summary": "Pequeña república báltica pionera en gobierno digital, identidad electrónica y voto por internet. Tiene un ecosistema tecnológico desproporcionado para su tamaño y una frontera directa con Rusia.",
+    "unProfile": {
+      "bloc": "Unión Europea; OTAN; Europa Septentrional; e-Governance",
+      "style": "Digital, pragmático y orientado a interoperabilidad; abierto a compartir su modelo.",
+      "allies": ["Finlandia", "Letonia", "Lituania", "Suecia"],
+      "tensions": ["Frontera con Rusia", "Despoblación rural", "Dependencia de talento externo"],
+      "redLines": ["Defiende la ciberseguridad y la soberanía de datos", "No acepta dependencia de infraestructura adversaria"]
+    },
+    "context": {
+      "aiAndEducation": "Programación y competencias digitales desde edades tempranas; uso extensivo de plataformas educativas y debate sobre IA en evaluación y privacidad.",
+      "youthLabour": "Buen nivel de empleo tecnológico, pero brecha entre Tallin y zonas rurales; emigración de talento.",
+      "digitalGovernance": "Referente mundial en identidad digital, interoperabilidad y servicios públicos; estrategia de IA aplicada."
+    },
+    "unesco": {
+      "position": "Apoya alfabetización digital, formación docente y equidad rural. Defiende la cooperación europea en datos y la protección de menores.",
+      "priorities": ["Competencias digitales desde primaria", "Equidad rural", "Ciberseguridad y privacidad"],
+      "vulnerability": "La despoblación y la dependencia de talento externo limitan la escala.",
+      "leverage": "Modelo de gobierno digital, interoperabilidad y ciberseguridad."
+    },
+    "ecosoc": {
+      "position": "Prioriza competencias digitales, movilidad laboral y protección social. Apoya la regulación de plataformas y la cooperación transfronteriza.",
+      "priorities": ["Recualificación digital", "Empleo juvenil tecnológico", "Protección de datos laborales"],
+      "vulnerability": "La concentración urbana y la brecha rural generan desigualdad de oportunidades.",
+      "leverage": "Gobierno digital, ciberseguridad y ecosistema de startups."
+    },
+    "tips": [
+      "Habla de 'interoperabilidad' y 'privacidad por diseño': son tus fortalezas.",
+      "No ocultes la frontera con Rusia; úsala para justificar resiliencia.",
+      "Propón transferencia de tecnología a países de renta baja como cooperación."
+    ],
+    "facts": [
+      "Estonia fue el primer país del mundo en celebrar elecciones nacionales con voto por internet, en 2005.",
+      "El sistema de identidad digital estonio permite firmar documentos y acceder a servicios públicos en línea.",
+      "Estonia tiene más de 2.000 islas.",
+      "Tallin es sede de la Academia de las Ciencias y de un ecosistema de startups tecnológicas."
+    ],
+    "sources": [
+      { "label": "Gobierno de Estonia", "url": "https://www.valitsus.ee/en", "kind": "official" },
+      { "label": "e-Estonia", "url": "https://e-estonia.com/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  }
+]

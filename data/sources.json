@@ -1,0 +1,71 @@
+{
+  "version": "0.1.0",
+  "description": "Fuentes globales de confianza para la ingesta de DebaMun. Los dossieres por país añaden sus propias fuentes oficiales.",
+  "allowed_domains": [
+    "un.org",
+    "unesco.org",
+    "ilo.org",
+    "oecd.org",
+    "worldbank.org",
+    "unicef.org",
+    "undp.org",
+    "who.int",
+    "europa.eu"
+  ],
+  "global": [
+    {
+      "label": "UNESCO · IA y educación",
+      "url": "https://www.unesco.org/en/digital-education/artificial-intelligence",
+      "kind": "multilateral",
+      "committee": "UNESCO"
+    },
+    {
+      "label": "UNESCO · Guía de IA generativa en educación",
+      "url": "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research",
+      "kind": "multilateral",
+      "committee": "UNESCO"
+    },
+    {
+      "label": "UNESCO · Observatorio de IA y educación",
+      "url": "https://www.unesco.org/en/artificial-intelligence",
+      "kind": "multilateral",
+      "committee": "UNESCO"
+    },
+    {
+      "label": "OIT · Empleo juvenil",
+      "url": "https://www.ilo.org/topics/youth-employment",
+      "kind": "multilateral",
+      "committee": "ECOSOC"
+    },
+    {
+      "label": "OIT · Trabajo decente y economía digital",
+      "url": "https://www.ilo.org/topics/digital-economy",
+      "kind": "multilateral",
+      "committee": "ECOSOC"
+    },
+    {
+      "label": "ONU · ODS 8",
+      "url": "https://sdgs.un.org/goals/goal8",
+      "kind": "multilateral",
+      "committee": "ECOSOC"
+    },
+    {
+      "label": "ONU · ODS 4",
+      "url": "https://sdgs.un.org/goals/goal4",
+      "kind": "multilateral",
+      "committee": "UNESCO"
+    },
+    {
+      "label": "Banco Mundial · Datos",
+      "url": "https://data.worldbank.org/",
+      "kind": "multilateral",
+      "committee": ""
+    },
+    {
+      "label": "OCDE · Inteligencia artificial",
+      "url": "https://www.oecd.org/en/topics/artificial-intelligence.html",
+      "kind": "multilateral",
+      "committee": ""
+    }
+  ]
+}

@@ -1,0 +1,426 @@
+[
+  {
+    "code": "JP",
+    "slug": "japon",
+    "name": "Japón",
+    "officialName": "Japón",
+    "flag": "🇯🇵",
+    "region": "Asia Oriental",
+    "capital": "Tokio",
+    "languages": ["japonés"],
+    "unMember": true,
+    "palette": { "primary": "#FF6B81", "secondary": "#F7F3E8", "accent": "#BC002D" },
+    "summary": "Monarquía parlamentaria y tercera economía mundial, con una sociedad envejecida y un liderazgo tecnológico en robótica. Combina alta digitalización industrial con una adopción educativa más cautelosa.",
+    "unProfile": {
+      "bloc": "G7; Asia Oriental; OCDE; aliado de Estados Unidos",
+      "style": "Técnico, prudente y orientado a consenso; prioriza seguridad económica y cooperación práctica.",
+      "allies": ["Estados Unidos", "Australia", "Corea del Sur", "Alemania"],
+      "tensions": ["Envejecimiento poblacional", "Relación con China", "Estancamiento salarial"],
+      "redLines": ["Defiende la seguridad de sus cadenas de suministro", "No acepta marcos que limiten su autonomía tecnológica"]
+    },
+    "context": {
+      "aiAndEducation": "Directrices nacionales para IA en escuelas, con énfasis en uso responsable y pensamiento crítico. Fuerte inversión en robótica y ciencia, pero adopción desigual entre centros.",
+      "youthLabour": "Bajo desempleo, pero empleo precario y cultura de largas jornadas; presión demográfica sobre el sistema de pensiones.",
+      "digitalGovernance": "Estrategia de sociedad digital, protección de datos y debate sobre derechos de autor e IA."
+    },
+    "unesco": {
+      "position": "Apoya formación docente, alfabetización digital y protección de menores. Prefiere directrices claras y pilotos antes de obligar, con respeto a la autonomía escolar.",
+      "priorities": ["Formación docente y evaluación", "Alfabetización mediática", "Equidad rural y envejecimiento"],
+      "vulnerability": "La brecha entre zonas urbanas y rurales y la baja natalidad tensionan el sistema.",
+      "leverage": "Robótica, investigación y experiencia en directrices educativas."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo estable, recapacitación y productividad. Apoya la protección social y la integración de trabajadores mayores y migrantes.",
+      "priorities": ["Reforma del trabajo y jornada", "Recualificación digital", "Integración de población mayor"],
+      "vulnerability": "La cultura laboral y la demografía limitan la movilidad juvenil.",
+      "leverage": "Automatización, robótica y cooperación tecnológica."
+    },
+    "tips": [
+      "No presentes a Japón como paraíso tecnológico: reconoce la brecha rural.",
+      "Habla de envejecimiento y empleo juvenil como dos caras del mismo problema.",
+      "Usa la robótica como complemento, no sustituto, del trabajo humano."
+    ],
+    "facts": [
+      "Japón es un archipiélago de más de 14.000 islas.",
+      "Tokio es la capital y una de las áreas metropolitanas más grandes del mundo.",
+      "Japón tiene 47 prefecturas.",
+      "El país tiene una de las esperanzas de vida más altas del mundo."
+    ],
+    "sources": [
+      { "label": "Gobierno de Japón", "url": "https://www.japan.go.jp/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Japón", "url": "https://www.oecd.org/en/countries/japan.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "KR",
+    "slug": "corea-del-sur",
+    "name": "Corea del Sur",
+    "officialName": "República de Corea",
+    "flag": "🇰🇷",
+    "region": "Asia Oriental",
+    "capital": "Seúl",
+    "languages": ["coreano"],
+    "unMember": true,
+    "palette": { "primary": "#5B8DEF", "secondary": "#F5F7FB", "accent": "#C8102E" },
+    "summary": "República presidencialista con una de las economías más innovadoras del mundo y un sistema educativo de altísima exigencia. Es pionera en llevar IA al aula mediante libros de texto digitales.",
+    "unProfile": {
+      "bloc": "Asia Oriental; OCDE; G20; aliado de Estados Unidos",
+      "style": "Técnico, rápido y orientado a resultados; combina innovación con control social.",
+      "allies": ["Estados Unidos", "Japón", "Australia", "India"],
+      "tensions": ["Relación con Corea del Norte", "Presión académica", "Baja natalidad"],
+      "redLines": ["Defiende la seguridad frente a Corea del Norte", "No acepta dependencia de tecnología sensible"]
+    },
+    "context": {
+      "aiAndEducation": "Libros de texto digitales con IA en fases piloto, debate sobre sobrecarga y equidad. Fuerte inversión en edtech y formación docente.",
+      "youthLabour": "Desempleo juvenil moderado, pero precariedad y competencia extrema; baja natalidad y envejecimiento acelerado.",
+      "digitalGovernance": "Ley de IA, protección de datos y estrategia de semiconductores."
+    },
+    "unesco": {
+      "position": "Apoya innovación educativa con salvaguardas, formación docente y reducción de la sobrecarga académica. Prioriza equidad y bienestar.",
+      "priorities": ["Bienestar y salud mental", "Formación docente en IA", "Equidad y brecha digital"],
+      "vulnerability": "La presión académica y la baja natalidad tensionan el sistema.",
+      "leverage": "Edtech, semiconductores y experiencia en pilotos de IA educativa."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo de calidad, protección social y transición digital. Apoya la recapacitación y la regulación de plataformas.",
+      "priorities": ["Empleo juvenil y precariedad", "Reconversión digital", "Protección de trabajadores de plataforma"],
+      "vulnerability": "La competencia y la desigualdad entre grandes empresas y PYMES limitan la movilidad.",
+      "leverage": "Tecnología, educación y cooperación en semiconductores."
+    },
+    "tips": [
+      "Habla de salud mental y presión académica: es un debate interno real.",
+      "Usa los libros de texto digitales como caso, con sus riesgos y evaluación.",
+      "No ignores la relación con Corea del Norte si surge seguridad."
+    ],
+    "facts": [
+      "Corea del Sur tiene como capital a Seúl.",
+      "El hangul, su alfabeto, fue creado en el siglo XV.",
+      "El país tiene una de las tasas de natalidad más bajas del mundo.",
+      "La Zona Desmilitarizada separa Corea del Sur de Corea del Norte."
+    ],
+    "sources": [
+      { "label": "Gobierno de Corea del Sur", "url": "https://www.korea.net/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Corea", "url": "https://www.oecd.org/en/countries/korea.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "SG",
+    "slug": "singapur",
+    "name": "Singapur",
+    "officialName": "República de Singapur",
+    "flag": "🇸🇬",
+    "region": "Sudeste Asiático",
+    "capital": "Singapur",
+    "languages": ["inglés", "malayo", "mandarín", "tamil"],
+    "unMember": true,
+    "palette": { "primary": "#FF6B6B", "secondary": "#FFFFFF", "accent": "#EF3340" },
+    "summary": "Ciudad-Estado y hub financiero y tecnológico del Sudeste Asiático. Su modelo de gobernanza tecnocrática combina planificación de largo plazo, meritocracia y una fuerte inversión en educación y habilidades.",
+    "unProfile": {
+      "bloc": "ASEAN; Commonwealth; Asia-Pacífico; no alineado pero pragmático",
+      "style": "Técnico, eficiente y orientado a resultados; evita confrontaciones y prioriza estabilidad.",
+      "allies": ["Malasia", "Indonesia", "Australia", "Japón", "Estados Unidos"],
+      "tensions": ["Dependencia comercial", "Desigualdad", "Libertades civiles"],
+      "redLines": ["Defiende la libertad de navegación y el comercio abierto", "No acepta injerencia en su modelo interno"]
+    },
+    "context": {
+      "aiAndEducation": "Smart Nation, AI Singapore y SkillsFuture. Fuerte énfasis en formación continua, competencias digitales y alianzas con la industria.",
+      "youthLabour": "Bajo desempleo, pero presión competitiva y costo de vida; habilidades técnicas muy valoradas.",
+      "digitalGovernance": "Marco de IA, protección de datos y estrategia de ciudad inteligente."
+    },
+    "unesco": {
+      "position": "Apoya calidad docente, multilingüismo y competencias para el futuro. Prefiere pilotos evaluados y alianzas público-privadas con salvaguardas.",
+      "priorities": ["Formación docente de alta calidad", "Multilingüismo e inclusión", "Competencias digitales y pensamiento crítico"],
+      "vulnerability": "La competencia y la desigualdad pueden excluir a estudiantes de menores ingresos.",
+      "leverage": "Smart Nation, SkillsFuture y experiencia en planificación educativa."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleabilidad, formación continua y diálogo tripartito. Apoya la protección social y la adaptación de PYMES.",
+      "priorities": ["Aprendizaje a lo largo de la vida", "PYMES y productividad", "Protección de trabajadores de plataforma"],
+      "vulnerability": "La dependencia del comercio y la competencia regional limitan la seguridad laboral.",
+      "leverage": "SkillsFuture, tripartismo y ecosistema financiero."
+    },
+    "tips": [
+      "Habla de 'aprendizaje a lo largo de la vida' con el modelo SkillsFuture.",
+      "Reconoce la tensión entre eficiencia y libertades civiles si te interpelan.",
+      "Usa el tripartismo para defender acuerdos laborales."
+    ],
+    "facts": [
+      "Singapur es una ciudad-Estado y uno de los países más densamente poblados del mundo.",
+      "Tiene cuatro lenguas oficiales: inglés, malayo, mandarín y tamil.",
+      "Se independizó de Malasia en 1965.",
+      "El puerto de Singapur es uno de los más activos del mundo."
+    ],
+    "sources": [
+      { "label": "Gobierno de Singapur", "url": "https://www.gov.sg/", "kind": "official" },
+      { "label": "SkillsFuture", "url": "https://www.skillsfuture.gov.sg/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "CN",
+    "slug": "china",
+    "name": "China",
+    "officialName": "República Popular China",
+    "flag": "🇨🇳",
+    "region": "Asia Oriental",
+    "capital": "Pekín",
+    "languages": ["mandarín", "lenguas regionales"],
+    "unMember": true,
+    "palette": { "primary": "#FF5A5F", "secondary": "#FFDE00", "accent": "#B31B1B" },
+    "summary": "República socialista con 56 grupos étnicos reconocidos y la segunda economía mundial. Es un actor central en IA, con regulaciones tempranas para contenido generado y una estrategia de soberanía tecnológica.",
+    "unProfile": {
+      "bloc": "Asia Oriental; BRICS; G20; Sur global",
+      "style": "Estratégico, formal y orientado a soberanía; prioriza desarrollo y no injerencia.",
+      "allies": ["Rusia", "Brasil", "Sudáfrica", "India", "Pakistán"],
+      "tensions": ["Relación con Estados Unidos", "Taiwán", "Derechos humanos"],
+      "redLines": ["Defiende el principio de una sola China", "No acepta injerencia en asuntos internos"]
+    },
+    "context": {
+      "aiAndEducation": "Gran inversión en infraestructura educativa digital y plataformas nacionales. Reglas de IA generativa (2023) centradas en contenido, etiquetado y seguridad.",
+      "youthLabour": "Desempleo juvenil elevado y competencia intensa; políticas para incentivar empleo y emprendimiento.",
+      "digitalGovernance": "Regulación de algoritmos, datos y contenido; estrategia de IA y semiconductores."
+    },
+    "unesco": {
+      "position": "Prioriza acceso equitativo, infraestructura rural y soberanía digital. Defiende cooperación Sur-Sur y respeto a modelos nacionales de gobernanza.",
+      "priorities": ["Equidad urbano-rural", "Formación docente y plataformas nacionales", "Protección de menores en entornos digitales"],
+      "vulnerability": "La escala y la brecha rural dificultan estándares homogéneos.",
+      "leverage": "Infraestructura, regulación de IA y cooperación Sur-Sur."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo, capacitación y reducción de la pobreza. Apoya la cooperación para el desarrollo y la regulación de plataformas con estándares nacionales.",
+      "priorities": ["Empleo juvenil y emprendimiento", "Recualificación industrial", "Cooperación Sur-Sur"],
+      "vulnerability": "La desaceleración y la transición industrial presionan el empleo juvenil.",
+      "leverage": "Escala económica, infraestructura y experiencia en reducción de pobreza."
+    },
+    "tips": [
+      "Usa el principio de no injerencia: es central en tu posición.",
+      "Habla de regulación de contenido generado con etiquetado y responsabilidad.",
+      "No prometas transparencia total; ofrece auditoría nacional y cooperación."
+    ],
+    "facts": [
+      "China reconoce oficialmente 56 grupos étnicos.",
+      "Pekín es la capital y sede de la mayoría de las instituciones centrales.",
+      "La Gran Muralla China se extiende por miles de kilómetros.",
+      "China es el país más poblado de Asia y uno de los más grandes por superficie."
+    ],
+    "sources": [
+      { "label": "Gobierno de China", "url": "https://english.www.gov.cn/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · China", "url": "https://www.oecd.org/en/countries/china.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "IN",
+    "slug": "india",
+    "name": "India",
+    "officialName": "República de la India",
+    "flag": "🇮🇳",
+    "region": "Asia Meridional",
+    "capital": "Nueva Delhi",
+    "languages": ["hindi", "inglés", "22 lenguas programadas"],
+    "unMember": true,
+    "palette": { "primary": "#FF9933", "secondary": "#FFFFFF", "accent": "#138808" },
+    "summary": "La democracia más poblada del mundo, con 28 estados y 8 territorios de la unión. Combina una economía digital de rápido crecimiento con brechas enormes de género, ruralidad y empleo informal.",
+    "unProfile": {
+      "bloc": "Asia Meridional; BRICS; G20; Sur global; no alineado estratégico",
+      "style": "Assertivo y pragmático; busca liderazgo del Sur global y autonomía estratégica.",
+      "allies": ["Brasil", "Sudáfrica", "Japón", "Australia", "Francia"],
+      "tensions": ["Relación con Pakistán", "Relación con China", "Desigualdad de género"],
+      "redLines": ["Defiende la reforma del Consejo de Seguridad con representación permanente", "No acepta condicionalidades que limiten su desarrollo"]
+    },
+    "context": {
+      "aiAndEducation": "Plataformas nacionales de aprendizaje digital, formación docente y expansión de conectividad. La IA se debate en educación superior y servicios públicos.",
+      "youthLabour": "Gran población joven, informalidad alta y desempleo juvenil; programas de habilidades y empleo rural.",
+      "digitalGovernance": "India Stack, identidad digital y debate sobre ley de IA y protección de datos."
+    },
+    "unesco": {
+      "position": "Prioriza equidad, multilingüismo, formación docente y acceso rural. Defiende cooperación Sur-Sur y soberanía digital.",
+      "priorities": ["Multilingüismo y educación rural", "Formación docente a escala", "Brecha de género en STEM"],
+      "vulnerability": "La escala y la diversidad lingüística dificultan soluciones uniformes.",
+      "leverage": "India Stack, escala demográfica y cooperación Sur-Sur."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo formal, habilidades y protección social. Apoya la cooperación para infraestructura y la inclusión de mujeres jóvenes.",
+      "priorities": ["Formalización y empleo juvenil", "Habilidades digitales", "Inclusión de mujeres en STEM"],
+      "vulnerability": "La informalidad y la baja participación laboral femenina limitan el crecimiento inclusivo.",
+      "leverage": "Escala, tecnología pública y liderazgo en el Sur global."
+    },
+    "tips": [
+      "Habla de reforma del Consejo de Seguridad: es una demanda histórica.",
+      "Usa India Stack como ejemplo de tecnología pública replicable.",
+      "No ignores la brecha de género; propón medidas concretas."
+    ],
+    "facts": [
+      "India es la democracia más poblada del mundo.",
+      "Tiene 28 estados y 8 territorios de la unión.",
+      "El hindi y el inglés son lenguas oficiales del gobierno central, además de 22 lenguas programadas.",
+      "El sistema de pagos UPI es uno de los más usados del mundo."
+    ],
+    "sources": [
+      { "label": "Gobierno de India", "url": "https://www.india.gov.in/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · India", "url": "https://www.oecd.org/en/countries/india.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "ZA",
+    "slug": "sudafrica",
+    "name": "Sudáfrica",
+    "officialName": "República de Sudáfrica",
+    "flag": "🇿🇦",
+    "region": "África Austral",
+    "capital": "Pretoria (ejecutiva), Ciudad del Cabo (legislativa), Bloemfontein (judicial)",
+    "languages": ["zulú", "xhosa", "afrikáans", "inglés", "y otras 7 lenguas oficiales"],
+    "unMember": true,
+    "palette": { "primary": "#2ECC71", "secondary": "#FFB612", "accent": "#DE3831" },
+    "summary": "Democracia constitucional con tres capitales y 11 lenguas oficiales, la economía más industrializada de África. Su historia de apartheid y reconciliación marca su diplomacia de derechos humanos y su presidencia del G20 en 2025.",
+    "unProfile": {
+      "bloc": "África Austral; BRICS; G20; Unión Africana",
+      "style": "Diplomacia de derechos humanos, solidaridad africana y multilateralismo.",
+      "allies": ["Brasil", "India", "China", "Nigeria", "Kenia"],
+      "tensions": ["Desigualdad extrema", "Crisis energética", "Desempleo juvenil"],
+      "redLines": ["Defiende la autodeterminación y la no injerencia", "Rechaza políticas que ignoren la deuda histórica"]
+    },
+    "context": {
+      "aiAndEducation": "Brecha digital y desigualdad escolar heredada del apartheid. Programas de conectividad y formación docente, con desafíos de infraestructura.",
+      "youthLabour": "Desempleo juvenil muy alto y desigualdad persistente; programas de empleo público y apoyo social.",
+      "digitalGovernance": "Ley de protección de datos (POPIA) y estrategia de IA en desarrollo."
+    },
+    "unesco": {
+      "position": "Prioriza equidad, descolonización del conocimiento, lenguas y acceso. Defiende reparaciones históricas y cooperación Sur-Sur.",
+      "priorities": ["Equidad y justicia educativa", "Lenguas y diversidad cultural", "Conectividad e infraestructura"],
+      "vulnerability": "La desigualdad estructural y la crisis energética afectan la continuidad escolar.",
+      "leverage": "Liderazgo africano, G20 y experiencia en reconciliación."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo juvenil, protección social y reducción de la desigualdad. Apoya la industrialización y la transición justa.",
+      "priorities": ["Desempleo juvenil", "Protección social e informalidad", "Transición energética justa"],
+      "vulnerability": "La desigualdad y la infraestructura limitan la creación de empleo.",
+      "leverage": "BRICS, G20 y liderazgo en la Unión Africana."
+    },
+    "tips": [
+      "Habla de justicia histórica y reparaciones con respeto y precisión.",
+      "Usa el G20 y los BRICS para mostrar capacidad de agenda.",
+      "No reduzcas el país a la crisis energética; menciona industria y talento."
+    ],
+    "facts": [
+      "Sudáfrica tiene tres capitales: Pretoria (ejecutiva), Ciudad del Cabo (legislativa) y Bloemfontein (judicial).",
+      "Tiene 11 lenguas oficiales.",
+      "Nelson Mandela fue su primer presidente elegido democráticamente en 1994.",
+      "Sudáfrica presidió el G20 en 2025."
+    ],
+    "sources": [
+      { "label": "Gobierno de Sudáfrica", "url": "https://www.gov.za/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "Unión Africana", "url": "https://au.int/", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "AU",
+    "slug": "australia",
+    "name": "Australia",
+    "officialName": "Mancomunidad de Australia",
+    "flag": "🇦🇺",
+    "region": "Oceanía",
+    "capital": "Canberra",
+    "languages": ["inglés", "lenguas indígenas"],
+    "unMember": true,
+    "palette": { "primary": "#2ECC71", "secondary": "#FFCD00", "accent": "#012169" },
+    "summary": "Monarquía constitucional federal con seis estados y dos territorios continentales. Economía rica en recursos, con un sistema educativo fuerte y una relación compleja con su historia indígena y el cambio climático.",
+    "unProfile": {
+      "bloc": "Oceanía; Commonwealth; G20; OCDE; aliado de Estados Unidos",
+      "style": "Pragmático, técnico y cooperativo en la región; prioriza seguridad y clima.",
+      "allies": ["Nueva Zelanda", "Estados Unidos", "Japón", "Reino Unido", "Canadá"],
+      "tensions": ["Cambio climático", "Reconciliación indígena", "Relación con China"],
+      "redLines": ["Defiende la libertad de navegación en el Indo-Pacífico", "No acepta políticas climáticas que dañen su economía sin transición"]
+    },
+    "context": {
+      "aiAndEducation": "Currículo nacional con competencias digitales; debate sobre IA en evaluación y brechas en comunidades remotas e indígenas.",
+      "youthLabour": "Desempleo juvenil moderado, pero costo de vivienda y empleo casual; dependencia de recursos.",
+      "digitalGovernance": "Marco de IA, protección de datos y estrategia de tecnologías críticas."
+    },
+    "unesco": {
+      "position": "Prioriza equidad, educación remota, derechos indígenas y sostenibilidad. Defiende alfabetización mediática y protección de menores.",
+      "priorities": ["Educación remota e indígena", "Alfabetización mediática", "Sostenibilidad y clima"],
+      "vulnerability": "La dispersión geográfica y las brechas con comunidades remotas limitan el acceso.",
+      "leverage": "Recursos, investigación y cooperación en el Indo-Pacífico."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo de calidad, habilidades y transición justa. Apoya la protección social y la inclusión de jóvenes indígenas.",
+      "priorities": ["Empleo juvenil y vivienda", "Transición energética justa", "Inclusión indígena"],
+      "vulnerability": "La dependencia de recursos y la precariedad juvenil tensionan el modelo.",
+      "leverage": "Recursos críticos, educación y cooperación regional."
+    },
+    "tips": [
+      "Habla de reconciliación indígena con medidas concretas, no solo símbolos.",
+      "Usa el Indo-Pacífico para mostrar relevancia estratégica.",
+      "Reconoce la tensión entre minería y clima si te interpelan."
+    ],
+    "facts": [
+      "Australia tiene seis estados y dos territorios continentales principales.",
+      "Canberra es la capital, planificada como sede del gobierno federal.",
+      "La Gran Barrera de Coral es el mayor sistema de arrecifes del mundo.",
+      "Australia es uno de los países más urbanizados del mundo."
+    ],
+    "sources": [
+      { "label": "Gobierno de Australia", "url": "https://www.australia.gov.au/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Australia", "url": "https://www.oecd.org/en/countries/australia.html", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "RU",
+    "slug": "rusia",
+    "name": "Rusia",
+    "officialName": "Federación de Rusia",
+    "flag": "🇷🇺",
+    "region": "Europa Oriental / Asia Septentrional",
+    "capital": "Moscú",
+    "languages": ["ruso", "lenguas cooficiales regionales"],
+    "unMember": true,
+    "palette": { "primary": "#FF5A5F", "secondary": "#FFFFFF", "accent": "#0039A6" },
+    "summary": "Federación con 11 zonas horarias y miembro permanente del Consejo de Seguridad. Su economía enfrenta sanciones y una fuerte orientación hacia soberanía tecnológica y alianzas con el Sur global.",
+    "unProfile": {
+      "bloc": "Consejo de Seguridad (P5); BRICS; Eurasia",
+      "style": "Firme, formal y orientado a soberanía; usa el veto y el derecho internacional como marco.",
+      "allies": ["China", "India", "Brasil", "Sudáfrica", "Bielorrusia"],
+      "tensions": ["Sanciones occidentales", "Conflicto en Ucrania", "Aislamiento tecnológico"],
+      "redLines": ["Defiende el principio de no injerencia", "No acepta condicionalidades políticas para cooperación"]
+    },
+    "context": {
+      "aiAndEducation": "Sistema educativo centralizado con énfasis en matemáticas y ciencias; desarrollo de modelos nacionales de IA y soberanía digital.",
+      "youthLabour": "Desempleo juvenil moderado, pero fuga de talento y sanciones limitan oportunidades tecnológicas.",
+      "digitalGovernance": "Soberanía digital, regulación de internet y desarrollo de IA nacional."
+    },
+    "unesco": {
+      "position": "Prioriza soberanía educativa, lengua rusa, patrimonio y cooperación multilateral. Defiende el respeto a modelos nacionales.",
+      "priorities": ["Lengua rusa y patrimonio cultural", "Educación científica y técnica", "Cooperación multilateral"],
+      "vulnerability": "Las sanciones limitan el acceso a tecnología y colaboración académica.",
+      "leverage": "Ciencia, energía y alianzas con el Sur global."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo, protección social y cooperación económica. Defiende la no condicionalidad política de la ayuda y el desarrollo.",
+      "priorities": ["Empleo juvenil y formación técnica", "Cooperación económica", "Protección social"],
+      "vulnerability": "Las sanciones y la fuga de talento debilitan el mercado laboral tecnológico.",
+      "leverage": "Energía, ciencia y alianzas BRICS."
+    },
+    "tips": [
+      "Mantén un tono formal y jurídico: evita confrontaciones personales.",
+      "Usa el principio de no injerencia para bloquear condicionalidades.",
+      "No minimices las sanciones; úsalas para justificar cooperación alternativa."
+    ],
+    "facts": [
+      "Rusia es el país más extenso del mundo y abarca 11 zonas horarias.",
+      "Moscú es la capital y la ciudad más poblada.",
+      "Es miembro permanente del Consejo de Seguridad de la ONU.",
+      "El lago Baikal es el lago de agua dulce más profundo del mundo."
+    ],
+    "sources": [
+      { "label": "Gobierno de Rusia", "url": "http://government.ru/en/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "BRICS", "url": "https://brics2024.gov.br/", "kind": "multilateral" }
+    ]
+  }
+]
