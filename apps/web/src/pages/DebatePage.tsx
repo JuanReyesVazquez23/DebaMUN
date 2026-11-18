@@ -200,7 +200,6 @@ export function DebatePage() {
   }
 
   if (status === 'choose') {
-    const suggestion = suggestedLevel(profile.delegate.grade);
     return (
       <div className="debate-setup">
         <header className="page__head debate-setup__head">
@@ -224,10 +223,7 @@ export function DebatePage() {
 
         <div className="difficulty-grid">
           {LEVELS.map((level) => (
-            <article
-              key={level.id}
-              className={level.id === suggestion ? 'difficulty-card is-suggested' : 'difficulty-card'}
-            >
+            <article key={level.id} className="difficulty-card">
               <header className="difficulty-card__head">
                 <span className="difficulty-card__level">{level.id}</span>
                 <div>
@@ -242,15 +238,12 @@ export function DebatePage() {
                 ))}
               </ul>
               <button
-                className={level.id === suggestion ? 'button' : 'button button--ghost'}
+                className="button button--ghost"
                 type="button"
                 onClick={() => void start(level.id)}
               >
                 Empezar en {level.name} <ArrowRight aria-hidden="true" size={16} />
               </button>
-              {level.id === suggestion ? (
-                <p className="difficulty-card__hint">Sugerido para tu grado</p>
-              ) : null}
             </article>
           ))}
         </div>
