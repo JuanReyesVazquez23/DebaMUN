@@ -129,8 +129,6 @@ export interface SessionProfile {
   country: CountryProfile;
   committee: CommitteeTopic;
   factOfDay: FactOfDay;
-  conference: ConferenceInfo;
-  countdownDays: number;
 }
 
 export interface ReadinessCheck {

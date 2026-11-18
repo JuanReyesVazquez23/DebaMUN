@@ -5,7 +5,7 @@
 
 ## 1. Usuario y contexto de uso
 
-- **Quién:** estudiantes de secundaria que representan un país en Ecosoft 2026, con 1–3 semanas de
+- **Quién:** estudiantes de secundaria que representan un país en la conferencia 2026, con 1–3 semanas de
   preparación y poco tiempo por sesión.
 - **Dónde:** casa, biblioteca o aula, muchas veces en móvil y con conexión irregular.
 - **Qué le preocupa:** no saber la postura de su país, no tener datos, quedarse sin argumentos y ser

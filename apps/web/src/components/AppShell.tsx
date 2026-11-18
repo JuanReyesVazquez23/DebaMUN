@@ -101,7 +101,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <footer className="footer">
         <div className="footer__inner">
           <span>
-            DebaMun · {profile.conference.name} · {profile.conference.date}
+            DebaMun
           </span>
           <span className="footer__note">
             Asistente con fuentes verificables · Evaluación en Diálogo, Argumentos, Coherencia y
@@ -146,7 +146,6 @@ export function OnboardingShell({
     <div className="onboarding">
       <header className="onboarding__head">
         <Brand />
-        <span className="onboarding__edition">Ecosoft 2026 · 9 de diciembre</span>
       </header>
 
       <div className="onboarding__body">

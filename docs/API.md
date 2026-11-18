@@ -109,8 +109,7 @@ Respuesta `201`:
   "country": { "…": "dossier completo" },
   "committee": { "…": "briefing completo" },
   "factOfDay": { "text": "…", "index": 2, "total": 8, "date": "2026-11-16", "offset": 0 },
-  "conference": { "name": "Ecosoft", "date": "2026-12-09" },
-  "countdownDays": 23
+  "conference": { "name": "DebaMun", "date": "" },
 }
 ```
 
@@ -127,8 +126,7 @@ Mismo cuerpo que la creación. Actualiza `last_seen_at`.
   "committee": { "…": "…" },
   "factOfDay": { "…": "…" },
   "factsOfDay": [{ "text": "…", "index": 4, "total": 8, "date": "2026-11-16", "offset": 0 }],
-  "conference": { "…": "…" },
-  "countdownDays": 23,
+  "conference": { "name": "DebaMun", "date": "" },
   "readiness": {
     "score": 45,
     "label": "En preparación",

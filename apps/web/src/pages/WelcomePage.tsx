@@ -37,7 +37,7 @@ export function WelcomePage() {
     <OnboardingShell
       step={1}
       title="Investiga. Debate. Mejora."
-      lead="DebaMun es tu mesa de preparación para Ecosoft 2026. Te asignaré un país, te daré un dossier con fuentes y entrenaré tu debate con evaluación en cuatro criterios."
+      lead="DebaMun es tu mesa de preparación para tus modelos de las naciones. Te asignaré un país, te daré un dossier con fuentes y entrenaré tu debate con evaluación en cuatro criterios."
       aside={
         <div className="onboarding__card">
           <p className="eyebrow">Cómo funciona</p>

@@ -1,10 +1,10 @@
 {
   "conference": {
-    "name": "Ecosoft",
-    "edition": "Modelo Interno de las Naciones Unidas 2026",
-    "date": "2026-12-09",
-    "weekday": "miércoles",
-    "format": "Dos comisiones simultáneas: salón de actos y 6.º de secundaria",
+    "name": "DebaMun",
+    "edition": "Plataforma general de preparación para modelos de las Naciones Unidas",
+    "date": "",
+    "weekday": "",
+    "format": "Dos comisiones simultáneas: UNESCO y ECOSOC",
     "note": "Los dossieres son material de preparación editorial. Las posturas son orientativas y deben contrastarse con las fuentes oficiales antes del debate."
   },
   "committees": [

@@ -84,8 +84,6 @@ export class SessionsService {
       committee,
       factOfDay: factsOfDay[0] ?? this.getFact(country.code, 0),
       factsOfDay,
-      conference: this.countries.getTopics().conference,
-      countdownDays: this.daysUntilConference(),
       readiness: { score: readinessScore, label: readinessLabel, checks },
       debate: {
         turns: stats.count,
@@ -141,8 +139,6 @@ export class SessionsService {
       country,
       committee,
       factOfDay: this.getFact(country.code, 0),
-      conference: this.countries.getTopics().conference,
-      countdownDays: this.daysUntilConference(),
     };
   }
 
@@ -155,11 +151,5 @@ export class SessionsService {
       grade: normalizeGrade(delegate.grade) ?? delegate.grade,
       createdAt: delegate.createdAt,
     };
-  }
-
-  private daysUntilConference(): number {
-    const target = new Date(`${this.countries.getTopics().conference.date}T00:00:00Z`).getTime();
-    const now = Date.now();
-    return Math.max(0, Math.ceil((target - now) / 86_400_000));
   }
 }

@@ -1,6 +1,6 @@
 # DebaMun · Roadmap de 5 fases
 
-> Modelo interno de Naciones Unidas **Ecosoft** · miércoles 9 de diciembre de 2026
+> Modelo de Naciones Unidas · plataforma general y permanente
 > Comisiones: **UNESCO** y **ECOSOC**.
 
 ## Principio rector

@@ -23,10 +23,6 @@ describe('format', () => {
     expect(formatSeconds(-4)).toBe('0:00');
   });
 
-  it('formatea la fecha de la conferencia en español', () => {
-    expect(longDate('2026-12-09').toLowerCase()).toContain('diciembre');
-  });
-
   it('etiqueta los grados nuevos y migra los antiguos', () => {
     expect(gradeLabel('primaria-3')).toBe('3.º de primaria');
     expect(gradeLabel('secundaria-6')).toBe('6.º de secundaria');

@@ -1,7 +1,7 @@
 # DebaMun
 
-> Plataforma de investigación y entrenamiento para delegados de **Ecosoft**, el modelo interno de
-> Naciones Unidas del **miércoles 9 de diciembre de 2026**.
+> Plataforma de investigación y entrenamiento para delegados del modelo interno de
+> Naciones Unidas. Plataforma general para prepararse para cualquier modelo de las Naciones Unidas,
 > Dos comisiones: **UNESCO** (IA generativa en educación) y **ECOSOC** (futuro del empleo juvenil ante la IA).
 > Ambas tienen el **mismo peso**: misma rúbrica, mismo dossier y mismo asistente.
 > Ninguna está preseleccionada ni se presenta como recomendada; el orden de la lista no implica prioridad.

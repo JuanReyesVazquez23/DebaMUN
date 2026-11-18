@@ -9,11 +9,11 @@ import type {
 } from '../types';
 
 export const conference: ConferenceInfo = {
-  name: 'Ecosoft',
-  edition: 'Modelo Interno de las Naciones Unidas 2026',
-  date: '2026-12-09',
-  weekday: 'miércoles',
-  format: 'Dos comisiones simultáneas',
+  name: 'DebaMun',
+  edition: 'Plataforma general de preparación para modelos de las Naciones Unidas',
+  date: '',
+  weekday: '',
+  format: 'Dos comisiones simultáneas: UNESCO y ECOSOC',
   note: 'Material de preparación editorial.',
 };
 
@@ -127,8 +127,6 @@ export const profile: SessionProfile = {
   country,
   committee,
   factOfDay,
-  conference,
-  countdownDays: 23,
 };
 
 export const dashboard: DashboardData = {

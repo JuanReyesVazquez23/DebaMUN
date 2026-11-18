@@ -3,19 +3,14 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   BookOpen,
-  CalendarDays,
   Check,
   Circle,
   Gauge,
-  Landmark,
-  MapPin,
-  MessagesSquare,
   RefreshCw,
   Sparkles,
   Swords,
   Target,
 } from 'lucide-react';
-import { CountryFlag } from '../components/CountryFlag';
 import { ScoreRing } from '../components/ScoreRing';
 import { ErrorBlock, LoadingBlock } from '../components/StateBlocks';
 import { api } from '../lib/api';
@@ -99,13 +94,6 @@ export function DashboardPage() {
           </h1>
           <p className="lead">{country.summary}</p>
           <div className="hero__meta">
-            <span className="pill pill--date">
-              <CalendarDays aria-hidden="true" size={15} />
-              {longDate(data.conference.date)}
-            </span>
-            <span className="pill">
-              Faltan <strong>{data.countdownDays}</strong> días
-            </span>
             <span className="pill">
               <Target aria-hidden="true" size={14} /> {gradeLabel(profile.delegate.grade)}
             </span>
@@ -121,27 +109,7 @@ export function DashboardPage() {
           </div>
         </div>
 
-        <aside className="hero__side" aria-label={`Ficha de ${country.name}`}>
-          <article className="flag-card">
-            <CountryFlag code={country.code} name={country.name} className="flag-card__flag" />
-            <div className="flag-card__body">
-              <p className="eyebrow">Tu delegación</p>
-              <h2>{country.officialName}</h2>
-              <ul className="flag-card__meta">
-                <li>
-                  <MapPin aria-hidden="true" size={14} /> {country.region}
-                </li>
-                <li>
-                  <Landmark aria-hidden="true" size={14} /> {country.capital}
-                </li>
-                <li>
-                  <MessagesSquare aria-hidden="true" size={14} /> {committee.abbr} ·{' '}
-                  {committee.shortTopic}
-                </li>
-              </ul>
-            </div>
-          </article>
-        </aside>
+
       </section>
 
       <div className="dashboard__grid">
