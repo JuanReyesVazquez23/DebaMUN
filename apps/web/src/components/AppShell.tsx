@@ -22,21 +22,6 @@ const ROOM: Record<CommitteeId, string> = {
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
     <span className={compact ? 'brand brand--compact' : 'brand'}>
-      <span className="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="32" height="32" rx="8" fill="currentColor" />
-          <g fill="var(--paper, #ffffff)">
-            <path d="M6 20h4v8H6z" />
-            <path d="M10 16h4v12h-4z" />
-            <path d="M14 12h4v16h-4z" />
-            <path d="M18 16h4v12h-4z" />
-            <path d="M22 20h4v8h-4z" />
-            <path d="M14 6h4v4h-4z" />
-            <path d="M15 6v4h2v-4z" />
-            <path d="M14 10h4v2h-4z" />
-          </g>
-        </svg>
-      </span>
       <span className="brand__word">
         Deba<span>Mun</span>
       </span>
