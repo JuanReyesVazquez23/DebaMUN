@@ -48,7 +48,9 @@
       "Suiza es miembro de la OCDE desde 1961.",
       "No pertenece a la Unión Europea, pero mantiene acuerdos bilaterales con ella.",
       "El CERN, uno de los mayores laboratorios de física del mundo, tiene sede en Ginebra.",
-      "Su formación profesional dual combina aprendizaje en empresa y escuela."
+      "Su formación profesional dual combina aprendizaje en empresa y escuela.",
+      "Suiza tiene una de las tasas de desempleo juvenil más bajas de Europa.",
+      "El país tiene más de 1.500 lagos y el 6 % de su superficie está cubierta por glaciares."
     ],
     "sources": [
       { "label": "Administración Federal Suiza", "url": "https://www.admin.ch/", "kind": "official" },
@@ -106,7 +108,9 @@
       "Escocia forma parte del Reino Unido y no es un Estado miembro de la ONU.",
       "Edimburgo es la capital y sede del Parlamento escocés.",
       "En el referéndum de independencia de 2014 ganó el 'no' con el 55 % de los votos.",
-      "Escocia tiene su propia política educativa y un sistema universitario de cuatro años."
+      "Escocia tiene su propia política educativa y un sistema universitario de cuatro años.",
+      "El país tiene más de 90.000 kilómetros cuadrados de superficie.",
+      "El famoso Lago Ness y el monstruo son parte de su patrimonio cultural."
     ],
     "sources": [
       { "label": "Gobierno de Escocia", "url": "https://www.gov.scot/", "kind": "official" },
@@ -163,7 +167,9 @@
       "Alemania es miembro de la OCDE desde 1961.",
       "Es el país más poblado de la Unión Europea.",
       "Su formación profesional dual es una referencia internacional.",
-      "Ingresó en la ONU en 1973, junto con la República Democrática Alemana."
+      "Ingresó en la ONU en 1973, junto con la República Democrática Alemana.",
+      "Berlín es la capital y ciudad más poblada del país.",
+      "Alemania tiene una de las industrias manufactureras más avanzadas del mundo."
     ],
     "sources": [
       { "label": "Gobierno Federal de Alemania", "url": "https://www.bundesregierung.de/", "kind": "official" },
@@ -220,7 +226,9 @@
       "España es miembro de la ONU desde 1955 y de la OCDE desde 1961.",
       "Cuenta con medio centenar de sitios declarados Patrimonio Mundial por la UNESCO.",
       "El español es la segunda lengua materna más hablada del mundo.",
-      "Es uno de los países con mayor esperanza de vida de la Unión Europea."
+      "Es uno de los países con mayor esperanza de vida de la Unión Europea.",
+      "Madrid es la capital y ciudad más poblada del país.",
+      "España tiene más de 8.000 kilómetros de costa."
     ],
     "sources": [
       { "label": "Gobierno de España", "url": "https://www.lamoncloa.gob.es/", "kind": "official" },
@@ -277,7 +285,9 @@
       "Francia es miembro permanente del Consejo de Seguridad de la ONU.",
       "El francés es una de las seis lenguas oficiales de la ONU.",
       "Es el país más visitado del mundo por turistas internacionales.",
-      "La educación obligatoria comienza a los 3 años desde 2019."
+      "La educación obligatoria comienza a los 3 años desde 2019.",
+      "París es la capital y ciudad más poblada de Francia.",
+      "El país tiene una de las redes de tren de alta velocidad más extensas de Europa."
     ],
     "sources": [
       { "label": "Gobierno de Francia", "url": "https://www.gouvernement.fr/", "kind": "official" },
@@ -334,7 +344,9 @@
       "Irlanda es miembro de la OCDE desde 1961.",
       "Dublín alberga sedes europeas de grandes empresas tecnológicas.",
       "El irlandés es lengua oficial junto al inglés, aunque se habla a diario en pocas zonas.",
-      "Es uno de los países de la UE con mayor PIB per cápita."
+      "Es uno de los países de la UE con mayor PIB per cápita.",
+      "El país tiene una de las poblaciones más jóvenes de Europa occidental.",
+      "San Patricio es el santo patrón de Irlanda y su día es festivo nacional."
     ],
     "sources": [
       { "label": "Gobierno de Irlanda", "url": "https://www.gov.ie/", "kind": "official" },
@@ -391,7 +403,9 @@
       "El Servicio Nacional de Salud (NHS) ofrece atención sanitaria pública desde 1948.",
       "Perteneció a la Unión Europea entre 1973 y 2020.",
       "La BBC es uno de los servicios públicos de radiodifusión más antiguos del mundo.",
-      "Es miembro de la OCDE, del G7 y de la OTAN."
+      "Es miembro de la OCDE, del G7 y de la OTAN.",
+      "Londres alberga cuatro sitios declarados Patrimonio Mundial por la UNESCO.",
+      "El país tiene una de las universidades más antiguas del mundo de habla inglesa (Oxford, fundada en 1096)."
     ],
     "sources": [
       { "label": "Gobierno del Reino Unido", "url": "https://www.gov.uk/", "kind": "official" },
@@ -448,7 +462,9 @@
       "Países Bajos es miembro fundador de la OCDE y de la OTAN.",
       "Es uno de los países con mayor uso de la bicicleta por habitante.",
       "Róterdam es el mayor puerto de Europa.",
-      "Su economía es una de las más abiertas y orientadas al comercio del mundo."
+      "Su economía es una de las más abiertas y orientadas al comercio del mundo.",
+      "El país tiene una de las densidades de población más altas de Europa.",
+      "El puerto de Róterdam maneja más de 470 millones de toneladas de carga al año."
     ],
     "sources": [
       { "label": "Gobierno de los Países Bajos", "url": "https://www.government.nl/", "kind": "official" },
@@ -505,7 +521,9 @@
       "Bélgica alberga las instituciones principales de la Unión Europea en Bruselas.",
       "Es miembro fundador de la OTAN y de la OCDE.",
       "Tiene tres lenguas oficiales: neerlandés, francés y alemán.",
-      "Su sistema educativo está organizado por comunidades lingüísticas."
+      "Su sistema educativo está organizado por comunidades lingüísticas.",
+      "Brujas y Gante son ciudades medievales bien conservadas y turísticas.",
+      "El país produce más de 1.000 variedades de cerveza reconocidas."
     ],
     "sources": [
       { "label": "Gobierno de Bélgica", "url": "https://www.belgium.be/", "kind": "official" },
@@ -562,7 +580,9 @@
       "Portugal es miembro de la ONU desde 1955 y de la OCDE desde 1961.",
       "Es uno de los países europeos con mayor proporción de electricidad renovable.",
       "Lisboa acoge la sede de la Comunidad de Países de Lengua Portuguesa.",
-      "Tiene una de las mayores zonas económicas exclusivas marítimas de Europa."
+      "Tiene una de las mayores zonas económicas exclusivas marítimas de Europa.",
+      "El país tiene más de 800 kilómetros de costa atlántica.",
+      "El Tratado de Tordesillas fue firmado en 1494 entre Portugal y España."
     ],
     "sources": [
       { "label": "Gobierno de Portugal", "url": "https://www.portugal.gov.pt/", "kind": "official" },
@@ -619,7 +639,9 @@
       "Italia ingresó en la ONU en 1955.",
       "Es uno de los países con más sitios Patrimonio Mundial de la UNESCO.",
       "Es miembro fundador de la Unión Europea.",
-      "Su educación secundaria superior dura cinco años y combina ciclos técnicos y académicos."
+      "Su educación secundaria superior dura cinco años y combina ciclos técnicos y académicos.",
+      "Roma es la capital y una de las ciudades más antiguas de Europa continuamente habitadas.",
+      "Italia tiene más de 7.600 kilómetros de costa."
     ],
     "sources": [
       { "label": "Gobierno de Italia", "url": "https://www.governo.it/", "kind": "official" },

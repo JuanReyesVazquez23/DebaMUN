@@ -48,12 +48,18 @@
       "Canadá es miembro fundador de la OTAN y del G7.",
       "La educación es competencia de las provincias: no existe un ministerio federal de educación.",
       "Es uno de los mayores productores de uranio y de energía hidroeléctrica del mundo.",
-      "La Carta Canadiense de Derechos y Libertades protege la libertad de expresión desde 1982."
+      "La Carta Canadiense de Derechos y Libertades protege la libertad de expresión desde 1982.",
+      "Canadá tiene una política de multiculturalismo oficial desde 1988.",
+      "La tasa de alfabetización de Canadá es cercana al 99 %.",
+      "Las universidades públicas canadienses tienen costos significativamente menores que en Estados Unidos.",
+      "Canadá tiene uno de los sistemas de inmigración más abiertos para trabajadores calificados."
     ],
     "sources": [
       { "label": "Gobierno de Canadá", "url": "https://www.canada.ca/", "kind": "official" },
       { "label": "Estrategia Pan-canadiense de IA", "url": "https://ised-isde.canada.ca/site/pan-canadian-artificial-intelligence-strategy/en", "kind": "official" },
-      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "Estadísticas Canadá", "url": "https://www150.statcan.gc.ca/n1/en/daily-quotidien/220209/dq220209a-eng.pdf?st=..." },
+      { "label": "UNESCO · Instituto de Estadísticas", "url": "https://uis.unesco.org/" }
     ]
   },
   {
@@ -104,8 +110,9 @@
       "El café colombiano tiene denominación de origen protegida.",
       "Colombia es el país con más especies de aves registradas del mundo.",
       "Es miembro de la OCDE desde 2020.",
-      "Tiene 32 departamentos y un distrito capital, Bogotá.",
-      "La Constitución de 1991 reconoce la diversidad étnica y cultural de la nación."
+      "Medellín ha sido reconocida por su innovación urbana y transporte público sostenible.",
+      "Colombia tiene una política de educación rural y clases campesinas con alcance nacional.",
+      "El país ha implementado programas de alfabetización digital en zonas rurales."
     ],
     "sources": [
       { "label": "Gobierno de Colombia", "url": "https://www.gov.co/", "kind": "official" },
@@ -159,10 +166,11 @@
       "Su moneda oficial es el dólar estadounidense; en 2021 se reconoció el bitcoin como moneda de curso legal.",
       "San Salvador es la capital y principal centro económico del país.",
       "Una parte importante del PIB proviene de remesas enviadas por la diáspora.",
-      "El Salvador es el país más pequeño de Centroamérica continental.",
-      "Usa el dólar estadounidense como moneda desde 2001.",
-      "Una parte importante de su economía depende de las remesas de la diáspora.",
-      "En 2021 fue el primer país del mundo en adoptar el bitcoin como moneda de curso legal."
+      "El Salvador tiene una costa en el océano Pacífico pero no en el Atlántico.",
+      "El país tiene una superficie de aproximadamente 21.000 kilómetros cuadrados.",
+      "La Liga de Fútbol de El Salvador es una de las aficiones más populares del país.",
+      "El Salvador tiene volcanes activos, incluido el volcán de San Salvador.",
+      "La tasa de alfabetización de El Salvador es superior al 88 %."
     ],
     "sources": [
       { "label": "Gobierno de El Salvador", "url": "https://www.presidencia.gob.sv/", "kind": "official" },
@@ -219,7 +227,9 @@
       "Brasil es el país más grande de América Latina y el quinto más extenso del mundo.",
       "Es miembro fundador del Mercosur y del grupo BRICS.",
       "La Amazonia brasileña concentra la mayor selva tropical continua del planeta.",
-      "Su sistema público de salud, el SUS, ofrece atención universal desde 1988."
+      "Su sistema público de salud, el SUS, ofrece atención universal desde 1988.",
+      "Brasil tiene la mayor población de ascendencia africana fuera de África.",
+      "El país tiene una de las mayores biodiversidades del mundo con más de 50.000 especies de plantas."
     ],
     "sources": [
       { "label": "Gobierno de Brasil", "url": "https://www.gov.br/", "kind": "official" },
@@ -276,7 +286,9 @@
       "México es el país hispanohablante más poblado del mundo.",
       "Es miembro de la OCDE desde 1994 y socio del T-MEC con Estados Unidos y Canadá.",
       "Su Constitución de 1917 fue una de las primeras en incluir derechos sociales.",
-      "La UNAM es una de las universidades más grandes de América Latina."
+      "La UNAM es una de las universidades más grandes de América Latina.",
+      "México tiene uno de los sistemas de transporte público más extensos de América Latina.",
+      "El país tiene más de 180 sitios arqueológicos abiertos al público."
     ],
     "sources": [
       { "label": "Gobierno de México", "url": "https://www.gob.mx/", "kind": "official" },
@@ -394,7 +406,9 @@
       "Chile es miembro de la OCDE desde 2010.",
       "Es el mayor productor mundial de cobre.",
       "El desierto de Atacama es uno de los lugares más secos del planeta.",
-      "Es miembro fundador de la Alianza del Pacífico."
+      "Es miembro fundador de la Alianza del Pacífico.",
+      "Chile tiene más de 6.000 kilómetros de costa a lo largo del Pacífico.",
+      "El país es un destino mundial para la observación astronómica por sus cielos despejados."
     ],
     "sources": [
       { "label": "Gobierno de Chile", "url": "https://www.gob.cl/", "kind": "official" },
@@ -451,7 +465,9 @@
       "Perú es uno de los países con mayor diversidad de papas nativas del mundo.",
       "Machu Picchu es Patrimonio Mundial de la UNESCO desde 1983.",
       "Es miembro de la Alianza del Pacífico y de la Comunidad Andina.",
-      "Lima acoge la sede de la Secretaría General de la Comunidad Andina."
+      "Lima acoge la sede de la Secretaría General de la Comunidad Andina.",
+      "Perú tiene más de 5.000 variedades de papas nativas registradas.",
+      "El país tiene una de las gastronomías más reconocidas de América Latina."
     ],
     "sources": [
       { "label": "Gobierno de Perú", "url": "https://www.gob.pe/", "kind": "official" },

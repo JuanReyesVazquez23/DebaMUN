@@ -57,6 +57,10 @@ const ALTERNATIVES = [
   'subsidiar dispositivos sin formar docentes resolverá la brecha',
   'una renta básica sin servicios de empleo es suficiente',
   'retrasar la edad de jubilación sin recapacitación es sostenible',
+  'eliminar el salario mínimo atrae más inversión y empleo',
+  'la educación en línea reemplaza por completo a la presencial',
+  'los algoritmos son neutrales y no necesitan supervisión',
+  'solo las grandes empresas pueden implementar IA de forma responsable'
 ];
 
 const RISKS: Record<string, string[]> = {
@@ -67,6 +71,10 @@ const RISKS: Record<string, string[]> = {
     'la homogenización cultural',
     'la dependencia de proveedores',
     'la desinformación sintética',
+    'el abandono de zonas rurales',
+    'la exclusión de estudiantes con discapacidad',
+    'la privatización de la educación pública',
+    'la vigilancia biométrica en escuelas'
   ],
   ECOSOC: [
     'la precarización',
@@ -75,6 +83,10 @@ const RISKS: Record<string, string[]> = {
     'la informalidad',
     'la concentración de mercado',
     'la pérdida de protección social',
+    'el reemplazo masivo de empleos de nivel inicial',
+    'la vigilancia de trabajadores por algoritmos',
+    'la brecha salarial de género en plataformas',
+    'la falta de seguridad social en economía de plataformas'
   ],
 };
 
@@ -85,6 +97,11 @@ const INCIDENTS: Record<string, string[]> = {
     'un deepfake de un docente',
     'un algoritmo que sesgó becas',
     'una plataforma que usó ensayos sin consentimiento',
+    'un sistema que denegó el ingreso a estudiantes con discapacidad',
+    'un profesor despedido por usar IA sin autorización',
+    'una escuela que vendió datos de alumnos a una empresa',
+    'un sistema de detección de plagio que acusó falsamente a estudiantes',
+    'un chatbot que dio consejos médicos peligrosos a estudiantes'
   ],
   ECOSOC: [
     'un despido masivo automatizado',
@@ -92,6 +109,11 @@ const INCIDENTS: Record<string, string[]> = {
     'una filtración de datos de trabajadores',
     'un recorte de personal por IA en una Pyme',
     'una plataforma que desactivó cuentas sin explicación',
+    'un algoritmo que redujo salarios sin notificación',
+    'una empresa que sustituyó a jóvenes por sistemas automatizados',
+    'una plataforma que retuvo pagos sin apelación',
+    'un sistema de puntuación de trabajadores con sesgo racial',
+    'una empresa que monitoreó pausas y baños de trabajadores'
   ],
 };
 
@@ -102,11 +124,15 @@ const CONTEXTS = [
   'un programa de empleo juvenil',
   'una plataforma de reparto',
   'un instituto de formación técnica',
+  'una cooperativa de trabajo',
+  'un hospital público',
+  'una oficina municipal',
+  'una empresa de logística'
 ];
 
-const VALUES = ['la equidad', 'la privacidad', 'la diversidad cultural', 'la libertad académica', 'la protección social', 'la autonomía docente'];
+const VALUES = ['la equidad', 'la privacidad', 'la diversidad cultural', 'la libertad académica', 'la protección social', 'la autonomía docente', 'la seguridad laboral', 'la transparencia', 'la inclusión', 'la soberanía tecnológica'];
 
-const SOURCES = ['UNESCO', 'OIT', 'Banco Mundial', 'OCDE', 'UNICEF', 'PNUD'];
+const SOURCES = ['UNESCO', 'OIT', 'Banco Mundial', 'OCDE', 'UNICEF', 'PNUD', 'CIDH', 'CEPAL', 'UNFPA', 'ONU Mujeres'];
 
 const STRUCTURES: Record<QuestionKind, string[]> = {
   apertura: ['Cortesía y postura en una frase', 'Principio + evidencia', 'Medida concreta y cierre'],

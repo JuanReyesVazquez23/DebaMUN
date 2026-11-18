@@ -46,9 +46,11 @@
       "Japón tiene 47 prefecturas.",
       "El país tiene una de las esperanzas de vida más altas del mundo.",
       "Japón es miembro de la OCDE desde 1964.",
-      "Tiene una de las esperanzas de vida más altas del mundo.",
       "Su Constitución de 1947 renuncia a la guerra como derecho del Estado.",
-      "Tokio es una de las áreas metropolitanas más pobladas del planeta."
+      "Tokio es una de las áreas metropolitanas más pobladas del planeta.",
+      "El país tiene una tasa de alfabetización cercana al 99 %.",
+      "Japón es uno de los principales exportadores de vehículos y tecnología del mundo.",
+      "El monte Fuji es el pico más alto del país con 3.776 metros."
     ],
     "sources": [
       { "label": "Gobierno de Japón", "url": "https://www.japan.go.jp/", "kind": "official" },
@@ -105,7 +107,9 @@
       "Corea del Sur es miembro de la OCDE desde 1996.",
       "Invierte uno de los porcentajes más altos del PIB en investigación y desarrollo.",
       "El hangeul, su alfabeto, fue promulgado en 1446.",
-      "Pasó de receptor a donante neto de ayuda al desarrollo."
+      "Pasó de receptor a donante neto de ayuda al desarrollo.",
+      "Seúl es una de las ciudades más conectadas del mundo con internet de alta velocidad.",
+      "El país tiene más de 3.000 islas."
     ],
     "sources": [
       { "label": "Gobierno de Corea del Sur", "url": "https://www.korea.net/", "kind": "official" },
@@ -162,7 +166,9 @@
       "Singapur es una ciudad-Estado y uno de los cuatro tigres asiáticos.",
       "Es miembro fundador de la ASEAN desde 1967.",
       "Su sistema NEWater reutiliza agua para cubrir una parte importante de la demanda.",
-      "Tiene cuatro lenguas oficiales: inglés, chino mandarín, malayo y tamil."
+      "Tiene cuatro lenguas oficiales: inglés, chino mandarín, malayo y tamil.",
+      "El país tiene aproximadamente 730 kilómetros cuadrados de superficie.",
+      "Singapur es uno de los principales centros financieros de Asia."
     ],
     "sources": [
       { "label": "Gobierno de Singapur", "url": "https://www.gov.sg/", "kind": "official" },
@@ -219,7 +225,9 @@
       "China es miembro fundador de la ONU y miembro permanente del Consejo de Seguridad.",
       "Es el segundo país más poblado del mundo desde 2023.",
       "La Gran Muralla es Patrimonio Mundial de la UNESCO.",
-      "Logró la educación primaria universal antes de los Objetivos de Desarrollo del Milenio."
+      "Logró la educación primaria universal antes de los Objetivos de Desarrollo del Milenio.",
+      "El país tiene más de 1.400 millones de habitantes.",
+      "Shanghái es una de las ciudades más pobladas y con mayor rascacielos del mundo."
     ],
     "sources": [
       { "label": "Gobierno de China", "url": "https://english.www.gov.cn/", "kind": "official" },
@@ -276,7 +284,9 @@
       "India es el país más poblado del mundo desde 2023.",
       "Es miembro fundador del Movimiento de Países No Alineados.",
       "Su Constitución de 1950 es una de las más extensas del mundo.",
-      "Es el mayor productor mundial de leche."
+      "Es el mayor productor mundial de leche.",
+      "El país tiene más de 1.400 millones de habitantes.",
+      "Mumbai es uno de los centros financieros más importantes de Asia."
     ],
     "sources": [
       { "label": "Gobierno de India", "url": "https://www.india.gov.in/", "kind": "official" },
@@ -333,7 +343,9 @@
       "Sudáfrica es el único país africano miembro del G20.",
       "Tiene tres capitales: Pretoria, Ciudad del Cabo y Bloemfontein.",
       "Es el mayor productor mundial de platino.",
-      "Nelson Mandela recibió el Premio Nobel de la Paz en 1993."
+      "Nelson Mandela recibió el Premio Nobel de la Paz en 1993.",
+      "El país tiene 11 lenguas oficiales reconocidas en su Constitución.",
+      "Ciudad del Cabo alberga la Table Mountain, una de las maravillas naturales del mundo."
     ],
     "sources": [
       { "label": "Gobierno de Sudáfrica", "url": "https://www.gov.za/", "kind": "official" },
@@ -390,7 +402,9 @@
       "Australia es miembro fundador de la ONU.",
       "La Gran Barrera de Coral es el mayor arrecife del mundo y Patrimonio Mundial.",
       "Su población se concentra en la costa, sobre todo en el sureste.",
-      "Es uno de los países con mayor proporción de energía solar residencial del mundo."
+      "Es uno de los países con mayor proporción de energía solar residencial del mundo.",
+      "El país tiene más de 25.000 kilómetros de costa.",
+      "Canberra fue elegida como capital para resolver la disputa entre Sídney y Melbourne."
     ],
     "sources": [
       { "label": "Gobierno de Australia", "url": "https://www.australia.gov.au/", "kind": "official" },
@@ -447,7 +461,9 @@
       "Rusia es miembro permanente del Consejo de Seguridad de la ONU.",
       "Es el país más extenso del mundo y abarca once husos horarios.",
       "El ruso es una de las seis lenguas oficiales de la ONU.",
-      "Es uno de los principales exportadores de gas natural del mundo."
+      "Es uno de los principales exportadores de gas natural del mundo.",
+      "El país tiene más de 2 millones de ríos.",
+      "San Petersburgo es la segunda ciudad más importante y antigua capital imperial."
     ],
     "sources": [
       { "label": "Gobierno de Rusia", "url": "http://government.ru/en/", "kind": "official" },

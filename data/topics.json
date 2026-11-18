@@ -54,9 +54,44 @@
           "description": "Cómo certificar aprendizajes cuando la producción de texto deja de ser una prueba suficiente. Evaluación procesual y oral."
         },
         {
-          "id": "gobernanza",
-          "label": "Gobernanza multiactor",
-          "description": "Directrices UNESCO, marcos nacionales, compras públicas, transparencia algorítmica y rendición de cuentas."
+          "id": "infraestructura",
+          "label": "Infraestructura y conectividad escolar",
+          "description": "Electricidad, internet, dispositivos y mantenimiento en centros educativos, especialmente rurales."
+        },
+        {
+          "id": "lenguas",
+          "label": "Lenguas indígenas y diversidad lingüística",
+          "description": "Educación en lenguas maternas, contenidos digitales locales y preservación de lenguas en peligro."
+        },
+        {
+          "id": "no_formal",
+          "label": "Educación no formal y comunidades",
+          "description": "Aprendizaje fuera del aula, programas comunitarios, bibliotecas y educación popular."
+        },
+        {
+          "id": "ia_evaluacion",
+          "label": "IA en la evaluación del aprendizaje",
+          "description": "Uso de sistemas automatizados para calificar, detectar plagio y tomar decisiones sobre estudiantes."
+        },
+        {
+          "id": "software_libre",
+          "label": "Software libre y código abierto en educación",
+          "description": "Plataformas educativas abiertas, soberanía tecnológica y reducción de dependencia de proveedores privados."
+        },
+        {
+          "id": "evaluacion_estandar",
+          "label": "Evaluación estandarizada y rendición de cuentas",
+          "description": "Pruebas estandarizadas, rankings escolares y uso de resultados para financiamiento o cierre de centros."
+        },
+        {
+          "id": "educacion_emocional",
+          "label": "Educación socioemocional y salud mental",
+          "description": "Bienestar del estudiante, prevención del acoso, resiliencia y acompañamiento psicológico en escuelas."
+        },
+        {
+          "id": "educacion_ambiental",
+          "label": "Educación ambiental y sostenibilidad",
+          "description": "Cambio climático en currículos, escuelas sostenibles y formación para la transición ecológica."
         }
       ],
       "keyQuestions": [
@@ -67,7 +102,9 @@
         "¿Qué salvaguardas se necesitan para los datos de niños, niñas y adolescentes?",
         "¿Cómo se protege la diversidad lingüística y cultural frente a modelos entrenados con pocos idiomas?",
         "¿Debe exigirse transparencia sobre el uso de IA en materiales y evaluaciones?",
-        "¿Qué papel deben tener estudiantes, familias y docentes en la gobernanza escolar de la IA?"
+        "¿Qué papel deben tener estudiantes, familias y docentes en la gobernanza escolar de la IA?",
+        "¿Quién paga la conectividad y los dispositivos en zonas rurales y de difícil acceso?",
+        "¿Las pruebas estandarizadas mejoran o profundizan las desigualdades educativas?"
       ],
       "glossary": [
         {
@@ -109,7 +146,11 @@
         "Protección reforzada de datos de menores",
         "Fondos para lenguas y contenidos locales",
         "Pilotos con evaluación independiente antes de escalar",
-        "Consejos escolares con estudiantes, familias y docentes"
+        "Consejos escolares con estudiantes, familias y docentes",
+        "Centros comunitarios de acceso digital y alfabetización",
+        "Reglamento de uso de IA en exámenes y calificaciones",
+        "Alianza universidad-escuela para tutoría y mentoría",
+        "Licencias abiertas para contenidos educativos públicos"
       ],
       "debateTensions": [
         "Innovación frente a protección",
@@ -119,7 +160,11 @@
         "Competitividad económica frente a equidad",
         "Autoría individual frente a producción asistida",
         "Regulación vinculante frente a orientaciones voluntarias",
-        "Tecnología global frente a diversidad cultural local"
+        "Tecnología global frente a diversidad cultural local",
+        "Conectividad rural frente a centralización urbana",
+        "Contenidos privados frente a educativos abiertos",
+        "Evaluación automatizada frente a juicio docente",
+        "Privacidad de datos frente a aprendizaje personalizado"
       ],
       "actors": [
         "ministerios de educación",
@@ -128,7 +173,12 @@
         "empresas de tecnología educativa",
         "organismos multilaterales",
         "sociedad civil y academia",
-        "autoridades de protección de datos"
+        "autoridades de protección de datos",
+        "comunidades indígenas y pueblos originarios",
+        "organizaciones de personas con discapacidad",
+        "bibliotecas y centros comunitarios",
+        "universidades y centros de formación docente",
+        "gobiernos locales y municipales"
       ],
       "sources": [
         {
@@ -194,6 +244,36 @@
           "id": "futuro",
           "label": "Trabajos verdes y cuidados",
           "description": "Sectores emergentes, empleos verdes, economía de los cuidados y reconversión productiva."
+        },
+        {
+          "id": "cuidados",
+          "label": "Economía de los cuidados y trabajo doméstico",
+          "description": "Trabajo no remunerado, cuidados infantiles y de personas mayores, y su valor económico."
+        },
+        {
+          "id": "informalidad_rural",
+          "label": "Informalidad y empleo rural",
+          "description": "Trabajo agrícola informal, falta de contratos y brecha entre zonas rurales y urbanas."
+        },
+        {
+          "id": "salud_mental",
+          "label": "Salud mental y condiciones de trabajo",
+          "description": "Estrés laboral, agotamiento, acoso y bienestar psicológico de jóvenes trabajadores."
+        },
+        {
+          "id": "datos_laborales",
+          "label": "Protección de datos de trabajadores",
+          "description": "Vigilancia laboral, recopilación de datos biométricos y privacidad en el entorno de trabajo."
+        },
+        {
+          "id": "economia_plataformas",
+          "label": "Economía de plataformas y algoritmos",
+          "description": "Gestión algorítmica de repartidores, conductores y freelancers, y estatus laboral."
+        },
+        {
+          "id": "economia_popular",
+          "label": "Economía popular y emprendimiento juvenil",
+          "description": "Cooperativas, microempresas, comercio informal y acceso a crédito para jóvenes."
         }
       ],
       "keyQuestions": [
@@ -248,7 +328,12 @@
         "Programas de primera experiencia y mentoría",
         "Inversión en conectividad y centros de capacitación rurales",
         "Compras públicas con cláusulas de empleo juvenil",
-        "Consejos de juventud con poder de recomendación"
+        "Consejos de juventud con poder de recomendación",
+        "Sistema nacional de cuidados con empleo decente",
+        "Cuotas de contratación juvenil en contratos públicos",
+        "Fondos de reconversión para sectores afectados por automatización",
+        "Certificación de habilidades adquiridas informalmente",
+        "Jornada reducida y semana laboral de cuatro días"
       ],
       "debateTensions": [
         "Flexibilidad frente a protección",
@@ -258,7 +343,11 @@
         "Automatización frente a empleo digno",
         "Focalización frente a universalidad",
         "Sector privado frente a provisión pública",
-        "Presente fiscal frente a inversión futura"
+        "Presente fiscal frente a inversión futura",
+        "Empleo verde frente a empleos tradicionales",
+        "Trabajo por plataforma frente a empleo estable",
+        "Capacitación estatal frente a capacitación empresarial",
+        "Salario mínimo frente a competitividad de PYMES"
       ],
       "actors": [
         "ministerios de trabajo",
@@ -267,7 +356,12 @@
         "plataformas digitales",
         "PYMES",
         "agencias de la ONU",
-        "instituciones de formación técnica"
+        "instituciones de formación técnica",
+        "organizaciones de economía popular y cooperativas",
+        "organizaciones de personas con discapacidad",
+        "agencias de empleo y colocación",
+        "gobiernos regionales y municipales",
+        "organizaciones de empleadas domésticas"
       ],
       "sources": [
         {
