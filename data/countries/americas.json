@@ -333,7 +333,11 @@
       "Argentina es miembro fundador de la ONU y del Mercosur.",
       "Es el segundo país más extenso de América del Sur.",
       "La educación primaria y secundaria es obligatoria y gratuita.",
-      "Tiene una presencia destacada en misiones de paz de la ONU."
+      "Tiene una presencia destacada en misiones de paz de la ONU.",
+      "La Ley de Memoria plena (2006) declara inconstitucionales las leyes de obediencia debida y punto final.",
+      "Los Juicios por la Verdad juzgan crímenes de lesa humanidad cometidos durante la última dictadura cívico-militar.",
+      "El Estadio Nacional de ESMA funciona hoy como Espacio Memoria y Derechos Humanos.",
+      "Las Abuelas de Plaza de Mayo han recuperado más de 130 nietos apropiados durante la dictadura."
     ],
     "sources": [
       { "label": "Gobierno de Argentina", "url": "https://www.argentina.gob.ar/", "kind": "official" },
@@ -453,6 +457,63 @@
       { "label": "Gobierno de Perú", "url": "https://www.gob.pe/", "kind": "official" },
       { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+    ]
+  },
+  {
+    "code": "PY",
+    "slug": "paraguay",
+    "name": "Paraguay",
+    "officialName": "República del Paraguay",
+    "flag": "🇵🇾",
+    "region": "América del Sur",
+    "capital": "Asunción",
+    "languages": ["español", "guaraní"],
+    "unMember": true,
+    "palette": { "primary": "#EF2B2D", "secondary": "#FFFFFF", "accent": "#00477E" },
+    "summary": "República presidencial con bicameralismo, conocida por su bilingüismo español-guaraní y una economía basada en agricultura y energía hidroeléctrica. Miembro de Mercosur con una historia marcada por conflictos y regímenes autoritarios en el siglo XX.",
+    "unProfile": {
+      "bloc": "América Latina y el Caribe; Mercosur; Comunidad Andina",
+      "style": "Diplomacia de vecindad, defensa de la soberanía y enfoque en derechos de pueblos indígenas.",
+      "allies": ["Argentina", "Brasil", "Uruguay"],
+      "tensions": ["Desarrollo rural", "Informalidad", "Infraestructura"],
+      "redLines": ["Defiende la soberanía nacional", "Rechaza injerencia en asuntos internos"]
+    },
+    "context": {
+      "aiAndEducation": "Educación bilingüe español-guaraní; brecha de conectividad en zonas rurales y programas incipientes de IA en educación.",
+      "youthLabour": "Informalidad elevada, empleo juvenil en agricultura y servicios, migración hacia Argentina y Brasil.",
+      "digitalGovernance": "Ley de protección de datos personales, agenda digital y conectividad rural pendiente."
+    },
+    "unesco": {
+      "position": "Promueve educación bilingüe, patrimonio cultural guaraní y diversidad lingüística. Defiende el acceso a la educación en zonas rurales.",
+      "priorities": ["Educación bilingüe español-guaraní", "Conectividad rural", "Patrimonio cultural"],
+      "vulnerability": "La dispersión geográfica y los recursos limitados dificultan la cobertura educativa.",
+      "leverage": "Bilingüismo, experiencia en educación intercultural y patrimonio vivo."
+    },
+    "ecosoc": {
+      "position": "Prioriza empleo rural, formalización y protección social. Apoya infraestructura y cooperación energética regional.",
+      "priorities": ["Empleo rural y juvenil", "Energía hidroeléctrica", "Protección social"],
+      "vulnerability": "La dependencia de commodities agrícolas expone la economía a shocks externos.",
+      "leverage": "Energía hidroeléctrica, producción agrícola y cooperación regional."
+    },
+    "tips": [
+      "Habla de la educación bilingüe español-guaraní como activo diferencial.",
+      "Menciona la Itaipú y la energía hidroeléctrica como ejemplo de cooperación regional.",
+      "Reconoce los desafíos de informalidad con propuestas concretas de formalización."
+    ],
+    "facts": [
+      "Paraguay es uno de los pocos países del mundo bilingüe oficial: español y guaraní.",
+      "La presa de Itaipú, compartida con Brasil, es una de las mayores hidroeléctricas del mundo.",
+      "Es miembro fundador de Mercosur y de la Comunidad Andina.",
+      "Durante el siglo XX sufrió la guerra del Chaco (1932-1935) contra Bolivia.",
+      "El régimen de Alfredo Stroessner gobernó de 1954 a 1989, uno de los más largos de Latinoamérica.",
+      "La democracia se restauró en 1989 tras el fin de la dictadura de Stroessner.",
+      "El Chaco paraguayo abarca más del 60% del territorio nacional con escasa densidad poblacional.",
+      "Asunción es una de las capitales más antiguas de Sudamérica, fundada en 1537."
+    ],
+    "sources": [
+      { "label": "Gobierno de Paraguay", "url": "https://www.paraguay.gov.py/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "Itaipú Binacional", "url": "https://www.itaipu.gov.py/", "kind": "official" }
     ]
   }
 ]

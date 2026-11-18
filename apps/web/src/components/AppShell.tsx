@@ -1,6 +1,6 @@
-import { useEffect, type CSSProperties, type ReactNode } from 'react';
+import { useCallback, useEffect, useState, type CSSProperties, type ReactNode } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { BookOpen, Compass, LogOut, MessagesSquare, Swords } from 'lucide-react';
+import { BookOpen, Compass, LogOut, MessagesSquare, Moon, Sun, Swords } from 'lucide-react';
 import { CountryFlag } from './CountryFlag';
 import { useSession } from '../lib/session';
 import { themeVars } from '../lib/theme';
@@ -35,6 +35,23 @@ export function Brand({ compact = false }: { compact?: boolean }) {
 export function AppShell({ children }: { children: ReactNode }) {
   const { profile, signOut } = useSession();
   const navigate = useNavigate();
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('debamun.color-scheme');
+    const prefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)').matches : false;
+    const enabled = saved ? saved === 'dark' : prefersDark;
+    setDarkMode(enabled);
+    document.documentElement.setAttribute('data-color-scheme', enabled ? 'dark' : 'light');
+  }, []);
+
+  const toggleDarkMode = useCallback(() => {
+    const next = !darkMode;
+    setDarkMode(next);
+    document.documentElement.setAttribute('data-color-scheme', next ? 'dark' : 'light');
+    localStorage.setItem('debamun.color-scheme', next ? 'dark' : 'light');
+  }, [darkMode]);
 
   useEffect(() => {
     document.title = profile ? `${profile.country.name} · DebaMun` : 'DebaMun';
@@ -78,6 +95,15 @@ export function AppShell({ children }: { children: ReactNode }) {
                 <span>{ROOM[profile.committee.id]}</span>
               </span>
             </div>
+            <button
+              type="button"
+              className="icon-button"
+              onClick={toggleDarkMode}
+              title={darkMode ? 'Modo claro' : 'Modo oscuro'}
+              aria-label={darkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+            >
+              {darkMode ? <Sun aria-hidden="true" size={17} /> : <Moon aria-hidden="true" size={17} />}
+            </button>
             <button
               type="button"
               className="icon-button"

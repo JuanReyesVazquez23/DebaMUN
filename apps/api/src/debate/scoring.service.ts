@@ -342,6 +342,107 @@ const INCLUSION = [
   'equidad',
 ];
 
+const HUMAN_RIGHTS = [
+  'derechos humanos',
+  'derecho internacional',
+  'memoria',
+  'verdad',
+  'justicia',
+  'reparacion',
+  'victimas',
+  'desaparicion',
+  'tortura',
+  'ejecucion',
+  'exilio',
+  'perseguido',
+  'presos politicos',
+  'censura',
+  'libertad de expresion',
+  'libertad sindical',
+  'equidad',
+  'dignidad',
+];
+
+const DEMOCRACY = [
+  'democracia',
+  'democratico',
+  'democratica',
+  'elecciones',
+  'voto',
+  'votan',
+  'suffragio',
+  'representacion',
+  'participacion ciudadana',
+  'estado de derecho',
+  'separacion de poderes',
+  'checks and balances',
+  'controles',
+  'instituciones',
+  'pluralismo',
+  'oposition',
+  'minorias',
+];
+
+const MEMORY = [
+  'nunca mas',
+  'nunca más',
+  'memoria',
+  'olvido',
+  'recuerdo',
+  'testimonio',
+  'archivo',
+  'museo',
+  'monumento',
+  'sitio de memoria',
+  'desaparecidos',
+  'desaparecidas',
+  'detenidos',
+  'desaparecidos',
+];
+
+const TRANSITIONAL_JUSTICE = [
+  'transicion',
+  'transicional',
+  'posconflicto',
+  'pos conflicto',
+  'reconstruccion',
+  'reconciliacion',
+  'reparacion',
+  'indemnizacion',
+  'juicio',
+  'condena',
+  'absolucion',
+  'imputacion',
+  'proceso',
+  'veredicto',
+  'sancion',
+];
+
+const DICTATORSHIP_CRITIQUE = [
+  'dictadura',
+  'dictador',
+  'autoritarismo',
+  'autoritario',
+  'regimen autoritario',
+  'estado de sitio',
+  'sitio',
+  'carcel',
+  'encarcelar',
+  'presa',
+  'presidio',
+  'golpe',
+  'golpe de estado',
+  'golpista',
+  'junta militar',
+  'cuerpo militar',
+  'fuerzas armadas',
+  'represion',
+  'reprimir',
+  'disidencia',
+  'opresion',
+  'oprimir',
+];
+
 function countMatches(normalized: string, markers: string[]): number {
   return markers.reduce((total, marker) => {
     const needle = normalizeForMatch(marker);
@@ -366,7 +467,7 @@ function adviceFor(key: CriterionKey, score: number): string {
     case 'argumentos':
       return high
         ? 'Buen uso de evidencia. Distingue entre dato, interpretación y propuesta para que la mesa pueda verificar cada paso.'
-        : 'Conecta cada afirmación con una fuente concreta (UNESCO, OIT, Banco Mundial, OCDE) y explica el mecanismo causal: dato → consecuencia → propuesta.';
+        : 'Conecta cada afirmación con una fuente concreta (UNESCO, OIT, Banco Mundial, OCDE, CIDH) y explica el mecanismo causal: dato → consecuencia → propuesta. Si hablas de dictaduras o derechos humanos, cita fechas, nombres y documentos verificables.';
     case 'coherencia':
       return high
         ? 'La estructura es clara. Reduce la longitud de las frases más largas y repite la idea central en el cierre.'
@@ -374,7 +475,7 @@ function adviceFor(key: CriterionKey, score: number): string {
     case 'resolucion':
       return high
         ? 'La propuesta es verificable. Añade un mecanismo de revisión independiente y un escenario de fallo para demostrar realismo.'
-        : 'Concreta cuatro elementos: responsable, financiamiento, plazo e indicador. Sin ellos, la propuesta suena a intención, no a resolución.';
+        : 'Concreta cuatro elementos: responsable, financiamiento, plazo e indicador. Si propones memoria, verdad o justicia, indica organismo, presupuesto y cronograma. Sin ellos, suena a intención, no a resolución.';
   }
 }
 
@@ -421,6 +522,11 @@ export class ScoringService {
     const feasibilityCount = countMatches(normalized, FEASIBILITY);
     const mechanismCount = countMatches(normalized, MECHANISM);
     const inclusionCount = countMatches(normalized, INCLUSION);
+    const humanRightsCount = countMatches(normalized, HUMAN_RIGHTS);
+    const democracyCount = countMatches(normalized, DEMOCRACY);
+    const memoryCount = countMatches(normalized, MEMORY);
+    const transitionalJusticeCount = countMatches(normalized, TRANSITIONAL_JUSTICE);
+    const dictatorshipCritiqueCount = countMatches(normalized, DICTATORSHIP_CRITIQUE);
     const exampleCount = countMatches(normalized, EXAMPLES);
     const counterCount = countMatches(normalized, COUNTER);
     const civicTone = /(consideramos|estimamos|entendemos|proponemos|reconocemos|nuestra delegacion|nuestro pais|esta delegacion)/.test(
@@ -464,8 +570,11 @@ export class ScoringService {
         (civicTone ? 6 : 0) +
         (politeOpening ? 4 : 0) +
         (sentences.length >= 3 ? 3 : 0) +
-        Math.min(5, words / 30) -
-        aggressiveCount * 12,
+        Math.min(5, words / 30) +
+        Math.min(10, humanRightsCount * 5) +
+        Math.min(8, democracyCount * 4) -
+        aggressiveCount * 12 -
+        dictatorshipCritiqueCount * 3,
     );
 
     const argumentos = clamp(
@@ -481,6 +590,9 @@ export class ScoringService {
         (counterCount > 0 ? 5 : 0) +
         Math.min(12, proposalCount * 2) +
         Math.min(12, topicOverlap * 18) +
+        Math.min(10, humanRightsCount * 5) +
+        Math.min(8, democracyCount * 4) +
+        Math.min(6, memoryCount * 3) +
         (words >= 80 ? 5 : words >= 50 ? 3 : 0) +
         (hasUrl ? 4 : 0) -
         (evidenceCount === 0 && opinionated ? 6 : 0),
@@ -493,6 +605,8 @@ export class ScoringService {
         (paragraphs > 1 ? 5 : 0) +
         Math.min(14, connectorCount * 5) +
         Math.min(16, topicOverlap * 24) +
+        Math.min(8, memoryCount * 4) +
+        Math.min(6, transitionalJusticeCount * 3) +
         (hasClosure ? 5 : 0) +
         (mentionsCountry && sentences.length > 1 ? 2 : 0) -
         (uniqueRatio < 0.3 ? 6 : 0) -
@@ -510,6 +624,9 @@ export class ScoringService {
         (feasibilityCount > 0 ? 5 : 0) +
         (hasFallback ? 4 : 0) +
         (inclusionCount > 0 ? 4 : 0) +
+        Math.min(8, transitionalJusticeCount * 4) +
+        Math.min(6, democracyCount * 3) +
+        Math.min(6, humanRightsCount * 3) +
         (words >= 80 ? 4 : 0),
     );
     const resolucion = resolutionExpected ? resolutionRaw : clamp(34 + resolutionRaw * 0.55);
@@ -525,7 +642,7 @@ export class ScoringService {
         score: Math.round(dialogo),
         level: levelOf(dialogo),
         weight: weights.dialogo,
-        evidence: sentenceEvidence(DIPLOMATIC),
+        evidence: sentenceEvidence([...DIPLOMATIC, ...HUMAN_RIGHTS, ...DEMOCRACY]),
         advice: adviceFor('dialogo', dialogo),
       },
       {
@@ -534,7 +651,15 @@ export class ScoringService {
         score: Math.round(argumentos),
         level: levelOf(argumentos),
         weight: weights.argumentos,
-        evidence: sentenceEvidence([...EVIDENCE, ...SOURCE_NAMES, ...CAUSAL, ...EXAMPLES]),
+        evidence: sentenceEvidence([
+          ...EVIDENCE,
+          ...SOURCE_NAMES,
+          ...CAUSAL,
+          ...EXAMPLES,
+          ...HUMAN_RIGHTS,
+          ...DEMOCRACY,
+          ...MEMORY,
+        ]),
         advice: adviceFor('argumentos', argumentos),
       },
       {
@@ -543,7 +668,14 @@ export class ScoringService {
         score: Math.round(coherencia),
         level: levelOf(coherencia),
         weight: weights.coherencia,
-        evidence: sentenceEvidence([...CONNECTORS, 'porque', 'en consecuencia', 'finalmente']),
+        evidence: sentenceEvidence([
+          ...CONNECTORS,
+          'porque',
+          'en consecuencia',
+          'finalmente',
+          ...MEMORY,
+          ...TRANSITIONAL_JUSTICE,
+        ]),
         advice: adviceFor('coherencia', coherencia),
       },
       {
@@ -559,6 +691,9 @@ export class ScoringService {
           ...TIMELINE,
           ...MEASUREMENT,
           ...ACCOUNTABILITY,
+          ...TRANSITIONAL_JUSTICE,
+          ...DEMOCRACY,
+          ...HUMAN_RIGHTS,
         ]),
         advice: adviceFor('resolucion', resolucion),
       },
@@ -656,6 +791,6 @@ export class ScoringService {
     if (overall >= 55) {
       return 'Intervención aceptable. Hay ideas pertinentes, pero falta evidencia o estructura. Revisa la rúbrica antes de la siguiente ronda.';
     }
-    return 'Intervención inicial. Reestructura: postura en una frase, dos argumentos con fuente y una medida con responsable, plazo e indicador.';
+    return 'Intervención inicial. Reestructura: postura en una frase, dos argumentos con fuente (incluida CIDH o ONU si hablas de derechos humanos) y una medida con responsable, plazo e indicador.';
   }
 }
