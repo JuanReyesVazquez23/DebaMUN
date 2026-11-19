@@ -96,6 +96,52 @@ export class StoreService {
     return record;
   }
 
+  /**
+   * Recupera la identidad de un delegado cuando el backend ya no la tiene: bases efímeras, reinicios
+   * o instancias serverless distintas. Si el delegado existe no se sobrescribe nada.
+   */
+  async restoreDelegate(input: {
+    id: string;
+    username: string;
+    countryCode: string;
+    committee: CommitteeId;
+    grade?: string | null;
+  }): Promise<DelegateRecord> {
+    const existing = await this.getDelegate(input.id);
+    if (existing) return existing;
+
+    const now = new Date().toISOString();
+    const record: DelegateRecord = {
+      id: input.id,
+      username: input.username,
+      countryCode: input.countryCode,
+      committee: input.committee,
+      grade: input.grade ?? null,
+      createdAt: now,
+      lastSeenAt: now,
+    };
+
+    if (this.db.isReady) {
+      try {
+        await this.db.query(
+          `insert into delegates (id, username, country_code, committee, grade)
+           values ($1, $2, $3, $4, $5)
+           on conflict (id) do nothing`,
+          [record.id, record.username, record.countryCode, record.committee, record.grade],
+        );
+        const stored = await this.getDelegate(input.id);
+        if (stored) return stored;
+      } catch (error) {
+        this.logger.warn(`Fallo al restaurar delegado en PostgreSQL: ${(error as Error).message}`);
+      }
+    }
+
+    const local = this.delegates.get(record.id);
+    if (local) return local;
+    this.delegates.set(record.id, record);
+    return record;
+  }
+
   async getDelegate(id: string): Promise<DelegateRecord | null> {
     if (this.db.isReady) {
       try {

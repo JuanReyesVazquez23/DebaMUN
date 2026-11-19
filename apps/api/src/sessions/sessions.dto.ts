@@ -1,5 +1,5 @@
 import { Transform, Type } from 'class-transformer';
-import { IsIn, IsInt, IsOptional, IsString, Length, Matches, Max, Min } from 'class-validator';
+import { IsIn, IsInt, IsOptional, IsString, IsUUID, Length, Matches, Max, Min } from 'class-validator';
 import type { CommitteeId } from '../countries/countries.types.js';
 import { GRADES, type GradeId } from './grade.js';
 
@@ -28,6 +28,11 @@ export class CreateSessionDto {
   @IsOptional()
   @IsIn(GRADES)
   grade?: GradeId;
+}
+
+export class RestoreSessionDto extends CreateSessionDto {
+  @IsUUID()
+  delegateId!: string;
 }
 
 export class FactQueryDto {

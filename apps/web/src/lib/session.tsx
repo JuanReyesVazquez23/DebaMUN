@@ -4,10 +4,11 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   type ReactNode,
 } from 'react';
-import { ApiError, api } from './api';
+import { ApiError, api, setSessionRecovery } from './api';
 import { normalizeGrade } from './format';
 import type { CommitteeId, CountrySummary, GradeId, SessionProfile } from '../types';
 
@@ -74,6 +75,44 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   const [profile, setProfile] = useState<SessionProfile | null>(null);
   const [draft, setDraft] = useState<Draft>(readDraft);
   const [error, setError] = useState<string | null>(null);
+  const profileRef = useRef<SessionProfile | null>(null);
+  useEffect(() => {
+    profileRef.current = profile;
+  }, [profile]);
+
+  /**
+   * Vuelve a registrar al delegado en el backend con los datos guardados en el navegador.
+   * Nunca cambia su identidad: si el servidor ya lo conoce, la operación no modifica nada.
+   * Las llamadas simultáneas comparten la misma petición.
+   */
+  const pendingRestore = useRef<Promise<void> | null>(null);
+  const ensureSession = useCallback(() => {
+    if (pendingRestore.current) return pendingRestore.current;
+
+    const current = profileRef.current;
+    if (!current) return Promise.resolve();
+
+    const run = api
+      .restoreSession(current)
+      .then((next) => {
+        profileRef.current = next;
+        localStorage.setItem(DELEGATE_KEY, next.delegate.id);
+        localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
+        setProfile(next);
+      })
+      .finally(() => {
+        pendingRestore.current = null;
+      });
+
+    pendingRestore.current = run;
+    return run;
+  }, []);
+
+  // Cualquier petición que reciba "Delegado no encontrado" restaura la sesión y se repite.
+  useEffect(() => {
+    setSessionRecovery(ensureSession);
+    return () => setSessionRecovery(null);
+  }, [ensureSession]);
 
   useEffect(() => {
     const delegateId = localStorage.getItem(DELEGATE_KEY);
@@ -84,8 +123,12 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       try {
         const parsed = JSON.parse(savedProfile) as SessionProfile;
         if (parsed?.delegate?.id && parsed.delegate.id === delegateId) {
+          profileRef.current = parsed;
           setProfile(parsed);
           setStatus('ready');
+          // Sincroniza con el backend sin bloquear la interfaz: si el servidor reinició su base,
+          // el delegado se re-registra y la sesión sigue abierta.
+          void ensureSession().catch(() => undefined);
           return;
         }
       } catch {
@@ -119,7 +162,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [ensureSession]);
 
   useEffect(() => {
     localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
@@ -154,6 +197,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
       });
       localStorage.setItem(DELEGATE_KEY, next.delegate.id);
       localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
+      profileRef.current = next;
       setProfile(next);
       setStatus('ready');
       return next;
@@ -172,6 +216,7 @@ export function SessionProvider({ children }: { children: ReactNode }) {
   const signOut = useCallback(() => {
     localStorage.removeItem(DELEGATE_KEY);
     localStorage.removeItem(PROFILE_KEY);
+    profileRef.current = null;
     setProfile(null);
     setStatus('anonymous');
   }, []);

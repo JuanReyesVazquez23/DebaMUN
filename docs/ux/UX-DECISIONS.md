@@ -44,8 +44,6 @@
 - Saludo + resumen del país en una frase: contexto inmediato.
 - Datos del día en un panel con cuatro hechos y rotación al siguiente bloque: contexto útil, no relleno.
 - La bandera del país vive en el topbar, junto al nombre: identidad permanente sin robar espacio al panel.
-- Readiness con checks ponderados y explicación de qué falta.
-- Progreso del debate con media, mejor y última intervención + historial corto.
 - "Qué haría ahora": cuatro acciones ordenadas por impacto.
 - Tópico de la comisión con subtemas y dos salidas: dossier o asistente.
 

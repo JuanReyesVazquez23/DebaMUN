@@ -3,19 +3,15 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   BookOpen,
-  Check,
-  Circle,
-  Gauge,
   MessagesSquare,
   RefreshCw,
   Sparkles,
   Swords,
   Target,
 } from 'lucide-react';
-import { ScoreRing } from '../components/ScoreRing';
 import { ErrorBlock, LoadingBlock } from '../components/StateBlocks';
 import { api } from '../lib/api';
-import { formatDateTime, gradeLabel } from '../lib/format';
+import { gradeLabel } from '../lib/format';
 import { useSession } from '../lib/session';
 import type { DashboardData, FactOfDay } from '../types';
 
@@ -29,6 +25,7 @@ function greeting(): string {
 
 export function DashboardPage() {
   const { profile } = useSession();
+  const delegateId = profile?.delegate.id ?? '';
   const [data, setData] = useState<DashboardData | null>(null);
   const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
   const [error, setError] = useState('');
@@ -37,10 +34,10 @@ export function DashboardPage() {
   const [factsBusy, setFactsBusy] = useState(false);
 
   const load = useCallback(() => {
-    if (!profile) return;
+    if (!delegateId) return;
     setStatus('loading');
     api
-      .dashboard(profile.delegate.id)
+      .dashboard(delegateId)
       .then((next) => {
         setData(next);
         setFacts(next.factsOfDay ?? [next.factOfDay]);
@@ -51,7 +48,7 @@ export function DashboardPage() {
         setError(cause instanceof Error ? cause.message : 'No pude cargar tu panel.');
         setStatus('error');
       });
-  }, [profile]);
+  }, [delegateId]);
 
   useEffect(load, [load]);
 
@@ -60,8 +57,7 @@ export function DashboardPage() {
   if (status === 'error' && !data) return <ErrorBlock message={error} onRetry={load} />;
   if (!data) return null;
 
-  const { country, committee, readiness, debate } = data;
-  const averageTone = debate.average >= 70 ? 'alta' : debate.average >= 50 ? 'media' : 'inicial';
+  const { country, committee } = data;
   const totalFacts = facts[0]?.total ?? 0;
 
   async function loadOtherFacts() {
@@ -145,79 +141,6 @@ export function DashboardPage() {
               ? `${Math.min(factOffset + 1, totalFacts)}–${Math.min(factOffset + facts.length, totalFacts)} de ${totalFacts} datos · rotan cada día`
               : 'Sin datos disponibles por ahora.'}
           </p>
-        </section>
-
-        <section className="panel panel--readiness" aria-labelledby="readiness-title">
-          <header className="panel__head">
-            <div>
-              <p className="eyebrow">
-                <Gauge aria-hidden="true" size={13} /> Preparación
-              </p>
-              <h2 id="readiness-title">{readiness.label}</h2>
-            </div>
-            <ScoreRing score={readiness.score} size={96} stroke={8} label="Preparación" caption="listo" />
-          </header>
-
-          <ul className="checks">
-            {readiness.checks.map((check) => (
-              <li key={check.id} className={check.done ? 'checks__item is-done' : 'checks__item'}>
-                <span className="checks__icon" aria-hidden="true">
-                  {check.done ? <Check size={13} /> : <Circle size={13} />}
-                </span>
-                <span>{check.label}</span>
-                <span className="checks__weight">+{check.weight}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className="panel" aria-labelledby="stats-title">
-          <header className="panel__head">
-            <div>
-              <p className="eyebrow">
-                <Target aria-hidden="true" size={13} /> Tu rúbrica
-              </p>
-              <h2 id="stats-title">Progreso del debate</h2>
-            </div>
-            <span className={`badge badge--${averageTone}`}>
-              {debate.turns > 0 ? `Media ${debate.average}` : 'Sin intervenciones'}
-            </span>
-          </header>
-
-          <div className="stat-row">
-            <div className="stat">
-              <strong>{debate.turns}</strong>
-              <span>intervenciones</span>
-            </div>
-            <div className="stat">
-              <strong>{debate.turns > 0 ? debate.average : '—'}</strong>
-              <span>media</span>
-            </div>
-            <div className="stat">
-              <strong>{debate.turns > 0 ? debate.best : '—'}</strong>
-              <span>mejor</span>
-            </div>
-            <div className="stat">
-              <strong>{debate.last ?? '—'}</strong>
-              <span>última</span>
-            </div>
-          </div>
-
-          {debate.recent.length > 0 ? (
-            <ul className="recent">
-              {debate.recent.map((turn) => (
-                <li key={turn.id}>
-                  <span className="recent__score">{turn.overall}</span>
-                  <span className="recent__text">{turn.question}</span>
-                  <span className="recent__date">{formatDateTime(turn.createdAt)}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="muted">
-              Aún no hay intervenciones. La primera pregunta se adapta a tu país y comisión.
-            </p>
-          )}
         </section>
 
         <section className="panel" aria-labelledby="steps-title">

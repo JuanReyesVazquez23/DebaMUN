@@ -35,7 +35,17 @@ function messageFrom(body: unknown, fallback: string): string {
   return fallback;
 }
 
-async function request<T>(path: string, init?: RequestInit): Promise<T> {
+/**
+ * La API puede perder delegados (base efímera, reinicio o instancia nueva). Cuando eso pasa, el
+ * proveedor de sesión vuelve a registrar al delegado y la petición se repite una sola vez.
+ */
+let recoverSession: (() => Promise<void>) | null = null;
+
+export function setSessionRecovery(recovery: (() => Promise<void>) | null): void {
+  recoverSession = recovery;
+}
+
+async function request<T>(path: string, init?: RequestInit, recoveries = 2): Promise<T> {
   let response: Response;
   try {
     response = await fetch(`${BASE_URL}${path}`, {
@@ -61,7 +71,19 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
       response.status === 429
         ? 'Demasiadas solicitudes seguidas. Espera un momento y vuelve a intentarlo.'
         : `El servidor respondió ${response.status}.`;
-    throw new ApiError(messageFrom(body, fallback), response.status);
+    const message = messageFrom(body, fallback);
+
+    const lostDelegate =
+      response.status === 404 &&
+      message.toLowerCase().includes('delegado no encontrado') &&
+      path !== '/sessions/restore';
+
+    if (lostDelegate && recoveries > 0 && recoverSession) {
+      await recoverSession();
+      return request<T>(path, init, recoveries - 1);
+    }
+
+    throw new ApiError(message, response.status);
   }
 
   return body as T;
@@ -90,6 +112,18 @@ export const api = {
   }) => request<SessionProfile>('/sessions', { method: 'POST', body: JSON.stringify(input) }),
 
   profile: (delegateId: string) => request<SessionProfile>(`/sessions/${delegateId}`),
+
+  restoreSession: (profile: SessionProfile) =>
+    request<SessionProfile>('/sessions/restore', {
+      method: 'POST',
+      body: JSON.stringify({
+        delegateId: profile.delegate.id,
+        username: profile.delegate.username,
+        grade: profile.delegate.grade ?? undefined,
+        countryCode: profile.country.code,
+        committee: profile.committee.id,
+      }),
+    }),
 
   dashboard: (delegateId: string) => request<DashboardData>(`/sessions/${delegateId}/dashboard`),
 

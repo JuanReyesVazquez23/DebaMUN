@@ -171,6 +171,41 @@ describe.each(FLOWS)('flujo $id', (flow) => {
 });
 
 describe('panel del delegado', () => {
+  it('recupera la sesión cuando el backend ya no conoce al delegado', async () => {
+    localStorage.setItem('debamun.delegate.v1', profile.delegate.id);
+    localStorage.setItem('debamun.profile.v1', JSON.stringify(profile));
+
+    let dashboardCalls = 0;
+    const restoreBodies: string[] = [];
+
+    mockFetch((url, init) => {
+      if (url.endsWith('/sessions/restore')) {
+        restoreBodies.push(String(init?.body ?? ''));
+        return json(profile);
+      }
+      if (url.endsWith('/dashboard')) {
+        dashboardCalls += 1;
+        return dashboardCalls === 1
+          ? json({ message: 'Delegado no encontrado.' }, 404)
+          : json(dashboard);
+      }
+      return null;
+    });
+
+    render(
+      <MemoryRouter initialEntries={['/app']}>
+        <AppRoutes />
+      </MemoryRouter>,
+    );
+
+    const heading = await screen.findByRole('heading', { level: 1 });
+    expect(heading.textContent).toContain('Valentina');
+    expect(await screen.findByText(factsOfDay[1].text)).toBeTruthy();
+    expect(dashboardCalls).toBe(2);
+    expect(restoreBodies.length).toBeGreaterThanOrEqual(1);
+    expect(localStorage.getItem('debamun.delegate.v1')).toBe(profile.delegate.id);
+  });
+
   it('rota los datos del día sin repetir el bloque anterior', async () => {
     localStorage.setItem('debamun.delegate.v1', profile.delegate.id);
 

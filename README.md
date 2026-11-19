@@ -21,7 +21,7 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 | Asistente | Recuperación por intención y entidades (BM25 + sinónimos + frases) sobre corpus local + servicio Python + LLM opcional. Cada respuesta se adapta a la pregunta y trae fuentes, extractos y nivel de confianza. |
 | Debate | 2.336 combinaciones por comisión, dificultad elegible (Básico, Intermedio, Avanzado), IDs estables y control de preguntas ya usadas por sesión. |
 | Evaluación | Rúbrica contextual en cuatro criterios, con señales de estructura, mecanismo causal, viabilidad y rendición de cuentas; resolución solo cuando la pregunta la exige. |
-| Persistencia | PostgreSQL (local o Neon) con fallback en memoria; Redis/BullMQ opcional con degradación elegante. |
+| Persistencia | PostgreSQL (local o Neon) con fallback en memoria; Redis/BullMQ opcional con degradación elegante. Si el backend pierde el delegado, el navegador lo re-registra sin cerrar la sesión. |
 | Marca y tema | Logo de podio con corbata, modo claro/oscuro persistente y preferencia del sistema como valor inicial. |
 | Accesibilidad | Foco visible, navegación por teclado, `aria-live`, contraste AA, `prefers-reduced-motion` y layout responsive. |
 

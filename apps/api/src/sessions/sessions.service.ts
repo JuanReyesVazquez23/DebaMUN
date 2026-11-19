@@ -5,7 +5,7 @@ import { seedFrom } from '../common/hash.js';
 import type { DelegateRecord } from '../database/store.service.js';
 import { StoreService } from '../database/store.service.js';
 import { normalizeGrade } from './grade.js';
-import type { CreateSessionDto } from './sessions.dto.js';
+import type { CreateSessionDto, RestoreSessionDto } from './sessions.dto.js';
 
 export interface FactOfDay {
   text: string;
@@ -37,6 +37,32 @@ export class SessionsService {
     });
 
     return this.buildProfile(delegate, country, committee);
+  }
+
+  /**
+   * Recrea la identidad de un delegado que ya existe en el navegador. Sirve para bases efímeras o
+   * instancias nuevas: el delegado conserva su id, nombre, grado, país y comisión.
+   */
+  async restore(dto: RestoreSessionDto) {
+    const country = this.countries.getCountry(dto.countryCode);
+    if (!country) throw new BadRequestException(`El país ${dto.countryCode} no está disponible todavía.`);
+
+    const committee = this.countries.getCommittee(dto.committee);
+    if (!committee) throw new BadRequestException(`La comisión ${dto.committee} no existe.`);
+
+    const delegate = await this.store.restoreDelegate({
+      id: dto.delegateId,
+      username: dto.username,
+      countryCode: country.code,
+      committee: dto.committee,
+      grade: dto.grade ?? 'secundaria-5',
+    });
+
+    // Si el delegado ya existía, manda lo que hay en el servidor: la restauración nunca lo cambia.
+    const storedCountry = this.countries.requireCountry(delegate.countryCode);
+    const storedCommittee = this.countries.requireCommittee(delegate.committee);
+
+    return this.buildProfile(delegate, storedCountry, storedCommittee);
   }
 
   async getProfile(delegateId: string) {

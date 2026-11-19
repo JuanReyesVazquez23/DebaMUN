@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
-import { CreateSessionDto, FactQueryDto } from './sessions.dto.js';
+import { CreateSessionDto, FactQueryDto, RestoreSessionDto } from './sessions.dto.js';
 import { SessionsService } from './sessions.service.js';
 
 @Controller('sessions')
@@ -9,6 +9,11 @@ export class SessionsController {
   @Post()
   create(@Body() dto: CreateSessionDto) {
     return this.sessions.create(dto);
+  }
+
+  @Post('restore')
+  restore(@Body() dto: RestoreSessionDto) {
+    return this.sessions.restore(dto);
   }
 
   @Get(':id')

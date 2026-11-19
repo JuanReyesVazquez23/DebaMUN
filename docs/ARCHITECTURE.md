@@ -61,13 +61,15 @@ Tres procesos independientes, sin Docker obligatorio. Cada uno degrada solo:
 POST /api/sessions {username, countryCode, committee}
   → valida DTO (nombre 2–40, país existente, comisión UNESCO|ECOSOC)
   → crea delegate (UUID)
-  → devuelve perfil completo + dato del día + cuenta atrás
-  → web guarda delegateId en localStorage
+  → devuelve perfil completo + dato del día
+  → web guarda delegateId y perfil en localStorage
 ```
 
 No hay login. El `delegateId` es la credencial de sesión del dispositivo; el backend no lo trata como
-secreto fuerte y por eso no expone datos sensibles. Si el `delegateId` no existe, la web borra el
-estado local y vuelve al onboarding.
+secreto fuerte y por eso no expone datos sensibles. Si el backend no encuentra el `delegateId` (base
+efímera, reinicio sin PostgreSQL o instancia nueva), la web **no cierra la sesión**: llama a
+`POST /api/sessions/restore` con los datos guardados en el navegador, recupera el perfil y repite la
+petición una vez. Solo sin perfil guardado se vuelve al onboarding.
 
 ### 2.3 Flujo de debate
 
@@ -148,7 +150,7 @@ funcione en PostgreSQL estándar y en Neon con pgvector.
 | `/bienvenida` | Nombre | Redirige a `/app` si ya hay perfil |
 | `/pais` | Selección de país con búsqueda y filtro por región | Requiere nombre |
 | `/comision` | Selección de comisión y creación de sesión | Requiere país |
-| `/app` | Panel: ficha con bandera del país, datos del día, readiness, stats y ruta de hoy | Requiere perfil |
+| `/app` | Panel: datos del día, ruta de hoy y tópico de la comisión | Requiere perfil |
 | `/app/dossier` | Dossier completo con navegación por secciones | Requiere perfil |
 | `/app/debate` | Arena: pregunta, temporizador, rúbrica, resultados | Requiere perfil |
 | `/app/investigacion` | Asistente conversacional con fuentes | Requiere perfil |
@@ -158,7 +160,10 @@ funcione en PostgreSQL estándar y en Neon con pgvector.
 
 - `SessionProvider` mantiene `status` (`loading | anonymous | ready`), `profile` y el borrador del
   onboarding (`username`, `country`).
-- Persistencia: `localStorage` (`debamun.delegate.v1`, `debamun.draft.v1`).
+- Persistencia: `localStorage` (`debamun.delegate.v1`, `debamun.profile.v1`, `debamun.draft.v1`).
+  El perfil completo permite re-registrar al delegado sin pedirle nada si el backend lo pierde.
+- Recuperación: `setSessionRecovery` en `lib/api.ts` intercepta el `404` «Delegado no encontrado»,
+  restaura la sesión y repite la petición una sola vez.
 - **Sin comisión por defecto:** hasta que el delegado elige, el tema usa un acento neutro. `themeVars`
   exige la comisión y no cae a ninguna de las dos. Ambas comparten pesos de rúbrica y profundidad de
   dossier; los tests de humo recorren UNESCO y ECOSOC con el mismo conjunto de garantías.
@@ -169,10 +174,10 @@ funcione en PostgreSQL estándar y en Neon con pgvector.
 
 ### 4.3 Decisiones de UI
 
-- Onboarding en tres pantallas, una pregunta por pantalla.Reduce el abandono y permite explicar el
+- Onboarding en cuatro pantallas, una pregunta por pantalla. Reduce el abandono y permite explicar el
   valor de cada dato.
-- El panel responde "qué hago ahora", no "cuántas métricas tengo": readiness con checks ponderados y
-  una ruta de cuatro pasos.
+- El panel responde "qué hago ahora", no "cuántas métricas tengo": datos del día, una ruta de cuatro
+  pasos y el tópico de la comisión.
 - El debate muestra la estructura sugerida **antes** de escribir y la evidencia **después** de
   enviar. La rúbrica es visible, no una caja negra.
 - La investigación separa respuesta, fuentes y nivel de confianza. Si la confianza es baja, lo dice.

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import type { CommitteeTopic, CountryProfile } from '../countries/countries.types.js';
 import type { CountriesService } from '../countries/countries.service.js';
-import type { StoreService } from '../database/store.service.js';
+import type { DelegateRecord, StoreService } from '../database/store.service.js';
 import { SessionsService } from './sessions.service.js';
 
 function serviceWithFacts(total: number) {
@@ -40,5 +41,50 @@ describe('SessionsService.getFacts', () => {
 
     expect(wrapped.map((fact) => fact.index)).toEqual(first.map((fact) => fact.index));
     expect(wrapped.map((fact) => fact.text)).toEqual(first.map((fact) => fact.text));
+  });
+});
+
+describe('SessionsService.restore', () => {
+  it('conserva el país y la comisión del delegado ya registrado', async () => {
+    const country = {
+      code: 'CH',
+      name: 'Suiza',
+      summary: 'Estado federal y neutral.',
+      facts: ['Suiza tiene cuatro lenguas oficiales.'],
+      sources: [],
+    } as unknown as CountryProfile;
+    const unesco = { id: 'UNESCO', abbr: 'UNESCO' } as unknown as CommitteeTopic;
+    const ecosoc = { id: 'ECOSOC', abbr: 'ECOSOC' } as unknown as CommitteeTopic;
+
+    const countries = {
+      getCountry: () => country,
+      requireCountry: () => country,
+      getCommittee: (id: string) => (id === 'ECOSOC' ? ecosoc : unesco),
+      requireCommittee: (id: string) => (id === 'ECOSOC' ? ecosoc : unesco),
+    } as unknown as CountriesService;
+
+    const record: DelegateRecord = {
+      id: 'c0ffee00-0000-4000-8000-000000000002',
+      username: 'Valentina Ríos',
+      countryCode: 'CH',
+      committee: 'UNESCO',
+      grade: 'secundaria-5',
+      createdAt: '2026-11-18T00:00:00.000Z',
+      lastSeenAt: '2026-11-18T00:00:00.000Z',
+    };
+    const store = { restoreDelegate: async () => record } as unknown as StoreService;
+
+    const service = new SessionsService(countries, store);
+    const profile = await service.restore({
+      delegateId: record.id,
+      username: 'Otro nombre',
+      grade: 'universidad',
+      countryCode: 'CH',
+      committee: 'ECOSOC',
+    });
+
+    expect(profile.committee.id).toBe('UNESCO');
+    expect(profile.delegate.username).toBe('Valentina Ríos');
+    expect(profile.delegate.grade).toBe('secundaria-5');
   });
 });

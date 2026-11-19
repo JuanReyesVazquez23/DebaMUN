@@ -108,10 +108,27 @@ Respuesta `201`:
   },
   "country": { "…": "dossier completo" },
   "committee": { "…": "briefing completo" },
-  "factOfDay": { "text": "…", "index": 2, "total": 10, "date": "2026-11-16", "offset": 0 },
-  "conference": { "name": "DebaMun", "date": "" },
+  "factOfDay": { "text": "…", "index": 2, "total": 10, "date": "2026-11-16", "offset": 0 }
 }
 ```
+
+### `POST /sessions/restore`
+
+Vuelve a registrar una sesión que ya existe en el navegador cuando el backend no la encuentra
+(base efímera, reinicio sin PostgreSQL o instancia nueva). Es idempotente: si el delegado existe, no
+se modifica nada y se devuelve su perfil real.
+
+```json
+{
+  "delegateId": "2e2ee2b9-…",
+  "username": "Valentina Ríos",
+  "grade": "secundaria-5",
+  "countryCode": "CH",
+  "committee": "UNESCO"
+}
+```
+
+Respuesta `200`: mismo cuerpo que `POST /sessions`, con el `id` original del delegado.
 
 ### `GET /sessions/:id`
 
