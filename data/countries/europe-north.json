@@ -236,6 +236,65 @@
     ]
   },
   {
+    "code": "DK",
+    "slug": "dinamarca",
+    "name": "Dinamarca",
+    "officialName": "Reino de Dinamarca",
+    "flag": "🇩🇰",
+    "region": "Europa Septentrional",
+    "capital": "Copenhague",
+    "languages": ["danés"],
+    "unMember": true,
+    "palette": { "primary": "#C8102E", "secondary": "#FFFFFF", "accent": "#A2001D" },
+    "summary": "Monarquía constitucional y economía abierta con un Estado de bienestar amplio y alta confianza social. Es referente en energía eólica y administración digital, y el Reino incluye a Groenlandia y las Islas Feroe con autogobierno.",
+    "unProfile": {
+      "bloc": "Unión Europea; Europa Septentrional; cooperación nórdica; OTAN",
+      "style": "Pragmático, consensual y basado en evidencia; combina ambición climática con rigor fiscal.",
+      "allies": ["Suecia", "Noruega", "Finlandia", "Alemania", "Países Bajos"],
+      "tensions": ["Política migratoria e integración", "Transición energética del mar del Norte", "Relación con Groenlandia"],
+      "redLines": ["Defiende el Estado de bienestar y la negociación colectiva", "No acepta retrocesos en ambición climática o en derechos de las personas migrantes"]
+    },
+    "context": {
+      "aiAndEducation": "Currículo con enfoque en colaboración y pensamiento crítico; se debate el uso de IA generativa en la evaluación y la protección de datos de menores.",
+      "youthLabour": "Mercado laboral flexible con alta participación y protección social; la vivienda en Copenhague y la conciliación son los principales retos juveniles.",
+      "digitalGovernance": "Administración digital avanzada con identidad electrónica universal y debate sobre vigilancia, datos y soberanía tecnológica europea."
+    },
+    "unesco": {
+      "position": "Apoya una educación inclusiva y gratuita, la alfabetización mediática y la protección de menores en entornos digitales. Defiende la autonomía docente y los pilotos de IA con evaluación independiente.",
+      "priorities": ["Alfabetización mediática y ciudadanía digital", "Bienestar y salud mental del alumnado", "Formación docente y equidad"],
+      "vulnerability": "Persisten brechas digitales entre municipios y hogares con distinto capital socioeconómico.",
+      "leverage": "Modelo educativo nórdico, alta digitalización y confianza en las instituciones."
+    },
+    "ecosoc": {
+      "position": "Defiende el diálogo social tripartito, la protección social universal y la transición verde con reconversión financiada. Apoya reglas comunes para plataformas y empleo juvenil.",
+      "priorities": ["Empleo juvenil y primera vivienda", "Reconversión verde y eólica marina", "Integración laboral de personas migrantes"],
+      "vulnerability": "La segregación residencial y las barreras de acceso a la vivienda limitan la movilidad de los jóvenes.",
+      "leverage": "Diálogo social, estabilidad fiscal y liderazgo en energía eólica."
+    },
+    "tips": [
+      "Cita la 'flexiguridad' danesa: mercado laboral flexible con protección social fuerte.",
+      "Distingue Dinamarca del Reino de Dinamarca: Groenlandia y las Islas Feroe tienen autogobierno.",
+      "Habla de vivienda asequible y salud mental: son temas que afectan directamente a los jóvenes."
+    ],
+    "facts": [
+      "Dinamarca es una monarquía constitucional con un parlamento unicameral, el Folketing.",
+      "Copenhague es una de las capitales más ciclistas del mundo: más de la mitad de sus habitantes usa la bici a diario.",
+      "Dinamarca tiene más de 7.000 kilómetros de costa y ningún punto del país está a más de 50 kilómetros del mar.",
+      "El parque eólico marino de Middelgrunden, inaugurado en 2000, es uno de los primeros de gran escala.",
+      "El Dannebrog, la bandera danesa, es una de las más antiguas en uso continuo.",
+      "Groenlandia y las Islas Feroe forman parte del Reino de Dinamarca, pero tienen autogobierno.",
+      "El modelo de 'flexiguridad' combina facilidad de despido con una red de protección social amplia.",
+      "Dinamarca es miembro de la Unión Europea desde 1973 y de la OTAN desde 1949.",
+      "La universidad es gratuita para el alumnado danés y de la Unión Europea.",
+      "El puente de Øresund conecta Copenhague con la ciudad sueca de Malmö."
+    ],
+    "sources": [
+      { "label": "Gobierno de Dinamarca", "url": "https://www.regeringen.dk/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Dinamarca", "url": "https://www.oecd.org/en/countries/denmark.html", "kind": "multilateral" }
+    ]
+  },
+  {
     "code": "PL",
     "slug": "polonia",
     "name": "Polonia",

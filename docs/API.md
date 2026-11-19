@@ -26,7 +26,7 @@ El frontend muestra el primer mensaje de validación y ofrece reintento en error
   "status": "ok",
   "service": "debamun-api",
   "version": "0.1.0",
-  "corpus": { "countries": 34, "committees": ["UNESCO", "ECOSOC"] },
+  "corpus": { "countries": 35, "committees": ["UNESCO", "ECOSOC"] },
   "services": {
     "database": "up",
     "cache": "memory",
@@ -343,7 +343,7 @@ Encola `research-refresh` (3 intentos, backoff exponencial) o devuelve un job in
 {
   "status": "ok",
   "service": "debamun-research",
-  "corpus": { "documents": 513, "countries": 34, "sources": 9, "scraped": 0 }
+  "corpus": { "documents": 513, "countries": 35, "sources": 9, "scraped": 0 }
 }
 ```
 

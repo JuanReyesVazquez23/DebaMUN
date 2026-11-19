@@ -53,6 +53,10 @@ Finlandia es una república con uno de los sistemas educativos más reconocidos 
 
 Islandia es una república parlamentaria con una de las democracias más antiguas del mundo (Alþingi, fundado en 930). Tiene alta igualdad de género y fuentes renovables de energía (geotérmica e hidroeléctrica). La economía depende de la pesca y el turismo. Islandia no tiene fuerzas armadas permanentes. El país es miembro de la OTAN y del Espacio Económico Europeo.
 
+## Dinamarca
+
+Dinamarca es una monarquía constitucional con un Estado de bienestar amplio y alta confianza social. Su parlamento unicameral es el Folketing. El país es referente en energía eólica y administración digital, y aplica el modelo de "flexiguridad", que combina un mercado laboral flexible con protección social fuerte. La universidad es gratuita para estudiantes daneses y de la Unión Europea. El Reino de Dinamarca incluye Groenlandia y las Islas Feroe, que tienen autogobierno. Los retos incluyen la vivienda juvenil en Copenhague y la integración de personas migrantes.
+
 ## Polonia
 
 Polonia es una república con una economía en crecimiento rápido dentro de la Unión Europea. Es miembro de la OTAN y tiene una fuerte industria manufacturera. El país ha implementado reformas educativas y tiene una población joven relativamente educada. Los desafíos incluyen la emigración de trabajadores jóvenes y tensiones sobre el estado de derecho. Polonia defiende la soberanía nacional y la cooperación regional.

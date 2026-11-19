@@ -66,14 +66,15 @@ export function CountryPage() {
     <OnboardingShell
       step={3}
       title="¿Qué país defiendes?"
-      lead="Cada dossier está escrito para esta conferencia: postura en tu comisión, prioridades, vulnerabilidades, líneas rojas y fuentes oficiales para citar."
+      lead="Cada dossier incluye la postura en tu comisión, prioridades, vulnerabilidades, líneas rojas y fuentes oficiales para citar."
       aside={
         <div className="onboarding__card onboarding__card--accent">
-          <p className="eyebrow">33 delegaciones</p>
+          <p className="eyebrow">
+            {countries.length > 0 ? `${countries.length} delegaciones` : 'Delegaciones'}
+          </p>
           <p>
-            La lista incluye las 22 delegaciones asignadas y diez adicionales para completar el
-            tablero. Escocia aparece marcada porque no es Estado miembro de la ONU: su política
-            exterior corresponde al Reino Unido.
+            La lista reúne todas las delegaciones disponibles. Escocia aparece marcada porque no es
+            Estado miembro de la ONU: su política exterior corresponde al Reino Unido.
           </p>
           <p className="muted small">
             Elige con criterio: tu país condiciona el tono, los aliados y las líneas rojas que
