@@ -75,4 +75,17 @@ describe('KnowledgeService', () => {
     expect(titles).not.toContain('Brasil');
     expect(titles).not.toContain('Líbano');
   });
+
+  it('indexa las organizaciones de tecnología y cooperación de cada país', () => {
+    const denmark = { ...country, code: 'DK', name: 'Dinamarca' } as unknown as CountryProfile;
+    const docs = buildService().buildDocs(denmark, committee);
+    const text = docs.map((doc) => doc.text).join('\n');
+
+    expect(text).toContain('Organizaciones de tecnología y cooperación internacional');
+    expect(text).toContain('Danida');
+    expect(text).toContain('digst.dk');
+    // Sin fugas: las agencias de otras delegaciones no entran en el contexto danés.
+    expect(text).not.toContain('AMEXCID');
+    expect(text).not.toContain('AECID');
+  });
 });

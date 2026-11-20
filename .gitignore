@@ -16,14 +16,6 @@ apps/api/dist/
 apps/api/data/
 .vercel
 .vercelignore
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.pytest_cache/
-.scrapy/
-services/research/.cache/
-services/research/data/output/
 temp/
 *.tsbuildinfo
 .DS_Store

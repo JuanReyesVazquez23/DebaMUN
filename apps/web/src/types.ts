@@ -235,7 +235,7 @@ export interface ResearchResult {
   answer: string;
   sources: ResearchSource[];
   confidence: 'alta' | 'media' | 'baja';
-  provider: 'local' | 'scraper' | 'llm';
+  provider: 'local' | 'llm';
   passages: Array<{ title: string; text: string; source: string; url: string; score: number }>;
   suggestedQuestions: string[];
   cached: boolean;

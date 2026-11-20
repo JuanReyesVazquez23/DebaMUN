@@ -1,4 +1,4 @@
-import { Injectable, Logger, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CountriesService } from '../countries/countries.service.js';
 import type { CommitteeTopic, CountryProfile } from '../countries/countries.types.js';
 import { shortHash } from '../common/hash.js';
@@ -38,7 +38,7 @@ export interface ResearchResult {
   answer: string;
   sources: ResearchSource[];
   confidence: 'alta' | 'media' | 'baja';
-  provider: 'local' | 'scraper' | 'llm';
+  provider: 'local' | 'llm';
   passages: ResearchPassage[];
   suggestedQuestions: string[];
   cached: boolean;
@@ -126,8 +126,6 @@ const SYNONYM_HINTS: Record<string, string[]> = {
 
 @Injectable()
 export class ResearchService {
-  private readonly logger = new Logger(ResearchService.name);
-
   constructor(
     private readonly countries: CountriesService,
     private readonly knowledge: KnowledgeService,
@@ -156,8 +154,7 @@ export class ResearchService {
       return { ...cached, cached: true };
     }
 
-    const externalDocs = await this.fetchScraper(question, country, committee);
-    const docs = [...this.knowledge.buildDocs(country, committee), ...externalDocs];
+    const docs = this.knowledge.buildDocs(country, committee);
     const ranked = this.rank(question, docs);
     const top = ranked.slice(0, 4);
     const sources = this.toSources(top);
@@ -190,11 +187,7 @@ export class ResearchService {
       ]);
     }
 
-    const provider: ResearchResult['provider'] = answer
-      ? 'llm'
-      : externalDocs.length > 0
-        ? 'scraper'
-        : 'local';
+    const provider: ResearchResult['provider'] = answer ? 'llm' : 'local';
     const finalAnswer = answer ?? this.composeAnswer(question, country, committee, top, confidence);
 
     const result: Omit<ResearchResult, 'cached'> = {
@@ -245,7 +238,6 @@ export class ResearchService {
           kind: 'multilateral',
         },
       ],
-      scraper: await this.scraperStatus(),
     };
   }
 
@@ -254,24 +246,6 @@ export class ResearchService {
     if (!delegate) throw new NotFoundException('Delegado no encontrado.');
     const messages = await this.store.listChatMessages(delegateId, 40);
     return { messages };
-  }
-
-  async scraperStatus(): Promise<{ status: string; url: string | null }> {
-    const baseUrl = process.env.RESEARCH_SERVICE_URL?.trim();
-    if (!baseUrl) return { status: 'not_configured', url: null };
-
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 900);
-    try {
-      const response = await fetch(`${baseUrl.replace(/\/+$/, '')}/health`, {
-        signal: controller.signal,
-      });
-      return { status: response.ok ? 'up' : 'down', url: baseUrl };
-    } catch {
-      return { status: 'down', url: baseUrl };
-    } finally {
-      clearTimeout(timeout);
-    }
   }
 
   private detectIntent(question: string): ResearchIntent {
@@ -393,7 +367,17 @@ export class ResearchService {
     const sentences = doc.text
       .split(/(?<=[.!?])\s+|\n+/u)
       .map((sentence) => sentence.trim())
-      .filter((sentence) => sentence.length > 30);
+      .filter((sentence) => sentence.length > 30)
+      // Los pasajes con listas («A (x.org); B (y.org); C (z.org)») son una sola oración:
+      // se trocean por punto y coma para citar incisos completos en lugar de media frase.
+      .flatMap((sentence) =>
+        sentence.length > maxChars
+          ? sentence
+              .split(/(?<=;)\s+/)
+              .map((part) => part.trim())
+              .filter((part) => part.length > 20)
+          : [sentence],
+      );
 
     if (sentences.length === 0) return truncate(doc.text, maxChars);
 
@@ -413,7 +397,8 @@ export class ResearchService {
       if (length + entry.sentence.length > maxChars && picked.length > 0) break;
       picked.push(entry.sentence);
       length += entry.sentence.length + 1;
-      if (picked.length >= 2) break;
+      // Los incisos cortos de una lista permiten citar varias organizaciones sin pasar del límite.
+      if (picked.length >= 6) break;
     }
 
     const ordered = sentences.filter((sentence) => picked.includes(sentence));
@@ -439,7 +424,7 @@ export class ResearchService {
     const intent = this.detectIntent(question);
     const primary = top[0];
     if (!primary) return 'No hay pasajes suficientes para responder.';
-    const lead = this.bestExcerpt(primary, question, 340);
+    const lead = this.bestExcerpt(primary, question, 480);
     const caveat =
       confidence === 'baja'
         ? ' El corpus solo cubre parte de la pregunta: contrasta el dato antes de citarlo en la sala.'
@@ -494,63 +479,6 @@ export class ResearchService {
       `**Evidencia por fuente**\n\n${evidence}\n\n` +
       `**Cómo usarlo en el debate:** ${bridge[intent]}`
     );
-  }
-
-  private async fetchScraper(
-    question: string,
-    country: CountryProfile,
-    committee: CommitteeTopic,
-  ): Promise<KnowledgeDoc[]> {
-    const baseUrl = process.env.RESEARCH_SERVICE_URL?.trim();
-    if (!baseUrl) return [];
-
-    const controller = new AbortController();
-    const timeout = setTimeout(
-      () => controller.abort(),
-      Number(process.env.RESEARCH_TIMEOUT_MS ?? 2500),
-    );
-
-    try {
-      const url = new URL(`${baseUrl.replace(/\/+$/, '')}/research`);
-      url.searchParams.set('q', question);
-      url.searchParams.set('country', country.code);
-      url.searchParams.set('committee', committee.id);
-      const response = await fetch(url, {
-        signal: controller.signal,
-        headers: { accept: 'application/json' },
-      });
-      if (!response.ok) return [];
-
-      const data = (await response.json()) as {
-        passages?: Array<{
-          title?: string;
-          text?: string;
-          source?: string;
-          url?: string;
-        }>;
-      };
-
-      return (data.passages ?? [])
-        .filter((passage) => typeof passage.text === 'string' && passage.text.length > 40)
-        .slice(0, 6)
-        .map((passage, index) => ({
-          id: `scraper:${index}`,
-          title: passage.title?.trim() || 'Fuente externa',
-          text: truncate(passage.text ?? '', 1500),
-          citation: {
-            label: passage.source?.trim() || 'Servicio de investigación',
-            url: passage.url?.trim() || baseUrl,
-            kind: 'scraped',
-          },
-          scope: 'knowledge' as const,
-          weight: 1.1,
-        }));
-    } catch (error) {
-      this.logger.debug(`Scraper no disponible: ${(error as Error).message}`);
-      return [];
-    } finally {
-      clearTimeout(timeout);
-    }
   }
 
   private toSources(top: RankedDoc[]): ResearchSource[] {

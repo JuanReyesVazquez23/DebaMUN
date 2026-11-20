@@ -18,7 +18,7 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 | Onboarding | Nombre → grado escolar (primaria 1.º–6.º, secundaria 1.º–6.º o universidad) → país → comisión, en cuatro pasos, sin correo ni contraseña. |
 | Dossier | 35 delegaciones con postura en cada comisión, prioridades, vulnerabilidad, palanca, aliados, tensiones, líneas rojas, tips, datos y fuentes. |
 | Datos del día | 10 hechos por país; el panel muestra 4 y permite rotar al siguiente bloque. La selección es determinista por fecha y no repite datos dentro del día. |
-| Asistente | Recuperación por intención y entidades (BM25 + sinónimos + frases) sobre corpus local + servicio Python + LLM opcional. Cada respuesta se adapta a la pregunta y trae fuentes, extractos y nivel de confianza. |
+| Asistente | Recuperación por intención y entidades (BM25 + sinónimos + frases) sobre corpus editorial + LLM opcional. Cada respuesta se adapta a la pregunta y trae fuentes, extractos y nivel de confianza. |
 | Debate | 2.336 combinaciones por comisión, dificultad elegible (Básico, Intermedio, Avanzado), IDs estables y control de preguntas ya usadas por sesión. |
 | Evaluación | Rúbrica contextual en cuatro criterios, con señales de estructura, mecanismo causal, viabilidad y rendición de cuentas; resolución solo cuando la pregunta la exige. |
 | Persistencia | PostgreSQL (local o Neon) con fallback en memoria; Redis/BullMQ opcional con degradación elegante. Si el backend pierde el delegado, el navegador lo re-registra sin cerrar la sesión. |
@@ -29,7 +29,7 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 
 - **API:** NestJS 12 + TypeScript 7, PostgreSQL (`pg`), Redis (`ioredis`), BullMQ.
 - **Web:** React 19.3 + Vite 8 + React Router 7 + Lucide.
-- **Investigación:** FastAPI + Scrapy + sanitizador propio (HTML, Unicode, PII, prompt injection).
+- **Investigación:** recuperación léxica en la API + sanitizador propio (HTML, Unicode, prompt injection) + LLM opcional.
 - **Datos:** JSON editorial versionado en `data/`.
 - **Banderas:** SVG incluidos en `apps/web/src/assets/flags` (flagcdn, dominio público), sin depender de red.
 
@@ -37,7 +37,7 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 
 ## Arranque rápido
 
-Requisitos: **Node 24+**, **Python 3.13+** y **PostgreSQL 16+** (probado con PostgreSQL 18).
+Requisitos: **Node 24+** y **PostgreSQL 16+** (probado con PostgreSQL 18).
 No hace falta Docker.
 
 ```powershell
@@ -45,7 +45,6 @@ No hace falta Docker.
 npm install
 npm --prefix apps/api install
 npm --prefix apps/web install
-cd services/research; python -m venv .venv; .\.venv\Scripts\python.exe -m pip install -r requirements.txt; cd ..\..
 
 # 2. Entorno
 Copy-Item .env.example apps/api/.env
@@ -54,7 +53,7 @@ Copy-Item .env.example apps/api/.env
 # 3. Base de datos (crea la base si falta y aplica db/schema.sql)
 npm run db:setup
 
-# 4. Todo a la vez: API :4000, web :5173, research :8000
+# 4. Todo a la vez: API :4000 y web :5173
 npm run dev
 ```
 
@@ -65,7 +64,6 @@ Si prefieres arrancar por separado:
 ```powershell
 npm run dev:api        # http://localhost:4000/api
 npm run dev:web        # http://localhost:5173
-npm run dev:research   # http://localhost:8000/health
 ```
 
 ### Sin PostgreSQL, Redis ni clave LLM
@@ -75,7 +73,6 @@ DebaMun funciona igual, en modo degradado y explícito:
 - Sin `DATABASE_URL` → almacenamiento en memoria (se pierde al reiniciar).
 - Sin `REDIS_URL` → caché en memoria y cola BullMQ en modo inline. Con `REDIS_URL` la caché pasa a ser compartida; la cola solo se activa con `JOBS_WORKER=1` (worker persistente, no en Vercel).
 - Sin `LLM_*` → recuperación local + rúbrica heurística (comportamiento por defecto).
-- Sin servicio Python → el asistente usa solo el corpus de la API.
 
 `GET /api/health` informa el modo real de cada servicio.
 
@@ -85,12 +82,11 @@ DebaMun funciona igual, en modo degradado y explícito:
 
 | Comando | Efecto |
 | --- | --- |
-| `npm run dev` | API + web + research con `concurrently`. |
+| `npm run dev` | API + web con `concurrently`. |
 | `npm run build` | Build de producción de API y web. |
-| `npm test` | Vitest API, Vitest web y pytest del servicio Python. |
+| `npm test` | Vitest API y Vitest web. |
 | `npm run lint` | oxlint en API y web. |
 | `npm run db:setup` | Crea la base y aplica `db/schema.sql`. |
-| `npm run ingest -- CH` | Ingesta Scrapy de un país (respeta `robots.txt`). |
 | `npm run deploy:prepare` | Copia el corpus a `apps/api/data` para la función serverless. |
 
 ---
@@ -113,16 +109,13 @@ DebOnu/
 │        ├─ pages/            bienvenida, país, comisión, panel, dossier, debate, investigación
 │        ├─ components/       shell, score ring, criterios, fuentes, estados
 │        └─ lib/              api, sesión, tema por país, formato
-├─ services/research/         FastAPI + Scrapy
-│  ├─ app/                    sanitizer, corpus, pipelines, spiders
-│  └─ tests/                  sanitización, recuperación y esquema de datos
 ├─ data/
 │  ├─ countries/              35 dossieres en 4 JSON
 │  ├─ knowledge/              guías editoriales de IA, empleo y debate
-│  └─ topics.json             briefing UNESCO/ECOSOC + conferencia
+│  └─ topics.json             briefing UNESCO/ECOSOC
 ├─ db/schema.sql              esquema PostgreSQL (incluye tablas de Fase 1)
 ├─ docs/                      arquitectura, UX, IA responsable, roadmap
-└─ scripts/                   setup de base, Python, ingesta
+└─ scripts/                   setup de base y preparación del deploy
 ```
 
 ---
@@ -130,8 +123,8 @@ DebOnu/
 ## Despliegue en Vercel
 
 La web y la API se despliegan como **dos proyectos de Vercel sobre el mismo repositorio**, con
-PostgreSQL en **Neon**. El servicio Python/Scrapy queda fuera de Vercel: la API funciona sin él y lo
-reporta como `scraper: down`.
+PostgreSQL en **Neon**. No hay servicios adicionales: el asistente responde con el corpus editorial
+incluido en la API.
 
 | Pieza | Dónde | Notas |
 | --- | --- | --- |
@@ -139,7 +132,6 @@ reporta como `scraper: down`.
 | API NestJS | Vercel (`apps/api`) | `src/main.ts` se detecta con el soporte zero-config de NestJS. |
 | PostgreSQL | Neon | Cadena con `-pooler`, `DATABASE_SSL=true`, `DATABASE_POOL_MAX=3`. |
 | Redis/BullMQ | Upstash (opcional) | Sin Redis, caché y cola viven en memoria por instancia; la cola necesita `JOBS_WORKER=1`. |
-| FastAPI + Scrapy | Fuera de Vercel | Necesita procesos largos y escritura en disco. |
 
 Orden recomendado: **Neon → API → copiar URL de la API → Web → copiar URL de la web → `WEB_ORIGIN` en la API → redeploy**.
 
@@ -251,7 +243,6 @@ Más detalle en [`docs/responsible-ai/RAI-ADR.md`](docs/responsible-ai/RAI-ADR.m
 | --- | --- | --- |
 | `No pude contactar con el servidor` | API apagada | `npm run dev:api` |
 | `database: memory` en `/api/health` | `DATABASE_URL` ausente o inválida | Revisa `apps/api/.env` y ejecuta `npm run db:setup` |
-| `scraper: down` | Servicio Python apagado | `npm run dev:research` |
 | Error de CORS | Origen distinto de `localhost:5173` | Añade el origen a `WEB_ORIGIN` |
 | Preguntas repetidas | Sesión de debate nueva | Es esperado: la no repetición es por sesión, no global |
 | 404 al recargar `/app/...` en Vercel | Falta el rewrite SPA | Revisa [`apps/web/vercel.json`](apps/web/vercel.json) |

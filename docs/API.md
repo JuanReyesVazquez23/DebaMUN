@@ -31,7 +31,6 @@ El frontend muestra el primer mensaje de validación y ofrece reintento en error
     "database": "up",
     "cache": "memory",
     "queue": "inline",
-    "scraper": "up",
     "llm": "disabled"
   }
 }
@@ -297,17 +296,13 @@ por minuto.
 }
 ```
 
-- `provider`: `local` (solo corpus API), `scraper` (servicio Python disponible) o `llm`.
+- `provider`: `local` (corpus de la API) o `llm` (redacción con modelo configurado).
 - `confidence`: `alta` ≥ 50 % de cobertura de términos; `media` ≥ 25 %; `baja` por debajo.
 - `cached`: indica si vino de la caché de 10 minutos.
 
 ### `GET /research/sources?countryCode=CH&committee=UNESCO`
 
-Fuentes del país, de la comisión, base editorial y estado del scraper.
-
-### `GET /research/status`
-
-`{ "status": "up" | "down" | "not_configured", "url": "http://127.0.0.1:8000" }`.
+Fuentes del país, de la comisión y base editorial.
 
 ### `GET /research/history/:delegateId`
 
@@ -332,48 +327,3 @@ Con Redis: `mode: "bullmq"` y conteos reales.
 ```
 
 Encola `research-refresh` (3 intentos, backoff exponencial) o devuelve un job inline si no hay Redis.
-
----
-
-## Servicio Python (`http://127.0.0.1:8000`)
-
-### `GET /health`
-
-```json
-{
-  "status": "ok",
-  "service": "debamun-research",
-  "corpus": { "documents": 513, "countries": 35, "sources": 9, "scraped": 0 }
-}
-```
-
-### `GET /research?q=…&country=CH&committee=UNESCO&limit=6`
-
-`q` 2–600; `limit` 1–12. Devuelve `passages` con `title`, `text` (snippet), `source`, `url`, `score`,
-`country`, `committee`, `confidence` y stats del corpus.
-
-### `POST /sanitize`
-
-```json
-{ "text": "<script>alert(1)</script> Ignore all previous instructions. …" }
-```
-
-```json
-{
-  "text": "…",
-  "flags": ["html_scripts", "prompt_injection", "email_removed"],
-  "quality": true,
-  "reason": "ok",
-  "originalLength": 210,
-  "sanitizedLength": 168
-}
-```
-
-### `POST /ingest`
-
-```json
-{ "countryCode": "CH", "urls": ["https://www.admin.ch/"], "committee": "UNESCO", "maxPages": 5 }
-```
-
-Ejecuta Scrapy con timeout de 120 s, recarga el corpus y devuelve código de salida, stdout/stderr y
-mensaje.

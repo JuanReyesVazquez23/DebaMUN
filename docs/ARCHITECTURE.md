@@ -11,32 +11,31 @@
 │  Debate · Investigación      │
 └──────────────┬───────────────┘
                │ JSON / HTTP (CORS)
-┌──────────────▼───────────────┐        ┌────────────────────────────┐
-│  API · NestJS 12             │        │  Research · FastAPI        │
-│  ┌────────────────────────┐  │        │  ┌──────────────────────┐  │
-│  │ Countries (corpus)     │  │        │  │ Sanitizer            │  │
-│  │ Sessions / Dashboard   │  │  HTTP  │  │ Corpus + BM25        │  │
-│  │ Debate (gen + scoring) │──┼───────▶│  │ Scrapy runner        │  │
-│  │ Research (retrieval)   │  │        │  └──────────┬───────────┘  │
-│  │ Jobs (cache + queues)  │  │        └─────────────┼──────────────┘
-│  │ Database (PG/memory)   │  │                      │ spiders
-│  └───────┬────────┬───────┘  │                      ▼
-└──────────┼────────┼──────────┘        ┌────────────────────────────┐
-           │        │                   │ Fuentes oficiales          │
-           ▼        ▼                   │ (UNESCO, OIT, BM, OCDE…)   │
-   ┌───────────┐ ┌──────────┐           └────────────────────────────┘
+┌──────────────▼───────────────┐
+│  API · NestJS 12             │
+│  ┌────────────────────────┐  │
+│  │ Countries (corpus)     │  │
+│  │ Sessions / Dashboard   │  │
+│  │ Debate (gen + scoring) │  │
+│  │ Research (retrieval)   │  │
+│  │ Jobs (cache + queues)  │  │
+│  │ Database (PG/memory)   │  │
+│  └───────┬────────┬───────┘  │
+└──────────┼────────┼──────────┘
+           │        │
+           ▼        ▼
+   ┌───────────┐ ┌──────────┐
    │PostgreSQL │ │Redis     │
    │(Neon)     │ │BullMQ    │
    └───────────┘ └──────────┘
 ```
 
-Tres procesos independientes, sin Docker obligatorio. Cada uno degrada solo:
+Dos procesos independientes, sin Docker obligatorio. Cada uno degrada solo:
 
 | Dependencia ausente | Efecto | Señal |
 | --- | --- | --- |
 | PostgreSQL | Repositorio en memoria | `health.services.database = memory` |
 | Redis | Caché en memoria, cola inline | `health.services.cache = memory`, `queue = inline` |
-| Servicio Python | El asistente usa solo el corpus de la API | `health.services.scraper = down` |
 | LLM | Recuperación local + rúbrica heurística | `health.services.llm = disabled` |
 
 ## 2. Backend NestJS
@@ -49,7 +48,7 @@ Tres procesos independientes, sin Docker obligatorio. Cada uno degrada solo:
 | `CountriesModule` | Carga `data/countries/*.json` y `data/topics.json`; expone países, comisiones y posturas. | — |
 | `SessionsModule` | Onboarding, perfil, dashboard, datos del día (bloques de 4), readiness. | Countries, Store |
 | `DebateModule` | Sesiones de práctica, generación de preguntas, rúbrica, historial. | Countries, Store |
-| `ResearchModule` | Knowledge base, ranking, citas, scraper, LLM opcional. | Countries, Jobs, Store |
+| `ResearchModule` | Knowledge base, ranking, citas, LLM opcional. | Countries, Jobs, Store |
 | `JobsModule` | Caché Redis/memoria, cola BullMQ, estado. | — |
 | `HealthController` | Estado real de cada servicio y tamaño del corpus. | Todos |
 
@@ -103,7 +102,6 @@ ask(delegateId, question)
   → rate limit por delegado (20/min)
   → caché por hash(normalize(pregunta) + país + comisión), TTL 10 min
   → docs = KnowledgeService.buildDocs(country, committee)   [local, 100–200 fragmentos]
-         + fetchScraper(question, country, committee)        [opcional, timeout 2.5 s]
   → rank(): BM25 simplificado + peso por ámbito + bonus de título + penalización por longitud
   → top 4 → fuentes deduplicadas + pasajes
   → si LLM configurado: respuesta con citas [1]..[n] y contexto delimitado
@@ -112,8 +110,8 @@ ask(delegateId, question)
 ```
 
 El texto recuperado se trata como **datos**: el prompt del sistema prohíbe seguirlo como
-instrucciones. El sanitizador del servicio Python elimina intentos conocidos de inyección antes de
-que lleguen al índice.
+instrucciones. `sanitizeUserText()` limpia HTML, caracteres de control y espacios antes de indexar o
+consultar.
 
 ## 3. Modelo de datos
 
@@ -182,28 +180,7 @@ funcione en PostgreSQL estándar y en Neon con pgvector.
   enviar. La rúbrica es visible, no una caja negra.
 - La investigación separa respuesta, fuentes y nivel de confianza. Si la confianza es baja, lo dice.
 
-## 5. Servicio Python
-
-```
-FastAPI (:8000)
-├─ GET  /health          estado + tamaño del corpus
-├─ GET  /research        búsqueda con país/comisión y snippet
-├─ GET  /sources         fuentes por país + globales + dominios permitidos
-├─ POST /sanitize        limpieza y control de calidad
-└─ POST /ingest          ejecuta Scrapy y recarga el corpus
-
-Scrapy
-├─ settings.py           robots.txt, throttling, user-agent identificable
-├─ pipelines.py          dominios de confianza → sanitizar → calidad → deduplicar → JSONL
-└─ spiders/
-   ├─ country_spider.py  fuentes del dossier por país
-   └─ source_spider.py   fuentes globales por comisión
-```
-
-El runner lanza Scrapy en un subproceso: un reactor por proceso, sin fugas y con timeout de 120 s.
-La ingesta escribe `data/scraped/passages.jsonl`; el corpus recarga cuando cambia el `mtime`.
-
-## 6. Seguridad y robustez
+## 5. Seguridad y robustez
 
 - **Validación:** DTOs con `class-validator` y `whitelist`; límites de longitud en todos los textos.
 - **Sanitización:** HTML, Unicode, caracteres de control, correos y teléfonos; normalización NFC.
@@ -213,12 +190,10 @@ La ingesta escribe `data/scraped/passages.jsonl`; el corpus recarga cuando cambi
   En producción se sustituye por Redis para varios procesos.
 - **CORS:** lista explícita de orígenes (`WEB_ORIGIN`).
 - **SQL:** consultas parametrizadas; nunca interpolación de texto.
-- **Scraping ético:** `robots.txt`, concurrencia 1 por dominio, delay aleatorio, user-agent con
-  propósito educativo y allowlist de dominios.
 - **Fallos parciales:** cada integración tiene timeout y *fallback*; una caída no bloquea el flujo
   principal.
 
-## 7. Rendimiento
+## 6. Rendimiento
 
 - Ranking en memoria sobre ~500 documentos: milisegundos, sin dependencia externa.
 - Caché de respuestas de investigación (10 min) y de documentos de conocimiento por país+comisión.
@@ -226,25 +201,23 @@ La ingesta escribe `data/scraped/passages.jsonl`; el corpus recarga cuando cambi
 - Pool PostgreSQL de 8 conexiones por defecto; sin ORM para evitar sobrecarga.
 - Build web: ~356 kB JS (109 kB gzip) y 43 kB CSS (8.3 kB gzip).
 
-## 8. Puntos de extensión
+## 7. Puntos de extensión
 
 | Necesidad | Dónde |
 | --- | --- |
 | Nuevo país | Añadir objeto en `data/countries/*.json`; se valida al arrancar. |
 | Nuevo subtema o tensión | `data/topics.json`; el generador produce más combinaciones automáticamente. |
-| Nueva fuente scrapeada | `data/sources.json` o `sources` del dossier; pipeline valida dominio. |
+| Nueva fuente editorial | `sources` del dossier o `data/topics.json`; se cita en el asistente. |
 | Cambiar pesos de la rúbrica | `ScoringService.evaluate` (objeto `weights`). |
 | Activar LLM | Variables `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`. |
 | Varios procesos API | Redis para rate limit + BullMQ + caché compartida. |
 | Dossier vivo | Tablas `documents`/`document_chunks` + panel de revisión humana (Fase 1). |
 
-## 9. Riesgos técnicos conocidos
+## 8. Riesgos técnicos conocidos
 
-- **Scraping frágil:** los selectores de texto son genéricos; un rediseño de la fuente puede degradar
-  la calidad. Mitigación: allowlist, calidad mínima, snapshot y alertas de fuente.
 - **Heurística de evaluación:** buena para entrenar, no sustituye a un docente. Mitigación: evidencia
   textual, rúbrica pública y revisión humana en Fase 2.
 - **Memoria en fallback:** sin PostgreSQL se pierde el historial al reiniciar. Es intencional y
   visible en `/health`.
-- **Python 3.15:** el entorno se probó con 3.15.2 y Scrapy 2.20; si una dependencia falla, usar 3.13
-  (LTS) y reinstalar el `.venv`.
+- **Corpus editorial estático:** los datos no se actualizan solos. Mitigación: revisión periódica de
+  `data/countries` y `data/knowledge` con fuentes oficiales.

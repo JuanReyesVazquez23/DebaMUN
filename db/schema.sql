@@ -71,7 +71,7 @@ create index if not exists idx_delegates_country on delegates(country_code);
 create index if not exists idx_research_cache_expires on research_cache(expires_at);
 
 -- ---------------------------------------------------------------------------
--- Fase 1 (dossier vivo): tablas preparadas para evidencia scrapeada y revisada.
+-- Fase 1 (dossier vivo): tablas preparadas para evidencia editorial revisada.
 -- Se crean vacías; el MVP no depende de ellas.
 -- ---------------------------------------------------------------------------
 
@@ -82,7 +82,7 @@ create table if not exists documents (
   title text not null,
   country_code text,
   committee text,
-  source_kind text not null default 'scraped',
+  source_kind text not null default 'editorial',
   content text not null,
   fingerprint text not null unique,
   fetched_at timestamptz not null default now(),

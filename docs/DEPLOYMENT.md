@@ -1,8 +1,7 @@
 # DebaMun · Despliegue en Vercel
 
 > Dos proyectos de Vercel sobre el mismo repositorio: **web** (estático) y **API** (función
-> serverless). La base de datos va en **Neon**. El servicio Python/Scrapy **no** se despliega en
-> Vercel: la API funciona sin él y lo reporta como `scraper: down`.
+> serverless). La base de datos va en **Neon**. No hay servicios adicionales que mantener.
 
 ## 1. Arquitectura desplegada
 
@@ -15,8 +14,7 @@ Vercel · proyecto API (apps/api)
   └─ src/main.ts  →  NestJS zero-config  (una sola función)
         │
         ├─ Neon PostgreSQL (DATABASE_URL)
-        ├─ Upstash Redis (opcional, solo caché con REDIS_URL)
-        └─ Research Python (opcional, fuera de Vercel)
+        └─ Upstash Redis (opcional, solo caché con REDIS_URL)
 ```
 
 | Pieza | ¿Vercel? | Motivo |
@@ -25,10 +23,9 @@ Vercel · proyecto API (apps/api)
 | API NestJS | Sí, como función | Se compila con `tsc` y se carga una sola vez por instancia. |
 | PostgreSQL | Neon | Serverless, con pooler y SSL. |
 | Redis/BullMQ | Upstash (opcional) | Sin Redis, caché y cola quedan en memoria por instancia. En Vercel la cola BullMQ no corre: no hay worker persistente. |
-| FastAPI + Scrapy | No | Lanza Scrapy en subproceso, escribe JSONL en disco y necesita procesos largos. |
 
-Sin el servicio Python el asistente sigue respondiendo con el corpus local, las fuentes del dossier
-y el briefing. `/api/health` mostrará `scraper: "down"`, que es el modo esperado en Vercel.
+El asistente responde con el corpus editorial incluido en la API: dossiers de país, base de
+conocimiento y briefing de comisión.
 
 ---
 
@@ -69,17 +66,17 @@ Debe terminar con `Esquema aplicado: 10 tablas en public.`
 | `NODE_ENV` | `production` |
 | `REDIS_URL` | Vacío, o la URL `rediss://...` de Upstash (solo caché compartida) |
 | `JOBS_WORKER` | Vacío en Vercel: BullMQ necesita un worker persistente |
-| `RESEARCH_SERVICE_URL` | Vacío (el servicio Python queda fuera de Vercel) |
 | `DATA_DIR` | Vacío (el corpus se copia a `apps/api/data`) |
 | `LLM_BASE_URL` / `LLM_API_KEY` / `LLM_MODEL` | Opcionales |
 
-6. Deploy. Comprueba:
+6. Deploy. Si cambias o añades variables de entorno después, lanza un **nuevo deployment**:
+   Vercel no aplica variables nuevas a un deployment ya creado. Comprueba:
 
 ```powershell
 Invoke-RestMethod https://<api>.vercel.app/api/health
 ```
 
-Respuesta esperada sin Redis ni servicio Python:
+Respuesta esperada sin Redis:
 
 ```json
 {
@@ -89,7 +86,6 @@ Respuesta esperada sin Redis ni servicio Python:
     "database": "up",
     "cache": "memory",
     "queue": "inline",
-    "scraper": "down",
     "llm": "disabled"
   }
 }
@@ -105,7 +101,7 @@ Si `database` dice `memory`, la API arrancó sin `DATABASE_URL` válida.
 - Vercel compila con TypeScript y conserva `design:paramtypes`; la inyección de dependencias
   funciona igual que en local.
 - La app Nest se construye una vez por instancia y se reutiliza entre invocaciones.
-- `scripts/prepare-api-deploy.mjs` copia `data/{topics.json,sources.json,countries,knowledge}` a
+- `scripts/prepare-api-deploy.mjs` copia `data/{topics.json,countries,knowledge}` a
   `apps/api/data` en cada build (esa carpeta está ignorada por git).
 - El empaquetador de funciones (Node File Trace) incluye `apps/api/data/**` en la función.
   `functions[...].includeFiles` **no** sirve aquí: Vercel solo admite esa clave para funciones
@@ -151,7 +147,7 @@ Neon → API → copiar URL de API → Web → copiar URL de Web → WEB_ORIGIN 
 
 ## 5. Verificación posterior
 
-1. `GET https://<api>.vercel.app/api/health` → `database: up`, 35 países, `scraper: down`.
+1. `GET https://<api>.vercel.app/api/health` → `database: up`, 35 países.
 2. Abre la web y completa nombre → país → comisión.
 3. Recarga en `/app/debate`: debe seguir funcionando (rewrite SPA).
 4. Envía una intervención y comprueba que se guarda (dashboard con `turns > 0`).
@@ -165,8 +161,8 @@ Neon → API → copiar URL de API → Web → copiar URL de Web → WEB_ORIGIN 
 - **Cold start:** la primera petición tras inactividad puede tardar 1–3 s (Nest + pool + corpus).
 - **Rate limit y caché en memoria:** son por instancia, no globales. Para un evento pequeño es
   suficiente; con Redis de Upstash pasan a ser compartidos.
-- **Sin servicio Python:** no hay ingesta Scrapy en producción. Las fuentes del dossier y la base
-  editorial siguen disponibles y citables.
+- **Corpus editorial estático:** el asistente cita dossiers y guías incluidas en el repositorio; para
+  actualizar un dato se edita `data/` y se redeploya.
 - **Pool de Neon:** mantén `DATABASE_POOL_MAX=3` y usa la cadena con `-pooler`.
 - **Datos de menores:** no se recogen correos ni teléfonos; el `delegateId` vive en `localStorage`.
 
@@ -178,16 +174,18 @@ Neon → API → copiar URL de API → Web → copiar URL de Web → WEB_ORIGIN 
 | `database: memory` | `DATABASE_URL` ausente o inválida | Cárgala en Vercel y redeploya. |
 | Error CORS en el navegador | `WEB_ORIGIN` no incluye el dominio web | Añádelo (sin barra final) y redeploya la API. |
 | `No se encontró el corpus` | Build sin copiar `data/` | Revisa que el Build Command ejecute `prepare-api-deploy.mjs`. |
-| `scraper: down` | Servicio Python fuera de Vercel | Es esperado; el asistente usa el corpus local. |
 | Timeout 504 | Cold start o consulta pesada | Reintenta; sube el timeout en **Settings → Functions** del proyecto API. |
 | La web llama a `localhost:4000` | `VITE_API_URL` no definida en el build | Defínela y redeploya la web. |
 
 ## 8. Alternativa: API fuera de Vercel
 
-Si prefieres procesos persistentes (Redis/BullMQ reales y servicio Python incluido), despliega
-`apps/api` y `services/research` en Render, Railway o Fly con Docker. En ese caso:
+Si prefieres procesos persistentes (Redis/BullMQ reales y caché compartida), despliega `apps/api` en
+Render, Railway o Fly con Docker o buildpack. En ese caso:
 
 - Web sigue en Vercel con `VITE_API_URL=https://<api>/api`.
-- API usa `RESEARCH_SERVICE_URL=https://<research>`.
-- `WEB_ORIGIN` apunta al dominio de Vercel.
+- API usa las mismas variables (`DATABASE_URL`, `DATABASE_SSL`, `WEB_ORIGIN`).
+- Con `REDIS_URL` definido, activa `JOBS_WORKER=1` para el worker de BullMQ.
 - El esquema de Neon no cambia.
+
+El corpus viaja con la API (`scripts/prepare-api-deploy.mjs` o `DATA_DIR`), así que el asistente no
+necesita ningún servicio extra.

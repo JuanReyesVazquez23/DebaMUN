@@ -34,7 +34,11 @@ export function clamp(value: number, min = 0, max = 100): number {
 }
 
 export function truncate(value: string, max: number): string {
-  return value.length <= max ? value : `${value.slice(0, max - 1).trimEnd()}…`;
+  if (value.length <= max) return value;
+  const slice = value.slice(0, max - 1);
+  // Evita cortar a mitad de palabra: retrocede al último espacio si el recorte lo dejó incompleto.
+  const trimmed = slice.replace(/\s+\S*$/, '').trimEnd();
+  return `${trimmed.length > max * 0.6 ? trimmed : slice.trimEnd()}…`;
 }
 
 const STOP_WORDS = new Set(

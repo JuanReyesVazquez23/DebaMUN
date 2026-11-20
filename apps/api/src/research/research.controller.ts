@@ -16,11 +16,6 @@ export class ResearchController {
     return this.research.getSources(countryCode, committee);
   }
 
-  @Get('status')
-  status() {
-    return this.research.scraperStatus();
-  }
-
   @Get('history/:delegateId')
   history(@Param('delegateId') delegateId: string) {
     return this.research.getHistory(delegateId);

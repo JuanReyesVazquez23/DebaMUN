@@ -1,7 +1,7 @@
 # DebaMun · IA responsable (RAI-ADR)
 
 > Formato ADR: contexto → decisión → consecuencias. Cada decisión se puede auditar en el código.
-> Ámbito: asistente de investigación, evaluación de debate, scraping y datos de delegados.
+> Ámbito: asistente de investigación, evaluación de debate, corpus editorial y datos de delegados.
 
 ## Contexto
 
@@ -31,7 +31,7 @@ briefing y guías editoriales). El LLM es opcional y solo redacta a partir del c
 ## ADR-002 · Toda respuesta declara confianza y origen
 
 **Decisión.** Cada respuesta incluye `sources` (etiqueta, URL, tipo), `provider`
-(`local | scraper | llm`) y `confidence` (`alta | media | baja`) calculada por cobertura de términos.
+(`local | llm`) y `confidence` (`alta | media | baja`) calculada por cobertura de términos.
 
 **Consecuencias.**
 
@@ -92,19 +92,20 @@ preguntas únicas.
 
 ---
 
-## ADR-006 · Sanitizar antes de indexar y antes de responder
+## ADR-006 · Sanitizar antes de responder
 
-**Decisión.** El servicio Python elimina HTML/scripts, caracteres de control y de ancho cero,
-normaliza Unicode, borra correos y teléfonos, y neutraliza patrones conocidos de inyección de prompt.
-El pipeline de Scrapy descarta dominios no confiables y textos de baja calidad.
+**Decisión.** `sanitizeUserText()` elimina HTML/scripts, caracteres de control y de ancho cero,
+normaliza Unicode y recorta los textos antes de indexarlos o consultarlos. El corpus editorial se
+revisa antes de publicarse y se trata siempre como datos, nunca como instrucciones.
 
 **Consecuencias.**
 
 - El índice no almacena basura ni PII.
 - Un texto malicioso no puede redefinir el comportamiento del asistente.
-- Se conservan `flags` para auditar qué se limpió.
+- Las citas muestran el texto limpio que se usó para responder.
 
-**Verificación.** `services/research/app/sanitizer.py`; 8 tests de sanitización.
+**Verificación.** `sanitizeUserText()` en `apps/api/src/common/text.ts`; se aplica en
+`research.service.ts` y `debate.service.ts`.
 
 ---
 
@@ -123,25 +124,28 @@ comisión, las respuestas y las consultas. El identificador es un UUID local.
 
 ---
 
-## ADR-008 · Scraping ético y acotado
+## ADR-008 · Corpus curado, sin rastreo automático
 
-**Decisión.** `robots.txt` obligatorio, una petición concurrente por dominio, retraso aleatorio,
-user-agent identificable, allowlist de dominios de organismos y timeout de 120 s por ingesta.
+**Decisión.** El asistente usa solo el corpus editorial del repositorio (`data/countries`,
+`data/knowledge` y `data/topics.json`). Se retiró el servicio Python/Scrapy: no hay crawling en
+producción ni procesos que mantener.
 
 **Consecuencias.**
 
-- Menos riesgo de bloqueo y de dañar la fuente.
-- La ingesta no es un rastreador abierto: es una actualización de fuentes conocidas.
-- Si una fuente cambia, se descarta por calidad en lugar de indexar ruido.
+- Cada dato es revisable en Git y se actualiza con un redeploy.
+- No hay dependencia de fuentes externas ni de un servicio adicional.
+- La frescura depende de la revisión editorial; el roadmap prioriza la curación con fuentes
+  oficiales.
 
-**Verificación.** `settings.py`, `pipelines.py`, `country_spider.py`.
+**Verificación.** `data/` en el repositorio, `KnowledgeService.buildDocs` y
+`npm run deploy:prepare`.
 
 ---
 
 ## ADR-009 · Degradación visible, nunca silenciosa
 
-**Decisión.** PostgreSQL, Redis, servicio Python y LLM son opcionales. `/api/health` declara el modo
-real y la interfaz muestra el estado del asistente.
+**Decisión.** PostgreSQL, Redis y LLM son opcionales. `/api/health` declara el modo real y la
+interfaz muestra el estado del asistente.
 
 **Consecuencias.**
 
@@ -177,9 +181,8 @@ la interfaz repite que las posturas deben contrastarse con fuentes oficiales.
 | Sesgo cultural o lingüístico | Media | Medio | Corpus en español neutro, fuentes multilaterales, revisión humana | Golden set con nombres y textos diversos |
 | Inyección de prompt vía fuente | Baja | Alto | Sanitizador + contexto delimitado + instrucción de sistema | Pruebas adversariales periódicas |
 | Exposición de datos de menores | Baja | Alto | Minimización, sin correo, datos locales | Política de retención y borrado en Fase 4 |
-| Dependencia de una fuente | Media | Medio | Allowlist múltiple, fallback a snapshot | Panel de salud de fuentes en Fase 1 |
+| Dependencia de una fuente | Media | Medio | Fuentes múltiples citadas en cada dossier | Revisión de vigencia en Fase 1 |
 | Coste LLM descontrolado | Baja | Medio | LLM opcional, caché 10 min, límite de tokens | Presupuesto por delegado en Fase 4 |
-| Scraping bloqueado | Media | Bajo | Throttling, robots.txt, user-agent | Rotación de fuentes y alertas |
 
 ## Evaluación continua
 
@@ -195,6 +198,6 @@ la interfaz repite que las posturas deben contrastarse con fuentes oficiales.
 - No predice el resultado de la conferencia.
 - No escribe discursos completos por el delegado.
 - No certifica competencias ni sustituye la evaluación de la mesa.
-- No scrapea redes sociales ni datos personales.
+- No rastrea la web ni redes sociales en producción.
 - No usa el contenido de las fuentes como instrucciones.
 - No inventa una respuesta cuando el corpus no alcanza: lo dice.

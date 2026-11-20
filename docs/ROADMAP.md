@@ -20,7 +20,7 @@ Cada función del producto responde a ese trabajo (ver `docs/ux/`).
 - Dossier editorial de 35 países con postura UNESCO y ECOSOC, alianzas, tensiones, tips y fuentes.
 - Datos del día rotativos por país: 10 por país, bloque de 4 en el panel y selección determinista por fecha.
 - Briefing de comisión con subtemas, preguntas clave, glosario y fuentes.
-- Asistente de investigación con recuperación local, citas y fallback al servicio Python.
+- Asistente de investigación con recuperación local, citas y confianza declarada.
 - Simulador de debate: preguntas combinatorias que no se repiten, modo relámpago y evaluación en
   **Diálogo, Argumentos, Coherencia y Resolución**.
 - Persistencia PostgreSQL (compatible Neon) con fallback en memoria; Redis/BullMQ opcional.
@@ -29,7 +29,7 @@ Cada función del producto responde a ese trabajo (ver `docs/ux/`).
   Islandia, Dinamarca, Reino Unido, Rusia, México, India, Sudáfrica, Australia, Argentina, Chile, Perú,
   Países Bajos, Bélgica, Portugal, Italia y Paraguay.
 - Accesibilidad WCAG AA, navegación por teclado, reduced motion y diseño responsive.
-- Tests unitarios de scoring, generador de preguntas, sanitizador y utilidades de frontend.
+- Tests unitarios de scoring, generador de preguntas, conocimiento y utilidades.
 
 **Criterio de salida:** `npm run test` pasa y el flujo onboarding → dashboard → debate → investigación
 funciona en local con `npm run dev`.
@@ -40,8 +40,8 @@ funciona en local con `npm run dev`.
 
 **Objetivo:** sustituir el seed editorial por conocimiento actualizado, trazable y revisado.
 
-- Scrapy en producción: spiders por fuente (UNESCO, OIT, Banco Mundial, OECD, gobiernos), schedules
-  con BullMQ, `robots.txt`, throttling y user-agent identificable.
+- Actualización editorial de fuentes oficiales (UNESCO, OIT, Banco Mundial, OCDE, gobiernos) con
+  revisión humana y fecha de vigencia.
 - Ingesta incremental a PostgreSQL (`documents`, `chunks`, `embeddings`, `source_health`) + búsqueda
   híbrida (BM25 + embeddings) con ventana de frescura.
 - Pipeline de sanitización reforzado: normalización Unicode, eliminación de HTML/scripts, control de
