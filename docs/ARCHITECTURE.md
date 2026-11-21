@@ -45,7 +45,7 @@ Dos procesos independientes, sin Docker obligatorio. Cada uno degrada solo:
 | Módulo | Responsabilidad | Depende de |
 | --- | --- | --- |
 | `DatabaseModule` (global) | Pool PostgreSQL, esquema idempotente, repositorio con fallback. | — |
-| `CountriesModule` | Carga `data/countries/*.json` y `data/topics.json`; expone países, comisiones y posturas. | — |
+| `CountriesModule` | Carga `data/countries/*.json`, `data/organizations.json` y `data/topics.json`; expone países, comisiones y posturas. | — |
 | `SessionsModule` | Onboarding, perfil, dashboard, datos del día (bloques de 4), readiness. | Countries, Store |
 | `DebateModule` | Sesiones de práctica, generación de preguntas, rúbrica, historial. | Countries, Store |
 | `ResearchModule` | Knowledge base, ranking, citas, LLM opcional. | Countries, Jobs, Store |
@@ -206,6 +206,7 @@ funcione en PostgreSQL estándar y en Neon con pgvector.
 | Necesidad | Dónde |
 | --- | --- |
 | Nuevo país | Añadir objeto en `data/countries/*.json`; se valida al arrancar. |
+| Nuevas organizaciones de un país | Añadir la lista en `data/organizations.json`; aparece en el dossier y en el asistente. |
 | Nuevo subtema o tensión | `data/topics.json`; el generador produce más combinaciones automáticamente. |
 | Nueva fuente editorial | `sources` del dossier o `data/topics.json`; se cita en el asistente. |
 | Cambiar pesos de la rúbrica | `ScoringService.evaluate` (objeto `weights`). |

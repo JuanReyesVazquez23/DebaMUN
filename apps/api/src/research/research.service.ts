@@ -248,6 +248,13 @@ export class ResearchService {
     return { messages };
   }
 
+  async clearHistory(delegateId: string) {
+    const delegate = await this.store.getDelegate(delegateId);
+    if (!delegate) throw new NotFoundException('Delegado no encontrado.');
+    const removed = await this.store.clearChatMessages(delegateId);
+    return { cleared: removed };
+  }
+
   private detectIntent(question: string): ResearchIntent {
     for (const rule of INTENT_RULES) {
       if (rule.pattern.test(question)) return rule.intent;

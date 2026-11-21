@@ -101,7 +101,7 @@ Si `database` dice `memory`, la API arrancó sin `DATABASE_URL` válida.
 - Vercel compila con TypeScript y conserva `design:paramtypes`; la inyección de dependencias
   funciona igual que en local.
 - La app Nest se construye una vez por instancia y se reutiliza entre invocaciones.
-- `scripts/prepare-api-deploy.mjs` copia `data/{topics.json,countries,knowledge}` a
+- `scripts/prepare-api-deploy.mjs` copia `data/{topics.json,organizations.json,countries,knowledge}` a
   `apps/api/data` en cada build (esa carpeta está ignorada por git).
 - El empaquetador de funciones (Node File Trace) incluye `apps/api/data/**` en la función.
   `functions[...].includeFiles` **no** sirve aquí: Vercel solo admite esa clave para funciones

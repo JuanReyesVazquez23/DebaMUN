@@ -12,6 +12,12 @@ export interface CountrySource {
   kind: string;
 }
 
+export interface CountryOrganization {
+  name: string;
+  detail: string;
+  url: string;
+}
+
 export interface CountryProfile {
   code: string;
   slug: string;
@@ -41,6 +47,7 @@ export interface CountryProfile {
   ecosoc: CommitteeStance;
   tips: string[];
   facts: string[];
+  organizations: CountryOrganization[];
   sources: CountrySource[];
 }
 

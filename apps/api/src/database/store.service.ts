@@ -388,6 +388,23 @@ export class StoreService {
     return (this.chats.get(delegateId) ?? []).slice(-limit);
   }
 
+  async clearChatMessages(delegateId: string): Promise<number> {
+    const memoryCount = (this.chats.get(delegateId) ?? []).length;
+    let removed = 0;
+    if (this.db.isReady) {
+      try {
+        const result = await this.db.query(`delete from chat_messages where delegate_id = $1`, [
+          delegateId,
+        ]);
+        removed = result.rowCount ?? 0;
+      } catch (error) {
+        this.logger.warn(`Fallo al borrar mensajes: ${(error as Error).message}`);
+      }
+    }
+    this.chats.delete(delegateId);
+    return Math.max(removed, memoryCount);
+  }
+
   async countChats(delegateId: string): Promise<number> {
     if (this.db.isReady) {
       try {

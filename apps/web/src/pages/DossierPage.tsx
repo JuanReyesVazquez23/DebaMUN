@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import {
   AlertOctagon,
   ArrowRight,
+  ArrowUpRight,
   Building2,
   Compass,
   Globe2,
@@ -14,12 +15,14 @@ import {
 } from 'lucide-react';
 import { CountryFlag } from '../components/CountryFlag';
 import { SourceList } from '../components/SourceList';
+import { hostOf } from '../lib/format';
 import { useSession } from '../lib/session';
 
 const SECTIONS = [
   { id: 'postura', label: 'Postura' },
   { id: 'contexto', label: 'Contexto' },
   { id: 'perfil', label: 'Perfil ONU' },
+  { id: 'organizaciones', label: 'Organizaciones' },
   { id: 'tips', label: 'Tips' },
   { id: 'datos', label: 'Datos' },
   { id: 'fuentes', label: 'Fuentes' },
@@ -31,6 +34,7 @@ export function DossierPage() {
 
   const { country, committee } = profile;
   const stance = committee.id === 'UNESCO' ? country.unesco : country.ecosoc;
+  const organizations = country.organizations ?? [];
 
   return (
     <div className="dossier">
@@ -184,6 +188,37 @@ export function DossierPage() {
               <li key={line}>{line}</li>
             ))}
           </ul>
+        </section>
+
+        <section id="organizaciones" className="panel panel--organizations" aria-labelledby="orgs-title">
+          <header className="panel__head">
+            <div>
+              <p className="eyebrow">
+                <Building2 aria-hidden="true" size={13} /> Tecnología y cooperación
+              </p>
+              <h2 id="orgs-title">Organizaciones con las que cuenta {country.name}</h2>
+            </div>
+          </header>
+          <p className="muted small">
+            Instituciones reales para respaldar una propuesta: qué hace cada una y dónde verificarlo.
+          </p>
+          {organizations.length > 0 ? (
+            <ul className="orgs">
+              {organizations.map((organization) => (
+                <li key={organization.name} className="orgs__item">
+                  <div>
+                    <h3>{organization.name}</h3>
+                    <p>{organization.detail}</p>
+                  </div>
+                  <a href={organization.url} target="_blank" rel="noreferrer noopener">
+                    {hostOf(organization.url)} <ArrowUpRight aria-hidden="true" size={12} />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="muted small">Aún no hay organizaciones registradas para esta delegación.</p>
+          )}
         </section>
 
         <section id="tips" className="panel panel--tips" aria-labelledby="tips-title">

@@ -1,0 +1,921 @@
+{
+  "version": "1.0.0",
+  "description": "Organizaciones de tecnología y cooperación internacional por delegación: qué hacen y su sitio oficial. Se muestran en el dossier y alimentan al asistente.",
+  "countries": {
+    "AR": [
+      {
+        "name": "La Dirección General de Cooperación Internacional de la Cancillería",
+        "detail": "Coordina la ayuda externa.",
+        "url": "https://cancilleria.gob.ar"
+      },
+      {
+        "name": "La Secretaría de Innovación, Ciencia y Tecnología",
+        "detail": "Define la política de ciencia y tecnología.",
+        "url": "https://argentina.gob.ar/ciencia"
+      },
+      {
+        "name": "CONICET",
+        "detail": "Es el principal organismo de investigación.",
+        "url": "https://conicet.gov.ar"
+      },
+      {
+        "name": "ARSAT",
+        "detail": "Opera infraestructura satelital y de telecomunicaciones.",
+        "url": "https://arsat.com.ar"
+      },
+      {
+        "name": "La Fundación Sadosky",
+        "detail": "Desarrolla capacidades en IA y software.",
+        "url": "https://fundacionsadosky.org.ar"
+      }
+    ],
+    "AU": [
+      {
+        "name": "El Departamento de Asuntos Exteriores y Comercio (DFAT)",
+        "detail": "Gestiona la ayuda oficial al desarrollo.",
+        "url": "https://dfat.gov.au"
+      },
+      {
+        "name": "El Departamento de Industria, Ciencia y Recursos (DISR)",
+        "detail": "Define la política tecnológica.",
+        "url": "https://industry.gov.au"
+      },
+      {
+        "name": "CSIRO",
+        "detail": "Es la agencia científica nacional.",
+        "url": "https://csiro.au"
+      },
+      {
+        "name": "ACIAR",
+        "detail": "Financia investigación agrícola para el desarrollo.",
+        "url": "https://aciar.gov.au"
+      },
+      {
+        "name": "Austrade",
+        "detail": "Promueve inversión y exportación tecnológica.",
+        "url": "https://austrade.gov.au"
+      }
+    ],
+    "BE": [
+      {
+        "name": "Enabel",
+        "detail": "Ejecuta la cooperación belga.",
+        "url": "https://enabel.be"
+      },
+      {
+        "name": "El SPF Asuntos Exteriores",
+        "detail": "Define la política de ayuda.",
+        "url": "https://diplomatie.belgium.be"
+      },
+      {
+        "name": "BOSA",
+        "detail": "Coordina la administración y la digitalización federal.",
+        "url": "https://bosa.belgium.be"
+      },
+      {
+        "name": "Imec",
+        "detail": "Investiga nanotecnología y semiconductores.",
+        "url": "https://imec-int.com"
+      },
+      {
+        "name": "AI4Belgium",
+        "detail": "Articula el ecosistema de IA (ai4belgium.be). Bruselas alberga además las instituciones de la Unión Europea.",
+        "url": "https://european-union.europa.eu"
+      }
+    ],
+    "BR": [
+      {
+        "name": "La Agência Brasileira de Cooperação (ABC), del Ministerio de Relaciones Exteriores",
+        "detail": "Coordina la cooperación Sur-Sur.",
+        "url": "https://gov.br/abc"
+      },
+      {
+        "name": "El Ministerio de Ciencia, Tecnología e Innovación (MCTI)",
+        "detail": "Define la política de IA e innovación.",
+        "url": "https://gov.br/mcti"
+      },
+      {
+        "name": "NIC.br y el CGI.br",
+        "detail": "Administran el registro de dominios y la gobernanza de internet.",
+        "url": "https://nic.br"
+      },
+      {
+        "name": "Finep",
+        "detail": "Financia investigación aplicada e innovación.",
+        "url": "https://finep.gov.br"
+      },
+      {
+        "name": "EMBRAPII",
+        "detail": "Apoya la innovación industrial junto a universidades.",
+        "url": "https://embrapii.org.br"
+      }
+    ],
+    "CA": [
+      {
+        "name": "Global Affairs Canada (GAC)",
+        "detail": "Gestiona la ayuda al desarrollo y la diplomacia económica.",
+        "url": "https://international.gc.ca"
+      },
+      {
+        "name": "Innovation, Science and Economic Development Canada (ISED)",
+        "detail": "Coordina la política de innovación y la Estrategia Pan-canadiense de IA.",
+        "url": "https://ised-isde.canada.ca"
+      },
+      {
+        "name": "El National Research Council (NRC)",
+        "detail": "Es la agencia pública de investigación aplicada.",
+        "url": "https://nrc.canada.ca"
+      },
+      {
+        "name": "El International Development Research Centre (IDRC)",
+        "detail": "Financia investigación para el desarrollo.",
+        "url": "https://idrc-crdi.ca"
+      },
+      {
+        "name": "CIFAR",
+        "detail": "Articula los institutos de IA de Montreal, Toronto y Edmonton.",
+        "url": "https://cifar.ca"
+      }
+    ],
+    "CH": [
+      {
+        "name": "La Agencia Suiza para el Desarrollo y la Cooperación (SDC/DEZA)",
+        "detail": "Ejecuta la ayuda.",
+        "url": "https://eda.admin.ch"
+      },
+      {
+        "name": "La SECO",
+        "detail": "Gestiona la cooperación económica.",
+        "url": "https://seco.admin.ch"
+      },
+      {
+        "name": "La Unión Internacional de Telecomunicaciones (UIT)",
+        "detail": "Tiene su sede en Ginebra y coordina las telecomunicaciones y el espectro radioeléctrico.",
+        "url": "https://itu.int"
+      },
+      {
+        "name": "ETH Zúrich",
+        "detail": "Es la universidad técnica de referencia.",
+        "url": "https://ethz.ch"
+      },
+      {
+        "name": "Swissnex",
+        "detail": "Conecta la ciencia suiza con el mundo.",
+        "url": "https://swissnex.org"
+      }
+    ],
+    "CL": [
+      {
+        "name": "La Agencia Chilena de Cooperación Internacional para el Desarrollo (AGCID)",
+        "detail": "Gestiona la cooperación.",
+        "url": "https://agcid.gob.cl"
+      },
+      {
+        "name": "El Ministerio de Ciencia, Tecnología, Conocimiento e Innovación",
+        "detail": "Diseña la política de IA.",
+        "url": "https://minciencia.gob.cl"
+      },
+      {
+        "name": "ANID",
+        "detail": "Financia investigación y becas.",
+        "url": "https://anid.cl"
+      },
+      {
+        "name": "SUBTEL",
+        "detail": "Regula telecomunicaciones y conectividad digital.",
+        "url": "https://subtel.gob.cl"
+      },
+      {
+        "name": "El Centro Nacional de Inteligencia Artificial (CENIA)",
+        "detail": "Investiga IA aplicada.",
+        "url": "https://cenia.cl"
+      }
+    ],
+    "CN": [
+      {
+        "name": "La Agencia China de Cooperación Internacional para el Desarrollo (CIDCA)",
+        "detail": "Gestiona la ayuda y la Iniciativa de la Franja y la Ruta.",
+        "url": "https://cidca.gov.cn"
+      },
+      {
+        "name": "El Ministerio de Industria y Tecnologías de la Información (MIIT)",
+        "detail": "Regula industria, telecomunicaciones y tecnología.",
+        "url": "https://miit.gov.cn"
+      },
+      {
+        "name": "El Ministerio de Ciencia y Tecnología (MOST)",
+        "detail": "Define la política de I+D.",
+        "url": "https://most.gov.cn"
+      },
+      {
+        "name": "La CAICT",
+        "detail": "Investiga política digital.",
+        "url": "https://caict.ac.cn"
+      },
+      {
+        "name": "La Administración del Ciberespacio (CAC)",
+        "detail": "Regula internet y datos.",
+        "url": "https://cac.gov.cn"
+      }
+    ],
+    "CO": [
+      {
+        "name": "La Agencia Presidencial de Cooperación Internacional (APC Colombia)",
+        "detail": "Coordina la cooperación que recibe el país y la cooperación Sur-Sur.",
+        "url": "https://apccolombia.gov.co"
+      },
+      {
+        "name": "El Ministerio de Tecnologías de la Información y las Comunicaciones (MinTIC)",
+        "detail": "Lidera conectividad, gobierno digital y alfabetización digital.",
+        "url": "https://mintic.gov.co"
+      },
+      {
+        "name": "MinCiencias",
+        "detail": "Financia investigación e innovación.",
+        "url": "https://minciencias.gov.co"
+      },
+      {
+        "name": "INNpulsa",
+        "detail": "Acompaña emprendimientos de base tecnológica.",
+        "url": "https://innpulsa.gov.co"
+      }
+    ],
+    "DE": [
+      {
+        "name": "El Ministerio Federal de Cooperación Económica y Desarrollo (BMZ)",
+        "detail": "Define la política de ayuda.",
+        "url": "https://bmz.de"
+      },
+      {
+        "name": "GIZ",
+        "detail": "Ejecuta proyectos de cooperación técnica.",
+        "url": "https://giz.de"
+      },
+      {
+        "name": "KfW Development Bank",
+        "detail": "Financia infraestructura y programas sociales.",
+        "url": "https://kfw.de"
+      },
+      {
+        "name": "El DFKI",
+        "detail": "Es el mayor centro de investigación en IA de Alemania.",
+        "url": "https://dfki.de"
+      },
+      {
+        "name": "DigitalService",
+        "detail": "Desarrolla servicios digitales para la administración federal.",
+        "url": "https://digitalservice.bund.de"
+      }
+    ],
+    "DK": [
+      {
+        "name": "Danida, dentro del Ministerio de Asuntos Exteriores",
+        "detail": "Ejecuta la cooperación al desarrollo.",
+        "url": "https://um.dk"
+      },
+      {
+        "name": "Digitaliseringsstyrelsen",
+        "detail": "Lidera la digitalización del sector público.",
+        "url": "https://digst.dk"
+      },
+      {
+        "name": "Innovation Fund Denmark",
+        "detail": "Financia investigación e innovación.",
+        "url": "https://innovationsfonden.dk"
+      },
+      {
+        "name": "La Universidad Técnica de Dinamarca (DTU)",
+        "detail": "Es la referencia en ingeniería.",
+        "url": "https://dtu.dk"
+      },
+      {
+        "name": "State of Green",
+        "detail": "Promueve tecnología climática y soluciones verdes.",
+        "url": "https://stateofgreen.com"
+      }
+    ],
+    "EE": [
+      {
+        "name": "El Ministerio de Asuntos Exteriores",
+        "detail": "Coordina la cooperación al desarrollo.",
+        "url": "https://vm.ee"
+      },
+      {
+        "name": "La Autoridad de Sistemas de Información (RIA)",
+        "detail": "Opera la infraestructura digital del Estado.",
+        "url": "https://ria.ee"
+      },
+      {
+        "name": "El e-Estonia Briefing Centre",
+        "detail": "Difunde el modelo digital.",
+        "url": "https://e-estonia.com"
+      },
+      {
+        "name": "TalTech",
+        "detail": "Es la universidad tecnológica nacional.",
+        "url": "https://taltech.ee"
+      },
+      {
+        "name": "Startup Estonia",
+        "detail": "Promueve el ecosistema emprendedor.",
+        "url": "https://startupestonia.ee"
+      }
+    ],
+    "ES": [
+      {
+        "name": "La Agencia Española de Cooperación Internacional para el Desarrollo (AECID)",
+        "detail": "Ejecuta la cooperación española.",
+        "url": "https://aecid.es"
+      },
+      {
+        "name": "La Secretaría de Estado de Digitalización e Inteligencia Artificial (SEDIA)",
+        "detail": "Diseña la política de IA.",
+        "url": "https://digital.gob.es"
+      },
+      {
+        "name": "Red.es",
+        "detail": "Impulsa la conectividad y los servicios digitales públicos.",
+        "url": "https://red.es"
+      },
+      {
+        "name": "El ONTSI",
+        "detail": "Analiza la sociedad digital.",
+        "url": "https://ontsi.es"
+      },
+      {
+        "name": "El CSIC",
+        "detail": "Es el mayor organismo público de investigación.",
+        "url": "https://csic.es"
+      }
+    ],
+    "FI": [
+      {
+        "name": "El Ministerio de Asuntos Exteriores",
+        "detail": "Gestiona la cooperación al desarrollo.",
+        "url": "https://um.fi"
+      },
+      {
+        "name": "Business Finland",
+        "detail": "Apoya innovación y exportación tecnológica.",
+        "url": "https://businessfinland.fi"
+      },
+      {
+        "name": "DVV",
+        "detail": "Presta servicios digitales de población.",
+        "url": "https://dvv.fi"
+      },
+      {
+        "name": "VTT",
+        "detail": "Es el centro público de investigación técnica.",
+        "url": "https://vttresearch.com"
+      },
+      {
+        "name": "FCAI",
+        "detail": "Articula la investigación finlandesa en IA.",
+        "url": "https://fcai.fi"
+      }
+    ],
+    "FR": [
+      {
+        "name": "La Agencia Francesa de Desarrollo (AFD)",
+        "detail": "Financia desarrollo y clima.",
+        "url": "https://afd.fr"
+      },
+      {
+        "name": "Expertise France",
+        "detail": "Ejecuta cooperación técnica.",
+        "url": "https://expertisefrance.fr"
+      },
+      {
+        "name": "La DINUM",
+        "detail": "Coordina los servicios digitales del Estado.",
+        "url": "https://numerique.gouv.fr"
+      },
+      {
+        "name": "Inria",
+        "detail": "Investiga informática e IA.",
+        "url": "https://inria.fr"
+      },
+      {
+        "name": "La CNIL",
+        "detail": "Regula la protección de datos.",
+        "url": "https://cnil.fr"
+      }
+    ],
+    "GB": [
+      {
+        "name": "La Foreign, Commonwealth and Development Office (FCDO)",
+        "detail": "Gestiona la ayuda oficial y la diplomacia.",
+        "url": "https://gov.uk"
+      },
+      {
+        "name": "El Department for Science, Innovation and Technology (DSIT)",
+        "detail": "Diseña la política de ciencia y tecnología.",
+        "url": "https://gov.uk"
+      },
+      {
+        "name": "UKRI",
+        "detail": "Financia investigación.",
+        "url": "https://ukri.org"
+      },
+      {
+        "name": "El Alan Turing Institute",
+        "detail": "Investiga IA y datos.",
+        "url": "https://turing.ac.uk"
+      },
+      {
+        "name": "El British Council",
+        "detail": "Promueve cooperación educativa y cultural.",
+        "url": "https://britishcouncil.org"
+      }
+    ],
+    "IE": [
+      {
+        "name": "Irish Aid, en el Ministerio de Asuntos Exteriores",
+        "detail": "Gestiona la cooperación.",
+        "url": "https://irishaid.ie"
+      },
+      {
+        "name": "Enterprise Ireland",
+        "detail": "Apoya empresas tecnológicas exportadoras.",
+        "url": "https://enterprise-ireland.com"
+      },
+      {
+        "name": "IDA Ireland",
+        "detail": "Atrae inversión extranjera.",
+        "url": "https://idaireland.com"
+      },
+      {
+        "name": "Research Ireland",
+        "detail": "Financia investigación.",
+        "url": "https://researchireland.ie"
+      },
+      {
+        "name": "La Comisión de Protección de Datos",
+        "detail": "Regula la privacidad.",
+        "url": "https://dataprotection.ie"
+      }
+    ],
+    "IN": [
+      {
+        "name": "El Ministerio de Asuntos Exteriores (MEA)",
+        "detail": "Canaliza la ayuda mediante su Development Partnership Administration.",
+        "url": "https://mea.gov.in"
+      },
+      {
+        "name": "El Ministerio de Electrónica y Tecnología de la Información (MeitY)",
+        "detail": "Diseña la política tecnológica y de IA.",
+        "url": "https://meity.gov.in"
+      },
+      {
+        "name": "El Departamento de Ciencia y Tecnología (DST)",
+        "detail": "Financia investigación.",
+        "url": "https://dst.gov.in"
+      },
+      {
+        "name": "IndiaAI",
+        "detail": "Articula el ecosistema nacional de IA.",
+        "url": "https://indiaai.gov.in"
+      },
+      {
+        "name": "NASSCOM",
+        "detail": "Representa a la industria tecnológica.",
+        "url": "https://nasscom.in"
+      }
+    ],
+    "IS": [
+      {
+        "name": "El Ministerio de Asuntos Exteriores",
+        "detail": "Gestiona la cooperación al desarrollo, de escala reducida y concentrada en países socios.",
+        "url": "https://government.is"
+      },
+      {
+        "name": "Digital Iceland",
+        "detail": "Coordina la transformación digital pública.",
+        "url": "https://digitaliceland.is"
+      },
+      {
+        "name": "Rannis",
+        "detail": "Financia investigación e innovación.",
+        "url": "https://rannis.is"
+      },
+      {
+        "name": "Business Iceland (Íslandsstofa)",
+        "detail": "Promueve la inversión y las exportaciones de tecnología islandesa.",
+        "url": "https://islandsstofa.is"
+      }
+    ],
+    "IT": [
+      {
+        "name": "La Agencia Italiana de Cooperación al Desarrollo (AICS)",
+        "detail": "Ejecuta la ayuda.",
+        "url": "https://aics.gov.it"
+      },
+      {
+        "name": "El Ministerio de Asuntos Exteriores (MAECI)",
+        "detail": "Define la política exterior y de cooperación.",
+        "url": "https://esteri.it"
+      },
+      {
+        "name": "AgID",
+        "detail": "Coordina la transformación digital pública.",
+        "url": "https://agid.gov.it"
+      },
+      {
+        "name": "El CNR",
+        "detail": "Es el mayor organismo público de investigación.",
+        "url": "https://cnr.it"
+      },
+      {
+        "name": "La Fondazione Bruno Kessler",
+        "detail": "Investiga IA y tecnología.",
+        "url": "https://fbk.eu"
+      }
+    ],
+    "JP": [
+      {
+        "name": "JICA",
+        "detail": "Ejecuta la ayuda oficial al desarrollo.",
+        "url": "https://jica.go.jp"
+      },
+      {
+        "name": "El Ministerio de Asuntos Exteriores (MOFA)",
+        "detail": "Define la política de cooperación.",
+        "url": "https://mofa.go.jp"
+      },
+      {
+        "name": "El Ministerio de Asuntos Internos y Comunicaciones (MIC)",
+        "detail": "Regula telecomunicaciones y promueve la sociedad digital.",
+        "url": "https://soumu.go.jp"
+      },
+      {
+        "name": "La Information-technology Promotion Agency (IPA)",
+        "detail": "Impulsa el software y la ciberseguridad.",
+        "url": "https://ipa.go.jp"
+      },
+      {
+        "name": "El NICT",
+        "detail": "Investiga redes e IA.",
+        "url": "https://nict.go.jp"
+      }
+    ],
+    "KR": [
+      {
+        "name": "KOICA",
+        "detail": "Gestiona la cooperación internacional.",
+        "url": "https://koica.go.kr"
+      },
+      {
+        "name": "El Ministerio de Ciencia y TIC (MSIT)",
+        "detail": "Define la política de IA.",
+        "url": "https://msit.go.kr"
+      },
+      {
+        "name": "La Agencia Nacional de la Sociedad de la Información (NIA)",
+        "detail": "Impulsa gobierno digital y datos abiertos.",
+        "url": "https://nia.or.kr"
+      },
+      {
+        "name": "ETRI",
+        "detail": "Investiga TIC e IA.",
+        "url": "https://etri.re.kr"
+      },
+      {
+        "name": "El IITP",
+        "detail": "Planifica la I+D en TIC.",
+        "url": "https://iitp.kr"
+      }
+    ],
+    "MX": [
+      {
+        "name": "La Agencia Mexicana de Cooperación Internacional para el Desarrollo (AMEXCID)",
+        "detail": "Coordina la ayuda y la cooperación Sur-Sur.",
+        "url": "https://gob.mx/amexcid"
+      },
+      {
+        "name": "El Consejo Nacional de Humanidades, Ciencias y Tecnologías (CONAHCyT)",
+        "detail": "Financia investigación e IA.",
+        "url": "https://conahcyt.mx"
+      },
+      {
+        "name": "La Secretaría de Infraestructura, Comunicaciones y Transportes (SICT)",
+        "detail": "Gestiona telecomunicaciones y conectividad.",
+        "url": "https://gob.mx/sct"
+      },
+      {
+        "name": "INFOTEC",
+        "detail": "Desarrolla tecnología pública y formación especializada.",
+        "url": "https://infotec.mx"
+      }
+    ],
+    "NL": [
+      {
+        "name": "El Ministerio de Asuntos Exteriores, mediante la Dirección General de Cooperación Internacional (DGIS)",
+        "detail": "Define la ayuda.",
+        "url": "https://government.nl"
+      },
+      {
+        "name": "RVO",
+        "detail": "Ejecuta programas de ayuda y comercio.",
+        "url": "https://rvo.nl"
+      },
+      {
+        "name": "Logius",
+        "detail": "Opera la infraestructura digital pública.",
+        "url": "https://logius.nl"
+      },
+      {
+        "name": "TNO",
+        "detail": "Es la organización de investigación aplicada.",
+        "url": "https://tno.nl"
+      },
+      {
+        "name": "La NL AI Coalition",
+        "detail": "Articula el ecosistema de IA.",
+        "url": "https://nlaic.com"
+      }
+    ],
+    "NO": [
+      {
+        "name": "Norad",
+        "detail": "Gestiona la cooperación al desarrollo.",
+        "url": "https://norad.no"
+      },
+      {
+        "name": "El Ministerio de Asuntos Exteriores",
+        "detail": "Define la política de ayuda.",
+        "url": "https://regjeringen.no"
+      },
+      {
+        "name": "El Consejo de Investigación de Noruega",
+        "detail": "Financia I+D.",
+        "url": "https://forskningsradet.no"
+      },
+      {
+        "name": "Digdir",
+        "detail": "Coordina los servicios digitales públicos.",
+        "url": "https://digdir.no"
+      },
+      {
+        "name": "Norfund",
+        "detail": "Invierte en empresas de países en desarrollo.",
+        "url": "https://norfund.no"
+      }
+    ],
+    "PE": [
+      {
+        "name": "La Agencia Peruana de Cooperación Internacional (APCI)",
+        "detail": "Coordina la ayuda externa.",
+        "url": "https://apci.gob.pe"
+      },
+      {
+        "name": "La Secretaría de Gobierno y Transformación Digital de la PCM",
+        "detail": "Impulsa el gobierno digital.",
+        "url": "https://gob.pe/pcm"
+      },
+      {
+        "name": "CONCYTEC",
+        "detail": "Financia ciencia y tecnología.",
+        "url": "https://gob.pe/concytec"
+      },
+      {
+        "name": "ProInnóvate",
+        "detail": "Apoya innovación y emprendimiento.",
+        "url": "https://proinnovate.gob.pe"
+      },
+      {
+        "name": "INICTEL-UNI",
+        "detail": "Investiga telecomunicaciones.",
+        "url": "https://inictel-uni.edu.pe"
+      }
+    ],
+    "PL": [
+      {
+        "name": "Polish Aid, del Ministerio de Asuntos Exteriores",
+        "detail": "Gestiona la cooperación al desarrollo.",
+        "url": "https://gov.pl/web/polishaid"
+      },
+      {
+        "name": "El Ministerio de Digitalización",
+        "detail": "Diseña la política digital.",
+        "url": "https://gov.pl/web/cyfryzacja"
+      },
+      {
+        "name": "NASK",
+        "detail": "Investiga ciberseguridad e IA.",
+        "url": "https://nask.pl"
+      },
+      {
+        "name": "PARP",
+        "detail": "Apoya a pymes y startups.",
+        "url": "https://parp.gov.pl"
+      },
+      {
+        "name": "IDEAS NCBR",
+        "detail": "Financia investigación en IA.",
+        "url": "https://ideas-ncbr.pl"
+      }
+    ],
+    "PT": [
+      {
+        "name": "Camões, I.P.",
+        "detail": "Gestiona la cooperación y la promoción de la lengua portuguesa.",
+        "url": "https://instituto-camoes.pt"
+      },
+      {
+        "name": "La Fundação para a Ciência e a Tecnologia (FCT)",
+        "detail": "Financia ciencia y tecnología.",
+        "url": "https://fct.pt"
+      },
+      {
+        "name": "AMA",
+        "detail": "Moderniza la administración digital.",
+        "url": "https://ama.gov.pt"
+      },
+      {
+        "name": "Startup Portugal",
+        "detail": "Apoya el emprendimiento.",
+        "url": "https://startupportugal.com"
+      },
+      {
+        "name": "DNS.PT",
+        "detail": "Opera el dominio nacional e impulsa la sociedad digital.",
+        "url": "https://dns.pt"
+      }
+    ],
+    "PY": [
+      {
+        "name": "La Dirección General de Cooperación Internacional del Ministerio de Relaciones Exteriores",
+        "detail": "Coordina la ayuda.",
+        "url": "https://mre.gov.py"
+      },
+      {
+        "name": "El Ministerio de Tecnologías de la Información y Comunicación (MITIC)",
+        "detail": "Diseña políticas de tecnología y gobierno digital.",
+        "url": "https://mitic.gov.py"
+      },
+      {
+        "name": "CONACYT",
+        "detail": "Financia investigación e innovación.",
+        "url": "https://conacyt.gov.py"
+      },
+      {
+        "name": "Itaipú Binacional",
+        "detail": "Impulsa proyectos de tecnología y energía.",
+        "url": "https://itaipu.gov.py"
+      },
+      {
+        "name": "El Parque Tecnológico Itaipú (PTI)",
+        "detail": "Desarrolla innovación aplicada.",
+        "url": "https://pti.org.py"
+      }
+    ],
+    "RU": [
+      {
+        "name": "Rossotrudnichestvo",
+        "detail": "Gestiona la cooperación cultural y humanitaria.",
+        "url": "https://rs.gov.ru"
+      },
+      {
+        "name": "El Ministerio de Desarrollo Digital (Mintsifry)",
+        "detail": "Diseña la política digital.",
+        "url": "https://digital.gov.ru"
+      },
+      {
+        "name": "El Ministerio de Ciencia y Educación Superior",
+        "detail": "Financia I+D.",
+        "url": "https://minobrnauki.gov.ru"
+      },
+      {
+        "name": "Skoltech",
+        "detail": "Es una universidad tecnológica orientada a la investigación.",
+        "url": "https://skoltech.ru"
+      }
+    ],
+    "SCT": [
+      {
+        "name": "El Gobierno escocés",
+        "detail": "Financia cooperación al desarrollo con Malawi, Ruanda, Zambia y Pakistán.",
+        "url": "https://gov.scot"
+      },
+      {
+        "name": "Scottish Enterprise",
+        "detail": "Atrae inversión y apoya la innovación.",
+        "url": "https://scottish-enterprise.com"
+      },
+      {
+        "name": "The Data Lab",
+        "detail": "Es el centro de innovación en datos e IA.",
+        "url": "https://thedatalab.com"
+      },
+      {
+        "name": "ScotlandIS",
+        "detail": "Representa al sector tecnológico.",
+        "url": "https://scotlandis.com"
+      }
+    ],
+    "SE": [
+      {
+        "name": "Sida",
+        "detail": "Ejecuta la cooperación al desarrollo.",
+        "url": "https://sida.se"
+      },
+      {
+        "name": "El Ministerio de Asuntos Exteriores",
+        "detail": "Define la política de ayuda.",
+        "url": "https://regeringen.se"
+      },
+      {
+        "name": "Vinnova",
+        "detail": "Financia innovación.",
+        "url": "https://vinnova.se"
+      },
+      {
+        "name": "DIGG",
+        "detail": "Coordina el gobierno digital.",
+        "url": "https://digg.se"
+      },
+      {
+        "name": "AI Sweden",
+        "detail": "Articula el ecosistema nacional de IA.",
+        "url": "https://ai.se"
+      }
+    ],
+    "SG": [
+      {
+        "name": "El Ministerio de Asuntos Exteriores (MFA)",
+        "detail": "Coordina la cooperación mediante el Singapore Cooperation Programme.",
+        "url": "https://mfa.gov.sg"
+      },
+      {
+        "name": "La Infocomm Media Development Authority (IMDA)",
+        "detail": "Regula telecomunicaciones y desarrolla la economía digital.",
+        "url": "https://imda.gov.sg"
+      },
+      {
+        "name": "GovTech",
+        "detail": "Construye servicios públicos digitales.",
+        "url": "https://tech.gov.sg"
+      },
+      {
+        "name": "Enterprise Singapore",
+        "detail": "Apoya startups y expansión tecnológica.",
+        "url": "https://enterprisesg.gov.sg"
+      },
+      {
+        "name": "AI Singapore",
+        "detail": "Articula investigación y talento en IA.",
+        "url": "https://aisingapore.org"
+      }
+    ],
+    "SV": [
+      {
+        "name": "La Agencia de El Salvador para la Cooperación Internacional (ESCO)",
+        "detail": "Canaliza la ayuda externa.",
+        "url": "https://esco.gob.sv"
+      },
+      {
+        "name": "La Secretaría de Innovación de la Presidencia",
+        "detail": "Impulsa gobierno digital y tecnología.",
+        "url": "https://innovacion.gob.sv"
+      },
+      {
+        "name": "El Banco de Desarrollo de El Salvador (BANDESAL)",
+        "detail": "Financia innovación y emprendimiento.",
+        "url": "https://bandesal.gob.sv"
+      },
+      {
+        "name": "INSAFORP",
+        "detail": "Forma técnicos y vincula a la juventud con el empleo.",
+        "url": "https://insaforp.org.sv"
+      }
+    ],
+    "ZA": [
+      {
+        "name": "El Departamento de Relaciones Internacionales y Cooperación (DIRCO)",
+        "detail": "Coordina la ayuda y la cooperación.",
+        "url": "https://dirco.gov.za"
+      },
+      {
+        "name": "El Departamento de Comunicaciones y Tecnologías Digitales (DCDT)",
+        "detail": "Diseña la política digital.",
+        "url": "https://dcdt.gov.za"
+      },
+      {
+        "name": "El Departamento de Ciencia e Innovación (DSI)",
+        "detail": "Financia I+D.",
+        "url": "https://dst.gov.za"
+      },
+      {
+        "name": "El CSIR",
+        "detail": "Es el mayor organismo público de investigación.",
+        "url": "https://csir.co.za"
+      },
+      {
+        "name": "SEDA",
+        "detail": "Apoya pequeñas empresas tecnológicas.",
+        "url": "https://seda.org.za"
+      }
+    ]
+  }
+}

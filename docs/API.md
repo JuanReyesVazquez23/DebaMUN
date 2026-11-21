@@ -308,6 +308,11 @@ Fuentes del país, de la comisión y base editorial.
 
 Últimos 40 mensajes con rol (`user | assistant`), contenido y fuentes.
 
+### `DELETE /research/history/:delegateId`
+
+Borra la conversación del delegado y devuelve `{ "cleared": 12 }`. La interfaz lo usa en el botón
+**Limpiar conversación**.
+
 ---
 
 ## Jobs

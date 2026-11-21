@@ -14,6 +14,33 @@ const base = {
   grade: 'secundaria-5',
 };
 
+describe('StoreService.clearChatMessages', () => {
+  it('borra la conversación del delegado y deja el historial vacío', async () => {
+    const store = memoryStore();
+    await store.restoreDelegate(base);
+    await store.addChatMessage({
+      delegateId: base.id,
+      role: 'user',
+      content: '¿Qué organizaciones tiene Dinamarca?',
+      sources: [],
+    });
+    await store.addChatMessage({
+      delegateId: base.id,
+      role: 'assistant',
+      content: 'Danida, Digitaliseringsstyrelsen…',
+      sources: [],
+    });
+
+    expect(await store.countChats(base.id)).toBe(2);
+
+    const removed = await store.clearChatMessages(base.id);
+
+    expect(removed).toBe(2);
+    expect(await store.listChatMessages(base.id)).toEqual([]);
+    expect(await store.countChats(base.id)).toBe(0);
+  });
+});
+
 describe('StoreService.restoreDelegate', () => {
   it('recrea al delegado con el mismo id que guarda el navegador', async () => {
     const store = memoryStore();

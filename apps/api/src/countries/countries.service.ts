@@ -4,6 +4,7 @@ import { join, resolve } from 'node:path';
 import type {
   CommitteeId,
   CommitteeTopic,
+  CountryOrganization,
   CountryProfile,
   CountrySummary,
   TopicConfig,
@@ -42,6 +43,7 @@ export class CountriesService implements OnModuleInit {
   private loadCountries(): void {
     const countriesDir = join(this.dataDir, 'countries');
     const files = readdirSync(countriesDir).filter((file) => file.endsWith('.json'));
+    const organizations = this.loadOrganizations();
     const loaded: CountryProfile[] = [];
 
     for (const file of files) {
@@ -51,12 +53,31 @@ export class CountriesService implements OnModuleInit {
         if (!country.code || !country.name || !country.palette) {
           throw new Error(`Dossier incompleto en ${file}: ${JSON.stringify(country).slice(0, 80)}`);
         }
-        loaded.push(country);
+        loaded.push({
+          ...country,
+          organizations: organizations.get(country.code.toUpperCase()) ?? [],
+        });
       }
     }
 
     this.countries = new Map(loaded.map((country) => [country.code.toUpperCase(), country]));
     this.logger.log(`Corpus cargado: ${loaded.length} países desde ${files.length} archivos.`);
+  }
+
+  private loadOrganizations(): Map<string, CountryOrganization[]> {
+    const file = join(this.dataDir, 'organizations.json');
+    if (!existsSync(file)) return new Map();
+
+    const raw = JSON.parse(readFileSync(file, 'utf8')) as {
+      countries?: Record<string, CountryOrganization[]>;
+    };
+    const entries: Array<[string, CountryOrganization[]]> = Object.entries(raw.countries ?? {}).map(
+      ([code, list]) => [code.toUpperCase(), list],
+    );
+    this.logger.log(
+      `Organizaciones cargadas: ${entries.reduce((total, [, list]) => total + list.length, 0)} en ${entries.length} países.`,
+    );
+    return new Map(entries);
   }
 
   private loadTopics(): void {

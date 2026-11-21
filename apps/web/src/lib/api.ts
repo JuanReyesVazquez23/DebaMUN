@@ -160,4 +160,7 @@ export const api = {
 
   researchHistory: (delegateId: string) =>
     request<{ messages: ChatMessage[] }>(`/research/history/${delegateId}`),
+
+  clearResearchHistory: (delegateId: string) =>
+    request<{ cleared: number }>(`/research/history/${delegateId}`, { method: 'DELETE' }),
 };

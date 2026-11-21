@@ -16,7 +16,7 @@ transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 | Módulo | Qué hace |
 | --- | --- |
 | Onboarding | Nombre → grado escolar (primaria 1.º–6.º, secundaria 1.º–6.º o universidad) → país → comisión, en cuatro pasos, sin correo ni contraseña. |
-| Dossier | 35 delegaciones con postura en cada comisión, prioridades, vulnerabilidad, palanca, aliados, tensiones, líneas rojas, tips, datos y fuentes. |
+| Dossier | 35 delegaciones con postura en cada comisión, prioridades, vulnerabilidad, palanca, aliados, tensiones, líneas rojas, organizaciones de tecnología y cooperación (qué hacen y enlace oficial), tips, datos y fuentes. |
 | Datos del día | 10 hechos por país; el panel muestra 4 y permite rotar al siguiente bloque. La selección es determinista por fecha y no repite datos dentro del día. |
 | Asistente | Recuperación por intención y entidades (BM25 + sinónimos + frases) sobre corpus editorial + LLM opcional. Cada respuesta se adapta a la pregunta y trae fuentes, extractos y nivel de confianza. |
 | Debate | 2.336 combinaciones por comisión, dificultad elegible (Básico, Intermedio, Avanzado), IDs estables y control de preguntas ya usadas por sesión. |
@@ -112,6 +112,7 @@ DebOnu/
 ├─ data/
 │  ├─ countries/              35 dossieres en 4 JSON
 │  ├─ knowledge/              guías editoriales de IA, empleo y debate
+│  ├─ organizations.json      organizaciones por país: qué hacen y enlace oficial
 │  └─ topics.json             briefing UNESCO/ECOSOC
 ├─ db/schema.sql              esquema PostgreSQL (incluye tablas de Fase 1)
 ├─ docs/                      arquitectura, UX, IA responsable, roadmap

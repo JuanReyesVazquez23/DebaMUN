@@ -21,7 +21,7 @@ if (!existsSync(source)) {
 rmSync(target, { recursive: true, force: true });
 mkdirSync(target, { recursive: true });
 
-for (const file of ['topics.json']) {
+for (const file of ['topics.json', 'organizations.json']) {
   cpSync(join(source, file), join(target, file));
 }
 

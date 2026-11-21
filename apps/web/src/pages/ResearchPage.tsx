@@ -9,6 +9,7 @@ import {
   Send,
   ShieldQuestion,
   Sparkles,
+  Trash2,
 } from 'lucide-react';
 import { LoadingBlock } from '../components/StateBlocks';
 import { AnswerText } from '../components/AnswerText';
@@ -40,6 +41,7 @@ export function ResearchPage() {
   const [question, setQuestion] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
+  const [clearing, setClearing] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const endRef = useRef<HTMLDivElement>(null);
@@ -105,6 +107,27 @@ export function ResearchPage() {
     }
   }
 
+  async function clearConversation() {
+    if (!profile || busy || clearing || messages.length === 0) return;
+    const confirmed = window.confirm(
+      '¿Borrar toda la conversación con el asistente? Esta acción no se puede deshacer.',
+    );
+    if (!confirmed) return;
+
+    setClearing(true);
+    setError('');
+    try {
+      await api.clearResearchHistory(profile.delegate.id);
+      setMessages([]);
+      setSuggestions([]);
+    } catch (cause) {
+      setError(cause instanceof Error ? cause.message : 'No pude borrar la conversación.');
+    } finally {
+      setClearing(false);
+      inputRef.current?.focus();
+    }
+  }
+
   return (
     <div className="research">
       <header className="page__head">
@@ -128,6 +151,23 @@ export function ResearchPage() {
 
       <div className="research__grid">
         <section className="chat" aria-label="Conversación con el asistente">
+          <div className="chat__toolbar">
+            <span className="muted small">
+              {messages.length === 0
+                ? 'Sin mensajes todavía'
+                : `${messages.length} ${messages.length === 1 ? 'mensaje' : 'mensajes'} en esta conversación`}
+            </span>
+            <button
+              type="button"
+              className="button button--ghost button--tiny"
+              onClick={() => void clearConversation()}
+              disabled={messages.length === 0 || busy || clearing}
+            >
+              <Trash2 aria-hidden="true" size={14} />
+              {clearing ? 'Borrando…' : 'Limpiar conversación'}
+            </button>
+          </div>
+
           <div className="chat__scroll">
             {loading ? <LoadingBlock label="Recuperando tu historial…" /> : null}
 

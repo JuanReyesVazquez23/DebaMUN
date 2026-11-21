@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Query } from '@nestjs/common';
 import { AskResearchDto } from './research.dto.js';
 import { ResearchService } from './research.service.js';
 
@@ -19,5 +19,10 @@ export class ResearchController {
   @Get('history/:delegateId')
   history(@Param('delegateId') delegateId: string) {
     return this.research.getHistory(delegateId);
+  }
+
+  @Delete('history/:delegateId')
+  clearHistory(@Param('delegateId') delegateId: string) {
+    return this.research.clearHistory(delegateId);
   }
 }
