@@ -9,6 +9,8 @@ DebaMun no es "otro chatbot". Es una mesa de preparación: te asigna un país, t
 editorial con fuentes, responde preguntas con citas verificables y entrena tu debate con una rúbrica
 transparente en **Diálogo, Argumentos, Coherencia y Resolución**.
 
+**Demo:** <https://debamun.vercel.app>
+
 ---
 
 ## Qué incluye
@@ -115,7 +117,7 @@ DebOnu/
 │  ├─ organizations.json      organizaciones por país: qué hacen y enlace oficial
 │  └─ topics.json             briefing UNESCO/ECOSOC
 ├─ db/schema.sql              esquema PostgreSQL (incluye tablas de Fase 1)
-├─ docs/                      arquitectura, UX, IA responsable, roadmap
+├─ docs/                      arquitectura, despliegue, SEO, UX, IA responsable, roadmap
 └─ scripts/                   setup de base y preparación del deploy
 ```
 
@@ -233,6 +235,7 @@ Más detalle en [`docs/responsible-ai/RAI-ADR.md`](docs/responsible-ai/RAI-ADR.m
 
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — componentes, flujos, modelo de datos y decisiones.
 - [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — despliegue en Vercel, Neon y variables de entorno.
+- [`docs/SEO.md`](docs/SEO.md) — sitemap, robots y verificación en Google Search Console.
 - [`docs/API.md`](docs/API.md) — endpoints, cuerpos y errores.
 - [`docs/ux/UX-DECISIONS.md`](docs/ux/UX-DECISIONS.md) — flujo, accesibilidad y microcopy.
 - [`docs/responsible-ai/RAI-ADR.md`](docs/responsible-ai/RAI-ADR.md) — decisiones de IA responsable.

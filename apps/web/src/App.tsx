@@ -1,8 +1,10 @@
 import type { ReactNode } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { AppShell } from './components/AppShell';
 import { LoadingBlock } from './components/StateBlocks';
 import { ColorSchemeProvider } from './lib/color-scheme';
+import { applyPageMeta, canonicalForPath, metaForPath } from './lib/seo';
 import { SessionProvider, useSession } from './lib/session';
 import { CommitteePage } from './pages/CommitteePage';
 import { CountryPage } from './pages/CountryPage';
@@ -13,6 +15,18 @@ import { GradePage } from './pages/GradePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { ResearchPage } from './pages/ResearchPage';
 import { WelcomePage } from './pages/WelcomePage';
+
+function RouteMeta() {
+  const { pathname } = useLocation();
+  const meta = metaForPath(pathname);
+  const canonical = canonicalForPath(pathname);
+
+  useEffect(() => {
+    applyPageMeta(meta, canonical);
+  }, [meta, canonical]);
+
+  return null;
+}
 
 function HomeRedirect() {
   const { status, profile } = useSession();
@@ -38,6 +52,7 @@ export function AppRoutes() {
   return (
     <ColorSchemeProvider>
       <SessionProvider>
+        <RouteMeta />
         <Routes>
           <Route path="/" element={<HomeRedirect />} />
           <Route

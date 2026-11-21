@@ -62,7 +62,7 @@ Debe terminar con `Esquema aplicado: 10 tablas en public.`
 | `DATABASE_URL` | Cadena de Neon con `?sslmode=require` |
 | `DATABASE_SSL` | `true` |
 | `DATABASE_POOL_MAX` | `3` (pocas conexiones por instancia) |
-| `WEB_ORIGIN` | `https://<tu-web>.vercel.app` (varios orígenes separados por coma) |
+| `WEB_ORIGIN` | `https://debamun.vercel.app` (varios orígenes separados por coma) |
 | `NODE_ENV` | `production` |
 | `REDIS_URL` | Vacío, o la URL `rediss://...` de Upstash (solo caché compartida) |
 | `JOBS_WORKER` | Vacío en Vercel: BullMQ necesita un worker persistente |
@@ -127,7 +127,11 @@ Si `database` dice `memory`, la API arrancó sin `DATABASE_URL` válida.
 VITE_API_URL=https://<api>.vercel.app/api
 ```
 
-Incluye `/api` al final. Vite la incrusta en el build: si la cambias, hay que **redeployar**.
+Incluye `/api` al final de `VITE_API_URL`. El dominio público ya está en
+`apps/web/.env.production` (`https://debamun.vercel.app`); define `VITE_SITE_URL` en Vercel solo si
+cambias de dominio. La verificación de Search Console viaja como archivo en `apps/web/public/`, así
+que no necesita variables. Vite incrusta los valores en el build: si los cambias, hay que
+**redeployar**. El proceso completo está en [`docs/SEO.md`](./SEO.md).
 
 5. Deploy. `apps/web/vercel.json` ya aporta:
    - Rewrite de SPA (`/* → /index.html`) para que `/app/debate` no devuelva 404 al recargar.
@@ -153,6 +157,10 @@ Neon → API → copiar URL de API → Web → copiar URL de Web → WEB_ORIGIN 
 4. Envía una intervención y comprueba que se guarda (dashboard con `turns > 0`).
 5. Haz una pregunta al asistente: debe citar fuentes del corpus local.
 6. Prueba las dos comisiones: **UNESCO** y **ECOSOC**.
+7. SEO: `https://debamun.vercel.app/robots.txt` y
+   `https://debamun.vercel.app/sitemap.xml` responden con su contenido (no con el HTML de la SPA).
+   Después, verifica la propiedad en Search Console y envía el sitemap:
+   [`docs/SEO.md`](./SEO.md).
 
 ---
 
@@ -176,6 +184,7 @@ Neon → API → copiar URL de API → Web → copiar URL de Web → WEB_ORIGIN 
 | `No se encontró el corpus` | Build sin copiar `data/` | Revisa que el Build Command ejecute `prepare-api-deploy.mjs`. |
 | Timeout 504 | Cold start o consulta pesada | Reintenta; sube el timeout en **Settings → Functions** del proyecto API. |
 | La web llama a `localhost:4000` | `VITE_API_URL` no definida en el build | Defínela y redeploya la web. |
+| `/sitemap.xml` no existe o devuelve la SPA | `VITE_SITE_URL` vacía en el build | Defínela con el dominio final y redeploya. |
 
 ## 8. Alternativa: API fuera de Vercel
 
