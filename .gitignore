@@ -4,8 +4,6 @@ build/
 coverage/
 .vite/
 *.log
-.env
-.env.local
 .env.*.local
 !.env.example
 apps/api/.env
@@ -19,3 +17,4 @@ apps/api/data/
 temp/
 *.tsbuildinfo
 .DS_Store
+config.bat

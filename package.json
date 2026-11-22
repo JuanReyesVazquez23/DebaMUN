@@ -2,18 +2,20 @@
   "name": "debamun",
   "version": "0.1.0",
   "private": true,
-  "description": "DebaMun - plataforma de investigación y entrenamiento para delegados de modelos de Naciones Unidas",
+  "description": "DebaMun - plataforma de investigaci\u00f3n y entrenamiento para delegados de modelos de Naciones Unidas",
   "scripts": {
-    "dev": "concurrently -n api,web -c cyan,magenta \"npm:dev:api\" \"npm:dev:web\"",
-    "dev:api": "npm --prefix apps/api run start:dev",
-    "dev:web": "npm --prefix apps/web run dev",
-    "build": "npm --prefix apps/api run build && npm --prefix apps/web run build",
+    "dev": "node init && concurrently -n api,web -c cyan,magenta \"npm:dev:api\" \"npm:dev:web\"",
+    "dev:api": "node init && npm --prefix apps/api run start:dev",
+    "dev:web": "node init && npm --prefix apps/web run dev",
+    "build": "node init && npm --prefix apps/api run build && npm --prefix apps/web run build",
     "test": "npm --prefix apps/api run test && npm --prefix apps/web run test",
     "lint": "npm --prefix apps/api run lint && npm --prefix apps/web run lint",
     "db:setup": "node scripts/setup-db.mjs",
     "deploy:prepare": "node scripts/prepare-api-deploy.mjs"
   },
   "devDependencies": {
-    "concurrently": "^9.2.0"
+    "concurrently": "^9.2.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2"
   }
 }

@@ -52,6 +52,36 @@
       "El país tiene más de 95.000 lagos.",
       "Estocolmo es conocida como la 'Venecia del Norte' por sus islas y canales."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Suecia",
+          "detail": "Marco del Gobierno sueco para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Suecia", "url": "https://www.government.se/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -111,6 +141,36 @@
       "Oslo es la ciudad más poblada y capital del país.",
       "El país tiene más de 450.000 lagos."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Noruega",
+          "detail": "Marco del Gobierno noruego para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades sami."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Noruega", "url": "https://www.regjeringen.no/en/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -170,6 +230,36 @@
       "Helsinki es la capital y ciudad más poblada.",
       "El país tiene más de 40 parques nacionales."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Finlandia",
+          "detail": "Marco del Gobierno finlandés para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Finlandia", "url": "https://valtioneuvosto.fi/en/", "kind": "official" },
       { "label": "Agencia Nacional de Educación", "url": "https://www.oph.fi/en", "kind": "official" },
@@ -229,6 +319,36 @@
       "El país tiene más de 130 volcanes, muchos de ellos activos.",
       "Reikiavik está a solo unos kilómetros del Círculo Polar Ártico."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Islandia",
+          "detail": "Marco del Gobierno islandés para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y gobierno digital",
+          "detail": "Desarrollar asistentes de IA para centros educativos basados en el modelo e-Estonia, con identidad digital, interoperabilidad y protección de datos de menores."
+        },
+        {
+          "title": "Microcredenciales en IA para ciberseguridad y startups",
+          "detail": "Certificar competencias digitales vinculadas a ciberseguridad y empresas tecnológicas, con alianzas con el ecosistema de startups de Tallin."
+        },
+        {
+          "title": "Observatorio de IA y soberanía de datos",
+          "detail": "Seguimiento del uso ético de IA en educación, con énfasis en soberanía digital, ciberseguridad y cooperación transfronteriza en el Báltico."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Islandia", "url": "https://www.government.is/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -288,6 +408,36 @@
       "La universidad es gratuita para el alumnado danés y de la Unión Europea.",
       "El puente de Øresund conecta Copenhague con la ciudad sueca de Malmö."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Dinamarca",
+          "detail": "Marco del Gobierno danés para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Dinamarca", "url": "https://www.regeringen.dk/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -347,6 +497,36 @@
       "El país tiene más de 9.000 lagos y 23 parques nacionales.",
       "Varsovia es la capital y ciudad más poblada de Polonia."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Polonia",
+          "detail": "Marco del Gobierno polaco para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Polonia", "url": "https://www.gov.pl/", "kind": "official" },
       { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
@@ -406,6 +586,36 @@
       "Tallin es la capital y ciudad más poblada del país.",
       "El país tiene más de 2.200 islas e islotes en el mar Báltico."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Estonia",
+          "detail": "Marco del Gobierno estonio para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Estonia", "url": "https://www.valitsus.ee/en", "kind": "official" },
       { "label": "e-Estonia", "url": "https://e-estonia.com/", "kind": "official" },

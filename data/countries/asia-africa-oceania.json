@@ -52,6 +52,36 @@
       "Japón es uno de los principales exportadores de vehículos y tecnología del mundo.",
       "El monte Fuji es el pico más alto del país con 3.776 metros."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Japón",
+          "detail": "Marco del Gobierno japonés para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de robótica, manufactura y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y robótica industrial",
+          "detail": "Desarrollar asistentes de IA para centros de formación técnica vinculados a la robótica y la manufactura, con protección de datos y evaluación de impacto en competencias digitales."
+        },
+        {
+          "title": "Microcredenciales en IA para recualificación de trabajadores mayores",
+          "detail": "Certificar competencias digitales vinculadas a la recualificación laboral, con enfoque en la sociedad envejecida y la integración de población mayor en el empleo."
+        },
+        {
+          "title": "Observatorio de IA y derechos de autor educativos",
+          "detail": "Seguimiento del uso ético de IA en educación con énfasis en derechos de autor, propiedad intelectual y uso responsable de contenidos generados."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Japón", "url": "https://www.japan.go.jp/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -111,6 +141,36 @@
       "Seúl es una de las ciudades más conectadas del mundo con internet de alta velocidad.",
       "El país tiene más de 3.000 islas."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Corea del Sur",
+          "detail": "Marco del Gobierno surcoreano para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de semiconductores, tecnología y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en libros de texto digitales y salud mental",
+          "detail": "Evaluar asistentes de IA en libros de texto digitales con enfoque en bienestar estudiantil y reducción de la sobrecarga académica, con protección de datos de menores."
+        },
+        {
+          "title": "Microcredenciales en IA para semiconductores y tecnología",
+          "detail": "Certificar competencias digitales vinculadas a la industria de semiconductores y edtech, con alianzas con empresas tecnológicas y centros de formación."
+        },
+        {
+          "title": "Observatorio de IA y bienestar estudiantil",
+          "detail": "Seguimiento del uso ético de IA en educación con enfoque en salud mental, presión académica y equidad, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Corea del Sur", "url": "https://www.korea.net/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -170,6 +230,36 @@
       "El país tiene aproximadamente 730 kilómetros cuadrados de superficie.",
       "Singapur es uno de los principales centros financieros de Asia."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Singapur",
+          "detail": "Marco del Gobierno de Singapur para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa de SkillsFuture para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de fintech, tecnología y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y Smart Nation",
+          "detail": "Desarrollar asistentes de IA para centros educativos en el marco de Smart Nation, con protección de datos y evaluación de impacto en competencias digitales."
+        },
+        {
+          "title": "Microcredenciales en IA para fintech y tecnología",
+          "detail": "Certificar competencias digitales vinculadas a fintech y servicios digitales, a través de SkillsFuture y alianzas con el sector tecnológico."
+        },
+        {
+          "title": "Observatorio de IA y multilingüismo educativo",
+          "detail": "Seguimiento del uso ético de IA en educación con énfasis en inglés, malayo, mandarín y tamil, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Singapur", "url": "https://www.gov.sg/", "kind": "official" },
       { "label": "SkillsFuture", "url": "https://www.skillsfuture.gov.sg/", "kind": "official" },
@@ -229,6 +319,36 @@
       "El país tiene más de 1.400 millones de habitantes.",
       "Shanghái es una de las ciudades más pobladas y con mayor rascacielos del mundo."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de China",
+          "detail": "Marco del Gobierno chino para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de tecnología, manufactura y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y diversidad étnica",
+          "detail": "Desarrollar asistentes de IA para centros educativos con énfasis en lenguas regionales y grupos étnicos, con protección de datos y evaluación de impacto en equidad."
+        },
+        {
+          "title": "Microcredenciales en IA para manufactura y tecnología",
+          "detail": "Certificar competencias digitales vinculadas a la industria manufacturera y tecnológica, con centros de formación profesional y cooperación Sur-Sur."
+        },
+        {
+          "title": "Observatorio de IA y regulación de contenido generado",
+          "detail": "Seguimiento del uso ético de IA en educación con énfasis en etiquetado de contenido generado, protección de menores y soberanía digital."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de China", "url": "https://english.www.gov.cn/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -288,6 +408,36 @@
       "El país tiene más de 1.400 millones de habitantes.",
       "Mumbai es uno de los centros financieros más importantes de Asia."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de India",
+          "detail": "Marco del Gobierno indio para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de tecnología, servicios y manufactura."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y multilingüismo",
+          "detail": "Desarrollar asistentes de IA en hindi, inglés y lenguas programadas para escuelas rurales, con protección de datos y evaluación de impacto en equidad."
+        },
+        {
+          "title": "Microcredenciales en IA para empleos digitales y rurales",
+          "detail": "Certificar competencias digitales vinculadas a India Stack y empleo informal, con formación en zonas rurales y programas de habilidades para mujeres jóvenes."
+        },
+        {
+          "title": "Observatorio de IA y brecha de género en STEM",
+          "detail": "Seguimiento del uso ético de IA en educación con énfasis en inclusión de mujeres en ciencia y tecnología, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de India", "url": "https://www.india.gov.in/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -347,6 +497,36 @@
       "El país tiene 11 lenguas oficiales reconocidas en su Constitución.",
       "Ciudad del Cabo alberga la Table Mountain, una de las maravillas naturales del mundo."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Sudáfrica",
+          "detail": "Marco del Gobierno sudafricano para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, minería y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y justicia histórica",
+          "detail": "Desarrollar asistentes de IA para centros educativos con énfasis en 11 lenguas oficiales y descolonización del conocimiento, con protección de datos y participación de comunidades."
+        },
+        {
+          "title": "Microcredenciales en IA para empleo juvenil y minería",
+          "detail": "Certificar competencias digitales vinculadas a minería y servicios digitales, con formación profesional y alianzas con el sector privado en zonas de alto desempleo juvenil."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa post-apartheid",
+          "detail": "Seguimiento del uso ético de IA en educación con enfoque en equidad racial y de clase, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Sudáfrica", "url": "https://www.gov.za/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -406,6 +586,36 @@
       "El país tiene más de 25.000 kilómetros de costa.",
       "Canberra fue elegida como capital para resolver la disputa entre Sídney y Melbourne."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Australia",
+          "detail": "Marco del Gobierno australiano para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades indígenas."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de recursos críticos, energía y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y comunidades remotas e indígenas",
+          "detail": "Desarrollar asistentes de IA para escuelas en zonas remotas y comunidades indígenas, con conectividad satelital, protección de datos y respeto a lenguas originarias."
+        },
+        {
+          "title": "Microcredenciales en IA para recursos críticos y energía",
+          "detail": "Certificar competencias digitales vinculadas a minería y energía renovable, con formación profesional y empleo en zonas rurales y regionales."
+        },
+        {
+          "title": "Observatorio de IA y reconciliación educativa",
+          "detail": "Seguimiento del uso ético de IA en educación con enfoque en derechos indígenas y equidad, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Australia", "url": "https://www.australia.gov.au/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -465,6 +675,36 @@
       "El país tiene más de 2 millones de ríos.",
       "San Petersburgo es la segunda ciudad más importante y antigua capital imperial."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Rusia",
+          "detail": "Marco del Gobierno ruso para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, ciencia y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y soberanía digital",
+          "detail": "Desarrollar asistentes de IA nacionales para centros educativos, con protección de datos y modelos propios, reduciendo dependencia de infraestructura extranjera."
+        },
+        {
+          "title": "Microcredenciales en IA para ciencia y energía",
+          "detail": "Certificar competencias digitales vinculadas a ciencia, energía y sectores estratégicos, con formación profesional y alianzas BRICS."
+        },
+        {
+          "title": "Observatorio de IA y no injerencia",
+          "detail": "Seguimiento del uso ético de IA en educación con énfasis en soberanía nacional y cooperación multilateral sin condicionalidades políticas."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Rusia", "url": "http://government.ru/en/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },

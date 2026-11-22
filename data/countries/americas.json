@@ -54,6 +54,36 @@
       "Las universidades públicas canadienses tienen costos significativamente menores que en Estados Unidos.",
       "Canadá tiene uno de los sistemas de inmigración más abiertos para trabajadores calificados."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Pan-canadiense de IA",
+          "detail": "Estrategia nacional de IA con institutos en Montreal, Toronto y Edmonton, centrada en investigación, comercialización y estándares responsables."
+        },
+        {
+          "title": "Agenda de competencias digitales del futuro",
+          "detail": "Programa de formación en habilidades digitales y IA para estudiantes y trabajadores, con énfasis en equidad regional e inclusión de pueblos indígenas."
+        },
+        {
+          "title": "Plan de vivienda y educación para jóvenes",
+          "detail": "Iniciativa federal para ampliar el acceso a vivienda asequible y formación postsecundaria, con incentivos a provincias y territorios."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Red nacional de sandbox educativos de IA",
+          "detail": "Probar asistentes de IA en aulas de distintas provincias durante 24 meses, con protección de datos de menores y evaluación externa de resultados de aprendizaje."
+        },
+        {
+          "title": "Fondo de conectividad rural y educativa",
+          "detail": "Expandir banda ancha y dispositivos en escuelas remotas y comunidades indígenas, con metas medibles de cobertura y continuidad educativa."
+        },
+        {
+          "title": "Microcredenciales en IA para trabajadores",
+          "detail": "Certificar competencias en IA y datos a través de colegios y politécnicos, vinculadas a demanda laboral de sectores prioritarios."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Canadá", "url": "https://www.canada.ca/", "kind": "official" },
       { "label": "Estrategia Pan-canadiense de IA", "url": "https://ised-isde.canada.ca/site/pan-canadian-artificial-intelligence-strategy/en", "kind": "official" },
@@ -114,6 +144,36 @@
       "Colombia tiene una política de educación rural y clases campesinas con alcance nacional.",
       "El país ha implementado programas de alfabetización digital en zonas rurales."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Plan Nacional de Desarrollo 2022-2026",
+          "detail": "Estrategia del Gobierno de Colombia centrada en paz con justicia social, derechos humanos, ordenamiento territorial y producción para la vida, con eje en educación y empleo."
+        },
+        {
+          "title": "Estrategia Nacional de Inteligencia Artificial",
+          "detail": "Hoja de ruta del Ministerio TIC para promover el desarrollo ético de la IA, fortalecer la infraestructura de datos y fomentar la adopción en sectores productivos y educativos."
+        },
+        {
+          "title": "Conectividad para el Aprendizaje",
+          "detail": "Programa de conectividad escolar y alfabetización digital en zonas rurales, con énfasis en reducir la brecha urbano-rural y dotar a docentes de competencias digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en educación rural",
+          "detail": "Implementar asistentes de IA en centros educativos rurales durante 24 meses, con formación docente, protección de datos de estudiantes y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias digitales y técnicas a través del SENA y aliados, vinculadas a prácticas en turismo, agroindustria y servicios digitales."
+        },
+        {
+          "title": "Observatorio de IA y derechos humanos",
+          "detail": "Crear un mecanismo de seguimiento del uso ético de la IA en educación y empleo, con participación de sociedad civil, academia y el Estado."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Colombia", "url": "https://www.gov.co/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -172,6 +232,36 @@
       "El Salvador tiene volcanes activos, incluido el volcán de San Salvador.",
       "La tasa de alfabetización de El Salvador es superior al 88 %."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Agenda Digital 2030",
+          "detail": "Estrategia de conectividad, inclusión financiera y servicios públicos en línea, con énfasis en bitcoin y tecnología blockchain como pilares de la economía digital."
+        },
+        {
+          "title": "Plan de educación técnica y digital",
+          "detail": "Programa de formación en competencias digitales y técnicas para jóvenes, con énfasis en inglés, programación y empleos remotos, vinculado a zonas de desarrollo económico."
+        },
+        {
+          "title": "Conectividad rural y escuelas digitales",
+          "detail": "Expandir internet y dispositivos en centros educativos rurales, con retos de electricidad y mantenimiento sostenible."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Sandbox de IA en escuelas públicas",
+          "detail": "Probar herramientas de IA generativa en centros educativos urbanos y rurales durante 18 meses, con formación docente y protección de datos de menores."
+        },
+        {
+          "title": "Becas digitales para jóvenes",
+          "detail": "Certificar competencias en IA, datos y desarrollo de software a través de alianzas con el sector privado y cooperación internacional."
+        },
+        {
+          "title": "Observatorio de inclusión digital",
+          "detail": "Monitorear brechas de acceso a tecnología y uso de IA en educación y empleo, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de El Salvador", "url": "https://www.presidencia.gob.sv/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -231,6 +321,36 @@
       "Brasil tiene la mayor población de ascendencia africana fuera de África.",
       "El país tiene una de las mayores biodiversidades del mundo con más de 50.000 especies de plantas."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Brasileña de Inteligencia Artificial",
+          "detail": "Eje del Gobierno Federal para fomentar IA responsable, investigación aplicada y soberanía tecnológica, con enfoque en salud, agricultura y educación pública."
+        },
+        {
+          "title": "Conectividad Escolar y EducaCidades",
+          "detail": "Programa de conectividad a banda ancha y dispositivos en escuelas públicas, con énfasis en zonas rurales, amazónicas y comunidades tradicionales."
+        },
+        {
+          "title": "Programa de formación técnica y empleo juvenil",
+          "detail": "Iniciativa del Ministerio del Trabajo para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía renovable, agroindustria y servicios."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Sandbox de IA educativa en redes públicas",
+          "detail": "Probar herramientas de IA en escuelas de diferentes estados durante 24 meses, con protección de datos de menores (LGPD) y evaluación de impacto en alfabetización digital."
+        },
+        {
+          "title": "Microcredenciales en IA para docentes",
+          "detail": "Certificar competencias en IA y datos para profesores de educación básica y media, con reconocimiento del MEC y alianzas con universidades federales."
+        },
+        {
+          "title": "Observatorio de IA y desigualdad educativa",
+          "detail": "Monitorear brechas de acceso a tecnología y uso de IA en escuelas públicas y privadas, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Brasil", "url": "https://www.gov.br/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -290,6 +410,36 @@
       "México tiene uno de los sistemas de transporte público más extensos de América Latina.",
       "El país tiene más de 180 sitios arqueológicos abiertos al público."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de Inteligencia Artificial",
+          "detail": "Hoja de ruta para el uso ético y responsable de la IA en servicios públicos, educación y salud, con énfasis en soberanía digital y protección de datos personales."
+        },
+        {
+          "title": "Conectividad para la Educación",
+          "detail": "Programa de internet gratuito y dispositivos en escuelas públicas, con énfasis en zonas rurales, indígenas y de alta marginación."
+        },
+        {
+          "title": "Jóvenes Construyendo el Futuro",
+          "detail": "Programa de capacitación en el trabajo para jóvenes que no estudian ni trabajan, con enfoque en habilidades digitales y técnicas para el empleo formal."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas secundarias",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos y evaluación de impacto en competencias digitales."
+        },
+        {
+          "title": "Microcredenciales en IA para jóvenes",
+          "detail": "Certificar competencias en IA, datos y desarrollo de software a través de alianzas con el sector privado, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y educación",
+          "detail": "Monitorear el uso ético de la IA en escuelas y centros de formación, con participación de universidades, sociedad civil y autoridades educativas."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de México", "url": "https://www.gob.mx/", "kind": "official" },
       { "label": "INEGI", "url": "https://www.inegi.org.mx/", "kind": "official" },
@@ -351,6 +501,36 @@
       "El Estadio Nacional de ESMA funciona hoy como Espacio Memoria y Derechos Humanos.",
       "Las Abuelas de Plaza de Mayo han recuperado más de 130 nietos apropiados durante la dictadura."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Plan Nacional de Educación Digital",
+          "detail": "Estrategia del Ministerio de Educación para incorporar tecnologías digitales e IA en las aulas, con formación docente y conectividad en escuelas rurales y urbanas."
+        },
+        {
+          "title": "Estrategia Nacional de IA y Datos",
+          "detail": "Iniciativa para desarrollar capacidad nacional en inteligencia artificial, con énfasis en salud, agricultura y administración pública, y protección de datos personales."
+        },
+        {
+          "title": "Programa de empleo juvenil y formación técnica",
+          "detail": "Iniciativa para capacitar a jóvenes en habilidades digitales y técnicas, vinculada a sectores de energía, agroindustria y servicios del conocimiento."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Sandbox de IA educativa federal",
+          "detail": "Probar asistentes de IA en escuelas de distintas provincias durante 24 meses, con protección de datos de menores y evaluación externa de resultados de aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de institutos técnicos y universidades públicas, vinculadas a demanda laboral de sectores estratégicos."
+        },
+        {
+          "title": "Observatorio de IA y derechos humanos",
+          "detail": "Crear un mecanismo de seguimiento del uso ético de la IA en educación y empleo, con participación de universidades, sociedad civil y el Estado."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Argentina", "url": "https://www.argentina.gob.ar/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -410,6 +590,36 @@
       "Chile tiene más de 6.000 kilómetros de costa a lo largo del Pacífico.",
       "El país es un destino mundial para la observación astronómica por sus cielos despejados."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de Inteligencia Artificial",
+          "detail": "Hoja de ruta para el uso ético y responsable de la IA en educación, salud y servicios públicos, con énfasis en soberanía digital y protección de datos personales."
+        },
+        {
+          "title": "Conectividad para la Educación 2030",
+          "detail": "Programa de internet y dispositivos en escuelas públicas, con énfasis en zonas rurales, extremas y comunidades indígenas."
+        },
+        {
+          "title": "Programa de formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía renovable, litio y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Laboratorios de IA en escuelas de zonas extremas",
+          "detail": "Instalar conectividad y asistentes de IA en establecimientos de regiones alejadas y comunidades indígenas, con energía solar y protección de datos de menores."
+        },
+        {
+          "title": "Microcredenciales en IA para la industria del litio y el cobre",
+          "detail": "Certificar competencias digitales y de datos vinculadas a la cadena de valor de minerales críticos, con alianzas con centros de formación técnica y empresas mineras."
+        },
+        {
+          "title": "Observatorio de IA y educación para la sostenibilidad",
+          "detail": "Monitorear el uso ético de IA en educación ambiental y transición energética, con participación de universidades y centros de investigación en astronomía y cambio climático."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Chile", "url": "https://www.gob.cl/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -469,6 +679,36 @@
       "Perú tiene más de 5.000 variedades de papas nativas registradas.",
       "El país tiene una de las gastronomías más reconocidas de América Latina."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de Transformación Digital",
+          "detail": "Hoja de ruta para la conectividad, servicios públicos digitales y competencias digitales, con énfasis en reducir brechas rurales y urbanas."
+        },
+        {
+          "title": "Plan de educación técnica y empleo juvenil",
+          "detail": "Programa de certificación en habilidades digitales y técnicas para jóvenes, vinculado a sectores de minería, agricultura y servicios."
+        },
+        {
+          "title": "Conectividad educativa rural",
+          "detail": "Expandir internet y dispositivos en escuelas de zonas rurales y de difícil acceso, con metas de continuidad educativa."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA bilingüe en educación intercultural",
+          "detail": "Desarrollar asistentes de IA en quechua y aimara para escuelas rurales de la sierra y la selva, con participación de comunidades indígenas y protección de conocimientos ancestrales."
+        },
+        {
+          "title": "Microcredenciales en IA para minería y agricultura",
+          "detail": "Certificar competencias digitales vinculadas a la cadena de valor de minerales y cultivos nativos, con alianzas con institutos técnicos y cooperativas agrícolas."
+        },
+        {
+          "title": "Observatorio de IA y patrimonio cultural",
+          "detail": "Monitorear el uso ético de IA en la promoción de sitios arqueológicos y gastronomía, con participación de universidades y comunidades locales."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Perú", "url": "https://www.gob.pe/", "kind": "official" },
       { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
@@ -526,6 +766,36 @@
       "El Chaco paraguayo abarca más del 60% del territorio nacional con escasa densidad poblacional.",
       "Asunción es una de las capitales más antiguas de Sudamérica, fundada en 1537."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Agenda Digital Nacional",
+          "detail": "Estrategia de conectividad, servicios públicos en línea y alfabetización digital, con énfasis en zonas rurales y educación bilingüe español-guaraní."
+        },
+        {
+          "title": "Plan de educación técnica y empleo rural",
+          "detail": "Programa de formación en competencias digitales y técnicas para jóvenes rurales, vinculado a agricultura, energía hidroeléctrica y servicios."
+        },
+        {
+          "title": "Conectividad escolar con energía solar",
+          "detail": "Expandir internet y dispositivos en escuelas de zonas vulnerables, con financiamiento para conexión satelital y electricidad solar."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Asistentes de IA en español y guaraní",
+          "detail": "Desarrollar herramientas de IA en ambas lenguas oficiales para escuelas rurales y del Chaco, con formación docente bilingüe y protección de datos de estudiantes."
+        },
+        {
+          "title": "Microcredenciales en IA para agricultura y energía hidroeléctrica",
+          "detail": "Certificar competencias digitales vinculadas a la producción agrícola y al sector energético, con alianzas con Itaipú y cooperativas del campo."
+        },
+        {
+          "title": "Observatorio de IA y derechos de pueblos indígenas",
+          "detail": "Seguimiento del uso ético de IA en educación intercultural y comunidades guaraníes, con participación de organizaciones indígenas y academia."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Paraguay", "url": "https://www.paraguay.gov.py/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },

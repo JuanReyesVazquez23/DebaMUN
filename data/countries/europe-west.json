@@ -52,6 +52,36 @@
       "Suiza tiene una de las tasas de desempleo juvenil más bajas de Europa.",
       "El país tiene más de 1.500 lagos y el 6 % de su superficie está cubierta por glaciares."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA",
+          "detail": "Marco regulatorio basado en riesgo, transparencia y protección de datos, con énfasis en investigación aplicada y estándares verificables."
+        },
+        {
+          "title": "Formación profesional dual y digitalización",
+          "detail": "Evolución del sistema de aprendizaje dual para incluir competencias digitales e IA, con certificación sectorial y apoyo a PYMES."
+        },
+        {
+          "title": "Protección de datos y ciberseguridad",
+          "detail": "Implementación de la ley federal de protección de datos revisada y fortalecimiento de la ciberseguridad en infraestructura crítica y servicios públicos."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y patrimonio cultural",
+          "detail": "Desarrollar asistentes de IA para centros de formación en artes, diseño y turismo, con protección de datos y valorización del patrimonio cultural italiano."
+        },
+        {
+          "title": "Microcredenciales en IA para manufactura y diseño",
+          "detail": "Certificar competencias digitales vinculadas a las pymes manufactureras y al sector del diseño, con centros de formación profesional y cámaras de comercio."
+        },
+        {
+          "title": "Observatorio de IA y brecha norte-sur educativa",
+          "detail": "Seguimiento del uso ético de IA en escuelas del sur de Italia y zonas de mayor desempleo juvenil, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Administración Federal Suiza", "url": "https://www.admin.ch/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -112,10 +142,40 @@
       "El país tiene más de 90.000 kilómetros cuadrados de superficie.",
       "El famoso Lago Ness y el monstruo son parte de su patrimonio cultural."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia de habilidades digitales de Escocia",
+          "detail": "Programa del Gobierno escocés para formar a estudiantes y trabajadores en competencias digitales, IA y datos, con énfasis en inclusión y zonas rurales."
+        },
+        {
+          "title": "Conectividad para todas las escuelas",
+          "detail": "Iniciativa de banda ancha y dispositivos en centros educativos, incluidas islas y zonas remotas, con apoyo del Gobierno británico y fondos locales."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa de Skills Development Scotland para certificar competencias digitales y técnicas en jóvenes, vinculadas a empleos en energía renovable y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en escuelas de islas y zonas rurales",
+          "detail": "Implementar asistentes de IA en centros educativos de las Highlands e islas durante 18 meses, con conectividad por satélite, formación docente y protección de datos de menores."
+        },
+        {
+          "title": "Microcredenciales en IA para energía renovable",
+          "detail": "Certificar competencias digitales vinculadas a la transición energética (eólica, hidrógeno), con Skills Development Scotland y empleos locales en zonas rurales."
+        },
+        {
+          "title": "Observatorio de IA y bienestar estudiantil",
+          "detail": "Seguimiento del uso de IA en educación con enfoque en salud mental y tiempo frente a pantallas, con participación de universidades y sindicatos."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Escocia", "url": "https://www.gov.scot/", "kind": "official" },
       { "label": "Education Scotland", "url": "https://education.gov.scot/", "kind": "official" },
-      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
+      { "label": "Skills Development Scotland", "url": "https://www.skillsdevelopmentscotland.co.uk/", "kind": "official" }
     ]
   },
   {
@@ -171,6 +231,36 @@
       "Berlín es la capital y ciudad más poblada del país.",
       "Alemania tiene una de las industrias manufactureras más avanzadas del mundo."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia de IA de Alemania",
+          "detail": "Marco del Gobierno Federal para fomentar IA confiable, investigación aplicada y soberanía tecnológica, alineada con el AI Act de la UE."
+        },
+        {
+          "title": "Pacto por las competencias digitales",
+          "detail": "Iniciativa para formar a estudiantes y trabajadores en IA, datos y tecnologías digitales, con énfasis en PYMES y sectores industriales."
+        },
+        {
+          "title": "Educación dual digital",
+          "detail": "Evolución del sistema de aprendizaje dual para incluir competencias en IA y datos, con certificación sectorial y apoyo a regiones."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Sandbox de IA educativa en Länder",
+          "detail": "Probar herramientas de IA en escuelas de diferentes estados federados durante 24 meses, con protección de datos (GDPR) y evaluación independiente."
+        },
+        {
+          "title": "Microcredenciales en IA para trabajadores",
+          "detail": "Certificar competencias en IA y datos a través de cámaras de comercio y centros de formación, vinculadas a demanda industrial."
+        },
+        {
+          "title": "Observatorio de IA y trabajo",
+          "detail": "Monitorear el impacto de la IA en el empleo, con participación de sindicatos, empleadores y autoridades laborales."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno Federal de Alemania", "url": "https://www.bundesregierung.de/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -230,6 +320,36 @@
       "Madrid es la capital y ciudad más poblada del país.",
       "España tiene más de 8.000 kilómetros de costa."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de Inteligencia Artificial",
+          "detail": "Marco del Gobierno de España para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en servicios públicos."
+        },
+        {
+          "title": "Conectividad y digitalización educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades autónomas con menor renta per cápita."
+        },
+        {
+          "title": "Formación profesional y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía renovable, turismo y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y turismo sostenible",
+          "detail": "Desarrollar asistentes de IA para centros de formación en hostelería y turismo, con protección de datos y evaluación de impacto en comunidades autónomas con alta dependencia turística."
+        },
+        {
+          "title": "Microcredenciales en IA para jóvenes en zonas de despoblación",
+          "detail": "Certificar competencias digitales vinculadas a empleo rural y servicios digitales, con centros de formación profesional en el interior de España."
+        },
+        {
+          "title": "Observatorio de IA y brecha territorial educativa",
+          "detail": "Monitorear el uso ético de IA en escuelas de comunidades autónomas con menor renta per cápita, con participación de universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de España", "url": "https://www.lamoncloa.gob.es/", "kind": "official" },
       { "label": "Ministerio de Educación", "url": "https://www.educacionfpydeportes.gob.es/", "kind": "official" },
@@ -289,6 +409,36 @@
       "París es la capital y ciudad más poblada de Francia.",
       "El país tiene una de las redes de tren de alta velocidad más extensas de Europa."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA",
+          "detail": "Marco del Gobierno de Francia para el desarrollo ético de la IA, con énfasis en soberanía tecnológica, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad para todas las escuelas",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y ultramarinas."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de energía, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y excepción cultural",
+          "detail": "Desarrollar asistentes de IA en francés y lenguas regionales para escuelas públicas, con protección de datos (CNIL) y respeto a la diversidad lingüística."
+        },
+        {
+          "title": "Microcredenciales en IA para empleo en periferias urbanas",
+          "detail": "Certificar competencias digitales vinculadas a empleo formal en zonas de alta concentración de desempleo juvenil, con centros de formación profesional y municipios."
+        },
+        {
+          "title": "Observatorio de IA y soberanía tecnológica",
+          "detail": "Seguimiento del uso ético de IA en educación pública, con participación de academias, universidades y autoridades de protección de datos."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Francia", "url": "https://www.gouvernement.fr/", "kind": "official" },
       { "label": "CNIL · Protección de datos", "url": "https://www.cnil.fr/", "kind": "official" },
@@ -348,6 +498,36 @@
       "El país tiene una de las poblaciones más jóvenes de Europa occidental.",
       "San Patricio es el santo patrón de Irlanda y su día es festivo nacional."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia de habilidades digitales de Irlanda",
+          "detail": "Programa del Gobierno irlandés para formar a estudiantes y trabajadores en competencias digitales, IA y datos, con énfasis en inclusión y zonas rurales."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Iniciativa de banda ancha y dispositivos en centros educativos, con apoyo de fondos europeos y Gobierno local."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa de SOLAS para certificar competencias digitales y técnicas en jóvenes, vinculadas a empleos en tecnología y servicios."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "IA en educación y lenguas oficiales",
+          "detail": "Desarrollar asistentes de IA en irlandés e inglés para centros educativos, con protección de datos y participación de comunidades gaélicas."
+        },
+        {
+          "title": "Microcredenciales en IA para el sector tecnológico",
+          "detail": "Certificar competencias digitales vinculadas a empresas tecnológicas y farmacéuticas con sede en Dublín, a través de SOLAS y colegios técnicos."
+        },
+        {
+          "title": "Observatorio de IA y bienestar juvenil",
+          "detail": "Seguimiento del uso de IA en educación con enfoque en vivienda, costo de vida y empleo joven, con participación de universidades y sindicatos."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Irlanda", "url": "https://www.gov.ie/", "kind": "official" },
       { "label": "Comisión de Protección de Datos", "url": "https://www.dataprotection.ie/", "kind": "official" },
@@ -407,6 +587,36 @@
       "Londres alberga cuatro sitios declarados Patrimonio Mundial por la UNESCO.",
       "El país tiene una de las universidades más antiguas del mundo de habla inglesa (Oxford, fundada en 1096)."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA",
+          "detail": "Marco del Gobierno del Reino Unido para el desarrollo ético de la IA, con énfasis en seguridad, soberanía tecnológica y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad para la educación",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de fintech, industria creativa y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno del Reino Unido", "url": "https://www.gov.uk/", "kind": "official" },
       { "label": "AI Safety Institute", "url": "https://www.aisi.gov.uk/", "kind": "official" },
@@ -466,6 +676,36 @@
       "El país tiene una de las densidades de población más altas de Europa.",
       "El puerto de Róterdam maneja más de 470 millones de toneladas de carga al año."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de los Países Bajos",
+          "detail": "Marco del Gobierno neerlandés para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades con menor renta per cápita."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de logística, agricultura y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de los Países Bajos", "url": "https://www.government.nl/", "kind": "official" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
@@ -525,6 +765,36 @@
       "Brujas y Gante son ciudades medievales bien conservadas y turísticas.",
       "El país produce más de 1.000 variedades de cerveza reconocidas."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Bélgica",
+          "detail": "Marco del Gobierno belga para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y comunidades lingüísticas."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de logística, industria y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de comunidades lingüísticas, universidades y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Bélgica", "url": "https://www.belgium.be/", "kind": "official" },
       { "label": "Unión Europea", "url": "https://european-union.europa.eu/", "kind": "multilateral" },
@@ -584,6 +854,36 @@
       "El país tiene más de 800 kilómetros de costa atlántica.",
       "El Tratado de Tordesillas fue firmado en 1494 entre Portugal y España."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Portugal",
+          "detail": "Marco del Gobierno portugués para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y archipiélagos."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de turismo, energía renovable y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Portugal", "url": "https://www.portugal.gov.pt/", "kind": "official" },
       { "label": "CPLP", "url": "https://www.cplp.org/", "kind": "multilateral" },
@@ -643,6 +943,36 @@
       "Roma es la capital y una de las ciudades más antiguas de Europa continuamente habitadas.",
       "Italia tiene más de 7.600 kilómetros de costa."
     ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Estrategia Nacional de IA de Italia",
+          "detail": "Marco del Gobierno italiano para el desarrollo ético de la IA, con énfasis en soberanía digital, protección de datos y uso responsable en educación y servicios públicos."
+        },
+        {
+          "title": "Conectividad educativa",
+          "detail": "Programa de banda ancha y dispositivos en centros educativos, con énfasis en zonas rurales y del sur del país."
+        },
+        {
+          "title": "Formación técnica y empleo juvenil",
+          "detail": "Iniciativa para certificar competencias digitales y técnicas en jóvenes, vinculadas a sectores de turismo, manufactura y servicios digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Pilotos de IA en escuelas públicas",
+          "detail": "Implementar asistentes de IA en centros educativos durante 18 meses, con formación docente, protección de datos (GDPR) y evaluación de impacto en aprendizaje."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes",
+          "detail": "Certificar competencias en IA y datos a través de centros de formación profesional, vinculadas a empleos en servicios y tecnología."
+        },
+        {
+          "title": "Observatorio de IA y equidad educativa",
+          "detail": "Monitorear el uso ético de la IA en escuelas, con participación de universidades, sindicatos y sociedad civil."
+        }
+      ]
+    },
     "sources": [
       { "label": "Gobierno de Italia", "url": "https://www.governo.it/", "kind": "official" },
       { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
