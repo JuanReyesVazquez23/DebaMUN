@@ -4,11 +4,14 @@ import {
   ArrowRight,
   ArrowUpRight,
   Building2,
+  CalendarClock,
   Compass,
   Globe2,
+  Landmark,
   Languages,
   Lightbulb,
   MapPin,
+  Rocket,
   ShieldCheck,
   Sparkles,
   Users,
@@ -21,6 +24,7 @@ import { useSession } from '../lib/session';
 const SECTIONS = [
   { id: 'postura', label: 'Postura' },
   { id: 'contexto', label: 'Contexto' },
+  { id: 'futuro', label: 'Futuro' },
   { id: 'perfil', label: 'Perfil ONU' },
   { id: 'organizaciones', label: 'Organizaciones' },
   { id: 'tips', label: 'Tips' },
@@ -35,6 +39,7 @@ export function DossierPage() {
   const { country, committee } = profile;
   const stance = committee.id === 'UNESCO' ? country.unesco : country.ecosoc;
   const organizations = country.organizations ?? [];
+  const futurePlans = country.futurePlans;
 
   return (
     <div className="dossier">
@@ -74,7 +79,7 @@ export function DossierPage() {
       ) : null}
 
       <nav className="section-nav" aria-label="Secciones del dossier">
-        {SECTIONS.map((section) => (
+        {SECTIONS.filter((section) => section.id !== 'futuro' || futurePlans).map((section) => (
           <a key={section.id} href={`#${section.id}`}>
             {section.label}
           </a>
@@ -146,6 +151,56 @@ export function DossierPage() {
             </div>
           </dl>
         </section>
+
+        {futurePlans ? (
+          <section id="futuro" className="panel panel--future" aria-labelledby="future-title">
+            <header className="panel__head">
+              <div>
+                <p className="eyebrow">
+                  <CalendarClock aria-hidden="true" size={13} /> Proyección
+                </p>
+                <h2 id="future-title">Hacia dónde va {country.name}</h2>
+              </div>
+            </header>
+            <p className="muted small">
+              Planes que el país ya anunció y propuestas para llevar al debate. Distingue siempre lo
+              oficial de lo sugerido.
+            </p>
+
+            <div className="future">
+              <div className="future__group">
+                <h3 className="subhead">
+                  <Landmark aria-hidden="true" size={15} /> Planes oficiales
+                </h3>
+                <ol className="future__list">
+                  {futurePlans.national.map((plan) => (
+                    <li key={plan.title}>
+                      <h4>{plan.title}</h4>
+                      <p>{plan.detail}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div className="future__group future__group--proposals">
+                <h3 className="subhead">
+                  <Rocket aria-hidden="true" size={15} /> Propuestas del modelo
+                </h3>
+                <p className="future__note">
+                  Ideas para negociar, no son posiciones oficiales de {country.name}.
+                </p>
+                <ol className="future__list">
+                  {futurePlans.proposals.map((plan) => (
+                    <li key={plan.title}>
+                      <h4>{plan.title}</h4>
+                      <p>{plan.detail}</p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </section>
+        ) : null}
 
         <section id="perfil" className="panel" aria-labelledby="profile-title">
           <header className="panel__head">

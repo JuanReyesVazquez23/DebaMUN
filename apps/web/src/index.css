@@ -2283,6 +2283,7 @@ svg {
 
 .panel--stance,
 .panel--organizations,
+.panel--future,
 #fuentes {
   grid-column: 1 / -1;
 }
@@ -2334,6 +2335,81 @@ svg {
 
 @media (max-width: 720px) {
   .orgs {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.future {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 0.9rem;
+}
+
+.future__group {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-2);
+}
+
+.future__group--proposals {
+  border-style: dashed;
+  background: transparent;
+}
+
+.future__note {
+  margin-top: 0.3rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.future__list {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+  list-style: none;
+  counter-reset: future;
+}
+
+.future__list li {
+  position: relative;
+  padding-left: 1.75rem;
+  counter-increment: future;
+}
+
+.future__list li::before {
+  content: counter(future);
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  display: grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: var(--country);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 700;
+}
+
+.future__list h4 {
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+
+.future__list p {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+@media (max-width: 720px) {
+  .future {
     grid-template-columns: minmax(0, 1fr);
   }
 }

@@ -52,6 +52,18 @@ export interface CommitteeStance {
   leverage: string;
 }
 
+export interface FuturePlan {
+  title: string;
+  detail: string;
+}
+
+export interface CountryFuturePlans {
+  /** Planes oficiales anunciados por el país. */
+  national: FuturePlan[];
+  /** Propuestas del modelo para el debate, no posiciones oficiales. */
+  proposals: FuturePlan[];
+}
+
 export interface CountryProfile extends CountrySummary {
   capital: string;
   languages: string[];
@@ -73,6 +85,7 @@ export interface CountryProfile extends CountrySummary {
   tips: string[];
   facts: string[];
   organizations?: CountryOrganization[];
+  futurePlans?: CountryFuturePlans;
   sources: CountrySource[];
 }
 

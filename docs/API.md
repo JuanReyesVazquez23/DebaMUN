@@ -26,7 +26,7 @@ El frontend muestra el primer mensaje de validación y ofrece reintento en error
   "status": "ok",
   "service": "debamun-api",
   "version": "0.1.0",
-  "corpus": { "countries": 35, "committees": ["UNESCO", "ECOSOC"] },
+  "corpus": { "countries": 37, "committees": ["UNESCO", "ECOSOC"] },
   "services": {
     "database": "up",
     "cache": "memory",

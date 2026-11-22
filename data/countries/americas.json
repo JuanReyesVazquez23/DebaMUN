@@ -531,5 +531,106 @@
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
       { "label": "Itaipú Binacional", "url": "https://www.itaipu.gov.py/", "kind": "official" }
     ]
+  },
+  {
+    "code": "DO",
+    "slug": "republica-dominicana",
+    "name": "República Dominicana",
+    "officialName": "República Dominicana",
+    "flag": "🇩🇴",
+    "region": "América Latina y el Caribe",
+    "capital": "Santo Domingo",
+    "languages": ["español"],
+    "unMember": true,
+    "palette": { "primary": "#002D62", "secondary": "#FFFFFF", "accent": "#CE1126" },
+    "summary": "Economía caribeña de renta media-alta, abierta al turismo, las remesas y las zonas francas. Comparte la isla Hispaniola con Haití y ha convertido la transformación digital y la inteligencia artificial en ejes de su agenda de desarrollo.",
+    "unProfile": {
+      "bloc": "GRULAC; CELAC; SICA (miembro pleno desde 2013); CARIFORUM; pequeños Estados insulares en desarrollo",
+      "style": "Diplomacia proactiva y pro-occidental, con liderazgo declarado en IA y ciberseguridad; combina intereses turísticos, inversión extranjera y cooperación regional.",
+      "allies": ["Estados Unidos", "España", "Panamá", "Costa Rica", "Brasil"],
+      "tensions": ["Brecha educativa y digital", "Relación migratoria con Haití", "Dependencia del turismo y las remesas"],
+      "redLines": ["Defiende la soberanía y la integridad territorial", "Rechaza el uso de la IA como arma de guerra", "No acepta condicionalidades que interfieran en su política migratoria"]
+    },
+    "context": {
+      "aiAndEducation": "La Estrategia Nacional de IA (ENIA, 2023) fue la primera de Centroamérica y el Caribe y forma parte de la Política Nacional de Innovación 2030. El Plan de Educación Horizonte 2034 prioriza calidad, equidad y competencias digitales, con brechas persistentes de conectividad y aprendizaje.",
+      "youthLabour": "Población joven con alta informalidad y desempleo juvenil. El programa Oportunidad 14-24 busca reinsertar en educación y empleo a jóvenes que no estudian ni trabajan; turismo, zonas francas y servicios concentran la demanda laboral.",
+      "digitalGovernance": "La Agenda Digital 2030 y la OGTIC impulsan interoperabilidad, identidad digital y servicios en línea. La estrategia de ciberseguridad y la protección de datos avanzan más rápido que la capacitación de usuarios."
+    },
+    "unesco": {
+      "position": "Defiende una educación inclusiva y de calidad, la formación docente y la alfabetización digital y mediática. Apoya el uso ético de la IA en las aulas y la protección del patrimonio cultural caribeño.",
+      "priorities": ["Formación docente y conectividad rural", "Alfabetización digital y mediática", "Patrimonio cultural e industrias creativas"],
+      "vulnerability": "Las brechas de aprendizaje y conectividad, agravadas por huracanes y crisis sanitarias, limitan la continuidad educativa.",
+      "leverage": "ENIA, Agenda Digital 2030 y un patrimonio cultural con proyección internacional."
+    },
+    "ecosoc": {
+      "position": "Prioriza la transformación productiva, la formalización del empleo y la protección social. Vincula la capacitación juvenil con los sectores de turismo, zonas francas y servicios digitales.",
+      "priorities": ["Empleo juvenil y formalización", "Protección social y primera infancia", "Resiliencia climática y gestión del agua"],
+      "vulnerability": "La informalidad, la exposición a huracanes y la dependencia de flujos externos reducen el margen fiscal.",
+      "leverage": "Turismo, remesas, zonas francas y una estrategia digital con respaldo político."
+    },
+    "tips": [
+      "Distingue la ENIA (estrategia de IA, 2023) de la Agenda Digital 2030: son instrumentos complementarios, no sinónimos.",
+      "Cita el Plan de Educación Horizonte 2034 cuando hables de docentes, currículo o evaluación.",
+      "Usa Oportunidad 14-24 para aterrizar propuestas de empleo juvenil y formación técnica.",
+      "Como pequeño Estado insular, conecta la resiliencia climática con la continuidad educativa."
+    ],
+    "facts": [
+      "República Dominicana comparte la isla Hispaniola con Haití.",
+      "Santo Domingo es una de las ciudades más antiguas fundadas por europeos en América.",
+      "El pico Duarte, con unos 3.175 metros, es la mayor elevación del Caribe.",
+      "El país es miembro de la ONU desde 1945.",
+      "Turismo, remesas y zonas francas son sus principales fuentes de divisas.",
+      "El merengue y la bachata fueron inscritos por la UNESCO como patrimonio cultural inmaterial.",
+      "Fue el primer país de Centroamérica y el Caribe en lanzar una estrategia nacional de inteligencia artificial, en 2023.",
+      "La ENIA se organiza en cuatro pilares: gobierno inteligente, talento humano, datos y escala regional.",
+      "Oportunidad 14-24 atiende a jóvenes de 14 a 24 años que no estudian ni trabajan.",
+      "La República Dominicana proclamó su independencia el 27 de febrero de 1844."
+    ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Plan de Educación Horizonte 2034",
+          "detail": "Hoja de ruta del MINERD para mejorar calidad y equidad, reforzar la formación docente y ampliar competencias digitales. Su formulación culminó en 2025 y prevé metas de mediano plazo."
+        },
+        {
+          "title": "Estrategia Nacional de Inteligencia Artificial (ENIA)",
+          "detail": "Plan de acción de 2023 con cuatro pilares: gobierno inteligente, HUB de talento #YoSoyFuturoRD, HUB de datos y escala regional. Busca automatizar servicios, personalizar la educación y atraer inversión."
+        },
+        {
+          "title": "Agenda Digital 2030",
+          "detail": "Carta de ruta del Ministerio de la Presidencia y la OGTIC para servicios públicos digitales, conectividad, competencias digitales y ciberseguridad."
+        },
+        {
+          "title": "Consolidar Oportunidad 14-24",
+          "detail": "El Gabinete de Política Social mantiene este programa de formación, acompañamiento y reinserción educativa o laboral para jóvenes que no estudian ni trabajan; el reto es sostener la cobertura y medir resultados."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Piloto de IA docente con evaluación independiente",
+          "detail": "Probar asistentes de planificación y evaluación en centros rurales y urbanos durante 24 meses, con formación docente, protección de datos y una evaluación externa publicada."
+        },
+        {
+          "title": "Fondo de conectividad escolar con energía solar",
+          "detail": "Financiar conexión satelital y electricidad solar en escuelas de zonas vulnerables, con metas medibles de asistencia y continuidad educativa tras huracanes."
+        },
+        {
+          "title": "Microcredenciales digitales para jóvenes que no estudian ni trabajan",
+          "detail": "Certificar competencias digitales y técnicas con INFOTEP e ITLA, vinculadas a prácticas en turismo, zonas francas y servicios digitales."
+        },
+        {
+          "title": "Observatorio caribeño de IA y educación",
+          "detail": "Crear, dentro del pilar de escala regional de la ENIA, una red de evidencia con pequeños Estados insulares para compartir pilotos, estándares y resultados."
+        }
+      ]
+    },
+    "sources": [
+      { "label": "Gobierno de República Dominicana", "url": "https://www.gob.do/", "kind": "official" },
+      { "label": "MINERD · Plan de Educación Horizonte 2034", "url": "https://www.ministeriodeeducacion.gob.do/sobre-nosotros/plan-decenal-de-educacion", "kind": "official" },
+      { "label": "Agenda Digital 2030", "url": "https://agendadigital.gob.do/agenda-digital/", "kind": "official" },
+      { "label": "ENIA · Lanzamiento oficial", "url": "https://agendadigital.gob.do/noticias/presidente-luis-abinader-encabeza-lanzamiento-de-estrategia-nacional-de-inteligencia-artificial/", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "Banco Mundial · República Dominicana", "url": "https://www.worldbank.org/en/country/dominicanrepublic", "kind": "multilateral" }
+    ]
   }
 ]

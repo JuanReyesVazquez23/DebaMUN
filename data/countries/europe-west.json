@@ -648,5 +648,107 @@
       { "label": "UNESCO · Patrimonio Mundial", "url": "https://whc.unesco.org/", "kind": "multilateral" },
       { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" }
     ]
+  },
+  {
+    "code": "LU",
+    "slug": "luxemburgo",
+    "name": "Luxemburgo",
+    "officialName": "Gran Ducado de Luxemburgo",
+    "flag": "🇱🇺",
+    "region": "Europa Occidental",
+    "capital": "Luxemburgo",
+    "languages": ["luxemburgués", "francés", "alemán"],
+    "unMember": true,
+    "palette": { "primary": "#00A1DE", "secondary": "#FFFFFF", "accent": "#ED2939" },
+    "summary": "Pequeño gran ducado sin litoral, fundador de la Unión Europea y centro financiero internacional. Combina un Estado social fuerte, un sistema educativo trilingüe y una estrategia de soberanía digital apoyada en investigación e infraestructura de cómputo.",
+    "unProfile": {
+      "bloc": "Unión Europea; Benelux; OTAN; Europa Occidental",
+      "style": "Técnico, consensual y orientado a estándares; apuesta por el mercado único, el multilateralismo y la cooperación al desarrollo.",
+      "allies": ["Bélgica", "Países Bajos", "Francia", "Alemania", "Irlanda"],
+      "tensions": ["Vivienda y costo de vida", "Dependencia del sector financiero", "Integración de trabajadores transfronterizos"],
+      "redLines": ["Defiende el Estado de derecho y el mercado único", "No acepta la fragmentación del mercado digital europeo", "Mantiene su compromiso con la cooperación al desarrollo"]
+    },
+    "context": {
+      "aiAndEducation": "La estrategia Accelerating Digital Sovereignty 2030 (2025) incluye la IA como uno de sus tres pilares y sitúa el talento y las competencias como primer habilitador. El sistema educativo es trilingüe y la Digital Skills & Jobs Coalition coordina formación y reconversión.",
+      "youthLabour": "El desempleo juvenil supera la media nacional y el acceso a la vivienda es el principal obstáculo para la autonomía. Cerca de la mitad de la fuerza laboral es transfronteriza, lo que exige coordinación con Bélgica, Francia y Alemania.",
+      "digitalGovernance": "Administración digital avanzada con identidad electrónica, Guichet.lu y una autoridad de protección de datos consolidada. La estrategia ADS2030 impulsa datos, IA y tecnologías cuánticas, con MeluXina y la AI Factory como infraestructura."
+    },
+    "unesco": {
+      "position": "Defiende una educación inclusiva y multilingüe, la alfabetización mediática y el uso humanista de la IA. Apoya la cooperación cultural europea y la protección del patrimonio.",
+      "priorities": ["Competencias digitales y pensamiento crítico", "Multilingüismo e integración", "Patrimonio cultural y creatividad"],
+      "vulnerability": "Los resultados educativos dependen del origen socioeconómico y lingüístico, y el costo de la vivienda dificulta atraer y retener docentes.",
+      "leverage": "Sistema trilingüe, alta conectividad, Digital Skills & Jobs Coalition y acceso a fondos europeos."
+    },
+    "ecosoc": {
+      "position": "Prioriza el empleo de calidad, la protección social y una transición digital justa. Apoya la Garantía Juvenil europea y la integración laboral de los trabajadores transfronterizos.",
+      "priorities": ["Vivienda asequible para jóvenes", "Competencias para el empleo digital", "Inclusión de trabajadores transfronterizos"],
+      "vulnerability": "La vivienda y la dependencia del empleo financiero exponen a los jóvenes a cambios de ciclo.",
+      "leverage": "Estabilidad fiscal, LuxDev, posición en la UE y ecosistema de innovación."
+    },
+    "tips": [
+      "Distingue la iniciativa Digital Luxembourg de la estrategia Accelerating Digital Sovereignty 2030.",
+      "Usa el multilingüismo y la fuerza laboral transfronteriza para hablar de integración, no solo de tecnología.",
+      "Cita el Pacte pour la jeunesse 2026-2030 cuando abordes autonomía juvenil, vivienda o participación.",
+      "Como Estado pequeño, tu palanca son los estándares, los sandboxes y los fondos europeos."
+    ],
+    "facts": [
+      "Luxemburgo es el único gran ducado del mundo.",
+      "Es miembro fundador de la Comunidad Europea (1957), de la OTAN (1949) y de la ONU (1945).",
+      "Tiene tres lenguas oficiales: luxemburgués, francés y alemán.",
+      "El luxemburgués es la lengua nacional desde 1984.",
+      "Cerca de la mitad de su fuerza laboral son trabajadores transfronterizos.",
+      "El supercomputador MeluXina, gestionado por LuxProvide, forma parte de la infraestructura europea de alto rendimiento.",
+      "En mayo de 2025 lanzó Accelerating Digital Sovereignty 2030, con estrategias de datos, IA y tecnologías cuánticas.",
+      "La Universidad de Luxemburgo se creó en 2003 y es la única universidad pública del país.",
+      "El centro histórico y las fortificaciones de la ciudad de Luxemburgo son Patrimonio Mundial de la UNESCO desde 1994.",
+      "La localidad de Schengen da nombre al acuerdo de libre circulación firmado en 1985.",
+      "Destina alrededor del 1 % de su renta nacional bruta a ayuda al desarrollo, una de las ratios más altas del mundo."
+    ],
+    "futurePlans": {
+      "national": [
+        {
+          "title": "Accelerating Digital Sovereignty 2030 (ADS2030)",
+          "detail": "Estrategia lanzada en mayo de 2025 con tres planes conectados —datos, IA y tecnologías cuánticas— y seis habilitadores, entre ellos talento y competencias. Incluye proyectos emblemáticos en educación, mercado laboral y administración pública."
+        },
+        {
+          "title": "Pacte pour la jeunesse 2026-2030",
+          "detail": "Plan de acción del Service national de la Jeunesse para dar a los jóvenes más tiempo, autonomía, participación y apoyo en su transición a la vida adulta."
+        },
+        {
+          "title": "AI Factory Luxembourg y MeluXina-AI",
+          "detail": "Ampliación de la capacidad de cómputo con MeluXina-AI y un polo de servicios para que empresas, investigación y sector público experimenten con IA fiable."
+        },
+        {
+          "title": "Digital Skills & Jobs Coalition",
+          "detail": "Coalición nacional que articula formación, reconversión y recursos para estudiantes, docentes, trabajadores y ciudadanía, alineada con la agenda europea de competencias digitales."
+        }
+      ],
+      "proposals": [
+        {
+          "title": "Alfabetización en IA en todas las vías secundarias",
+          "detail": "Incluir un módulo común de IA, datos y ciudadanía digital en las vías académica y técnica, con formación docente y auditoría externa de los materiales."
+        },
+        {
+          "title": "Garantía de vivienda para aprendices y estudiantes",
+          "detail": "Reservar alojamiento asequible y avales públicos para jóvenes en formación, incluidos los transfronterizos, con incentivos para construir residencias."
+        },
+        {
+          "title": "Pasaporte europeo de competencias digitales",
+          "detail": "Microcredenciales reconocidas en la UE, coordinadas con la Digital Skills & Jobs Coalition y ADEM, para facilitar la movilidad laboral juvenil."
+        },
+        {
+          "title": "Sandbox de IA para centros educativos",
+          "detail": "Extender el sandbox del LIST a escuelas y lycées, con revisión ética, protección de datos y publicación de resultados antes de escalar."
+        }
+      ]
+    },
+    "sources": [
+      { "label": "Gobierno de Luxemburgo", "url": "https://gouvernement.lu/", "kind": "official" },
+      { "label": "Accelerating Digital Sovereignty 2030", "url": "https://gouvernement.lu/en/dossiers.gouv2024_smc+en+dossiers+strategy-ads2030+strategy-ads2030.html", "kind": "official" },
+      { "label": "Digital Luxembourg · Estrategia de IA", "url": "https://digital-luxembourg.public.lu/stories/luxembourgs-ai-strategy-11", "kind": "official" },
+      { "label": "MEN · Pacte pour la jeunesse 2026-2030", "url": "https://men.public.lu/fr/publications/jeunesse/informations-generales/brochure-pacte-jeunesse-2026-2030.html", "kind": "official" },
+      { "label": "UNESCO · IA y educación", "url": "https://www.unesco.org/en/digital-education/artificial-intelligence", "kind": "multilateral" },
+      { "label": "OCDE · Luxemburgo", "url": "https://www.oecd.org/en/countries/luxembourg.html", "kind": "multilateral" }
+    ]
   }
 ]

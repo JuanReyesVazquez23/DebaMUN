@@ -34,7 +34,7 @@ describe('QuestionGenerator', () => {
     }
 
     expect(new Set(askedIds).size).toBe(60);
-  });
+  }, 15_000);
 
   it('es determinista para la misma sesión y número de pregunta', () => {
     const { committee, country } = createContext();

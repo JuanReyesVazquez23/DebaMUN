@@ -81,7 +81,7 @@ Respuesta esperada sin Redis:
 ```json
 {
   "status": "ok",
-  "corpus": { "countries": 35, "committees": ["ECOSOC", "UNESCO"] },
+  "corpus": { "countries": 37, "committees": ["ECOSOC", "UNESCO"] },
   "services": {
     "database": "up",
     "cache": "memory",
@@ -151,7 +151,7 @@ Neon → API → copiar URL de API → Web → copiar URL de Web → WEB_ORIGIN 
 
 ## 5. Verificación posterior
 
-1. `GET https://<api>.vercel.app/api/health` → `database: up`, 35 países.
+1. `GET https://<api>.vercel.app/api/health` → `database: up`, 37 países.
 2. Abre la web y completa nombre → país → comisión.
 3. Recarga en `/app/debate`: debe seguir funcionando (rewrite SPA).
 4. Envía una intervención y comprueba que se guarda (dashboard con `turns > 0`).

@@ -18,6 +18,18 @@ export interface CountryOrganization {
   url: string;
 }
 
+export interface FuturePlan {
+  title: string;
+  detail: string;
+}
+
+export interface CountryFuturePlans {
+  /** Planes oficiales anunciados por el país. */
+  national: FuturePlan[];
+  /** Propuestas del modelo para el debate, no posiciones oficiales. */
+  proposals: FuturePlan[];
+}
+
 export interface CountryProfile {
   code: string;
   slug: string;
@@ -48,6 +60,7 @@ export interface CountryProfile {
   tips: string[];
   facts: string[];
   organizations: CountryOrganization[];
+  futurePlans?: CountryFuturePlans;
   sources: CountrySource[];
 }
 

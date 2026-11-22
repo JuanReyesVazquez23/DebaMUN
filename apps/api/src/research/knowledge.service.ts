@@ -147,6 +147,22 @@ export class KnowledgeService implements OnModuleInit {
     );
     push(`${country.name} · tips de negociación`, country.tips.join(' '), countrySource, 'country', 1.0);
     push(`${country.name} · datos del país`, country.facts.join(' '), countrySource, 'country', 0.9);
+    if (country.futurePlans) {
+      push(
+        `${country.name} · planes oficiales a futuro`,
+        country.futurePlans.national.map((plan) => `${plan.title}: ${plan.detail}`).join(' '),
+        countrySource,
+        'country',
+        1.05,
+      );
+      push(
+        `${country.name} · propuestas del modelo para el debate (no oficiales)`,
+        country.futurePlans.proposals.map((plan) => `${plan.title}: ${plan.detail}`).join(' '),
+        countrySource,
+        'country',
+        0.95,
+      );
+    }
 
     push(`${committee.abbr} · tópico`, committee.topic, committeeSource, 'committee', 1.15);
     push(`${committee.abbr} · mandato`, committee.mandate, committeeSource, 'committee', 1.0);

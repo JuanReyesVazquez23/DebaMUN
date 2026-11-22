@@ -294,6 +294,53 @@
         "url": "https://stateofgreen.com"
       }
     ],
+    "DO": [
+      {
+        "name": "El Ministerio de Educación (MINERD)",
+        "detail": "Diseña la política educativa y coordina el Plan de Educación Horizonte 2034.",
+        "url": "https://www.ministeriodeeducacion.gob.do"
+      },
+      {
+        "name": "La Oficina Gubernamental de Tecnologías de la Información y Comunicación (OGTIC)",
+        "detail": "Coordina la transformación digital y los servicios públicos en línea.",
+        "url": "https://ogtic.gob.do"
+      },
+      {
+        "name": "El Viceministerio de Agenda Digital",
+        "detail": "Impulsa la Agenda Digital 2030 y la Estrategia Nacional de IA.",
+        "url": "https://agendadigital.gob.do"
+      },
+      {
+        "name": "El Instituto Tecnológico de Las Américas (ITLA)",
+        "detail": "Forma talento técnico en software, datos y tecnologías emergentes.",
+        "url": "https://itla.edu.do"
+      },
+      {
+        "name": "El Instituto Nacional de Formación Técnico Profesional (INFOTEP)",
+        "detail": "Capacita para el empleo y la reconversión laboral.",
+        "url": "https://www.infotep.gob.do"
+      },
+      {
+        "name": "El Instituto Dominicano de las Telecomunicaciones (INDOTEL)",
+        "detail": "Regula las telecomunicaciones y amplía la conectividad.",
+        "url": "https://www.indotel.gob.do"
+      },
+      {
+        "name": "El Gabinete de Política Social",
+        "detail": "Coordina el programa Oportunidad 14-24 para jóvenes que no estudian ni trabajan.",
+        "url": "https://www.gabinetesocial.gob.do"
+      },
+      {
+        "name": "El Ministerio de la Juventud",
+        "detail": "Diseña políticas de participación y desarrollo juvenil.",
+        "url": "https://juventud.gob.do"
+      },
+      {
+        "name": "El PNUD en República Dominicana",
+        "detail": "Apoya innovación pública, gobernanza y desarrollo sostenible.",
+        "url": "https://www.undp.org/es/dominican-republic"
+      }
+    ],
     "EE": [
       {
         "name": "El Ministerio de Asuntos Exteriores",
@@ -530,6 +577,63 @@
         "name": "La Fondazione Bruno Kessler",
         "detail": "Investiga IA y tecnología.",
         "url": "https://fbk.eu"
+      }
+    ],
+    "LU": [
+      {
+        "name": "El Ministerio de Educación Nacional, Infancia y Juventud (MEN)",
+        "detail": "Define la política educativa, lingüística y de juventud.",
+        "url": "https://men.public.lu"
+      },
+      {
+        "name": "El Service national de la Jeunesse (SNJ)",
+        "detail": "Ejecuta la política juvenil y el Pacte pour la jeunesse 2026-2030.",
+        "url": "https://www.snj.lu"
+      },
+      {
+        "name": "Digital Luxembourg (Innovative Initiatives)",
+        "detail": "Coordina proyectos de competencias digitales, datos y conectividad.",
+        "url": "https://digital-luxembourg.public.lu"
+      },
+      {
+        "name": "La Digital Skills & Jobs Coalition",
+        "detail": "Articula formación y reconversión en competencias digitales.",
+        "url": "https://digitalskills.lu"
+      },
+      {
+        "name": "La Universidad de Luxemburgo",
+        "detail": "Es la única universidad pública y un polo de investigación en IA.",
+        "url": "https://www.uni.lu"
+      },
+      {
+        "name": "El Luxembourg Institute of Science and Technology (LIST)",
+        "detail": "Investiga IA fiable y opera un sandbox técnico.",
+        "url": "https://www.list.lu"
+      },
+      {
+        "name": "Luxinnovation",
+        "detail": "Apoya la innovación y la adopción tecnológica en empresas.",
+        "url": "https://www.luxinnovation.lu"
+      },
+      {
+        "name": "LuxDev",
+        "detail": "Ejecuta la cooperación al desarrollo luxemburguesa.",
+        "url": "https://luxdev.lu"
+      },
+      {
+        "name": "La Agence pour le développement de l'emploi (ADEM)",
+        "detail": "Gestiona el empleo, la orientación y la Garantía Juvenil.",
+        "url": "https://adem.public.lu"
+      },
+      {
+        "name": "El Luxembourg House of Financial Technology (LHoFT)",
+        "detail": "Conecta el sector financiero con startups y talento tecnológico.",
+        "url": "https://www.lhoft.com"
+      },
+      {
+        "name": "La AI Factory Luxembourg",
+        "detail": "Facilita cómputo y experimentación con IA a empresas e investigación.",
+        "url": "https://www.aifactory.lu"
       }
     ],
     "JP": [
